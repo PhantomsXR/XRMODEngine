@@ -1,5 +1,5 @@
 {
-  "name": "com.phantomsxr.actionnotification",
+  "name": "@phantomsxr/actionnotification",
   "version": "2.0.0",
   "displayName": "XRMOD Action Notification",
   "unity": "2021.3",
