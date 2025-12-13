@@ -74,38 +74,38 @@ namespace FoundationTest.Runtime
             Assert.AreEqual(XRMODAPI.GetCurrentExperienceSpaceType().ToString(), "ExclusiveSpace");
             var tmp_FoundationTestPrefab = await XRMODAPI.LoadAssetAsync<GameObject>("FoundationTestPrefab");
             Object.Instantiate(tmp_FoundationTestPrefab, XRMODAPI.GetProcessContainer);
-            
+
             var tmp_AudioClipData =
                 await XRMODAPI.LoadAssetsAsync<ScriptableObject>(new[] {"AudioClipData 1", "AudioClipData 2"});
             foreach (var t in tmp_AudioClipData)
             {
                 Debug.Log((t as AudioClipData).GetAudioClip().name);
             }
-            
+
             var tmp_TestDataJson = await XRMODAPI.LoadAssetAsync<TextAsset>("TestData");
             Assert.AreEqual(JsonMapper.ToObject<TestData>(tmp_TestDataJson.text).Health, 100);
 
 
             var tmp_TutorialFlowManager = await XRMODAPI.LoadAssetAsync<GameObject>("TutorialFlowManager");
             Object.Instantiate(tmp_TutorialFlowManager, XRMODAPI.GetProcessContainer);
-            
+
             var tmp_PlayerBase = await XRMODAPI.LoadAssetAsync<GameObject>("PlayerBase");
             Object.Instantiate(tmp_PlayerBase, XRMODAPI.GetProcessContainer);
-            
+
             unipoolPrefab = await XRMODAPI.LoadAssetAsync<GameObject>("UniPoolSphere");
-            
+
             await Task.Delay(1000);
             var tmp_PlayerPrefab = await XRMODAPI.LoadAssetAsync<GameObject>("Player");
             var tmp_PlayerInstance = Object.Instantiate(tmp_PlayerPrefab);
             tmp_PlayerInstance.GetComponent<PlayerBase>().Init();
-            
+
             await Task.Delay(2000);
             await XRMODAPI.LoadUnityScene("EmptyScene");
             await XRMODAPI.LoadUnityScene("LargeScene");
             await XRMODAPI.LoadUnityScene("ScriptBindingScene");
-            
+
             await Task.Delay(5000);
-            
+
             var tmp_AgentPrefab = await XRMODAPI.LoadAssetAsync<GameObject>("Agent");
             var tmp_GoapSystemPrefab = await XRMODAPI.LoadAssetAsync<GameObject>("GoapSystemPrefab");
             Object.Instantiate(tmp_GoapSystemPrefab);
@@ -124,11 +124,13 @@ namespace FoundationTest.Runtime
             }
 
             Debug.Log(
-                $"TouchPadSize:{RokidNativeAPI.GetInstance.PhoneScreenWidth},{RokidNativeAPI.GetInstance.PhoneScreenHeight}");
-            RokidNativeAPI.GetInstance.SetSystemScreenOrientation(ScreenOrientation.LandscapeLeft);
-            RokidNativeAPI.GetInstance.SetUnityScreenOrientation(ScreenOrientation.LandscapeLeft);
+                $"TouchPadSize:{Phantom.XRMOD.RokidModule.Runtime.RokidNativeAPI.GetInstance.PhoneScreenWidth},{Phantom.XRMOD.RokidModule.Runtime.RokidNativeAPI.GetInstance.PhoneScreenHeight}");
+            Phantom.XRMOD.RokidModule.Runtime.RokidNativeAPI.GetInstance.SetSystemScreenOrientation(ScreenOrientation
+                .LandscapeLeft);
+            Phantom.XRMOD.RokidModule.Runtime.RokidNativeAPI.GetInstance.SetUnityScreenOrientation(ScreenOrientation
+                .LandscapeLeft);
             Debug.Log(
-                $"TouchPadSize:{RokidNativeAPI.GetInstance.PhoneScreenWidth},{RokidNativeAPI.GetInstance.PhoneScreenHeight}");
+                $"TouchPadSize:{Phantom.XRMOD.RokidModule.Runtime.RokidNativeAPI.GetInstance.PhoneScreenWidth},{Phantom.XRMOD.RokidModule.Runtime.RokidNativeAPI.GetInstance.PhoneScreenHeight}");
 #endif
 
 
