@@ -22,7 +22,8 @@
         "Phantom.XRMOD.Localization.Runtime",
         "Phantom.XRMOD.LitJson.Runtime",
         "VContainer",
-        "Phantom.XRMOD.AudioModule.Runtime"
+        "Phantom.XRMOD.AudioModule.Runtime",
+        "Phantom.XRMOD.RokidModule.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
