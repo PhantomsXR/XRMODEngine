@@ -1,0 +1,31 @@
+{
+    "name": "Phantom.XRMOD.UnityFusion.Editor",
+    "rootNamespace": "",
+    "references": [
+        "Phantom.XRMOD.UnityFusion.Runtime.Core",
+        "Phantom.XRMOD.UnityFusion.Runtime.CodeHook",
+        "Phantom.XRMOD.Core.Runtime",
+        "Phantom.XRMOD.ActionNotification.Runtime",
+        "Phantom.XRMOD.PackageTools.Editor",
+        "Unity.TextMeshPro",
+        "Unity.AI.Navigation",
+        "Phantom.XRMOD.PackageTools.Runtime",
+        "Phantom.XRMOD.UnityFusion.Adapter.Runtime",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Phantom.XRMOD.LitJson.Runtime",
+        "Unity.InternalAPIEditorBridgeDev.005"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "XRMOD_INSTALL"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,29 @@
+{
+    "name": "Phantom.XRMOD.RokidModule.Runtime",
+    "rootNamespace": "Phantom.XRMOD.RokidModule.Runtime",
+    "references": [
+        "GUID:793c86bbd39d348ee8be578e0928811b",
+        "GUID:d445613d091ffc941ae68355f01656f6",
+        "GUID:fe685ec1767f73d42b749ea8045bfe43",
+        "GUID:dc960734dc080426fa6612f1c5fe95f3",
+        "GUID:86061c4979bdc4f34b42fd06d8552b97",
+        "GUID:6447e10b87dc140ab924878c1ecef665",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:a9420e37d7990b54abdef6688edbe313",
+        "GUID:92703082f92b41ba80f0d6912de66115",
+        "GUID:0c2055e182afe49728b18698ad8a3050",
+        "GUID:b96574a69af95463fab5474caf3dcb0e",
+        "GUID:5842b0b0fb8b442cea4e7aa46b723420"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "XRMOD_INSTALL"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

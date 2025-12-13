@@ -1,0 +1,21 @@
+{
+    "name": "Phantom.XRMOD.UnityFusion.Runtime.CLRBingding.CLR.ILRT",
+    "rootNamespace": "Phantom.XRMOD.UnityFusion.Runtime.CLRBingding.CLR.ILRT",
+    "references": [
+        "GUID:d1b7af04124239145bc1904ef0c73501",
+        "GUID:fb044e467877d42df875ffad27576788",
+        "GUID:f8c1459ac3785474b92feffdf4f8681f",
+        "GUID:a4fa105e1e1e4404bb5e9fd55a43a5ca"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "XRMOD_INSTALL"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,7 @@
+.select-table {
+    flex-grow: 1;
+    font-size: 16px;
+    -unity-font-style: bold;
+    justify-content: center;
+    align-items: center;
+}

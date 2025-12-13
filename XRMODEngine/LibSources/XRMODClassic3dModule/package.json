@@ -1,0 +1,20 @@
+{
+  "name": "com.phantomsxr.classic3d",
+  "displayName": "XRMOD Classic3D",
+  "version": "2.0.0-preview.22",
+  "unity": "2021.3",
+  "keywords": [
+    "il",
+    "core"
+  ],
+  "type": "library",
+  "author": {
+    "name": "Phantoms",
+    "email": "phantomxm2021@gmail.com"
+  },
+  "dependencies": {
+    "com.phantomsxr.actionnotification": "2.0.0-preview.9",
+    "com.phantomsxr.xrmodpackagetools": "1.6.0",
+    "com.phantomsxr.xrmodapi": "2.0.0-preview.21"
+  }
+}

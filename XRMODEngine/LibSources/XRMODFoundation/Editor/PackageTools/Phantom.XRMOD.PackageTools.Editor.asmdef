@@ -1,0 +1,30 @@
+{
+    "name": "Phantom.XRMOD.PackageTools.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:5c1ff9bd975acec488150743d53a93ca",
+        "GUID:c5ecc461727906345a35491a0440694f",
+        "GUID:92703082f92b41ba80f0d6912de66115",
+        "GUID:d445613d091ffc941ae68355f01656f6",
+        "GUID:793c86bbd39d348ee8be578e0928811b",
+        "GUID:8c1b5e158961445498f8a66188fbb2e3",
+        "GUID:9cf70241678cb41a7b5484e5e1b7a238",
+        "GUID:f82d8dacaa2ef42918d414ca7732b8b8",
+        "GUID:0c2055e182afe49728b18698ad8a3050",
+        "GUID:164e9802f869143bcb45523cb1a84a13",
+        "GUID:9d09fd32588ee489e9ddde59dac0811e"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "XRMOD_INSTALL"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

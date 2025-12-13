@@ -1,0 +1,19 @@
+{
+    "name": "Phantom.XRMOD.ActionNotification.UnityFusion",
+    "rootNamespace": "Phantom.XRMOD.ActionNotification.UnityFusion",
+    "references": [
+        "GUID:d445613d091ffc941ae68355f01656f6",
+        "GUID:d1b7af04124239145bc1904ef0c73501"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "XRMOD_INSTALL"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

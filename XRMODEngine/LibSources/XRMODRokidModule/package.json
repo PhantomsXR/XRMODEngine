@@ -1,0 +1,29 @@
+{
+  "name": "com.phantomsxr.rokidmodule",
+  "displayName": "XRMOD Rokid Module",
+  "version": "3.0.0-preview.10",
+  "keywords": [
+    "foundation",
+    "core",
+    "rokid"
+  ],
+  "type": "library",
+  "dependencies": {
+    "com.phantomsxr.actionnotification": "2.0.4",
+    "com.phantomsxr.xrmodpackagetools": "1.9.4",
+    "com.phantomsxr.xrmodutilities": "1.3.2",
+    "com.phantomsxr.xrmodrenderingassistant": "1.1.3",
+    "com.phantomsxr.foundation": "2.0.0",
+    "com.phantomsxr.unityfusion": "2.0.6",
+    "com.phantomsxr.xrmodinput": "1.4.3",
+    "com.phantomsxr.xrmodapi": "2.0.1",
+    "com.phantomsxr.setup": "1.0.1",
+    "com.phantomsxr.xrmodlocalization": "1.2.5",
+    "com.phantomsxr.xrmodopenxrmodule": "1.0.0"
+  },
+  "author": {
+    "name": "Phantoms",
+    "email": "nswell@phantomsxr.com"
+  },
+  "unity": "6000.0"
+}

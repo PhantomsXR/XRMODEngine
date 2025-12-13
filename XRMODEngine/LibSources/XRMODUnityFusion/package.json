@@ -1,0 +1,22 @@
+{
+  "name": "com.phantomsxr.unityfusion",
+  "displayName": "XRMOD UnityFusion",
+  "version": "3.0.4",
+  "keywords": [
+    "il",
+    "core"
+  ],
+  "type": "library",
+  "author": {
+    "name": "Phantoms",
+    "email": "phantomxm2021@gmail.com"
+  },
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.1",
+    "com.phantomsxr.actionnotification": "2.0.0",
+    "com.phantomsxr.foundation": "3.0.8",
+    "com.unity.xr.interaction.toolkit": "3.0.1",
+    "com.unity.ai.navigation": "1.1.5",
+    "com.unity.textmeshpro": "3.0.6"
+  }
+}
