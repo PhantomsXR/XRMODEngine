@@ -1,0 +1,47 @@
+Key,English,ChineseSimplified
+Matching_Title,Joining Party,正在加入派对
+Matching_Disconnected_Text,Cancel,取消
+Start_StartGame_Text,Start Game,开始游戏
+ErrorBox_Action_Text,Action,Action
+GameLobby_ReadyUp_Text,Ready UP,准备
+Setting_Title,Settings,设置选项
+Quick_Start,Quick Start,快速匹配
+Join_Session,Join Session,加入派对
+JoinSpecifiedSession_SessionCode,Session Code,派对码
+JoinSpecifiedSession_Description,Use party codes to play against friends.,使用派对码与朋友进行对战。
+JoinSpecifiedSession_Join_Button,Join Party,加入派对
+JoinSpecifiedSession_SessionCode_Input,Session Code...,输入派对码...
+JoinSpecifiedSession_Title,Join Party,加入派对
+GameModeUI_Title,Game Mode,选择模式
+Join_Party_Hint_Text,Looking for an opponent.,正在寻找对手。
+More_GameMode,Stay Tuned,敬请期待
+PartyCode_Title,Party Code,派对码
+PartyCode_Description,Share your party code to compete with friends.,分享你的派对码与好友同台竞技。
+PartyCode_Copy_Button,Copy,复制
+Input_Device_Guide_Title,Input Device Guide,输入控制帮助
+Input_Device_Guide_L2,Secondary Weapon Trigger,副武器射击
+Input_Device_Guide_R2,Main Weapon Trigger,主武器射击
+Input_Device_Guide_LJ,Movement,移动
+Input_Device_Guide_RJ,Shot Direction,射击方向
+Input_Device_Guide_R,Ready,准备
+Input_Device_Guide_WASD,Control tank movement,控制坦克移动。
+Input_Device_Guide_LM,Main weapon - shoot with the left mouse button.,主武器-用鼠标左键射击。
+Input_Device_Guide_RM,Secondary weapon - shoot with the right mouse button.,副武器-用鼠标右键射击。
+Input_Device_Guide_Aim,Use the mouse to control the direction of the turret.,使用鼠标控制炮台的方向。
+ErrorBox_JoinFailed_Title,Join Failed,加入失败
+ErrorBox_JoinFailed_Description,The party code is wrong or the party does not exist.,派对码错误或派对不存在。
+ErrorBox_OK,OK,确认
+Setting_BestRegion_Title,Best Region,最佳地区
+Setting_BestRegion_Hint,"If the ping is too high, please choose according to your region.",如果ping过高请根据您所在的地域选择。
+Setting_BestRegion_BEST,Auto,自动
+Setting_BestRegion_CN,China,中国
+Setting_BestRegion_AU,Australia,澳大利亚
+Setting_BestRegion_ASIA,Singapore,新加坡
+Setting_BestRegion_IN,India,印度
+Setting_BestRegion_JP,Japan,日本
+Setting_BestRegion_KR,Korea,韩国
+Setting_BestRegion_TR,Turkey,土耳其
+Setting_BestRegion_UAE,Dubai,迪拜
+Setting_BestRegion_US,USA,美国
+Setting_BestRegion_HK,Hong Kong,香港
+PING,<br><size=2.5>PING</size>,<br><size=2.5>延迟</size>

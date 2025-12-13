@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2611676609903112966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1052217461230012183}
+  - component: {fileID: 1235022172196269123}
+  - component: {fileID: 1484179610944040961}
+  m_Layer: 0
+  m_Name: UniPoolTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1052217461230012183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2611676609903112966}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1235022172196269123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2611676609903112966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b473716bb7b42df9db8364c573e021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScriptList:
+  - ClassNamespace: FoundationTest.Runtime.UniPoolTest
+    ClassName: UniPoolSpawner
+    Fields:
+    - FieldName: colorList
+      Value: 
+      GameObject: {fileID: 0}
+      FieldType: 24
+      AssetType: UnityEngine.Color
+      ColorArray:
+      - {r: 1, g: 0, b: 0, a: 0}
+      - {r: 1, g: 0.96495914, b: 0, a: 0}
+      - {r: 0.3354423, g: 1, b: 0, a: 0}
+      - {r: 0, g: 1, b: 0.002824545, a: 0}
+      - {r: 0, g: 0.9953959, b: 1, a: 0}
+      - {r: 0, g: 0.4796934, b: 1, a: 0}
+      - {r: 0, g: 0.020439148, b: 1, a: 0}
+      - {r: 0.4221263, g: 0, b: 1, a: 0}
+      - {r: 0.94609547, g: 0, b: 1, a: 0}
+      - {r: 1, g: 0, b: 0.36585808, a: 0}
+      Vector2Array: []
+      Vector3Array: []
+      Vector4Array: []
+      QuaternionArray: []
+      AnimationCurveArray: []
+      Components: []
+      GameObjectArray: []
+    - FieldName: multiplier
+      Value: 5
+      GameObject: {fileID: 0}
+      FieldType: 0
+      AssetType: System.Int32
+      ColorArray: []
+      Vector2Array: []
+      Vector3Array: []
+      Vector4Array: []
+      QuaternionArray: []
+      AnimationCurveArray: []
+      Components: []
+      GameObjectArray: []
+    - FieldName: fillAmount
+      Value: 100
+      GameObject: {fileID: 0}
+      FieldType: 0
+      AssetType: System.Int32
+      ColorArray: []
+      Vector2Array: []
+      Vector3Array: []
+      Vector4Array: []
+      QuaternionArray: []
+      AnimationCurveArray: []
+      Components: []
+      GameObjectArray: []
+    - FieldName: prefabList
+      Value: '["CapsulePoolObj","CubePoolObj","SpherePoolObj"]'
+      GameObject: {fileID: 0}
+      FieldType: 34
+      AssetType: UnityEngine.GameObject
+      ColorArray: []
+      Vector2Array: []
+      Vector3Array: []
+      Vector4Array: []
+      QuaternionArray: []
+      AnimationCurveArray: []
+      Components: []
+      GameObjectArray: []
+    BoundData: 0
+    Added: 0
+    Activated: 0
+  DefaultRenderState: 0
+--- !u!114 &1484179610944040961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2611676609903112966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd2841abfc9a499ca837a83fb5c1758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 1052217461230012183}
