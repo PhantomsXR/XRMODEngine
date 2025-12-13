@@ -1,0 +1,104 @@
+<linker>
+    <!-- Platform Base Start -->
+    <assembly fullname="Phantom.XRMOD.QuestModule.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.QuestModule.UnityFusion" preserve="all"/>
+    <!-- Platform Base End -->
+
+
+    <!-- XRMOD Base Start -->
+    <assembly fullname="Phantom.XRMOD.GLTFExtension.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.UIExtension.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.SDKEntry.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.BaseFeaturesModule.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.Models.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.Core.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.RenderAssistant.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.XRMODAPI.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.WebrequestExtension.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.Immersal.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.ActionNotification.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.Localization.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.XRMODInput.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.XRMODUtilites.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.OpenXRModule.Runtime" preserve="all"/>
+    <!-- XRMOD Base End -->
+
+
+    <!-- Unity Base Start -->
+    <assembly fullname="NavMeshComponents" preserve="all"/>
+    <assembly fullname="Unity.Timeline" preserve="all"/>
+    <assembly fullname="com.unity.visualscripting" preserve="all"/>
+    <assembly fullname="Unity.XR.Interaction" preserve="all"/>
+    <assembly fullname="Unity.InputSystem" preserve="all"/>
+    <assembly fullname="UnityEngine.AudioModule" preserve="all"/>
+    <assembly fullname="UnityEngine.PhysicsModule" preserve="all"/>
+    <assembly fullname="UnityEngine.UIModule" preserve="all"/>
+    <assembly fullname="UnityEngine.UI" preserve="all"/>
+    <assembly fullname="UnityEngine.CoreModule" preserve="all"/>
+    <!-- Unity Base End -->
+
+
+    <!--Unity Fusion Start -->
+    <assembly fullname="Phantom.XRMOD.UnityFusion.Adapter.Runtime" preserve="all"/>Ï
+    <assembly fullname="Phantom.XRMOD.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.UnityFusion.Runtime.CLR" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.UnityFusion.Runtime.CLRBingding.CLR.ILRT" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.UnityFusion.Runtime.CLRBingding.CLR.Phantoms" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.UnityFusion.Runtime.CLRBingding.CLR.System" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.UnityFusion.Runtime.CLRBingding.CLR.UnityEngine" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.UnityFusion.Runtime.CodeHook" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.UnityFusion.ValueBinder" preserve="all"/>
+    <!--Unity Fusion End -->
+
+    <!--Unity Fusion Start -->
+    <assembly fullname="Phantom.XRMOD.AudioModule.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.PhotonModule.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.GameServices.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.SDKEntry.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.BaseFeaturesModule.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.Models.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.Core.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.RenderAssistant.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.XRMODAPI.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.Immersal.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.ActionNotification.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.Localization.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.XRMODInput.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.XRMODUtilites.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.GoapModue.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.UIFramework.UnityFusion" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.OpenXRModule.UnityFusion" preserve="all"/>
+    <!--Unity Fusion End -->
+
+
+    <!--Unity Extra Start -->
+    <assembly fullname="com.unity.animations.springbone" preserve="all"/>
+    <assembly fullname="Unity.Services.Core" preserve="all"/>
+    <!--Unity Extra End -->
+
+    <!--XRMOD Extra Module Start -->
+    <assembly fullname="Fusion.Unity" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.GameServices.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.PhotonModule.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.AudioModule.Runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.GoapModue.Runtime" preserve="all"/>
+    <assembly fullname="com.phantomsxr.agent.core" preserve="all"/>
+    <assembly fullname="com.phantomsxr.agent.runtime" preserve="all"/>
+    <assembly fullname="com.phantomsxr.goap.core" preserve="all"/>
+    <assembly fullname="com.phantomsxr.goap.resolver" preserve="all"/>
+    <assembly fullname="com.phantomsxr.goap.runtime" preserve="all"/>
+    <assembly fullname="Phantom.XRMOD.UIFramework.Runtime" preserve="all"/>
+    <!--XRMOD Extra Module End -->
+
+
+    <!--ARFoundation Start -->
+    <assembly fullname="Unity.XR.ARFoundation" preserve="all"/>
+    <assembly fullname="Unity.XR.ARSubsystems" preserve="all"/>
+    <assembly fullname="Unity.XR.ARFoundation.InternalUtils" preserve="all"/>
+    <assembly fullname="Unity.XR.ARKit" preserve="all"/>
+    <assembly fullname="Unity.XR.ARCore" preserve="all"/>
+    <assembly fullname="Unity.XR.CoreUtils" preserve="all"/>
+    <assembly fullname="Unity.XR.Interaction.Toolkit" preserve="all"/>
+    <!--ARFoundation End -->
+
+</linker>

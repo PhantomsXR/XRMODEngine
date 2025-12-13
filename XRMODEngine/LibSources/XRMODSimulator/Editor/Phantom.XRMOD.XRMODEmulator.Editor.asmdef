@@ -1,0 +1,44 @@
+{
+    "name": "Phantom.XRMOD.XRMODSimulator.Editor",
+    "rootNamespace": "Phantom.XRMOD.XRMODSimulator.Editor",
+    "references": [
+        "GUID:d445613d091ffc941ae68355f01656f6",
+        "GUID:7e905900bfc7c49c0a05ff59ede1664a",
+        "GUID:c5ecc461727906345a35491a0440694f",
+        "GUID:f9fe0089ec81f4079af78eb2287a6163",
+        "GUID:e40ba710768534012815d3193fa296cb",
+        "GUID:040e7d3de957a7e49b43185599fa7a17",
+        "GUID:ff67403ef013347b081c20081c24d737",
+        "GUID:767f25efd20d4339a8b1683f8dc1d7d8",
+        "GUID:894a6cc6ed5cd2645bb542978cbed6a9"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "XRMOD_INSTALL"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.multiplayer.playmode",
+            "expression": "1.0.0",
+            "define": "USE_MPPM"
+        },
+        {
+            "name": "com.veriorpies.parrelsync",
+            "expression": "1.0.0",
+            "define": "USE_PARREL"
+        },
+        {
+            "name": "com.unity.multiplayer.playmode",
+            "expression": "2.0.1",
+            "define": "USE_MPPM_2"
+        }
+    ],
+    "noEngineReferences": false
+}

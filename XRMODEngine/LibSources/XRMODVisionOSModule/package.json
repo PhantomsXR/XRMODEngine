@@ -1,0 +1,35 @@
+{
+  "name": "com.phantomsxr.visionosmodule",
+  "displayName": "XRMOD VisionOSModule",
+  "version": "1.0.0-preview.26",
+  "unity": "6000.0",
+  "keywords": [
+    "foundation",
+    "core",
+    "apple vision pro",
+    "poly spatial",
+    "spatial computing"
+  ],
+  "type": "library",
+  "author": {
+    "name": "Phantoms",
+    "email": "phantomxm2021@gmail.com"
+  },
+  "dependencies": {
+    "com.unity.polyspatial.xr": "2.2.4",
+    "com.unity.xr.visionos": "2.2.4",
+    "com.unity.polyspatial.visionos": "2.2.4",
+    "com.unity.xr.management": "4.5.0",
+    "com.unity.render-pipelines.universal": "17.1.0",
+    "com.phantomsxr.foundation": "2.0.0-preview.55",
+    "com.phantomsxr.xrmodapi": "2.0.0-preview.38",
+    "com.phantomsxr.xrmodinput": "1.4.1",
+    "com.phantomsxr.xrmodlocalization": "1.2.2",
+    "com.phantomsxr.xrmodpackagetools": "1.8.15",
+    "com.phantomsxr.setup": "1.0.1",
+    "com.phantomsxr.unityfusion": "2.0.0-preview.78",
+    "com.phantomsxr.xrmodutilities": "1.2.6",
+    "com.phantomsxr.actionnotification": "2.0.1"
+  },
+  "unityRelease": "26f1"
+}

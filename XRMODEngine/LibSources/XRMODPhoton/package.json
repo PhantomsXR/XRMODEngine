@@ -1,0 +1,22 @@
+{
+  "name": "com.phantomsxr.xrmodphotonmodule",
+  "version": "1.0.0-preview.12",
+  "displayName": "XRMOD Photon Module",
+  "type": "library",
+  "unity": "2020.3",
+  "keywords": [
+    "XRMOD",
+    "API",
+    "Multiplayer",
+    "Photon"
+  ],
+  "dependencies": {
+    "com.unity.nuget.mono-cecil": "1.11.4"
+  },
+  "author": {
+    "name": "Phantoms",
+    "email": "nswell@phantomsxr.com"
+  },
+  "description": "Fusion is a new high performance state synchronization networking library for Unity. Fusion is built with simplicity in mind to integrate naturally into the common Unity workflow, while also offering advanced features like data compression, client-side prediction and lag compensation out of the box.",
+  "license": "Apache License"
+}

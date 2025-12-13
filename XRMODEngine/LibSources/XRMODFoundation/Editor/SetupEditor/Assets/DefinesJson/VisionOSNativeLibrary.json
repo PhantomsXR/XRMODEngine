@@ -1,0 +1,7 @@
+{
+  "Json": [
+    "ENABLE_NATIVE",
+    "VISIONOS_INSTALL", 
+    "XRMOD_INSTALL"
+  ]
+}

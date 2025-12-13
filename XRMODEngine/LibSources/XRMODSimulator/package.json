@@ -1,0 +1,19 @@
+{
+  "name": "com.phantomsxr.xrmodsimulator",
+  "version": "1.0.3",
+  "displayName": "XRMOD Simulator",
+  "hideInEditor": false,
+  "unity": "2020.3",
+  "keywords": [],
+  "author": {
+    "name": "Phantoms",
+    "email": "phantomxm2021@gmail.com"
+  },
+  "dependencies": {
+    "com.unity.scriptablebuildpipeline": "1.20.1",
+    "com.phantomsxr.foundation": "3.0.3"
+  },
+  "type": "tool",
+  "description": "The XR-MOD Simulator is a tool used to develop XR Experience content. It allows developers to get what you see is what you get.",
+  "license": "Apache License"
+}

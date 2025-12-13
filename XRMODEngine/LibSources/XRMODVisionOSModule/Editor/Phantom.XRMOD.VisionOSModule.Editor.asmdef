@@ -1,0 +1,19 @@
+{
+    "name": "Phantom.XRMOD.VisionOSModule.Editor",
+    "rootNamespace": "Phantom.XRMOD.VisionOSModule.Editor",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "VISIONOS_INSTALL",
+        "XRMOD_INSTALL"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

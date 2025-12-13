@@ -1,0 +1,26 @@
+{
+  "name": "com.phantomsxr.questmodule",
+  "displayName": "XRMOD QuestModule",
+  "version": "1.0.1",
+  "unity": "6000.0",
+  "keywords": [
+    "foundation",
+    "core",
+    "quest"
+  ],
+  "type": "library",
+  "author": {
+    "name": "Phantoms",
+    "email": "nswell@phantomsxr.com"
+  },
+  "dependencies": {
+    "com.phantomsxr.actionnotification": "2.0.4",
+    "com.phantomsxr.foundation": "3.0.9",
+    "com.phantomsxr.unityfusion": "3.0.3",
+    "com.phantomsxr.xrmodinput": "1.4.8",
+    "com.phantomsxr.xrmodopenxrmodule": "1.0.2",
+    "com.unity.xr.meta-openxr": "2.1.1",
+    "com.unity.xr.openxr": "1.14.3"
+  },
+  "description": "XRMOD QuestModule is a specialized support module for the Meta Quest space operating system. \nIt enables XRMOD Engine to run smoothly on Meta Quest."
+}

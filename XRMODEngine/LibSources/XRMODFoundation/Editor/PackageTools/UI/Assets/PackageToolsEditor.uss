@@ -1,0 +1,43 @@
+.horizontal-button {
+    margin-top: 10px;
+}
+
+.build-button {
+    margin-right: 0;
+    border-right-width: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.dropdown-button {
+    border-left-width: 0;
+    margin-left: 1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 20px;
+}
+.dropdown-button-image{
+    background-image: resource("d_dropdown@2x");
+    align-self: center;
+    height: 16px;
+    width: 16px;
+    -unity-text-align: middle-center;
+}
+
+.toolbar-button-item {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbar-label-item {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.full-vertical-view {
+    height: 100%;
+}

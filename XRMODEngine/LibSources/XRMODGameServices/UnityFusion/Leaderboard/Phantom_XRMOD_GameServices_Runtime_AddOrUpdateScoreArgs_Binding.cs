@@ -1,0 +1,116 @@
+using System;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Runtime.InteropServices;
+
+using UnityFusion.CLR.TypeSystem;
+using UnityFusion.CLR.Method;
+using UnityFusion.Runtime.Enviorment;
+using UnityFusion.Runtime.Intepreter;
+using UnityFusion.Runtime.Stack;
+using UnityFusion.Reflection;
+using UnityFusion.CLR.Utils;
+#if DEBUG && !DISABLE_UNITYFUSION_DEBUG
+using AutoList = System.Collections.Generic.List<object>;
+#else
+using AutoList = UnityFusion.Other.UncheckedList<object>;
+#endif
+
+namespace UnityFusion.Runtime.Generated
+{
+    unsafe class Phantom_XRMOD_GameServices_Runtime_AddOrUpdateScoreArgs_Binding
+    {
+        public static void Register(UnityFusion.Runtime.Enviorment.AppDomain app)
+        {
+            BindingFlags flag = BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly;
+            MethodBase method;
+            FieldInfo field;
+            Type[] args;
+            Type type = typeof(Phantom.XRMOD.GameServices.Runtime.AddOrUpdateScoreArgs);
+
+            field = type.GetField("UserName", flag);
+            app.RegisterCLRFieldGetter(field, get_UserName_0);
+            app.RegisterCLRFieldSetter(field, set_UserName_0);
+            app.RegisterCLRFieldBinding(field, CopyToStack_UserName_0, AssignFromStack_UserName_0);
+            field = type.GetField("Score", flag);
+            app.RegisterCLRFieldGetter(field, get_Score_1);
+            app.RegisterCLRFieldSetter(field, set_Score_1);
+            app.RegisterCLRFieldBinding(field, CopyToStack_Score_1, AssignFromStack_Score_1);
+
+
+            app.RegisterCLRCreateDefaultInstance(type, () => new Phantom.XRMOD.GameServices.Runtime.AddOrUpdateScoreArgs());
+            app.RegisterCLRCreateArrayInstance(type, s => new Phantom.XRMOD.GameServices.Runtime.AddOrUpdateScoreArgs[s]);
+
+            args = new Type[]{};
+            method = type.GetConstructor(flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, Ctor_0);
+
+        }
+
+
+
+        static object get_UserName_0(ref object o)
+        {
+            return ((Phantom.XRMOD.GameServices.Runtime.AddOrUpdateScoreArgs)o).UserName;
+        }
+
+        static StackObject* CopyToStack_UserName_0(ref object o, ILIntepreter __intp, StackObject* __ret, AutoList __mStack)
+        {
+            var result_of_this_method = ((Phantom.XRMOD.GameServices.Runtime.AddOrUpdateScoreArgs)o).UserName;
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static void set_UserName_0(ref object o, object v)
+        {
+            ((Phantom.XRMOD.GameServices.Runtime.AddOrUpdateScoreArgs)o).UserName = (System.String)v;
+        }
+
+        static StackObject* AssignFromStack_UserName_0(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, AutoList __mStack)
+        {
+            UnityFusion.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            System.String @UserName = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack), (CLR.Utils.Extensions.TypeFlags)0);
+            ((Phantom.XRMOD.GameServices.Runtime.AddOrUpdateScoreArgs)o).UserName = @UserName;
+            return ptr_of_this_method;
+        }
+
+        static object get_Score_1(ref object o)
+        {
+            return ((Phantom.XRMOD.GameServices.Runtime.AddOrUpdateScoreArgs)o).Score;
+        }
+
+        static StackObject* CopyToStack_Score_1(ref object o, ILIntepreter __intp, StackObject* __ret, AutoList __mStack)
+        {
+            var result_of_this_method = ((Phantom.XRMOD.GameServices.Runtime.AddOrUpdateScoreArgs)o).Score;
+            __ret->ObjectType = ObjectTypes.Float;
+            *(float*)&__ret->Value = result_of_this_method;
+            return __ret + 1;
+        }
+
+        static void set_Score_1(ref object o, object v)
+        {
+            ((Phantom.XRMOD.GameServices.Runtime.AddOrUpdateScoreArgs)o).Score = (System.Single)v;
+        }
+
+        static StackObject* AssignFromStack_Score_1(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, AutoList __mStack)
+        {
+            UnityFusion.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            System.Single @Score = *(float*)&ptr_of_this_method->Value;
+            ((Phantom.XRMOD.GameServices.Runtime.AddOrUpdateScoreArgs)o).Score = @Score;
+            return ptr_of_this_method;
+        }
+
+
+
+        static StackObject* Ctor_0(ILIntepreter __intp, StackObject* __esp, AutoList __mStack, CLRMethod __method, bool isNewObj)
+        {
+            UnityFusion.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 0);
+
+            var result_of_this_method = new Phantom.XRMOD.GameServices.Runtime.AddOrUpdateScoreArgs();
+
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+
+    }
+}

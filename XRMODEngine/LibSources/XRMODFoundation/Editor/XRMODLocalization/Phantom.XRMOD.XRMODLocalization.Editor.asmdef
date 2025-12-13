@@ -1,0 +1,30 @@
+{
+    "name": "Phantom.XRMOD.XRMODLocalization.Editor",
+    "rootNamespace": "Phantom.XRMOD.XRMODLocalization.Editor",
+    "references": [
+        "GUID:164e9802f869143bcb45523cb1a84a13",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:de70d7e09fb0f461aa4945d95ce1951c",
+        "GUID:793c86bbd39d348ee8be578e0928811b",
+        "GUID:478a2357cc57436488a56e564b08d223"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "XRMOD_INSTALL"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.phantomsxr.audiomodule",
+            "expression": "0.0.1",
+            "define": "USE_AUDIO_MODULE"
+        }
+    ],
+    "noEngineReferences": false
+}

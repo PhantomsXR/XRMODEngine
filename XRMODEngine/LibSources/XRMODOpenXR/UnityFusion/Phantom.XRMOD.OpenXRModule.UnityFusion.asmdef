@@ -1,0 +1,30 @@
+{
+    "name": "Phantom.XRMOD.OpenXRModule.UnityFusion",
+    "rootNamespace": "",
+    "references": [
+        "GUID:002999ee0ebf846898468419036e2ced",
+        "GUID:d1b7af04124239145bc1904ef0c73501",
+        "GUID:4847341ff46394e83bb78fbd0652937e",
+        "GUID:8efef0e48627b4af5a28950b21575514"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.xr.openxr",
+            "expression": "1.14.2",
+            "define": "UNITY_OPENXR"
+        },
+        {
+            "name": "com.unity.xr.meta-openxr",
+            "expression": "2.1.0",
+            "define": "META_OPENXR"
+        }
+    ],
+    "noEngineReferences": false
+}

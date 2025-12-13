@@ -1,0 +1,35 @@
+{
+    "name": "Phantom.XRMOD.GoapModue.UnityFusion",
+    "rootNamespace": "Phantom.XRMOD.GoapModue.UnityFusion",
+    "references": [
+        "GUID:d1b7af04124239145bc1904ef0c73501",
+        "GUID:b42b1af0d05434e77946ece798ade41b",
+        "GUID:1492f7fc38ce464dae5c20df05fd22e3",
+        "GUID:e52adf591423434e8c16eeb452c84a82",
+        "GUID:6eb7f39de256eea4bb8708df2c32e1ba",
+        "GUID:0d347051544a4880a72466503e27985a",
+        "GUID:4d9088d80ac84f52b9b07421f95af69c",
+        "GUID:fb044e467877d42df875ffad27576788",
+        "GUID:d445613d091ffc941ae68355f01656f6",
+        "GUID:f5391a7299cc4483daabe53b20c42edb",
+        "GUID:0c2055e182afe49728b18698ad8a3050"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "ENABLE_UNITYFUSION",
+        "XRMOD_INSTALL"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.phantomsxr.unityfusion",
+            "expression": "2.0.0-preview.1",
+            "define": "ENABLE_UNITYFUSION"
+        }
+    ],
+    "noEngineReferences": false
+}
