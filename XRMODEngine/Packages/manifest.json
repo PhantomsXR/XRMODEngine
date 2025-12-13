@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.phantomsxr.actionnotification": "file:../LibSources/XRMODActionNotifier",
+    "com.phantomsxr.xrmodavatar": "file:../LibSources/XRMODAvatar",
     "com.phantomsxr.foundation": "file:../LibSources/XRMODFoundation",
     "com.phantomsxr.questmodule": "file:../LibSources/XRMODQuestModule",
     "com.phantomsxr.unityfusion": "file:../LibSources/XRMODUnityFusion",
