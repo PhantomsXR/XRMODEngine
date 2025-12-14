@@ -1,4 +1,4 @@
-name: Deploy All Packages by Release
+name: Deploy All Packages (UPM + NPM)
 
 on:
   release:
@@ -11,8 +11,8 @@ jobs:
   inspect-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # 需要写权限来打 Tag 和推送分支
-    
+      contents: write
+      packages: write
     strategy:
       fail-fast: false
       matrix:
@@ -41,28 +41,24 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # 必须拉取完整历史
-
+          
+      # 1. 准备 Node.js 环境 (新增步骤)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16'
+          # 如果发布到 npmjs.org:
+          # registry-url: 'https://registry.npmjs.org'
+          # 如果发布到 GitHub Packages:
+          registry-url: 'https://npm.pkg.github.com'
+          
       - name: Read Package Version
         id: meta
         run: |
           PKG_PATH="XRMODPackages/${{ matrix.package }}"
-          
-          # 1. 检查文件是否存在
-          if [ ! -f "$PKG_PATH/package.json" ]; then
-            echo "::error::package.json not found in $PKG_PATH"
-            exit 1
-          fi
-
-          # 2. 读取 version 字段
           VERSION=$(jq -r .version "$PKG_PATH/package.json")
-          
-          # 3. 构造目标 Tag 名字 (格式: 包名/版本号)
           TAG_NAME="${{ matrix.package }}/$VERSION"
           
-          echo "Detected Version: $VERSION"
-          echo "Target Tag: $TAG_NAME"
-          
-          # 4. 导出变量
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
           echo "PKG_PATH=$PKG_PATH" >> $GITHUB_ENV
@@ -71,10 +67,8 @@ jobs:
         id: check_tag
         run: |
           if git rev-parse "${{ env.TAG_NAME }}" >/dev/null 2>&1; then
-            echo "Tag ${{ env.TAG_NAME }} already exists. Skipping tag creation."
             echo "exists=true" >> $GITHUB_OUTPUT
           else
-            echo "New version detected!"
             echo "exists=false" >> $GITHUB_OUTPUT
           fi
 
@@ -107,3 +101,23 @@ jobs:
           
           # 推送 Tag
           git push origin ${{ env.TAG_NAME }}
+      # 2. 发布到 NPM (新增步骤)
+      - name: Publish to NPM
+        # 只有新版本才发布到 NPM
+        if: steps.check_tag.outputs.exists == 'false'
+        run: |
+          echo "Publishing ${{ matrix.package }} to NPM Registry..."
+          
+          # 进入包的目录
+          cd ${{ env.PKG_PATH }}
+          
+          # 【关键】因为 npm publish 需要 .npmrc 里的认证信息
+          # setup-node action 会自动生成 .npmrc，但我们这里直接运行即可
+          
+          # 运行发布命令
+          # --access public 是必须的，除非你付费了私有包
+          npm publish --access public
+        env:
+          # 这里的 Token 对应你在 setup-node 里配置的 registry
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          # 如果是用 GitHub Packages，这里用 ${{ secrets.GITHUB_TOKEN }}
