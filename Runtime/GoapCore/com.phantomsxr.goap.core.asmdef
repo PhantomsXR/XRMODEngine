@@ -1,0 +1,20 @@
+{
+    "name": "Goap.Core",
+    "rootNamespace": "Goap.Core",
+    "references": [
+        "GUID:0d347051544a4880a72466503e27985a",
+        "GUID:d1b7af04124239145bc1904ef0c73501",
+        "GUID:f5391a7299cc4483daabe53b20c42edb"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "XRMOD_INSTALL"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
