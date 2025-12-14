@@ -1,7 +1,7 @@
 {
   "name": "com.phantomsxr.xrmodnetcodemodule",
   "displayName": "XRMOD Netcode Module",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Netcode for GameObjects is a high-level netcode SDK that provides networking capabilities to GameObject/MonoBehaviour workflows within Unity and sits on top of underlying transport layer.",
   "keywords": [
     "Multiplayer",

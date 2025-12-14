@@ -34,6 +34,8 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
         private static NetcodeServiceAPI _INSTANCE;
         private static ISession _SESSION;
         private static NetworkObject _PLAYER_PREFAB;
+        private static NetworkTopologyTypes _NETWORK_MANAGER_TYPES;
+        private static UnityTransport _UNITY_TRANSPORT;
 
         private List<GameObject> networkPrefabObjects = new List<GameObject>();
 
@@ -49,7 +51,15 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
 
         public string GetCurrentSessionName => _SESSION.Name;
 
-        public string GetCurrentSessionCode => _SESSION.Code;
+        public string GetCurrentSessionCode
+        {
+            get
+            {
+                if (_SESSION != null && NetworkTopologyTypes != NetworkTopologyTypes.ClientServer)
+                    return _SESSION.Code;
+                return _NETWORK_MANAGER.GetFixedCode(_UNITY_TRANSPORT.ConnectionData.Address);
+            }
+        }
 
         /// <summary>
         /// Gets a value indicating whether the current instance is acting as a server.
@@ -67,9 +77,16 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
         public bool IsHost => _NETWORK_MANAGER.IsHost;
 
         /// <summary>
+        /// Gets current network topology types
+        /// </summary>
+        public NetworkTopologyTypes NetworkTopologyTypes => _NETWORK_MANAGER_TYPES;
+
+        /// <summary>
         /// Gets the underlying Unity NetworkManager instance.
         /// </summary>
         public NetworkManager GetNetworkManager => _NETWORK_MANAGER;
+
+        public UnityTransport GetUnityTransport => _UNITY_TRANSPORT;
 
         /// <summary>
         /// Gets the singleton instance of the <see cref="NetcodeServiceAPI"/>.
@@ -302,13 +319,14 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
         /// <exception cref="Exception">Thrown if both matchmake and create session operations fail.</exception>
         public async Task<ISession> CreateOrJoinSession(string _gameName, BaseSessionConfig _baseSessionConfig)
         {
+            _NETWORK_MANAGER_TYPES = _baseSessionConfig.TopologyTypes;
             if (!_baseSessionConfig.UseUnityMatchmaking &&
                 _baseSessionConfig.TopologyTypes == NetworkTopologyTypes.ClientServer)
             {
-                var tmp_Transport = MakeUnityTransport();
+                _UNITY_TRANSPORT = MakeUnityTransport();
 
                 if (_baseSessionConfig is not HostingBaseSessionConfig tmp_Config) return null;
-                tmp_Transport.SetConnectionData(tmp_Config.Host, tmp_Config.Port);
+                _UNITY_TRANSPORT.SetConnectionData(tmp_Config.Host, tmp_Config.Port);
 
                 switch (tmp_Config.ClientServerType)
                 {
@@ -401,15 +419,15 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
                 if (!_baseSessionConfig.UseUnityMatchmaking &&
                     _baseSessionConfig.TopologyTypes == NetworkTopologyTypes.ClientServer)
                 {
-                    var tmp_Transport = MakeUnityTransport();
+                    _UNITY_TRANSPORT = MakeUnityTransport();
 
                     if (_baseSessionConfig is not HostingBaseSessionConfig tmp_Config)
                     {
                         Debug.Log(_baseSessionConfig.GetType());
                         return null;
                     }
-                    
-                    tmp_Transport.SetConnectionData(tmp_Config.Host, tmp_Config.Port);
+
+                    _UNITY_TRANSPORT.SetConnectionData(tmp_Config.Host, tmp_Config.Port);
                     switch (tmp_Config.ClientServerType)
                     {
                         case ClientServerTypeEnum.Host:
@@ -510,7 +528,7 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
                 case NetworkTopologyTypes.ClientServer:
                 {
                     // Ensure UnityTransport is present for ClientServer topology.
-                    _ = MakeUnityTransport();
+                    _UNITY_TRANSPORT = MakeUnityTransport();
 
                     if (_baseSessionConfig is HostingBaseSessionConfig tmp_Config)
                     {
@@ -526,7 +544,7 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
                 case NetworkTopologyTypes.UnityRelay:
                 {
                     // For Relay, ensure UnityTransport is present and configure with region.
-                    _ = MakeUnityTransport();
+                    _UNITY_TRANSPORT = MakeUnityTransport();
 
                     var tmp_Config = (RelayOrDistributedBaseSessionConfig) _baseSessionConfig;
                     var tmp_Region =
@@ -537,7 +555,7 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
                 case NetworkTopologyTypes.DistributedAuthority:
                 {
                     // For Distributed Authority, UnityTransport might not be needed or might be handled differently.
-                    _ = MakeUnityTransport();
+                    _UNITY_TRANSPORT = MakeUnityTransport();
 
                     var tmp_Config = (RelayOrDistributedBaseSessionConfig) _baseSessionConfig;
                     var tmp_Region =
