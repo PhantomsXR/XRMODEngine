@@ -46,11 +46,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '16'
-          # 如果发布到 npmjs.org:
+          node-version: '18'
           registry-url: 'https://registry.npmjs.org'
-          # 如果发布到 GitHub Packages:
-          # registry-url: 'https://npm.pkg.github.com'
           
       - name: Read Package Version
         id: meta
@@ -92,21 +89,16 @@ jobs:
 
       # 2. 发布到 NPM (新增步骤)
       - name: Publish to NPM
-        # 只有新版本才发布到 NPM
-        if: steps.check_tag.outputs.exists == 'false'
         run: |
-          echo "Publishing ${{ matrix.package }} to NPM Registry..."
-          
-          # 进入包的目录
           cd ${{ env.PKG_PATH }}
           
-          # 【关键】因为 npm publish 需要 .npmrc 里的认证信息
-          # setup-node action 会自动生成 .npmrc，但我们这里直接运行即可
+          # 确保没有任何干扰的 publishConfig
+          jq 'del(.publishConfig)' package.json > tmp.json && mv tmp.json package.json
           
-          # 运行发布命令
-          # --access public 是必须的，除非你付费了私有包
+          echo "Publishing to Official NPM Registry with Granular Token..."
+          
+          # Granular Token 必须带上 --access public 才能发布 scoped 包
           npm publish --access public
         env:
-          # 这里的 Token 对应你在 setup-node 里配置的 registry
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} 
-          # 如果是用 GitHub Packages，这里用 ${{ secrets.GITHUB_TOKEN }}
+          # 使用更新后的 Token
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
