@@ -1,0 +1,40 @@
+{
+    "name": "Phantom.XRMOD.XRMODAvatar.Runtime",
+    "rootNamespace": "Phantom.XRMOD.XRMODAvatar",
+    "references": [
+        "GUID:1491147abca9d7d4bb7105af628b223e",
+        "GUID:ce522b6ed64c8be4c989a1d26d0e3275",
+        "GUID:fe685ec1767f73d42b749ea8045bfe43",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:3c47f6a4d9ec348da87b1afcbf75a631",
+        "GUID:dc960734dc080426fa6612f1c5fe95f3",
+        "GUID:e0cd26848372d4e5c891c569017e11f1",
+        "GUID:21aeb795136b45f0a2408f3003f0efeb",
+        "GUID:d445613d091ffc941ae68355f01656f6",
+        "GUID:0c2055e182afe49728b18698ad8a3050",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:21d6de024542e4b7bb829ca2ebc8f511"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "XRMOD_INSTALL"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.xr.hands",
+            "expression": "1.0.0",
+            "define": "USE_XR_HAND"
+        },
+        {
+            "name": "com.unity.xr.interaction.toolkit",
+            "expression": "1.0.0",
+            "define": "USE_XRI"
+        }
+    ],
+    "noEngineReferences": false
+}
