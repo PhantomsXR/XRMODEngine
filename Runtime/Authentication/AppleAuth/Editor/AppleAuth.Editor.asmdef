@@ -1,0 +1,20 @@
+{
+    "name": "AppleAuth.Editor",
+    "rootNamespace": "",
+    "references": [
+        "AppleAuth"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "USE_APPLE_AUTHENTICATION"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

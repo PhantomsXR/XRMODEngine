@@ -1,0 +1,16 @@
+{
+    "name": "AppleAuth",
+    "rootNamespace": "",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "USE_APPLE_AUTHENTICATION"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
