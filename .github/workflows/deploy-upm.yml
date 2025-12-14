@@ -80,6 +80,7 @@ jobs:
           git push origin split-temp:$TARGET_BRANCH --force
 
       # 3. 发布到 NPM (新增步骤)
+      # 3. 发布到 NPM (If New Version) - 修复版
       - name: Publish to NPM (If New Version)
         run: |
           cd ${{ env.PKG_PATH }}
@@ -91,23 +92,33 @@ jobs:
           PACKAGE_NAME=$(jq -r .name package.json)
           LOCAL_VERSION=$(jq -r .version package.json)
           
-          echo "🔍 Checking $PACKAGE_NAME (Local: $LOCAL_VERSION)..."
+          echo "🔍 Checking package: $PACKAGE_NAME"
+          echo "📝 Local Version: '$LOCAL_VERSION'"
 
-          # 3. 检查 NPM 上是否存在该版本
-          # npm view 命令如果找不到包会报错，所以我们用 || echo "" 来处理新包的情况
-          # 2>/dev/null 也是为了屏蔽 "404 Not Found" 的错误日志
-          REMOTE_VERSION=$(npm view "$PACKAGE_NAME@$LOCAL_VERSION" version 2>/dev/null || echo "")
+          # 3. 检查 NPM 上是否存在该版本 (优化点：使用 --json 获取确切结果)
+          # 如果包不存在或版本不存在，npm view --json 会返回空或者错误，我们捕获它
+          # 仅获取 version 字段，并去除所有引号和空白
+          REMOTE_VERSION=$(npm view "$PACKAGE_NAME@$LOCAL_VERSION" version --json 2>/dev/null | jq -r . || echo "")
+          
+          # 确保 REMOTE_VERSION 为纯净字符串 (去除 null 字符串如果 jq 返回 null)
+          if [ "$REMOTE_VERSION" == "null" ]; then REMOTE_VERSION=""; fi
+
+          echo "☁️  Remote Version found: '$REMOTE_VERSION'"
 
           # 4. 逻辑判断
           if [ "$REMOTE_VERSION" == "$LOCAL_VERSION" ]; then
-            echo "✅ Version $LOCAL_VERSION already exists on NPM."
-            echo "⏭️  Skipping publish to avoid error."
+            echo "✅ Version matches. Skipping publish."
+            # 显式退出当前 step，但不标记为失败 (exit 0)
             exit 0
           else
-            echo "🚀 Version $LOCAL_VERSION is not on NPM (or is a new package)."
-            echo "📦 Publishing..."
+            if [ -z "$REMOTE_VERSION" ]; then
+                echo "🚀 Version not found on NPM (New Release)."
+            else
+                # 理论上不应该走到这里，除非 npm view 返回了奇怪的东西，但我们当作不匹配处理
+                echo "⚠️ Version mismatch or other status. Proceeding to publish."
+            fi
             
-            # 执行发布
+            echo "📦 Publishing..."
             npm publish --access public
           fi
         env:
