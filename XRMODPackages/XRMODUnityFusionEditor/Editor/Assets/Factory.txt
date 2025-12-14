@@ -1,0 +1,41 @@
+// // /*===============================================================================
+// // Copyright (C) 2025 PhantomsXR Ltd. All Rights Reserved.
+// //
+// // This file is part of the Phantom.XRMOD.UnityFusion.Runtime.CodeHook.
+// //
+// // The VisionOSPlatform cannot be copied, distributed, or made available to
+// // third-parties for commercial purposes without written permission of PhantomsXR Ltd.
+// //
+// // Contact info@phantomsxr.com for licensing requests.
+// // ===============================================================================*/
+
+using System;
+using System.Reflection;
+using Phantom.XRMOD.Core.Runtime;
+using TMPro;
+using Unity.AI.Navigation;
+using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.Animations;
+using UnityEngine.Playables;
+using UnityEngine.Rendering;
+using UnityEngine.U2D;
+using UnityEngine.UI;
+using UnityEngine.Video;
+using Object = System.Object;
+
+namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
+{
+    public class MakeSureFactory
+    {
+        public bool MakeSureValue(ref FieldInfo _fieldInfo, object _target, object _value)
+        {
+            switch (_value)
+            {
+                #INSERT#
+            }
+
+            return true;
+        }
+    }
+}
