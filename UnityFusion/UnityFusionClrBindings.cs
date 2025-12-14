@@ -40,16 +40,16 @@ namespace UnityFusion.Runtime.Generated
                 .RegisterFunctionDelegate<Phantom.XRMOD.GameServices.Runtime.VoiceParticipant, System.Boolean>();
 
             app.DelegateManager
-                .RegisterDelegateConvertor<System.Predicate<Phantom.XRMOD.GameServices.Runtime.VoiceParticipant>>(
-                    (act) =>
+                .RegisterDelegateConvertor<
+                    System.Predicate<Phantom.XRMOD.GameServices.Runtime.VoiceParticipant>>((act) =>
+                {
+                    return new System.Predicate<Phantom.XRMOD.GameServices.Runtime.VoiceParticipant>((obj) =>
                     {
-                        return new System.Predicate<Phantom.XRMOD.GameServices.Runtime.VoiceParticipant>((obj) =>
-                        {
-                            return
-                                ((Func<Phantom.XRMOD.GameServices.Runtime.VoiceParticipant, System.Boolean>) act)(
-                                    obj);
-                        });
+                        return
+                            ((Func<Phantom.XRMOD.GameServices.Runtime.VoiceParticipant, System.Boolean>) act)(
+                                obj);
                     });
+                });
 
             // Authentication
             AuthenticationSystem_Runtime_SignInWithMetaProvider_Binding.Register(app);
