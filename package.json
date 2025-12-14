@@ -1,0 +1,20 @@
+{
+  "name": "com.phantomsxr.rokidmodule",
+  "displayName": "XRMOD Rokid Module",
+  "version": "3.0.0-preview.11",
+  "keywords": [
+    "foundation",
+    "core",
+    "rokid"
+  ],
+  "type": "library",
+  "dependencies": {
+    "com.phantomsxr.actionnotification": "2.0.4",
+    "com.phantomsxr.foundation": "3.0.11"
+  },
+  "author": {
+    "name": "Phantoms",
+    "email": "nswell@phantomsxr.com"
+  },
+  "unity": "6000.0"
+}
