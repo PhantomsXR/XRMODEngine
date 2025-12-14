@@ -1,0 +1,35 @@
+{
+    "name": "Phantom.XRMOD.UIFramework.UnityFusion",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0284bfbd6174c4f4eb8a040bacd14513",
+        "GUID:fb044e467877d42df875ffad27576788",
+        "GUID:f5391a7299cc4483daabe53b20c42edb",
+        "GUID:21d6de024542e4b7bb829ca2ebc8f511",
+        "GUID:d1b7af04124239145bc1904ef0c73501",
+        "GUID:fe685ec1767f73d42b749ea8045bfe43",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:f06555f75b070af458a003d92f9efb00",
+        "GUID:0c2055e182afe49728b18698ad8a3050"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.xr.interaction.toolkit",
+            "expression": "1.0.0",
+            "define": "USE_XRI"
+        },
+        {
+            "name": "com.unity.timeline",
+            "expression": "1.0.0",
+            "define": "USE_TIMELINE "
+        }
+    ],
+    "noEngineReferences": false
+}
