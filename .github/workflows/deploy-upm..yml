@@ -20,7 +20,7 @@ jobs:
         # 【配置】在这里列出所有包的文件夹名称
         # =======================================================
         package: 
-          - XRMODActionsNotifier 
+          - XRMODActionNotifier 
           - XRMODAvatar 
           - XRMODFoundation 
           - XRMODGameServices 
