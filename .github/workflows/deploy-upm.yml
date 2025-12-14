@@ -21,19 +21,19 @@ jobs:
         # =======================================================
         package: 
           - XRMODActionNotifier 
-          # - XRMODAvatar 
-          # - XRMODFoundation 
-          # - XRMODGameServices 
-          # - XRMODGoap 
-          # - XRMODInput 
-          # - XRMODNetcode 
-          # - XRMODOpenXR 
-          # - XRMODPhoton 
-          # - XRMODQuestModule 
-          # - XRMODRokidModule 
-          # - XRMODSimulator 
-          # - XRMODUIFramework 
-          # - XRMODUnityFusion 
+          - XRMODAvatar 
+          - XRMODFoundation 
+          - XRMODGameServices 
+          - XRMODGoap 
+          - XRMODInput 
+          - XRMODNetcode 
+          - XRMODOpenXR 
+          - XRMODPhoton 
+          - XRMODQuestModule 
+          - XRMODRokidModule 
+          - XRMODSimulator 
+          - XRMODUIFramework 
+          - XRMODUnityFusion 
           # 添加更多包...
 
     steps:
