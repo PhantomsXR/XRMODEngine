@@ -1,0 +1,40 @@
+using System;
+using UnityEngine;
+using System.Collections;
+using Phantom.XRMOD.XRMODAPI.Runtime;
+using Phantom.XRMOD.XRMODUtilites.Runtime;
+using Phantom.XRMOD.ActionNotification.Runtime;
+
+namespace #NAMESPACE#.Runtime 
+{
+    public class #SCRIPTNAME#
+    {       
+        private SharedData sharedData = SharedData.GetInstance;
+                
+        /// <summary>
+        /// Use this for initialization.
+        /// </summary>
+        public void OnLoad()
+        {
+        }
+        
+        /// <summary>
+        /// General event callback. Please delete the function if it is not used 
+        /// </summary>
+        /// <param name="_data"></param>
+        public void OnEvent(BaseNotificationData _data)
+        {
+            
+        }
+
+        /// <summary>
+        /// Release Memory after XR close. Please delete the function if it is not used
+        /// </summary> 
+        public void ReleaseMemory(string _projectName)
+        {
+            if (nameof(#NAMESPACE#) != _projectName) return;
+            sharedData.Dispose();
+            sharedData = null;
+        }
+    }
+}

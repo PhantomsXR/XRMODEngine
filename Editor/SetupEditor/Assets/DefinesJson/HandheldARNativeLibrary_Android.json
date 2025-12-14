@@ -1,0 +1,10 @@
+{
+  "Json": [    
+    "ENABLE_IMMERSAL",
+    "ENABLE_NATIVE",   
+    "HANDHELD_ARMODULE_INSTALL",
+    "ARCORE_INSTALL", 
+    "XRMOD_INSTALL"
+    
+  ]
+}

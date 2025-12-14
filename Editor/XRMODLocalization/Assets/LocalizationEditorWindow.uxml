@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="flex-direction: row; padding: 10px; gap: 6px;">
+        <ui:VisualElement name="left-panel" style="flex-direction: column; width: 200px;">
+            <ObjectField name="db-object-field" label="Localization DB" />
+            <ui:ListView name="table-list" style="flex-grow: 1; border-width: 1px; border-color: red;" />
+
+        </ui:VisualElement>
+        <ui:VisualElement name="table-detail" style="flex-grow: 1; border-width: 1px; border-color: red;" />
+    </ui:VisualElement>
+</ui:UXML>

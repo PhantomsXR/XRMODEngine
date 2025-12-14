@@ -1,0 +1,168 @@
+/* Global */
+.root-container {
+    flex-grow: 1;
+    background-color: #383838;
+}
+
+/* Toolbar */
+.toolbar-container {
+    flex-direction: row;
+    height: 30px;
+    background-color: #2D2D2D;
+    border-bottom-width: 1px;
+    border-bottom-color: #232323;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+}
+
+.toolbar-title {
+    -unity-font-style: bold;
+    color: #C4C4C4;
+}
+
+.toolbar-button {
+    background-color: #444;
+    border-width: 0;
+    border-radius: 3px;
+    color: #FFF;
+    padding: 4px 10px;
+}
+
+.toolbar-button:hover {
+    background-color: #555;
+}
+
+.toolbar-button:active {
+    background-color: #333;
+}
+
+/* Drop Area */
+.drop-area {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: #555;
+    border-style: dashed;
+    background-color: #303030;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.drop-area:hover {
+    border-color: #888;
+    background-color: #353535;
+}
+
+.drop-label {
+    color: #EEE;
+    font-size: 18px;
+    -unity-font-style: bold;
+    margin-top: 10px;
+}
+
+.drop-sublabel {
+    color: #888;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Main Container */
+.main-container {
+    flex-grow: 1;
+}
+
+.split-view {
+    flex-grow: 1;
+}
+
+.pane-header {
+    background-color: #282828;
+    padding: 5px 10px;
+    -unity-font-style: bold;
+    color: #AAA;
+    border-bottom-width: 1px;
+    border-bottom-color: #232323;
+}
+
+/* Left Pane */
+.left-pane {
+    flex-grow: 1;
+    background-color: #333;
+    border-right-width: 1px;
+    border-right-color: #232323;
+}
+
+.asset-list {
+    flex-grow: 1;
+}
+
+.asset-list-item {
+    padding: 5px 10px;
+    color: #DDD;
+    border-bottom-width: 1px;
+    border-bottom-color: #3A3A3A;
+}
+
+.asset-list-item:hover {
+    background-color: #3E3E3E;
+}
+
+.asset-list-item:checked {
+    background-color: #2C5D87;
+    color: #FFF;
+}
+
+/* Right Pane */
+.right-pane {
+    flex-grow: 1;
+    background-color: #2B2B2B;
+}
+
+.preview-scroll-view {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.preview-hint {
+    color: #666;
+    font-size: 14px;
+    align-self: center;
+    margin-top: 50px;
+}
+
+/* Preview Elements */
+.preview-label {
+    color: #EEE;
+    font-size: 14px;
+    white-space: normal;
+}
+
+.preview-text {
+    color: #EEE;
+    font-size: 12px;
+    white-space: normal;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.preview-button {
+    margin: 5px;
+    padding: 5px 15px;
+    background-color: #444;
+    color: #EEE;
+    border-radius: 4px;
+    border-width: 0;
+}
+
+.preview-button:hover {
+    background-color: #555;
+}
+
+.preview-button:active {
+    background-color: #333;
+}

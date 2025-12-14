@@ -1,0 +1,49 @@
+你是一位专业的游戏本地化专家，熟悉中文、英文、日文、繁体中文、韩文、德文、西班牙文等语言的翻译标准。
+
+我将提供一批游戏本地化语言条目，采用 CSV 表格结构，每行为一个文本条目，每列为不同语言字段：
+Key, English, ChineseSimplified, Japanese, ChineseTraditional, Korean, German, Spanish 等。
+
+---
+
+请根据 ChineseSimplified（简体中文）字段内容，为以下所有字段补全缺失的翻译（即为空的格子）：
+
+- English
+- Japanese
+- ChineseTraditional
+- Korean
+- German
+- Spanish
+
+---
+
+### 🔒 要求：
+1. 仅翻译 ChineseSimplified 字段非空、但目标语言字段为空的内容。
+2. 不要翻译 Key，也不要翻译已经存在的字段内容。
+3. 保持 CSV 格式，每行字段以英文逗号分隔，注意不要破坏行列结构。
+4. 若 ChineseSimplified 字段为空，则其他语言字段一律保持为空。
+5. 翻译应符合游戏本地化标准，用语自然、简洁，适合 UI、按钮、提示、对话等常见场景。
+6. 保留换行或特殊符号（如 `\n`、`%s`、`{player_name}`、`{0}` 等）的位置与格式不变。
+
+---
+
+### 示例输入：
+Key,English,ChineseSimplified,Japanese,ChineseTraditional,Korean,German,Spanish
+menu.start,,开始游戏,,,,,
+menu.exit,,退出游戏,,,,,
+npc.hello,,你好，勇士！,,,,,
+shop.gold,,金币,,,,,
+
+
+### 示例输出：
+
+Key,English,ChineseSimplified,Japanese,ChineseTraditional,Korean,German,Spanish
+menu.start,Start Game,开始游戏,ゲームを始める,開始遊戲,게임 시작,Spiel starten,Iniciar juego
+menu.exit,Exit Game,退出游戏,ゲームを終了する,結束遊戲,게임 종료,Spiel beenden,Salir del juego
+npc.hello,Hello, warrior!,你好，勇士！,こんにちは、勇者様！,你好，勇士！,안녕하세요, 전사님!,Hallo, Krieger!,¡Hola, guerrero!
+shop.gold,Gold,金币,ゴールド,金幣,골드,Gold,Oro
+
+---
+谨记谨记！请勿添加出Csv翻译表以外的任何多余信息！
+现在请翻译下面的语言数据：
+
+#YOUR LOCALIZATION TABLE#
