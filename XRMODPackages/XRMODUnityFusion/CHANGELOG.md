@@ -1,3 +1,9 @@
+# 3.0.5
+
+## Improved
+
+- Add missing clrs and reduce GC
+
 # 3.0.4
 
 ## Fixed

@@ -248,7 +248,12 @@ public class CLRCodeHelperEditor : EditorWindow
         // Get package manager assembly files path
         ilCodeBaseCollection.AllAssemblies = Directory.GetFiles(scriptAssembliesPath, "*.dll").ToList();
         // Get built-in assembly files path
-        var tmp_BuiltinAssembliesPath = Path.Combine(EditorApplication.applicationPath, "Contents/Managed/UnityEngine");
+        var tmp_BuiltinAssembliesPath =
+#if UNITY_6000_3_OR_NEWER
+            Path.Combine(EditorApplication.applicationPath, "Contents/Resources/Scripting/Managed/UnityEngine");
+#else
+            Path.Combine(EditorApplication.applicationPath, "Contents/Managed/UnityEngine");
+#endif
         var tmp_AllBuiltinAssembliesPath = Directory.GetFiles(tmp_BuiltinAssembliesPath, "*.dll").ToList();
         ilCodeBaseCollection.AllAssemblies.AddRange(tmp_AllBuiltinAssembliesPath);
         if (Directory.Exists($"{Application.dataPath}/Photon/Fusion/Assemblies"))

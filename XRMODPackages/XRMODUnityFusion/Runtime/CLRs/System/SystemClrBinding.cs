@@ -32,7 +32,8 @@ namespace UnityFusion.Runtime.Generated
             System_IO_FileSystemInfo_Binding.Register(_app);
 
             System_TimeSpan_Binding.Register(_app);
-
+            System_Activator_Binding.Register(_app);
+            
             System_Action_Binding.Register(_app);
             System_Action_1_DownloadHandler_Binding.Register(_app);
             System_Func_2_Nullable_1_DateTime_Task_Binding.Register(_app);
@@ -40,6 +41,8 @@ namespace UnityFusion.Runtime.Generated
             System_Action_1_String_Binding.Register(_app);
             System_Action_1_ILTypeInstance_Binding.Register(_app);
             System_Action_1_Transform_Binding.Register(_app);
+            System_Action_2_IPAddress_Int32_Binding.Register(_app);
+            System_Action_3_UInt64_Int32_Boolean_Binding.Register(_app);
             System_Func_1_ILTypeInstance_Binding.Register(_app);
             Dictionary_2_Int32_Func_1_ILTypeInstance_Binding.Register(_app);
             Dictionary_2_Type_List_1_Delegate_Binding.Register(_app);
@@ -62,6 +65,8 @@ namespace UnityFusion.Runtime.Generated
 
             System_Threading_Interlocked_Binding.Register(_app);
             System_Threading_Tasks_Task_Binding.Register(_app);
+            System_Threading_Tasks_Task_1_Single_Binding.Register(_app);
+            System_Threading_Tasks_Task_1_String_Binding.Register(_app);
             System_Threading_Tasks_Task_1_Texture_Binding.Register(_app);
             System_Threading_Tasks_Task_1_GameObject_Binding.Register(_app);
             System_Threading_Tasks_Task_1_AudioClip_Binding.Register(_app);
@@ -121,6 +126,7 @@ namespace UnityFusion.Runtime.Generated
             System_Threading_Tasks_Task_1_PhysicsMaterial2D_Binding.Register(_app);
             System_Threading_Tasks_Task_1_Shader_Binding.Register(_app);
             System_Threading_Tasks_Task_1_Sprite_Binding.Register(_app);
+            System_Threading_Tasks_Task_1_ILTypeInstance_Binding.Register(_app);
 
 
             System_Threading_Monitor_Binding.Register(_app);
@@ -293,6 +299,7 @@ namespace UnityFusion.Runtime.Generated
             System_Runtime_CompilerServices_TaskAwaiter_1_AnimationClip_Array_Binding.Register(_app);
             System_Runtime_CompilerServices_TaskAwaiter_1_Animator_Array_Binding.Register(_app);
             System_Runtime_CompilerServices_TaskAwaiter_1_AudioMixer_Array_Binding.Register(_app);
+            
             System_Runtime_CompilerServices_TaskAwaiter_1_Dictionary_2_String_AnimationClip_Binding.Register(_app);
             System_Runtime_CompilerServices_TaskAwaiter_1_Dictionary_2_String_Animator_Binding.Register(_app);
             System_Runtime_CompilerServices_TaskAwaiter_1_Dictionary_2_String_AudioMixer_Binding.Register(_app);
@@ -385,6 +392,10 @@ namespace UnityFusion.Runtime.Generated
 
             // CompilerServices
             System_Runtime_CompilerServices_TaskAwaiter_Binding.Register(_app);
+            System_Runtime_CompilerServices_TaskAwaiter_1_String_Binding.Register(_app);
+            System_Runtime_CompilerServices_TaskAwaiter_1_Single_Binding.Register(_app);
+            System_Runtime_CompilerServices_TaskAwaiter_1_ILTypeInstance_Binding.Register(_app);
+            System_Runtime_CompilerServices_TaskAwaiter_1_ShaderVariantCollection_Binding.Register(_app);
             System_Runtime_CompilerServices_TaskAwaiter_1_SpriteAtlas_Binding.Register(_app);
             System_Runtime_CompilerServices_TaskAwaiter_1_TextAsset_Binding.Register(_app);
             System_Runtime_CompilerServices_TaskAwaiter_1_Texture2D_Binding.Register(_app);
@@ -408,6 +419,9 @@ namespace UnityFusion.Runtime.Generated
             System_Runtime_CompilerServices_YieldAwaitable_Binding.Register(_app);
             System_Runtime_CompilerServices_YieldAwaitable_Binding_YieldAwaiter_Binding.Register(_app);
             System_Runtime_CompilerServices_AsyncTaskMethodBuilder_1_ScriptableObject_Binding.Register(_app);
+            System_Runtime_CompilerServices_AsyncTaskMethodBuilder_1_Single_Binding.Register(_app);
+            System_Runtime_CompilerServices_AsyncTaskMethodBuilder_1_ILTypeInstance_Binding.Register(_app);
+            System_Runtime_CompilerServices_AsyncTaskMethodBuilder_1_AudioClip_Binding.Register(_app);
 #if UNITY_6000_0_OR_NEWER
             System_Runtime_CompilerServices_AsyncTaskMethodBuilder_1_GameObject_Binding.Register(_app);
 #endif
@@ -431,6 +445,7 @@ namespace UnityFusion.Runtime.Generated
 
             System_Globalization_CultureInfo_Binding.Register(_app);
             System_Diagnostics_Stopwatch_Binding.Register(_app);
+            System_Reflection_MethodInfo_Binding.Register(_app);
 
             // Net
             System_Net_Http_StreamContent_Binding.Register(_app);
@@ -445,6 +460,11 @@ namespace UnityFusion.Runtime.Generated
             System_Net_IPHostEntry_Binding.Register(_app);
             System_Net_Dns_Binding.Register(_app);
             System_Net_IPAddress_Binding.Register(_app);
+            System_Net_IPEndPoint_Binding.Register(_app);
+            System_Net_NetworkInformation_IPAddressInformation_Binding.Register(_app);
+            System_Net_NetworkInformation_IPInterfaceProperties_Binding.Register(_app);
+            System_Net_NetworkInformation_NetworkInterface_Binding.Register(_app);
+            System_Net_NetworkInformation_UnicastIPAddressInformationCollection_Binding.Register(_app);
         }
     }
 }
