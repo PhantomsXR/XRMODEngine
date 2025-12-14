@@ -1,9 +1,0 @@
-﻿using Goap.Runtime;
-
-namespace {{namespace}}
-{
-    [GoapId("{{id}}")]
-    public class {{name}}Goal : GoalBase
-    {
-    }
-}

@@ -1,1 +1,0 @@
-{"name":"FoundationTest.Editor","rootNamespace":"FoundationTest.Editor","references":["FoundationTest.Runtime"],"includePlatforms":["Editor"],"excludePlatforms":[],"allowUnsafeCode":true,"overrideReferences":false,"precompiledReferences":[],"autoReferenced":true,"defineConstraints":[],"versionDefines":[],"noEngineReferences":false}
