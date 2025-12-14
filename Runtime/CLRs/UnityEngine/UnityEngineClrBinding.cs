@@ -39,6 +39,8 @@ namespace UnityFusion.Runtime.Generated
             UnityEngine_Gizmos_Binding.Register(_app);
 
             //EventSystems
+            UnityEngine_Events_UnityEvent_2_Byte_Byte_Binding.Register(_app);
+            UnityEngine_Events_UnityEvent_2_UInt32_UInt32_Binding.Register(_app);
             UnityEngine_EventSystems_EventTrigger_Binding.Register(_app);
             UnityEngine_EventSystems_PointerEventData_Binding.Register(_app);
             UnityEngine_EventSystems_EventTrigger_Binding_Entry_Binding.Register(_app);
@@ -111,7 +113,10 @@ namespace UnityFusion.Runtime.Generated
             UnityEngine_AudioClip_Binding.Register(_app);
             UnityEngine_AudioSource_Binding.Register(_app);
             UnityEngine_Audio_AudioMixer_Binding.Register(_app);
-
+            UnityEngine_AudioSettings_Binding.Register(_app);
+            UnityEngine_Audio_AudioMixerGroup_Binding.Register(_app);
+            UnityEngine_Audio_AudioMixerSnapshot_Binding.Register(_app);
+            
             UnityEngine_Animator_Binding.Register(_app);
             UnityEngine_Animation_Binding.Register(_app);
             UnityEngine_MeshRenderer_Binding.Register(_app);
@@ -284,8 +289,7 @@ namespace UnityFusion.Runtime.Generated
             UnityEngine_RenderSettings_Binding.Register(_app);
             UnityEngine_Material_Binding.Register(_app);
             UnityEngine_Light_Binding.Register(_app);
-            UnityEngine_Skybox_Binding.Register(_app);
-            UnityEngine_MeshFilter_Binding.Register(_app);
+            UnityEngine_Skybox_Binding.Register(_app); 
             UnityEngine_MeshRenderer_Binding.Register(_app);
             UnityEngine_LineUtility_Binding.Register(_app);
             UnityEngine_LODGroup_Binding.Register(_app);
