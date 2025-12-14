@@ -1,0 +1,26 @@
+{
+    "name": "Phantom.XRMOD.XRMODSplinesModule.UnityFusion",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d1b7af04124239145bc1904ef0c73501",
+        "GUID:21d1eb854b91ade49bc69a263d12bee2",
+        "GUID:d8b63aba1907145bea998dd612889d6b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "USE_UNITY_SPLINE"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.splines",
+            "expression": "2.6.0",
+            "define": "USE_UNITY_SPLINE"
+        }
+    ],
+    "noEngineReferences": false
+}
