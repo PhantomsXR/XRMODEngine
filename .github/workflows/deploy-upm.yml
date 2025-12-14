@@ -90,17 +90,6 @@ jobs:
           # 强制推送到 upm 分支 (用户通过 URL 安装通常指向这个分支的最新 commit)
           git push origin split-temp:$TARGET_BRANCH --force
 
-      - name: Create Release Tag
-        # 只有当检测到是新版本时，才打 Tag
-        if: steps.check_tag.outputs.exists == 'false'
-        run: |
-          echo "Creating release tag: ${{ env.TAG_NAME }}"
-          
-          # 给刚才的 split-temp 打上 Tag
-          git tag ${{ env.TAG_NAME }} split-temp
-          
-          # 推送 Tag
-          git push origin ${{ env.TAG_NAME }}
       # 2. 发布到 NPM (新增步骤)
       - name: Publish to NPM
         # 只有新版本才发布到 NPM
