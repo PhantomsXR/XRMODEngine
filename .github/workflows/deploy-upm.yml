@@ -60,22 +60,14 @@ jobs:
           echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
           echo "PKG_PATH=$PKG_PATH" >> $GITHUB_ENV
 
-      - name: Check if Tag Exists
-        id: check_tag
-        run: |
-          if git rev-parse "${{ env.TAG_NAME }}" >/dev/null 2>&1; then
-            echo "exists=true" >> $GITHUB_OUTPUT
-          else
-            echo "exists=false" >> $GITHUB_OUTPUT
-          fi
-
       - name: Setup Git User
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+
+      # 2.无论版本是否更新，我们都更新 upm 分支的代码，确保它是最新的
       - name: Split and Push UPM Branch
-        # 无论版本是否更新，我们都更新 upm 分支的代码，确保它是最新的
         env:
           TARGET_BRANCH: "upm/${{ matrix.package }}"
         run: |
@@ -87,18 +79,36 @@ jobs:
           # 强制推送到 upm 分支 (用户通过 URL 安装通常指向这个分支的最新 commit)
           git push origin split-temp:$TARGET_BRANCH --force
 
-      # 2. 发布到 NPM (新增步骤)
-      - name: Publish to NPM
+      # 3. 发布到 NPM (新增步骤)
+      - name: Publish to NPM (If New Version)
         run: |
           cd ${{ env.PKG_PATH }}
           
-          # 确保没有任何干扰的 publishConfig
+          # 1. 准备工作：清理可能存在的干扰配置
           jq 'del(.publishConfig)' package.json > tmp.json && mv tmp.json package.json
           
-          echo "Publishing to Official NPM Registry with Granular Token..."
+          # 2. 获取包信息
+          PACKAGE_NAME=$(jq -r .name package.json)
+          LOCAL_VERSION=$(jq -r .version package.json)
           
-          # Granular Token 必须带上 --access public 才能发布 scoped 包
-          npm publish --access public
+          echo "🔍 Checking $PACKAGE_NAME (Local: $LOCAL_VERSION)..."
+
+          # 3. 检查 NPM 上是否存在该版本
+          # npm view 命令如果找不到包会报错，所以我们用 || echo "" 来处理新包的情况
+          # 2>/dev/null 也是为了屏蔽 "404 Not Found" 的错误日志
+          REMOTE_VERSION=$(npm view "$PACKAGE_NAME@$LOCAL_VERSION" version 2>/dev/null || echo "")
+
+          # 4. 逻辑判断
+          if [ "$REMOTE_VERSION" == "$LOCAL_VERSION" ]; then
+            echo "✅ Version $LOCAL_VERSION already exists on NPM."
+            echo "⏭️  Skipping publish to avoid error."
+            exit 0
+          else
+            echo "🚀 Version $LOCAL_VERSION is not on NPM (or is a new package)."
+            echo "📦 Publishing..."
+            
+            # 执行发布
+            npm publish --access public
+          fi
         env:
-          # 使用更新后的 Token
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
