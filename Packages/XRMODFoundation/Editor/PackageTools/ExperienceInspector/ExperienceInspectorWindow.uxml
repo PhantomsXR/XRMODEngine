@@ -1,0 +1,35 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement class="root-container">
+        <!-- Toolbar -->
+        <ui:VisualElement class="toolbar-container">
+            <ui:Label text="Experience Inspector" class="toolbar-title"/>
+            <ui:Button name="ResetButton" text="Reset" class="toolbar-button" style="display: none;" />
+        </ui:VisualElement>
+
+        <!-- Drop Area -->
+        <ui:VisualElement name="DropArea" class="drop-area">
+            <ui:VisualElement class="drop-icon"/>
+            <ui:Label text="Drag &amp; Drop .arexperience file here" class="drop-label"/>
+            <ui:Label text="Supported format: AssetBundle" class="drop-sublabel"/>
+        </ui:VisualElement>
+
+        <!-- Main Content (Split View) -->
+        <ui:VisualElement name="MainContainer" class="main-container" style="display: none;">
+            <ui:TwoPaneSplitView name="SplitView" fixed-pane-index="0" fixed-pane-initial-dimension="250" orientation="horizontal" class="split-view">
+                <!-- Left Pane: Asset List -->
+                <ui:VisualElement class="left-pane">
+                    <ui:Label text="Assets" class="pane-header"/>
+                    <ui:ListView name="AssetListView" class="asset-list"/>
+                </ui:VisualElement>
+                
+                <!-- Right Pane: Preview -->
+                <ui:VisualElement class="right-pane">
+                    <ui:Label text="Preview" class="pane-header"/>
+                    <ui:ScrollView name="AssetPreviewView" class="preview-scroll-view">
+                        <ui:Label name="PreviewHintLabel" text="Select an asset to preview" class="preview-hint"/>
+                    </ui:ScrollView>
+                </ui:VisualElement>
+            </ui:TwoPaneSplitView>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

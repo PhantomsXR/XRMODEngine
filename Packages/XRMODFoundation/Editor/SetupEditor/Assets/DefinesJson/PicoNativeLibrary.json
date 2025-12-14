@@ -1,0 +1,8 @@
+{
+  "Json": [
+    "PICO_INSTALL", 
+    "ENABLE_NATIVE", 
+    "XRMOD_INSTALL"
+    
+  ]
+}

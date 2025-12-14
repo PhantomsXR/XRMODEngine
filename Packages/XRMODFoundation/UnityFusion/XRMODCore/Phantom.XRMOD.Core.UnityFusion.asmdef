@@ -1,0 +1,21 @@
+{
+    "name": "Phantom.XRMOD.Core.UnityFusion",
+    "rootNamespace": "Phantom.XRMOD.Core.UnityFusion",
+    "references": [
+        "GUID:d1b7af04124239145bc1904ef0c73501",
+        "GUID:0c2055e182afe49728b18698ad8a3050",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:fb044e467877d42df875ffad27576788"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "XRMOD_INSTALL"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

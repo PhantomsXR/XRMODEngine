@@ -1,0 +1,33 @@
+// // /*===============================================================================
+// // Copyright (C) 2025 PhantomsXR Ltd. All Rights Reserved.
+// //
+// // This file is part of the Phantom.XRMOD.PackageTools.Editor.
+// //
+// // The XRMOD cannot be copied, distributed, or made available to
+// // third-parties for commercial purposes without written permission of PhantomsXR Ltd.
+// //
+// // Contact info@phantomsxr.com for licensing requests.
+// // ===============================================================================*/
+
+namespace #NAMESPACE#.Runtime
+{
+    public class UnityFusionSingletonTemplate<T> where T : class, new()
+    {
+        private static T _INSTANCE;
+        private static readonly object _LOCK = new object(); 
+
+        public static T GetInstance
+        {
+            get
+            {
+                if (_INSTANCE != null) return _INSTANCE;
+                lock (_LOCK)
+                { 
+                    _INSTANCE ??= new T();
+                }
+
+                return _INSTANCE;
+            }
+        }
+    }
+}

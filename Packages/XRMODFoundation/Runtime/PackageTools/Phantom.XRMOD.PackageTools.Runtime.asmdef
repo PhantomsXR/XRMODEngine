@@ -1,0 +1,33 @@
+{
+    "name": "Phantom.XRMOD.PackageTools.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:793c86bbd39d348ee8be578e0928811b",
+        "GUID:9cf70241678cb41a7b5484e5e1b7a238",
+        "GUID:8c1b5e158961445498f8a66188fbb2e3",
+        "GUID:5c1ff9bd975acec488150743d53a93ca",
+        "GUID:767f25efd20d4339a8b1683f8dc1d7d8"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "XRMOD_INSTALL"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.multiplayer.playmode",
+            "expression": "1.0.0",
+            "define": "USE_MPPM"
+        },
+        {
+            "name": "com.unity.multiplayer.playmode",
+            "expression": "2.0.0",
+            "define": "USE_MPPM_2_0"
+        }
+    ],
+    "noEngineReferences": false
+}

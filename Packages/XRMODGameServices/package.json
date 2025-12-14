@@ -1,0 +1,20 @@
+{
+  "name": "com.phantomsxr.xrmodgameservices",
+  "displayName": "XRMOD Game Services",
+  "version": "1.0.7",
+  "description": "Take your game to the next level without having to worry about maintaining or scaling your back-end infrastructure. XRMOD-GS simplifies many game development tasks and challenges.",
+  "author": {
+    "name": "Phantoms",
+    "email": "nswell@phantomsxr.com"
+  },
+  "dependencies": {
+    "com.unity.services.leaderboards": "2.3.3",
+    "com.unity.services.authentication": "3.5.2",
+    "com.unity.services.friends": "1.1.1",
+    "com.unity.services.vivox": "16.8.0",
+    "com.unity.services.cloudsave": "3.4.0",
+    "com.unity.purchasing": "4.14.0"
+  },
+  "_fingerprint": "cf8c532215e6bceee4d077144186efdbd6f4a7df",
+  "unity": "6000.3"
+}

@@ -1,0 +1,38 @@
+{
+    "name": "Phantom.XRMOD.XRMODSimulator.Runtime",
+    "rootNamespace": "Phantom.XRMOD.XRMODSimulator.Runtime",
+    "references": [
+        "GUID:d445613d091ffc941ae68355f01656f6",
+        "GUID:f82d8dacaa2ef42918d414ca7732b8b8",
+        "GUID:f9fe0089ec81f4079af78eb2287a6163",
+        "GUID:fe685ec1767f73d42b749ea8045bfe43",
+        "GUID:37c96a4f173824d7d90440f9eee3504d",
+        "GUID:5c1ff9bd975acec488150743d53a93ca",
+        "GUID:793c86bbd39d348ee8be578e0928811b",
+        "GUID:9edf3ad0be3774879b00250c8c354b4c",
+        "GUID:040e7d3de957a7e49b43185599fa7a17",
+        "GUID:9cf70241678cb41a7b5484e5e1b7a238",
+        "GUID:21aeb795136b45f0a2408f3003f0efeb",
+        "GUID:fe25561d224ed4743af4c60938a59d0b",
+        "GUID:ff67403ef013347b081c20081c24d737",
+        "GUID:b96574a69af95463fab5474caf3dcb0e",
+        "GUID:164e9802f869143bcb45523cb1a84a13"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "XRMOD_INSTALL"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.phantomsxr.xrmodgameservices",
+            "expression": "1.0.0-preview.33",
+            "define": "USE_XRMOD_GAMESERVICES"
+        }
+    ],
+    "noEngineReferences": false
+}

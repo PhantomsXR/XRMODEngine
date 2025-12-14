@@ -1,0 +1,29 @@
+{
+    "name": "Phantom.XRMOD.OpenXRModule.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:4847341ff46394e83bb78fbd0652937e",
+        "GUID:8efef0e48627b4af5a28950b21575514",
+        "GUID:d445613d091ffc941ae68355f01656f6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.xr.openxr",
+            "expression": "1.14.0",
+            "define": "UNITY_OPENXR"
+        },
+        {
+            "name": "com.unity.xr.meta-openxr",
+            "expression": "2.1.0",
+            "define": "META_OPENXR"
+        }
+    ],
+    "noEngineReferences": false
+}

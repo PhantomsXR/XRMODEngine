@@ -1,0 +1,22 @@
+{
+    "name": "Phantom.XRMOD.UnityFusion.Runtime.CLRBingding.CLR.Phantoms",
+    "rootNamespace": "Phantom.XRMOD.UnityFusion.Runtime.CLRBingding.CLR.Phantoms",
+    "references": [
+        "GUID:d445613d091ffc941ae68355f01656f6",
+        "GUID:8e4b22805b128544c875816e5bb32c91",
+        "GUID:15fc0a57446b3144c949da3e2b9737a9",
+        "GUID:d1b7af04124239145bc1904ef0c73501",
+        "GUID:f82d8dacaa2ef42918d414ca7732b8b8"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "XRMOD_INSTALL"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

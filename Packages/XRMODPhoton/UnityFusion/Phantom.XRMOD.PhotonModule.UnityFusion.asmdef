@@ -1,0 +1,25 @@
+{
+    "name": "Phantom.XRMOD.PhotonModule.UnityFusion",
+    "rootNamespace": "Phantom.XRMOD.PhotonModule.UnityFusion",
+    "references": [
+        "Fusion.Unity",
+        "Fusion.Addons.KCC",
+        "Fusion.Addons.Physics",
+        "Phantom.XRMOD.PhotonModule.Runtime",
+        "Phantom.XRMOD.ActionNotification.Runtime",
+        "Phantom.XRMOD.UnityFusion.Runtime.Core",
+        "Phantom.XRMOD.UnityFusion.Adapter.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "FUSION2",
+        "XRMOD_INSTALL"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
