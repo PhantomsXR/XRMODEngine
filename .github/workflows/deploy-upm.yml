@@ -108,5 +108,5 @@ jobs:
           npm publish --access public
         env:
           # 这里的 Token 对应你在 setup-node 里配置的 registry
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} 
           # 如果是用 GitHub Packages，这里用 ${{ secrets.GITHUB_TOKEN }}
