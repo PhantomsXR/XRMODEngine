@@ -1,79 +1,99 @@
-name: Deploy Independent Package
+name: Deploy All Packages by Release
 
 on:
-  push:
-    # 触发规则：匹配 "任意字符/任意字符" 的格式
-    # 例如: XRMODFoundation/1.0.5
-    tags:
-      - '*/*' 
+  release:
+    types: [published] # 当你在 GitHub 页面点击 "Publish release" 时触发
+  
+  # 也可以手动触发，方便测试
+  workflow_dispatch:
 
 jobs:
-  deploy-specific:
+  inspect-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write # 需要写权限来打 Tag 和推送分支
     
+    strategy:
+      fail-fast: false
+      matrix:
+        # =======================================================
+        # 【配置】在这里列出所有包的文件夹名称
+        # =======================================================
+        package:
+          - XRMODFoundation
+          - XRMODActionsNotifier
+          - XRMODNetcode
+          - XRMODInput
+          # 添加更多包...
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # 必须拉取完整历史
 
-      - name: Parse Tag and Setup Environment
-        id: parse
+      - name: Read Package Version
+        id: meta
         run: |
-          # 1. 获取完整 Tag，例如 XRMODFoundation/1.0.5
-          FULL_TAG=${GITHUB_REF#refs/tags/}
+          PKG_PATH="XRMODPackages/${{ matrix.package }}"
           
-          # 2. 解析包名 (斜杠前的内容)
-          PKG_NAME=$(echo $FULL_TAG | cut -d'/' -f1)
-          
-          # 3. 解析版本号 (斜杠后的内容)
-          VERSION=$(echo $FULL_TAG | cut -d'/' -f2)
-          
-          echo "Target Package: $PKG_NAME"
-          echo "Target Version: $VERSION"
-          
-          # 4. 验证目录是否存在
-          PKG_PATH="XRMODPackages/$PKG_NAME"
-          if [ ! -d "$PKG_PATH" ]; then
-            echo "::error::Directory $PKG_PATH does not exist! Check your tag spelling."
+          # 1. 检查文件是否存在
+          if [ ! -f "$PKG_PATH/package.json" ]; then
+            echo "::error::package.json not found in $PKG_PATH"
             exit 1
           fi
 
-          # 5. 导出变量给后续步骤使用
-          echo "PKG_NAME=$PKG_NAME" >> $GITHUB_ENV
-          echo "PKG_PATH=$PKG_PATH" >> $GITHUB_ENV
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          # 2. 读取 version 字段
+          VERSION=$(jq -r .version "$PKG_PATH/package.json")
           
-          # 设置 Git 身份
+          # 3. 构造目标 Tag 名字 (格式: 包名/版本号)
+          TAG_NAME="${{ matrix.package }}/$VERSION"
+          
+          echo "Detected Version: $VERSION"
+          echo "Target Tag: $TAG_NAME"
+          
+          # 4. 导出变量
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
+          echo "PKG_PATH=$PKG_PATH" >> $GITHUB_ENV
+
+      - name: Check if Tag Exists
+        id: check_tag
+        run: |
+          if git rev-parse "${{ env.TAG_NAME }}" >/dev/null 2>&1; then
+            echo "Tag ${{ env.TAG_NAME }} already exists. Skipping tag creation."
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "New version detected!"
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Setup Git User
+        run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Update package.json Version
-        run: |
-          echo "Updating $PKG_NAME to version $VERSION"
-          
-          # 修改指定包的 package.json
-          jq --arg v "${{ env.VERSION }}" '.version = $v' "${{ env.PKG_PATH }}/package.json" > tmp.json && mv tmp.json "${{ env.PKG_PATH }}/package.json"
-          
-          # 提交修改 (为了让 git subtree 包含这个变动)
-          git add "${{ env.PKG_PATH }}/package.json"
-          git commit -m "Bump ${{ env.PKG_NAME }} version to ${{ env.VERSION }}"
-
-      - name: Split and Push
+      - name: Split and Push UPM Branch
+        # 无论版本是否更新，我们都更新 upm 分支的代码，确保它是最新的
         env:
-          TARGET_BRANCH: "upm/${{ env.PKG_NAME }}"
+          TARGET_BRANCH: "upm/${{ matrix.package }}"
         run: |
-          echo "Deploying to branch: $TARGET_BRANCH"
+          echo "Syncing ${{ env.PKG_PATH }} to branch $TARGET_BRANCH"
           
           # 拆分分支
           git subtree split --prefix="${{ env.PKG_PATH }}" -b split-temp
           
-          # 推送到 upm 分支
+          # 强制推送到 upm 分支 (用户通过 URL 安装通常指向这个分支的最新 commit)
           git push origin split-temp:$TARGET_BRANCH --force
+
+      - name: Create Release Tag
+        # 只有当检测到是新版本时，才打 Tag
+        if: steps.check_tag.outputs.exists == 'false'
+        run: |
+          echo "Creating release tag: ${{ env.TAG_NAME }}"
           
-          # 打上特定 Tag (可选，方便用户引用)
-          # Tag 格式保持原样: XRMODFoundation/1.0.5
-          git tag ${{ env.PKG_NAME }}/${{ env.VERSION }} split-temp
-          git push origin ${{ env.PKG_NAME }}/${{ env.VERSION }} --force
+          # 给刚才的 split-temp 打上 Tag
+          git tag ${{ env.TAG_NAME }} split-temp
+          
+          # 推送 Tag
+          git push origin ${{ env.TAG_NAME }}
