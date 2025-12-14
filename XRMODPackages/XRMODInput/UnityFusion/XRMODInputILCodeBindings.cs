@@ -156,7 +156,12 @@ namespace UnityFusion.Runtime.Generated
             UnityEngine_XR_Interaction_Toolkit_Interactors_XRRayInteractor_Binding.Register(_app);
             UnityEngine_XR_Interaction_Toolkit_SelectEnterEventArgs_Binding.Register(_app);
             UnityEngine_XR_Interaction_Toolkit_Transformers_XRBaseGrabTransformer_Binding.Register(_app);
-
+            UnityEngine_Events_UnityEvent_1_HoverExitEventArgs_Binding.Register(_app);
+            UnityEngine_Events_UnityEvent_1_HoverEnterEventArgs_Binding.Register(_app);
+            UnityEngine_XR_Interaction_Toolkit_HoverEnterEventArgs_Binding.Register(_app);
+            UnityEngine_XR_Interaction_Toolkit_HoverExitEventArgs_Binding.Register(_app);
+            UnityEngine_XR_Interaction_Toolkit_SelectExitEventArgs_Binding.Register(_app);
+                
             Phantom_XRMOD_XRMODInput_Runtime_HandsAggregatorSubsystem_Binding.Register(_app);
             Phantom_XRMOD_XRMODInput_Runtime_DynamicMoveProvider_Binding.Register(_app);
             Phantom_XRMOD_XRMODInput_Runtime_InputType_Binding.Register(_app);

@@ -79,7 +79,7 @@ namespace UnityFusion.Runtime.Generated
             RegisterUnityAction<Unity.Netcode.NetworkObject>(app);
             RegisterNetworkVariable<int>(app);
 
-
+            Unity_Netcode_NetworkClient_Binding.Register(app);
             Unity_Netcode_NetworkConfig_Binding.Register(app);
             Unity_Netcode_NetworkPrefab_Binding.Register(app);
             Unity_Netcode_NetworkPrefabs_Binding.Register(app);
@@ -127,10 +127,13 @@ namespace UnityFusion.Runtime.Generated
             Unity_Netcode_Components_NetworkTransform_Binding.Register(app);
             Unity_Netcode_NetworkVariable_1_Int32_Binding.Register(app);
             Unity_Services_Multiplayer_ISession_Binding.Register(app);
+            Unity_Netcode_NetworkManager_Binding_ConnectionApprovalResponse_Binding.Register(app);
+            UnityEngine_Events_UnityEvent_2_IPEndPoint_DiscoveryResponseData_Binding.Register(app);
+            
             Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_LANNetworkDiscovery_Binding.Register(app);
             Phantom_XRMOD_NetcodeModule_Runtime_LagCompensation_TrackedObject_Binding.Register(app);
             Phantom_XRMOD_NetcodeModule_Runtime_LagCompensation_LagCompensationManager_Binding.Register(app);
-
+            
             Phantom_XRMOD_NetcodeModule_Runtime_Fixed128StringSerializable_Binding.Register(app);
             Phantom_XRMOD_NetcodeModule_Runtime_Fixed32StringSerializable_Binding.Register(app);
             Phantom_XRMOD_NetcodeModule_Runtime_Fixed4096StringSerializable_Binding.Register(app);
@@ -182,10 +185,15 @@ namespace UnityFusion.Runtime.Generated
             Phantom_XRMOD_NetcodeModule_Runtime_OnEventCustomNetworkMessagingEventArgs_Binding.Register(app);
             Phantom_XRMOD_NetcodeModule_Runtime_PlayerEntry_Binding.Register(app);
 
+            System_Threading_Tasks_Task_1_ISession_Binding.Register(app);
             System_Collections_Generic_List_1_NetworkVariableBase_Binding.Register(app);
+            System_Runtime_CompilerServices_TaskAwaiter_1_ISession_Binding.Register(app);
+            System_Action_1_PlayerScoreEntry_Binding.Register(app);
+            System_Collections_Generic_IReadOnlyCollection_1_NGOPlayerBase_Binding.Register(app);
+            System_Collections_Generic_IReadOnlyList_1_NGOPlayerBase_Binding.Register(app);
             UnityEngine_Events_UnityEvent_2_Int32_Int32_Binding.Register(app);
-
-
+            System_Runtime_CompilerServices_AsyncTaskMethodBuilder_1_String_Binding.Register(app);
+            
             // Tabletop system
             Phantom_XRMOD_NetcodeModule_Runtime_TableSystem_TableTopPlayer_Binding.Register(app);
             Phantom_XRMOD_NetcodeModule_Runtime_TableSystem_TableTop_Binding.Register(app);
