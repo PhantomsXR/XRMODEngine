@@ -21,19 +21,19 @@ jobs:
         # =======================================================
         package: 
           - XRMODActionNotifier 
-          - XRMODAvatar 
-          - XRMODFoundation 
-          - XRMODGameServices 
-          - XRMODGoap 
-          - XRMODInput 
-          - XRMODNetcode 
-          - XRMODOpenXR 
-          - XRMODPhoton 
-          - XRMODQuestModule 
-          - XRMODRokidModule 
-          - XRMODSimulator 
-          - XRMODUIFramework 
-          - XRMODUnityFusion 
+          # - XRMODAvatar 
+          # - XRMODFoundation 
+          # - XRMODGameServices 
+          # - XRMODGoap 
+          # - XRMODInput 
+          # - XRMODNetcode 
+          # - XRMODOpenXR 
+          # - XRMODPhoton 
+          # - XRMODQuestModule 
+          # - XRMODRokidModule 
+          # - XRMODSimulator 
+          # - XRMODUIFramework 
+          # - XRMODUnityFusion 
           # 添加更多包...
 
     steps:
@@ -48,9 +48,9 @@ jobs:
         with:
           node-version: '16'
           # 如果发布到 npmjs.org:
-          # registry-url: 'https://registry.npmjs.org'
+          registry-url: 'https://registry.npmjs.org'
           # 如果发布到 GitHub Packages:
-          registry-url: 'https://npm.pkg.github.com'
+          # registry-url: 'https://npm.pkg.github.com'
           
       - name: Read Package Version
         id: meta
@@ -119,5 +119,5 @@ jobs:
           npm publish --access public
         env:
           # 这里的 Token 对应你在 setup-node 里配置的 registry
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-          # 如果是用 GitHub Packages，这里用 ${{ secrets.GITHUB_TOKEN }}
+          # NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          如果是用 GitHub Packages，这里用 ${{ secrets.GITHUB_TOKEN }}
