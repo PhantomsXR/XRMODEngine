@@ -1,3 +1,9 @@
+# 1.0.2
+
+## Update
+
+- Update dependency of Foundation and UnityFusion
+
 # 1.0.1
 
 ## Update
