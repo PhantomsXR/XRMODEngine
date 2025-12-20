@@ -1,7 +1,7 @@
 {
   "name": "com.phantomsxr.questmodule",
   "displayName": "XRMOD QuestModule",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "unity": "6000.0",
   "keywords": [
     "foundation",
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "com.phantomsxr.actionnotification": "2.0.4",
-    "com.phantomsxr.foundation": "3.0.11",
+    "com.phantomsxr.foundation": "3.0.12",
     "com.phantomsxr.unityfusion": "3.0.5",
     "com.phantomsxr.xrmodinput": "1.4.8",
     "com.phantomsxr.xrmodopenxrmodule": "1.0.2",
