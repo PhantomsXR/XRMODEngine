@@ -58,8 +58,7 @@ namespace Phantom.XRMOD.Models.Runtime
         [Multiline] public string token;
 
         public string appKey;
-        public string appSecret;
-
+       
         /// <summary>
         /// Max time of networking require
         /// </summary>
@@ -82,7 +81,7 @@ namespace Phantom.XRMOD.Models.Runtime
     [System.Serializable]
     public class SDKConfiguration
     {
-        public EngineType engineType = EngineType.Native;
+        public EngineType engineType = EngineType.Unity;
         public DashboardConfig dashboardConfig;
         public ImageCloudRecognizerConfig imageCloudRecognizerConfig;
         public CustomConfig customConfig;

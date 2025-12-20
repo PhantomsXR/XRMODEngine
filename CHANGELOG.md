@@ -1,14 +1,28 @@
+# 3.0.12
+
+## Removed
+
+- **SDKEntry**: Removed SupabaseLibs
+
+## Added
+
+- **SDKEntry**: Added Supabase request via Unity webrequest
+
 # 3.0.11
 
 ## Improved
 
-- **SetupEditor**: Implemented "UI Caching" and "Staggered Execution" for drawers to eliminate UI lag and reduce "Semaphore.Wait" spikes.
-- **SetupEditor**: Added automated fix for Input System "Active Input Handling" (auto-sets to 'Both' and prompts for restart).
-- **SetupEditor**: Optimized `RebuildDrawers` to reuse cached UI elements instead of rebuilding, significantly improving refresh performance.
+- **SetupEditor**: Implemented "UI Caching" and "Staggered Execution" for drawers to eliminate UI lag and reduce "
+  Semaphore.Wait" spikes.
+- **SetupEditor**: Added automated fix for Input System "Active Input Handling" (auto-sets to 'Both' and prompts for
+  restart).
+- **SetupEditor**: Optimized `RebuildDrawers` to reuse cached UI elements instead of rebuilding, significantly improving
+  refresh performance.
 
 ## Fixed
 
-- **SetupEditor**: Fixed memory leaks in `ShadersValidationDrawer` and `XRMODEnginePreferences` by properly disposing `SerializedObject`.
+- **SetupEditor**: Fixed memory leaks in `ShadersValidationDrawer` and `XRMODEnginePreferences` by properly disposing
+  `SerializedObject`.
 - **SetupEditor**: Fixed compilation errors (`CS0103`, `CS1503`) and scoping issues in strict compilation environments.
 - **SetupEditor**: Fixed "Input System" fix logic where the UI wouldn't update immediately after fixing.
 

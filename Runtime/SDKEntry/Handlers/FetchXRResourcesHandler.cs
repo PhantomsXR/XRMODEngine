@@ -44,6 +44,7 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
                 ResponseMapper tmp_Response = null;
                 try
                 {
+                    var tmp_SDKInformation = IocContainer.GetIoc.Resolve<SDKEntryPointModel>().SDKInformation;
                     var tmp_Config = IocContainer.GetIoc.Resolve<SdkConfigModel>().SDKConfiguration.Value
                         .dashboardConfig;
                     var tmp_QueryParameter = new QueryParameter
@@ -54,8 +55,8 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
                         Token = tmp_Config.token,
                         Timeout = tmp_Config.timeout,
                         AppKey = tmp_Config.appKey,
-                        AppSecret = tmp_Config.appSecret,
                         BackendType = tmp_Config.backendType,
+                        Env = tmp_SDKInformation.environmentType.ToString().ToLower()
                     };
 
                     tmp_Response =
@@ -68,7 +69,6 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
                     //  Download the experience file
                     //  Decompress the experience file 
                     //  Load experience
-
                     tmp_SDKEntryPointModel.XRExperienceData =
                         await NetworkRequestFactory<XRExperienceData>.CreateNetworkRequest(
                             NetworkRequestType.DownloadAssetBundleJson,
@@ -76,7 +76,7 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
                             {
                                 AssetBundleJsonUrl = tmp_Response.data.json_url.Trim().Replace("'", "")
                             }
-                        ); 
+                        );
                     base.Handle();
                 }
                 catch (Exception tmp_Exception)

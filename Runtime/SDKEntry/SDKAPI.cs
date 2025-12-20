@@ -18,6 +18,7 @@ using Phantom.XRMOD.Core.Runtime;
 using Phantom.XRMOD.Models.Runtime;
 using Phantom.XRMOD.XRMODUtilites.Runtime;
 using Phantom.XRMOD.ActionNotification.Runtime;
+using Phantom.XRMOD.SDKEntry.Runtime.Logic;
 
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
@@ -45,8 +46,8 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
                         IocContainer.GetIoc.Resolve<OfflineLicenseValidator>().Execute();
                     }
 
-                    if (sdkEntryPointModel.SdkInitialed == null) return;
-                    sdkEntryPointModel.SdkInitialed.Value = true;
+                    if (sdkKernel.Model.SdkInitialed == null) return;
+                    sdkKernel.Model.SdkInitialed.Value = true;
                 };
 
                 tmp_SDKConfig.Value = JsonUtility.FromJson<SDKConfiguration>(_config);
@@ -81,8 +82,8 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
                         IocContainer.GetIoc.Resolve<OfflineLicenseValidator>().Execute();
                     }
 
-                    if (sdkEntryPointModel.SdkInitialed == null) return;
-                    sdkEntryPointModel.SdkInitialed.Value = true;
+                    if (sdkKernel.Model.SdkInitialed == null) return;
+                    sdkKernel.Model.SdkInitialed.Value = true;
                 };
 
                 tmp_SDKConfig.Value = _config;
@@ -106,8 +107,8 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         {
             try
             {
-                Assert.IsNotNull(sdkEntryPointModel.SdkInitialed, "sdkEntryPointModel == null");
-                if (!sdkEntryPointModel.SdkInitialed.Value)
+                Assert.IsNotNull(sdkKernel.Model.SdkInitialed, "sdkEntryPointModel == null");
+                if (!sdkKernel.Model.SdkInitialed.Value)
                 {
                     Debug.LogError($"SDK is not initialized. [{nameof(LaunchXRQuery)}] will be not working!");
                     return;
@@ -135,7 +136,7 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         
         public void LaunchARScanner()
         {
-            if (!sdkEntryPointModel.SdkInitialed.Value) return;
+            if (!sdkKernel.Model.SdkInitialed.Value) return;
             // StartCoroutine(AlgorithmCreator.CheckAvailability(_state =>
             // {
             //     CheckAvailabilityCallback(_state);
@@ -157,7 +158,7 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         {
             var tmp_MaximumOfRetries = IocContainer.GetIoc.Resolve<SDKConfiguration>().imageCloudRecognizerConfig
                 .maximumOfRetries;
-            if (sdkEntryPointModel.MaximumOfRetries.Value >= tmp_MaximumOfRetries)
+            if (sdkKernel.Model.MaximumOfRetries.Value >= tmp_MaximumOfRetries)
             {
                 StopRecognizer();
                 APICallback.ThrowException(nameof(ErrorCode.REACHED_MAXIMUM_OF_RETRIES),
@@ -167,7 +168,7 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
 
 
             // imageCloudRecognizer.StartAlgorithm();
-            sdkEntryPointModel.MaximumOfRetries.Value++;
+            sdkKernel.Model.MaximumOfRetries.Value++;
         }
 
         /// <summary>
@@ -197,7 +198,7 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
                 // imageCloudRecognizer = null;
             }
 
-            sdkEntryPointModel.MaximumOfRetries.Value = 0;
+            sdkKernel.Model.MaximumOfRetries.Value = 0;
         }
 
         #endregion
@@ -265,20 +266,9 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         
         public void ContinueToDownloadAssets()
         {
-            if (!sdkEntryPointModel.BreakDownloadWhenGreaterPresetSize.Value) return;
-            sdkEntryPointModel.BreakDownloadWhenGreaterPresetSize.Value = false;
-            var tmp_GetXRPackageConfigHandler = new GetXRPackageConfigHandler();
-            var tmp_SdkVersionCheckHandler = new SdkVersionCheckHandler();
-            var tmp_LaunchXRModuleHandler = new LaunchXRModuleHandler();
-            var tmp_LoadingUIHandler = new ExpericenLoadStateHandler();
-            var tmp_CreateUIEventSystemHandler = new CreateUIEventSystemHandler();
-
-            tmp_GetXRPackageConfigHandler
-                .SetNext(tmp_SdkVersionCheckHandler)
-                .SetNext(tmp_LaunchXRModuleHandler)
-                .SetNext(tmp_LoadingUIHandler)
-                .SetNext(tmp_CreateUIEventSystemHandler);
-            tmp_GetXRPackageConfigHandler.Handle();
+            if (!sdkKernel.Model.BreakDownloadWhenGreaterPresetSize.Value) return;
+            sdkKernel.Model.BreakDownloadWhenGreaterPresetSize.Value = false;
+            new ProjectLoadingPipeline(null).ExecuteContinueDownload();
         }
 
 
