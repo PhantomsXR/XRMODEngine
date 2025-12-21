@@ -1,88 +1,86 @@
-// // /*===============================================================================
-// // Copyright (C) 2022 PhantomsXR Ltd. All Rights Reserved.
-// //
-// // This file is part of the SDKEntry.Runtime.
-// //
-// // The ARMOD-SDK cannot be copied, distributed, or made available to
-// // third-parties for commercial purposes without written permission of PhantomsXR Ltd.
-// //
-// // Contact nswell@phantomsxr.com for licensing requests.
-// // ===============================================================================*/
-
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using Phantom.XRMOD.Models.Runtime;
-using UnityEngine;
 using Phantom.XRMOD.Core.Runtime;
-using Phantom.XRMOD.SDKEntry.Runtime.Mapper;
+using Phantom.XRMOD.Models.Runtime;
+using Phantom.XRMOD.SDKEntry.Runtime.Models;
+using UnityEngine;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime.DataRequest
 {
+    public interface IRequestCommandCreator
+    {
+        Task<object> Create(QueryParameter _param, SDKConfiguration _config);
+    }
+
     public enum NetworkRequestType
     {
         InfoByUId,
         InfoByMarker,
         DownloadAssetBundleJson,
         DownloadAssetBundleContent,
-        LoadConfigure
+        LoadConfigure,
+        GetExperienceAssets
     }
 
     public class NetworkRequestFactory<T> : SingletonTemplate<NetworkRequestFactory<T>> where T : class, new()
     {
+        private static readonly Dictionary<NetworkRequestType, Func<QueryParameter, SDKConfiguration, Task<object>>>
+            _REGISTRY = new();
+
+        static NetworkRequestFactory()
+        {
+            RegisterCommands();
+        }
+
+        private static void RegisterCommands()
+        {
+            _REGISTRY.Add(NetworkRequestType.InfoByUId, async (_param, _config) =>
+            {
+                switch (_config.AppModel)
+                {
+                    case AppModel.Online when _param.BackendType == BackendType.Legacy:
+                        return await new QueryXRProjectForOnlineLegacy<T>(_param).Execute();
+                    case AppModel.Online when _param.BackendType == BackendType.Supabase:
+                        return await new QueryXRProjectForOnlineSupabase(_param).Execute();
+                    case AppModel.Offline:
+                        return await new QueryARProjectForOffline(_param).Execute();
+                    case AppModel.Simulator:
+                        return await new QueryARProjectForSimulator(_param).Execute();
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+            });
+
+            _REGISTRY.Add(NetworkRequestType.DownloadAssetBundleJson, async (_param, _config) =>
+            {
+                var tmp_JsonUrl = _config.AppModel is AppModel.Online
+                    ? _param.AssetBundleJsonUrl
+                    : Application.platform == RuntimePlatform.Android
+                        ? _param.AssetBundleJsonUrl
+                        : $"file://{_param.AssetBundleJsonUrl}";
+                _param.AssetBundleJsonUrl = tmp_JsonUrl;
+                return await new DownloadAssetBundleJson<T>(_param).Execute();
+            });
+
+            _REGISTRY.Add(NetworkRequestType.DownloadAssetBundleContent,
+                async (_param, _config) => await new DownloadAssetBundleContent(_param).Execute());
+
+            _REGISTRY.Add(NetworkRequestType.LoadConfigure,
+                async (_param, _config) => await new GetPackageConfigure(_param).Execute());
+        }
+
         public static async Task<T> CreateNetworkRequest(NetworkRequestType _networkRequestType,
             QueryParameter _param)
         {
-            var tmp_SDKConfiguration = IocContainer.GetIoc.Resolve<SdkConfigModel>().SDKConfiguration.Value;
-            switch (_networkRequestType)
+            if (!_REGISTRY.TryGetValue(_networkRequestType, out var tmp_Creator))
             {
-                case NetworkRequestType.InfoByUId:
-                    switch (tmp_SDKConfiguration.AppModel)
-                    {
-                        case AppModel.Online when _param.BackendType == BackendType.Legacy:
-                            return await new QueryXRProjectForOnlineLegacy<T>(_param).Execute();
-                        case AppModel.Online when _param.BackendType == BackendType.Supabase:
-                            return await new QueryXRProjectForOnlineSupabase(_param).Execute() as T;
-                        case AppModel.Offline:
-                            return await new QueryARProjectForOffline(_param).Execute() as T;
-                        case AppModel.Simulator:
-                            return await new QueryARProjectForSimulator(_param).Execute() as T;
-                        default:
-                            throw new ArgumentOutOfRangeException();
-                    }
-
-                case NetworkRequestType.DownloadAssetBundleJson:
-                    var tmp_JsonUrl = tmp_SDKConfiguration.AppModel is AppModel.Online
-                        ? _param.AssetBundleJsonUrl
-                        : Application.platform == RuntimePlatform.Android
-                            ? _param.AssetBundleJsonUrl
-                            : $"file://{_param.AssetBundleJsonUrl}";
-                    _param.AssetBundleJsonUrl = tmp_JsonUrl;
-                    return await new DownloadAssetBundleJson<T>(_param).Execute();
-                case NetworkRequestType.DownloadAssetBundleContent:
-                    return await new DownloadAssetBundleContent(_param).Execute() as T;
-                case NetworkRequestType.LoadConfigure:
-                    return await new GetPackageConfigure(_param).Execute() as T;
-                case NetworkRequestType.InfoByMarker:
-                    throw new ArgumentOutOfRangeException(nameof(_networkRequestType), _networkRequestType, null);
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(_networkRequestType), _networkRequestType, null);
+                throw new ArgumentOutOfRangeException(nameof(_networkRequestType), _networkRequestType, null);
             }
-        }
-    }
 
-    public struct QueryParameter
-    {
-        public string URL;
-        public string Token;
-        public int Timeout;
-        public string AppKey;
-        public string AppSecret;
-        public BackendType BackendType;
-        public string experienceUid;
-        public string Platform;
-        public string AssetBundleJsonUrl;
-        public string AssetBundleContentUrl;
-        public uint Crc;
-        public string Hash;
+            var tmp_SDKConfiguration = IocContainer.GetIoc.Resolve<SdkConfigModel>().SDKConfiguration.Value;
+            var tmp_Result = await tmp_Creator(_param, tmp_SDKConfiguration);
+            return tmp_Result as T;
+        }
     }
 }
