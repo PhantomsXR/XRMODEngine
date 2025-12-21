@@ -1,3 +1,5 @@
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/PhantomsXR/XRMODEngine)
+
 **The Infinite Canvas for Spatial Computing**
 > "We are not building a walled garden. We are giving you the geology map and saying: 'Go, this land is free. Build your
 > own empire.'"
