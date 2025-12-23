@@ -21,6 +21,9 @@ namespace Phantom.XRMOD.ActionNotification.Runtime
         private readonly Queue<Action> _pendingOps = new();
         private bool isPosting = false;
 
+        /// <summary>
+        /// Registers a general notification handler. Handles reentrancy.
+        /// </summary>
         public void AddHandler(INotificationHandler _handler)
         {
             if (isPosting)
