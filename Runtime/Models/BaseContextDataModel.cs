@@ -16,6 +16,10 @@ using Phantom.XRMOD.Core.Runtime;
 
 namespace Phantom.XRMOD.Models.Runtime
 {
+    /// <summary>
+    /// A data model that stores the execution context for an XR experience,
+    /// including the project name, process ID, world scale, and space type.
+    /// </summary>
     public class BaseContextDataModel : IModel, IReleaseCommand
     {
         public Camera MainCamera;

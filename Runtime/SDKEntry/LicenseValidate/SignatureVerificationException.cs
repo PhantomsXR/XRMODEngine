@@ -13,6 +13,9 @@ using System;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Exception thrown when a JWT signature verification fails.
+    /// </summary>
     public class SignatureVerificationException : Exception
     {
         public SignatureVerificationException(string _message)

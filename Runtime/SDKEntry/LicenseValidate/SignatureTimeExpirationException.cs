@@ -13,6 +13,9 @@ using System;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Exception thrown when a signed token has expired based on its claim time.
+    /// </summary>
     public class SignatureTimeExpirationException:Exception
     {
         public SignatureTimeExpirationException(string _message)

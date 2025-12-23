@@ -6,7 +6,8 @@ using Phantom.XRMOD.SDKEntry.Runtime.Models;
 namespace Phantom.XRMOD.SDKEntry.Runtime.Logic
 {
     /// <summary>
-    /// Responsible for building the project loading handler pipeline.
+    /// Responsible for building and executing the project loading handler pipeline.
+    /// Orchestrates the transition from metadata fetching to experience launch.
     /// </summary>
     public class ProjectLoadingPipeline
     {
@@ -17,6 +18,9 @@ namespace Phantom.XRMOD.SDKEntry.Runtime.Logic
             experienceUid = _experienceUid;
         }
 
+        /// <summary>
+        /// Starts the full loading sequence from scratch for a specific project.
+        /// </summary>
         public void Execute()
         {
             var tmp_GetARExperienceProjectHandler =
@@ -41,6 +45,10 @@ namespace Phantom.XRMOD.SDKEntry.Runtime.Logic
             tmp_GetARExperienceProjectHandler.Handle();
         }
 
+        /// <summary>
+        /// Resumes the loading sequence from the configuration download phase, typically used
+        /// after a user has acknowledged an oversize package warning.
+        /// </summary>
         public void ExecuteContinueDownload()
         {
             var tmp_GetXRPackageConfigHandler = new GetXRPackageConfigHandler();

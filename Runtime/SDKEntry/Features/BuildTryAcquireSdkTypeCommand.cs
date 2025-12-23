@@ -15,6 +15,10 @@ using Phantom.XRMOD.SDKEntry.Runtime.Models;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Command that provides the current SDK device type (e.g., Handheld vs Headset).
+    /// Subscribes to the <c>TryAcquireSdkType</c> action notification.
+    /// </summary>
     public class BuildTryAcquireSdkTypeCommand : ICommand, IReleaseCommand
     {
         public BuildTryAcquireSdkTypeCommand()

@@ -23,6 +23,10 @@ using UnityEngine.Networking;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime.DataRequest
 {
+    /// <summary>
+    /// Command that downloads a compressed experience package, unzips it to the local cache,
+    /// and then loads the experience configuration.
+    /// </summary>
     public class DownloadPackBundleAndLoadConfig : IHttpRequestCommand<string>
     {
         private readonly QueryParameter queryParameter;

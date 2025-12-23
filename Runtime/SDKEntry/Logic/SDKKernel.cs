@@ -26,6 +26,9 @@ namespace Phantom.XRMOD.SDKEntry.Runtime.Logic
         {
         }
 
+        /// <summary>
+        /// Initializes the kernel, notifies the application, and prepares project loading logic.
+        /// </summary>
         public void Initialize()
         {
             // Let developer know xr-mod engine was launching
@@ -68,11 +71,17 @@ namespace Phantom.XRMOD.SDKEntry.Runtime.Logic
                 codesHook = _hook;
         }
 
+        /// <summary>
+        /// Updates the kernel state, primarily forwarding updates to active code hooks.
+        /// </summary>
         public void OnUpdate()
         {
             codesHook?.OnUpdate();
         }
 
+        /// <summary>
+        /// Disposes of the kernel, unregistering observers and cleaning up hooks.
+        /// </summary>
         public void Dispose()
         {
             ActionNotificationCenter.DefaultCenter.RemoveObserver(nameof(ActionParameterDataType.FetchProjectDetail));

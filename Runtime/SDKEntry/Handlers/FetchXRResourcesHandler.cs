@@ -21,6 +21,10 @@ using Phantom.XRMOD.XRMODUtilites.Runtime;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Handler that asynchronously fetches XR experience metadata and asset bundle manifests
+    /// from the backend based on the project identity and target platform.
+    /// </summary>
     public class FetchXRResourcesHandler : AbstractHandler
     {
         private readonly NetworkRequestType networkRequestType;

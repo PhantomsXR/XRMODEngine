@@ -15,6 +15,10 @@ using Phantom.XRMOD.Core.Runtime;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Command that listens for the 'Exit' notification and triggers the SDK disposal sequence.
+    /// This effectively stops the current project and returns to the host application state.
+    /// </summary>
     public class BuildExitCommand : ICommand, IReleaseCommand
     {
         public BuildExitCommand()

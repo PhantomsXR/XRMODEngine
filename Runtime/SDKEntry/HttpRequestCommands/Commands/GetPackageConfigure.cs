@@ -20,6 +20,10 @@ using Phantom.XRMOD.XRMODUtilites.Runtime;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime.DataRequest
 {
+    /// <summary>
+    /// High-level command that determines the correct strategy for loading an experience configuration
+    /// based on the package mode (Asset only vs Asset and Scene).
+    /// </summary>
     public class GetPackageConfigure : IHttpRequestCommand<TextAsset>
     {
         private QueryParameter queryParameter;

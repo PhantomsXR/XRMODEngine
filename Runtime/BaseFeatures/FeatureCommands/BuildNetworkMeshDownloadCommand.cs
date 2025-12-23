@@ -20,6 +20,10 @@ using Phantom.XRMOD.GLTFExtension.Runtime;
 
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
+    /// <summary>
+    /// Command responsible for downloading 3D mesh files from a URL and caching them locally.
+    /// Subscribes to the <c>DownloadMesh</c> action notification.
+    /// </summary>
     public class BuildNetworkMeshDownloadCommand : ICommand, IReleaseCommand
     {
         public BuildNetworkMeshDownloadCommand()

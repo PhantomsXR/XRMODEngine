@@ -17,10 +17,14 @@ using UnityEngine.Rendering;
 
 namespace Phantom.XRMOD.XRMODUtilites.Runtime
 {
+    /// <summary>
+    /// Adapter component that adds and manages a sorting group, specifically for Apple VisionOS via PolySpatial.
+    /// Controls the rendering order of multiple objects in a 3D scene.
+    /// </summary>
     public class SortingGroupComponentAdapter : MonoBehaviour
     {
         /// <summary>
-        /// Enum defining depth pass types.
+        /// Enum defining depth pass types for the sorting group.
         /// </summary>
         public enum DepthPassType : int
         {
@@ -46,9 +50,19 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
         List<RendererSorting> renderers = new List<RendererSorting>();
 
 
+        /// <summary>
+        /// The depth pass type currently in use.
+        /// </summary>
         public BindableProperty<DepthPassType> DepthPass = new();
+
+        /// <summary>
+        /// The list of renderers and their associated sort order.
+        /// </summary>
         public BindableProperty<List<RendererSorting>> Renderers = new();
 
+        /// <summary>
+        /// Data structure defining the sorting order for a specific renderer.
+        /// </summary>
         [System.Serializable]
         public struct RendererSorting : IEquatable<RendererSorting>
         {

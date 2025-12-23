@@ -30,8 +30,17 @@ using UnityEngine.Android;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Provides common utility functions for the XRMOD SDK, including platform mapping,
+    /// version comparison, and permission requests.
+    /// </summary>
     public static class Utility
     {
+        /// <summary>
+        /// Extracts the version number from a gateway URL string.
+        /// </summary>
+        /// <param name="_gateway">The gateway URL.</param>
+        /// <returns>The version string found at the expected index.</returns>
         public static string GetGatewayVersion(string _gateway)
         {
             var tmp_Args = _gateway.Split("/");
@@ -57,11 +66,22 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
             return tmp_MD5String.ToString();
         }
 
+        /// <summary>
+        /// Gets the current runtime platform name in lowercase.
+        /// </summary>
+        /// <returns>The platform name (e.g., "android", "ios").</returns>
         public static string GetRuntimePlatform()
         {
             return RuntimePlatformHelper.GetPlatformName().ToLower();
         }
 
+        /// <summary>
+        /// Maps a platform name and base URLs to an <see cref="ExperienceResourceMapper"/> object.
+        /// </summary>
+        /// <param name="_platform">The target platform name.</param>
+        /// <param name="_bundleURL">The base bundle URL.</param>
+        /// <param name="_jsonURL">The base JSON configuration URL.</param>
+        /// <returns>A populated mapper object, or null if the platform is unsupported.</returns>
         public static ExperienceResourceMapper MakeSurePlatformAsset(string _platform, string _bundleURL,
             string _jsonURL)
         {
@@ -148,7 +168,6 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
                         json_url = _jsonURL,
                         platform_type = "DedicatedServerOSX"
                     };
-                    break;
                 case "dedicatedserverwin":
                     return new ExperienceResourceMapper()
                     {
@@ -156,7 +175,6 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
                         json_url = _jsonURL,
                         platform_type = "DedicatedServerWin"
                     };
-                    break;
                 case "dedicatedserverlinux":
                     return new ExperienceResourceMapper()
                     {
@@ -164,7 +182,6 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
                         json_url = _jsonURL,
                         platform_type = "DedicatedServerLinux"
                     };
-                    break;
             }
 
             return null;

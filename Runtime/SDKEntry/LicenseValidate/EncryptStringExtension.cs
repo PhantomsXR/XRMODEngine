@@ -17,6 +17,10 @@ using System.Text;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Extension methods for encrypting and decrypting strings using Advanced Encryption Standard (AES) with Rijndael.
+    /// Used for securing sensitive tokens and license data.
+    /// </summary>
     public static class EncryptStringExtension
     {
         private const string CONST_SECRET_KEY = "GQDstcKsx0NHjPOuXOYg5MbeJ1XT0uFiwDVvVBrk";
@@ -29,6 +33,11 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         // This constant determines the number of iterations for the password bytes generation function.
         private const int DerivationIterations = 1000;
 
+        /// <summary>
+        /// Encrypts the specified string using a predefined secret key and random entropy.
+        /// </summary>
+        /// <param name="_text">The plain text to encrypt.</param>
+        /// <returns>A Base64 encoded string containing the salt, IV, and cipher text.</returns>
         public static string Encrypt(this string _text)
         {
             // Salt and IV is randomly generated each time, but is preprended to encrypted cipher text
@@ -67,6 +76,11 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
             }
         }
 
+        /// <summary>
+        /// Decrypts a previously encrypted string using the predefined secret key.
+        /// </summary>
+        /// <param name="_text">The Base64 encoded cipher text (including salt and IV).</param>
+        /// <returns>The decrypted plain text.</returns>
         public static string Decrypt(this string _text)
         {
             // Get the complete stream of bytes that represent:

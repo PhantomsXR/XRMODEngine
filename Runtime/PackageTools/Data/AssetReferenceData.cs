@@ -13,10 +13,17 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.XRMODPackageTools.Runtime
 {
+    /// <summary>
+    /// Stores reference information for a single asset within an XRMOD package.
+    /// Used at runtime to map asset names to their actual Unity Objects for easy retrieval by name.
+    /// </summary>
     public class AssetReferenceData : ScriptableObject
     {
+        /// <summary> The unique name or identifier of the asset within the package. </summary>
         public string AssetName;
+        /// <summary> The fully qualified type name of the asset (e.g., UnityEngine.GameObject). </summary>
         [HideInInspector] public string AssetType;
+        /// <summary> The actual Unity Object reference, populated at runtime via the loading system. </summary>
         [HideInInspector] public UnityEngine.Object Asset;
     }
 }

@@ -11,6 +11,9 @@
 
 namespace Phantom.XRMOD.SDKEntry.Runtime.Mapper
 {
+    /// <summary>
+    /// Base class for all server responses, containing a status code and an optional message.
+    /// </summary>
     [System.Serializable]
     public class BaseServerResponse
     {

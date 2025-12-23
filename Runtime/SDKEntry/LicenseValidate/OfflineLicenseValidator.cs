@@ -16,6 +16,10 @@ using Phantom.XRMOD.SDKEntry.Runtime.Models;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Command that validates an offline license token.
+    /// Decodes the JWT token and verifies the application identifier and expiration time.
+    /// </summary>
     public class OfflineLicenseValidator : ICommand
     {
         public void Execute()

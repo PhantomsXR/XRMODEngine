@@ -11,6 +11,9 @@
 
 namespace Phantom.XRMOD.XRMODUtilites.Runtime
 {
+    /// <summary>
+    /// Arguments for events triggered when the list of active XR processes changes.
+    /// </summary>
     [System.Serializable]
     public class ProcessChangeArgs
     {

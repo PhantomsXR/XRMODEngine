@@ -16,6 +16,10 @@ using Phantom.XRMOD.Core.Runtime;
 
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
+    /// <summary>
+    /// Command that configures post-processing settings on the main camera.
+    /// Enables FXAA, Stop NaN, and Post-Processing as part of the experience initialization.
+    /// </summary>
     public class BuildPostProcessingCommand : AbstractCommand, ICommand, IReleaseCommand
     {
         private BaseContextDataModel arComponentModel;

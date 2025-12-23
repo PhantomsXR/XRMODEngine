@@ -19,6 +19,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Implementation of <see cref="IDownloadStrategy"/> using .NET <see cref="HttpClient"/>.
+    /// Supports multi-part downloads with Range headers for improved performance.
+    /// </summary>
     public class HttpClientDownloadStrategy : IDownloadStrategy
     {
         private readonly HttpClient httpClient;

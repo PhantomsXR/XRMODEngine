@@ -13,6 +13,10 @@ using System.Threading.Tasks;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Base implementation for the project loading and disposal chain-of-responsibility.
+    /// Manages the linking of handlers in a sequence.
+    /// </summary>
     public abstract class AbstractHandler : IHandler
     {
         private IHandler nextHandler;

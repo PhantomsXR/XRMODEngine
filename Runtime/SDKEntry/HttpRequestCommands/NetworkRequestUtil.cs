@@ -19,6 +19,10 @@ using Cysharp.Threading.Tasks;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime.DataRequest
 {
+    /// <summary>
+    /// Utility class for sending common HTTP requests using UnityWebRequest.
+    /// Provides helper methods for GET and POST requests with custom headers and timeouts.
+    /// </summary>
     public static class NetworkRequestUtil
     {
         public static async Task<T> SendRequest<T>(string _apiUrl, string _method, int _timeout, string _token,

@@ -16,6 +16,10 @@ using Phantom.XRMOD.Core.Runtime;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Handler that launches the active <see cref="BaseFeatureModule"/> once all assets are loaded,
+    /// triggering the actual XR experience start.
+    /// </summary>
     public class LaunchXRModuleHandler : AbstractHandler
     {
         public override void Handle()

@@ -18,6 +18,10 @@ using Phantom.XRMOD.XRMODUtilites.Runtime;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime.DataRequest
 {
+    /// <summary>
+    /// Command for downloading asset bundle content and loading a specific configuration from it.
+    /// Uses <see cref="BasePackageLoaderUtility"/> for the actual loading logic.
+    /// </summary>
     public class DownloadAssetBundleContent : IHttpRequestCommand<string>
     {
         private readonly QueryParameter queryParameter;

@@ -16,6 +16,10 @@ using UnityEngine.Video;
 
 namespace Phantom.XRMOD.XRMODPackageTools.Runtime
 {
+    /// <summary>
+    /// Legacy API utility for loading various asset types from XRMOD packages.
+    /// Provides simple callback-based wrappers around <see cref="BasePackageLoaderUtility"/>.
+    /// </summary>
     [Obsolete("Deprecated, use other api instead.", true)]
     public class PackageLoaderApiUtility
     {

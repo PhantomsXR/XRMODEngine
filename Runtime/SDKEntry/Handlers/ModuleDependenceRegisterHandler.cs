@@ -15,6 +15,10 @@ using Phantom.XRMOD.SDKEntry.Runtime.Models;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Handler that registers all essential system models and commands into the global <see cref="IocContainer"/>
+    /// during the SDK's bootstrap phase.
+    /// </summary>
     public class ModuleDependenceRegisterHandler : AbstractHandler
     {
         public override void Handle()

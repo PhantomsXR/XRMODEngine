@@ -16,6 +16,10 @@ using UnityEngine;
 namespace Phantom.XRMOD.GLTFExtension.Runtime
 {
     // List<T>
+    /// <summary>
+    /// A generic wrapper to enable serialization of <see cref="List{T}"/> using Unity's <see cref="JsonUtility"/>.
+    /// </summary>
+    /// <typeparam name="T">The type of elements in the list.</typeparam>
     [Serializable]
     public class Serialization<T>
     {
@@ -33,6 +37,12 @@ namespace Phantom.XRMOD.GLTFExtension.Runtime
     }
 
     // Dictionary<TKey, TValue>
+    /// <summary>
+    /// A generic wrapper to enable serialization of <see cref="Dictionary{TKey, TValue}"/> using Unity's <see cref="JsonUtility"/>.
+    /// It implements <see cref="ISerializationCallbackReceiver"/> to convert the dictionary into two lists for serialization.
+    /// </summary>
+    /// <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
+    /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
     [Serializable]
     public class Serialization<TKey, TValue> : ISerializationCallbackReceiver
     {

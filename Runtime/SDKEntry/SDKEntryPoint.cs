@@ -1,16 +1,16 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Phantom.XRMOD.ActionNotification.Runtime;
-using Phantom.XRMOD.UnityFusion.Runtime;
-using Phantom.XRMOD.Core.Runtime;
 using Phantom.XRMOD.SDKEntry.Runtime.Logic;
-using Phantom.XRMOD.XRMODUtilites.Runtime;
 using UnityEngine.XR.ARFoundation;
 
 // ReSharper disable once CheckNamespace
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// The main entry point for the XRMOD SDK.
+    /// Handles the SDK lifecycle, scene events, and kernel updates.
+    /// </summary>
     public partial class SDKEntryPoint : MonoBehaviour
     {
         private SDKKernel sdkKernel;

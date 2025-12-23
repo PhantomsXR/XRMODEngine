@@ -14,6 +14,9 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.XRMODUtilites.Runtime
 {
+    /// <summary>
+    /// Provides extension methods for Unity's <see cref="GameObject"/>.
+    /// </summary>
     public static class GameObjectExtension
     {
         public static GameObject InstantiateWithTransform(this GameObject _prefab, Transform _parent)

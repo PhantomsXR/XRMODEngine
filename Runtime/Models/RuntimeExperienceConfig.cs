@@ -14,11 +14,23 @@ using Phantom.XRMOD.Core.Runtime;
 
 namespace Phantom.XRMOD.Models.Runtime
 {
+    /// <summary>
+    /// Managed model that holds the current runtime configuration and metadata for an active XR experience.
+    /// It provides a bindable property for reactive updates when the configuration changes.
+    /// </summary>
     public class RuntimeExperienceConfig : IModel, IReleaseCommand
     {
+        /// <summary>
+        /// The current experience configuration, wrapped in a <see cref="BindableProperty{T}"/> for observation.
+        /// </summary>
         public BindableProperty<BaseExperienceConfigModel> CurrentConfigures { get; private set; }
+        
+        /// <summary> Optional metadata string associated with the experience. </summary>
         public string MetaData;
 
+        /// <summary>
+        /// Initializes the config model and its bindable properties.
+        /// </summary>
         public void Initialize()
         {
             CurrentConfigures = new BindableProperty<BaseExperienceConfigModel>();
@@ -29,6 +41,10 @@ namespace Phantom.XRMOD.Models.Runtime
             Initialize();
         }
 
+        /// <summary>
+        /// Releases resources and clears bindings when the experience is stopped or disposed.
+        /// </summary>
+        /// <param name="_projectName">Optional project name for scoped release.</param>
         public void Release(string _projectName = null)
         {
             CurrentConfigures.OnValueChanged = null;

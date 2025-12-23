@@ -17,12 +17,31 @@ using UnityEngine.Serialization;
 
 namespace Phantom.XRMOD.Localization.Runtime
 {
+    /// <summary>
+    /// A ScriptableObject that stores a collection of localization tables and settings.
+    /// Acts as the primary database for internationalization data within XRMOD.
+    /// </summary>
     [Icon("Packages/com.phantomsxr.foundation/Editor/XRMODLocalization/Assets/Icons/LocalizationDatabase.png")]
     public class LocalizationDatabase : ScriptableObject
     {
+        /// <summary>
+        /// A list of localization tables, separated by scope and platform.
+        /// </summary>
         public List<LocalizationTable> Tables = new();
+
+        /// <summary>
+        /// Settings related to the localization process and behavior.
+        /// </summary>
         public LocalizatoinSettings LocalizatoinSettings;
 
+        /// <summary>
+        /// Retrieves a localized string based on the provided key, language, scope, and platform.
+        /// </summary>
+        /// <param name="_key">The localization key to look up.</param>
+        /// <param name="_language">The desired language.</param>
+        /// <param name="_scope">The scope of the localization (e.g., InExperiences, Global).</param>
+        /// <param name="_platform">The XRMOD runtime platform.</param>
+        /// <returns>The localized string if found; otherwise, returns the original <paramref name="_key"/>.</returns>
         public string GetLocalizedString(string _key, SystemLanguage _language, LocalizationScope _scope,
             XRMODPlatform _platform)
         {

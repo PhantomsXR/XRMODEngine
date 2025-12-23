@@ -13,12 +13,18 @@ using System;
 
 namespace Phantom.XRMOD.XRMODUtilites.Runtime
 {
+    /// <summary>
+    /// Obsolete provider class for platform checking. Use <see cref="RuntimePlatformHelper"/> instead.
+    /// </summary>
     [Obsolete("Obsoleted", true)]
     public abstract class RuntimePlatformCheckerProvider
     {
         public abstract bool IsPlatform(PlatformType _platform);
     }
 
+    /// <summary>
+    /// Detailed classification of XR platforms and specific device models.
+    /// </summary>
     public enum PlatformType : byte
     {
         Pico,

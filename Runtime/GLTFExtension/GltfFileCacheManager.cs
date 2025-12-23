@@ -20,6 +20,10 @@ using UnityEngine.Assertions;
 
 namespace Phantom.XRMOD.GLTFExtension.Runtime
 {
+    /// <summary>
+    /// Manages a local file system cache for GLTF/GLB assets.
+    /// Allows the SDK to persist and retrieve exported 3D models to avoid redundant exports.
+    /// </summary>
     public class GltfFileCacheManager
     {
         private GltfCacheDb gltfCacheDb = new GltfCacheDb();

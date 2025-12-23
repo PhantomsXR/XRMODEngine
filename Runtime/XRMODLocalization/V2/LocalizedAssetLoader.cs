@@ -14,8 +14,22 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.Localization.Runtime
 {
+    /// <summary>
+    /// Static utility class for asynchronously loading localized assets (like prefabs or textures) 
+    /// from either Unity Resources or XRMOD asset bundles.
+    /// </summary>
     public static class LocalizedAssetLoader
     {
+        /// <summary>
+        /// Asynchronously loads a localized asset of type <typeparamref name="T"/>.
+        /// </summary>
+        /// <typeparam name="T">The type of asset to load (must be a Unity Object).</typeparam>
+        /// <param name="_key">The localization key (not used directly for asset loading here, but passed for context).</param>
+        /// <param name="_lang">The desired language.</param>
+        /// <param name="_projectName">The name of the XRMOD project (for in-experience loading).</param>
+        /// <param name="_scope">The localization scope (InLauncher or InExperience).</param>
+        /// <param name="_langKey">The actual resource path or asset name to load.</param>
+        /// <returns>A task representing the asynchronous load operation, yielding the asset.</returns>
         public static async System.Threading.Tasks.Task<T> LoadAsync<T>(
             string _key,
             SystemLanguage _lang,

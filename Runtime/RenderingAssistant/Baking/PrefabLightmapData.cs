@@ -4,31 +4,48 @@ using UnityEngine.SceneManagement;
 
 namespace Phantom.XRMOD.RenderAssistant.Runtime
 {
+    /// <summary>
+    /// Component used to store and apply lightmap data for prefabs that are instantiated at runtime.
+    /// This is an older implementation compared to <see cref="PrefabBaker"/> but still used in some contexts.
+    /// </summary>
     [DisallowMultipleComponent]
     [ExecuteInEditMode]
     [ExecuteAlways]
     public class PrefabLightmapData : MonoBehaviour
     {
+        /// <summary> Data structure storing lightmap assignment information for a renderer. </summary>
         [System.Serializable]
         public struct RendererInfo
         {
+            /// <summary> The renderer component. </summary>
             public Renderer Renderer;
+            /// <summary> The index of the lightmap in the global list. </summary>
             public int LightmapIndex;
+            /// <summary> The UV offset and scale for the lightmap. </summary>
             public Vector4 LightmapOffsetScale;
         }
 
+        /// <summary> Data structure storing basic information about a baked light. </summary>
         [System.Serializable]
         public struct LightInfo
         {
+            /// <summary> The light component. </summary>
             public Light Light;
+            /// <summary> The type of light baking (e.g., Baked, Mixed). </summary>
             public int LightmapBaketype;
+            /// <summary> The mixed lighting mode. </summary>
             public int MixedLightingMode;
         }
 
+        /// <summary> List of renderers and their corresponding lightmap data. </summary>
         public RendererInfo[] m_RendererInfo;
+        /// <summary> Array of color lightmap textures. </summary>
         public Texture2D[] m_Lightmaps;
+        /// <summary> Array of directional lightmap textures. </summary>
         public Texture2D[] m_LightmapsDir;
+        /// <summary> Array of shadow mask textures. </summary>
         public Texture2D[] m_ShadowMasks;
+        /// <summary> List of lights and their baking settings. </summary>
         public LightInfo[] m_LightInfo;
 
 
@@ -37,6 +54,9 @@ namespace Phantom.XRMOD.RenderAssistant.Runtime
             Init();
         }
 
+        /// <summary>
+        /// Initializes the lightmaps in the scene by combining the prefab's lightmaps with existing scene lightmaps.
+        /// </summary>
         public void Init()
         {
             if (m_RendererInfo == null || m_RendererInfo.Length == 0)

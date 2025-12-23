@@ -21,8 +21,16 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.XRMODPackageTools.Runtime
 {
+    /// <summary>
+    /// General-purpose utility class for file searching, path manipulation, and type mapping
+    /// within the XRMOD package management system.
+    /// </summary>
     public static class Utility
     {
+        /// <summary>
+        /// Gets the data path for the application, handling specific overrides for multiplayer play mode if active.
+        /// </summary>
+        /// <returns>The resolved application data path.</returns>
         public static string GetApplicationDataPath()
         {
             string tmp_UnityProjectPath = Application.dataPath;
@@ -43,6 +51,11 @@ namespace Phantom.XRMOD.XRMODPackageTools.Runtime
             return tmp_UnityProjectPath;
         }
 
+        /// <summary>
+        /// Searches for a directory by its name within the application's data path.
+        /// </summary>
+        /// <param name="_folderName">The name of the folder to search for.</param>
+        /// <returns>The full path to the folder if found; otherwise, an empty string.</returns>
         public static string SearchFolderByName(string _folderName)
         {
             if (string.IsNullOrEmpty(_folderName))
@@ -95,6 +108,11 @@ namespace Phantom.XRMOD.XRMODPackageTools.Runtime
             return tmp_ShortenPath;
         }
 
+        /// <summary>
+        /// Maps a Unity Object type to its common file extension.
+        /// </summary>
+        /// <typeparam name="T">The type of Unity Object.</typeparam>
+        /// <returns>The file extension (without the dot) associated with the type.</returns>
         public static string TypeMapping<T>() where T : UnityEngine.Object
         {
             var tmp_Type = typeof(T);
@@ -103,6 +121,7 @@ namespace Phantom.XRMOD.XRMODPackageTools.Runtime
             {
                 tmp_Suffix = "prefab";
             }
+// ... (rest of the method)
             else if (tmp_Type == typeof(Animator))
             {
                 tmp_Suffix = "controller";
