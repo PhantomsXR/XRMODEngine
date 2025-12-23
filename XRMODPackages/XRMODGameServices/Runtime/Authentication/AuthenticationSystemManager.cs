@@ -10,15 +10,39 @@ using UnityEngine;
 namespace Phantom.XRMOD.GameServices.Runtime
 {
     /// <summary>
-    /// Sample implementation of the Unity Authentication Service.
+    /// Manages the authentication system, providing various sign-in methods and user information management.
+    /// Wraps Unity's Authentication Service.
     /// </summary>
     public class AuthenticationSystemManager
     {
+        /// <summary>
+        /// Invoked when the user successfully signs in.
+        /// </summary>
         public static event Action SignedInCallback;
+
+        /// <summary>
+        /// Invoked when the user signs out.
+        /// </summary>
         public static event Action SignOutCallback;
+
+        /// <summary>
+        /// Invoked when a sign-in attempt fails.
+        /// </summary>
         public static event Action<RequestFailedException> SignFailedCallback;
+
+        /// <summary>
+        /// Invoked when a sign-in code is received (e.g., for device code flow).
+        /// </summary>
         public static event Action<SignInCodeInfo> SignInCodeReceivedCallback;
+
+        /// <summary>
+        /// Invoked when a sign-in code expires.
+        /// </summary>
         public static event Action SignInCodeExpiredCallback;
+
+        /// <summary>
+        /// Invoked when the current session/token has expired.
+        /// </summary>
         public static event Action ExpiredCallback;
 
         private static bool isSiginning;
@@ -26,6 +50,10 @@ namespace Phantom.XRMOD.GameServices.Runtime
 
         private static UserInfoModel _USER_INFO_MODEL = new();
 
+        /// <summary>
+        /// Initializes the authentication service callbacks.
+        /// This should be called once the Unity Services are initialized.
+        /// </summary>
         public static void InitServices()
         {
             // AuthenticationService.SignedIn execute before got the user data
@@ -40,6 +68,18 @@ namespace Phantom.XRMOD.GameServices.Runtime
 
         #region Custom UserName and Password APIs
 
+        /// <summary>
+        /// Signs in a user using a username and password.
+        /// </summary>
+        /// <param name="_userName">The username.</param>
+        /// <param name="_pwd">The password.</param>
+        /// <param name="_error">Callback invoked on error with the error message.</param>
+        /// <returns>A Task representing the sign-in process.</returns>
+        /// <example>
+        /// <code>
+        /// await AuthenticationSystemManager.SignInUserNameWithPassword("myUser", "myPass", (err) => Debug.LogError(err));
+        /// </code>
+        /// </example>
         public static async Task SignInUserNameWithPassword(string _userName, string _pwd, Action<string> _error)
         {
             try
@@ -62,6 +102,12 @@ namespace Phantom.XRMOD.GameServices.Runtime
             }
         }
 
+        /// <summary>
+        /// Updates the current user's password.
+        /// </summary>
+        /// <param name="_currentPwd">The current password.</param>
+        /// <param name="_newPwd">The new password.</param>
+        /// <returns>A Task representing the update process.</returns>
         public static async Task UpdateUserNamePassword(string _currentPwd, string _newPwd)
         {
             try
@@ -82,6 +128,13 @@ namespace Phantom.XRMOD.GameServices.Runtime
             }
         }
 
+        /// <summary>
+        /// Signs up a new user with a username and password.
+        /// </summary>
+        /// <param name="_userName">The username.</param>
+        /// <param name="_newPwd">The password.</param>
+        /// <param name="_error">Callback invoked on error with the error message.</param>
+        /// <returns>A Task representing the sign-up process.</returns>
         public static async Task SignUpUserNameWithPassword(string _userName, string _newPwd, Action<string> _error)
         {
             try
@@ -109,7 +162,8 @@ namespace Phantom.XRMOD.GameServices.Runtime
         #region Sign with Platforms
 
         /// <summary>
-        /// Sign in with apple account
+        /// Signs in using Apple Authentication. 
+        /// Requires the <c>USE_APPLE_AUTHENTICATION</c> define.
         /// </summary>  
         public static void SignInWithApple()
         {
@@ -293,14 +347,10 @@ namespace Phantom.XRMOD.GameServices.Runtime
         #endregion
 
         /// <summary>
-        /// A cached player is a player who has their session token cached on the SDK.
-        /// Every time a sign in event is successful, the SDK caches a session token.
-        /// A cached player exists if these conditions are fulfilled:
-        ///  - The player previously signed in with Unity Authentication via anonymous login or platform login.
-        ///  - The cached session token hasn't been deleted.
-        /// If the session token exists, then the <see cref="SignInWithCache"/> method recovers the existing credentials
-        /// of a player, regardless of whether they signed in anonymously or through a platform account. 
+        /// Signs in using a cached session token if it exists.
+        /// A cached player exists if they previously signed in and the token hasn't been deleted.
         /// </summary> 
+        /// <returns>A Task representing the sign-in process.</returns>
         public static async Task SignInWithCache()
         {
             if (!AuthenticationService.Instance.SessionTokenExists) return;
@@ -336,8 +386,9 @@ namespace Phantom.XRMOD.GameServices.Runtime
         }
 
         /// <summary>
-        /// Sign in with anonymous user
+        /// Signs in anonymously.
         /// </summary> 
+        /// <returns>A Task representing the sign-in process.</returns>
         public static async Task SignInWithAnonymous()
         {
             try
@@ -368,9 +419,9 @@ namespace Phantom.XRMOD.GameServices.Runtime
 
 
         /// <summary>
-        /// Sign out current account
+        /// Signs out the current user and clears the session token.
         /// </summary>
-        /// <param name="_profileName">The signin profile</param>
+        /// <param name="_profileName">Optional profile name (currently unused in this method but provided for context).</param>
         public static void SignOut(string _profileName = null)
         {
             if (AuthenticationService.Instance.IsAuthorized || AuthenticationService.Instance.IsSignedIn)
@@ -390,9 +441,9 @@ namespace Phantom.XRMOD.GameServices.Runtime
         }
 
         /// <summary>
-        /// Get current user information
+        /// Gets the current user's information.
         /// </summary>
-        /// <returns>The user information</returns>
+        /// <returns>A <see cref="UserInfoModel"/> containing the current user's data.</returns>
         public static UserInfoModel GetUserInfo()
         {
             _USER_INFO_MODEL.player_name = AuthenticationService.Instance.PlayerName;
@@ -410,19 +461,32 @@ namespace Phantom.XRMOD.GameServices.Runtime
         }
 
         /// <summary>
-        /// Change the player name
+        /// Updates the current player's display name.
         /// </summary>
-        /// <param name="_playerName">The new player name</param>
+        /// <param name="_playerName">The new display name.</param>
         public static void UpdatePlayerName(string _playerName)
         {
             AuthenticationService.Instance.UpdatePlayerNameAsync(_playerName);
         }
 
+        /// <summary>
+        /// Whether a user is currently signed in.
+        /// </summary>
         public static bool IsSignedIn => AuthenticationService.Instance.IsSignedIn;
+
+        /// <summary>
+        /// Whether the current session is authorized.
+        /// </summary>
         public static bool IsAuthorized => AuthenticationService.Instance.IsAuthorized;
 
+        /// <summary>
+        /// Whether the current session token has expired.
+        /// </summary>
         public static bool IsExpired => AuthenticationService.Instance.IsExpired;
 
+        /// <summary>
+        /// Whether a session token exists on the local device.
+        /// </summary>
         public static bool SessionTokenExists => AuthenticationService.Instance.SessionTokenExists;
     }
 }

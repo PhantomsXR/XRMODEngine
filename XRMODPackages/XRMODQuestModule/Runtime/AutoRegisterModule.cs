@@ -17,15 +17,24 @@ using UnityEngine.Scripting;
 
 namespace Phantom.XRMOD.QuestModule.Runtime
 {
+    /// <summary>
+    /// Automatically registers the Meta Quest module when running on a Quest device.
+    /// </summary>
     [Preserve]
     public class AutoRegisterModule : MonoBehaviour
     {
 #if QUEST_INSTALL
+        /// <summary>
+        /// Unity Awake lifecycle method. Calls RegisterModule.
+        /// </summary>
         private void Awake()
         {
             RegisterModule();
         }
 
+        /// <summary>
+        /// Registers the <see cref="MetaQuestModule"/> into the IoC container if the current platform is Quest.
+        /// </summary>
         private void RegisterModule()
         {
             if (!RuntimePlatformHelper.IsQuest()) return;

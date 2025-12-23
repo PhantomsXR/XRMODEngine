@@ -14,7 +14,10 @@ using LitJson;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
-    public class LitJsonSerializer:IJsonSerializer
+    /// <summary>
+    /// JSON Serializer implementation using the LitJson library.
+    /// </summary>
+    public class LitJsonSerializer : IJsonSerializer
     {
         public string Serialize(object obj)
         {

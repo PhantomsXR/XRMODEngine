@@ -23,6 +23,11 @@ namespace Phantom.XRMOD.SDKEntry.Runtime.DataRequest
         GetExperienceAssets
     }
 
+    /// <summary>
+    /// Factory for creating and executing network request commands based on <see cref="NetworkRequestType"/>.
+    /// Handles the instantiation of specialized query and download commands for different backends.
+    /// </summary>
+    /// <typeparam name="T">The expected return type of the request.</typeparam>
     public class NetworkRequestFactory<T> : SingletonTemplate<NetworkRequestFactory<T>> where T : class, new()
     {
         private static readonly Dictionary<NetworkRequestType, Func<QueryParameter, SDKConfiguration, Task<object>>>

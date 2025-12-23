@@ -18,9 +18,16 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
 {
+    /// <summary>
+    /// Represents a single field/property within a runtime script and its assigned value.
+    /// Supports various types including primitives, Unity objects, and arrays.
+    /// </summary>
     [Serializable]
     public class MonoField
     {
+        /// <summary>
+        /// Defines the data type of the field.
+        /// </summary>
         public enum FieldTypeEnum : byte
         {
             Number = 0,
@@ -88,18 +95,30 @@ namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
         // [HideInInspector] public AnimationClip[] AnimationClipArray;
     }
 
+    /// <summary>
+    /// Generic wrapper for serializing a list of Unity Objects.
+    /// </summary>
+    /// <typeparam name="T">The type of Unity Object.</typeparam>
     [System.Serializable]
     public class UnityObject<T> where T : Object
     {
+        /// <summary> The list of Unity Objects. </summary>
         public List<T> List;
+        /// <summary> The System.Type of the list elements. </summary>
         public Type ListType;
     }
 
 
+    /// <summary>
+    /// Generic wrapper for serializing a list of primitive values.
+    /// </summary>
+    /// <typeparam name="T">The primitive type.</typeparam>
     [System.Serializable]
     public class GenericPrimitiveObject<T>
     {
+        /// <summary> The list of primitive values. </summary>
         public List<T> List;
+        /// <summary> The type name of the list elements. </summary>
         public string ListType;
     }
 }

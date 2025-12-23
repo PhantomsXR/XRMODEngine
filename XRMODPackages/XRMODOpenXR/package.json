@@ -1,7 +1,7 @@
 {
   "name": "com.phantomsxr.xrmodopenxrmodule",
   "displayName": "XRMOD OpenXR Module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "library",
   "unity": "2020.3",
   "keywords": [

@@ -31,9 +31,14 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.UnityFusion.Runtime
 {
+    /// <summary>
+    /// The core hook class for the XR-MOD runtime.
+    /// Manages the ILRuntime/CLR AppDomain, assembly loading, and hooks into Unity's lifecycle and event system.
+    /// </summary>
     // ReSharper disable once InconsistentNaming
     public class CodesHook
     {
+        /// <summary> Gets or sets whether debug mode is enabled. </summary>
         public bool debug { get; set; }
 
         private static bool _INITIALIZED;
@@ -58,9 +63,23 @@ namespace Phantom.XRMOD.UnityFusion.Runtime
         private ILTypeInstance ilTypeInstance;
         private string projectName;
 
+        /// <summary>
+        /// Gets the current active AppDomain.
+        /// </summary>
         public static AppDomain GetAppDomain => SharedData.Instance.appDomain;
+
+        /// <summary>
+        /// Gets the cached runtime asset reference databases by project name.
+        /// </summary>
         public static Dictionary<string, RuntimeAssetReferenceDatabase> AssetReferences { get; private set; } = new();
 
+        /// <summary>
+        /// Initializes the hook for a specific project and entry point.
+        /// </summary>
+        /// <param name="_projectName">The name of the project.</param>
+        /// <param name="_domainName">The domain/namespace name.</param>
+        /// <param name="_mainEntryPoint">The main class entry point.</param>
+        /// <param name="_jitFlag">The JIT flag for the AppDomain.</param>
         public void InitializeHook(string _projectName, string _domainName, string _mainEntryPoint, int _jitFlag)
         {
             _INITIALIZED = SharedData.Instance.appDomain != null;
@@ -176,6 +195,10 @@ namespace Phantom.XRMOD.UnityFusion.Runtime
         ////////////////////////
         //Call back function////
         ////////////////////////
+        /// <summary>
+        /// Called during the Unity Update cycle.
+        /// Invokes the 'OnUpdate' method in the hot-reload assembly for all active instances.
+        /// </summary>
         public void OnUpdate()
         {
             if (!_INITIALIZED || updateMethods == null || SharedData.Instance.dllStream == null) return;
@@ -207,6 +230,10 @@ namespace Phantom.XRMOD.UnityFusion.Runtime
             GetAppDomain.Invoke(onReleaseMethod, ilTypeInstance, _projectName ?? projectName);
         }
 
+        /// <summary>
+        /// Disposes of the hook, releases memory, and cleans up the AppDomain and asset references.
+        /// </summary>
+        /// <param name="_projectName">The project to clean up (optional).</param>
         public async void Dispose(string _projectName = null)
         {
             try

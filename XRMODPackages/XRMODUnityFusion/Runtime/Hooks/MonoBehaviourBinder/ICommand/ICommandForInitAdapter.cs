@@ -13,8 +13,16 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook.ICommand
 {
+    /// <summary>
+    /// Interface for commands that initialize an adapter for a specific component.
+    /// </summary>
+    /// <typeparam name="T">The type of adapter instance created and returned.</typeparam>
     public interface ICommandForInitAdapter<T> where T : class,new()
     {
+        /// <summary>
+        /// Executes the initialization command.
+        /// </summary>
+        /// <returns>The created adapter instance.</returns>
         T Execute();
     }
 }

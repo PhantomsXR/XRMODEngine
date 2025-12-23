@@ -19,8 +19,17 @@ using UnityEngine.SceneManagement;
 
 namespace Phantom.XRMOD.XRMODPackageTools.Runtime
 {
+    /// <summary>
+    /// Utility class for loading and unloading Unity scenes from Asset Bundles.
+    /// Uses UniTask for asynchronous operations.
+    /// </summary>
     public class LoadSceneUtility
     {
+        /// <summary>
+        /// Asynchronously loads a scene from an Asset Bundle additively.
+        /// </summary>
+        /// <param name="_assetBundle">The bundle containing the scene.</param>
+        /// <param name="_sceneName">The name of the scene to load.</param>
         public static async Task LoadSceneAsync(AssetBundle _assetBundle, string _sceneName)
         {
             var tmp_ScenePaths = _assetBundle.GetAllScenePaths();
@@ -32,6 +41,11 @@ namespace Phantom.XRMOD.XRMODPackageTools.Runtime
             await SceneManager.LoadSceneAsync(tmp_SceneName, LoadSceneMode.Additive).ToUniTask();
         }
 
+        /// <summary>
+        /// Asynchronously unloads a specific scene that was loaded from an Asset Bundle.
+        /// </summary>
+        /// <param name="_assetBundle">The bundle that contained the scene.</param>
+        /// <param name="_sceneName">The name of the scene to unload.</param>
         public static async Task UnLoadSceneAsync(AssetBundle _assetBundle, string _sceneName)
         {
             var tmp_ScenePaths = _assetBundle.GetAllScenePaths();
@@ -43,6 +57,10 @@ namespace Phantom.XRMOD.XRMODPackageTools.Runtime
             await SceneManager.UnloadSceneAsync(tmp_SceneName).ToUniTask();
         }
 
+        /// <summary>
+        /// Unloads all scenes associated with the provided Asset Bundle.
+        /// </summary>
+        /// <param name="_assetBundle">The bundle whose scenes should be unloaded.</param>
         public static async void UnloadRuntimeScenes(AssetBundle _assetBundle)
         {
             try

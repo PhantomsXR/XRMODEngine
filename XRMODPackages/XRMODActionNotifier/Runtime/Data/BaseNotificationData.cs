@@ -15,6 +15,9 @@ using System.Threading.Tasks;
 
 namespace Phantom.XRMOD.ActionNotification.Runtime
 {
+    /// <summary>
+    /// Base class for all notification data.
+    /// </summary>
     public class BaseNotificationData : IDisposable
     {
         /// <summary>

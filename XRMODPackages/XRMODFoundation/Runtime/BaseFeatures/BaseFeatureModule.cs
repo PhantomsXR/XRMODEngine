@@ -17,6 +17,11 @@ using Phantom.XRMOD.Core.Runtime;
 
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
+    /// <summary>
+    /// The core module responsible for registering and managing fundamental XRMOD features.
+    /// It handles the initialization and disposal of essential services like GLTF loading,
+    /// event systems, and post-processing.
+    /// </summary>
     public class BaseFeatureModule : IModule
     {
         public BaseFeatureModule()

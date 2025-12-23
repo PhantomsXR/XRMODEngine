@@ -16,6 +16,10 @@ using Phantom.XRMOD.Core.Runtime;
 
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
+    /// <summary>
+    /// Command that returns the path to the temporary cache directory used by XRMOD for storing downloaded assets.
+    /// Subscribes to the <c>TryAcquireTemporaryCachePath</c> action notification.
+    /// </summary>
     public class BuildTryAcquireTemporaryCachePathCommand : ICommand, IReleaseCommand
     {
         public BuildTryAcquireTemporaryCachePathCommand()

@@ -6,8 +6,17 @@ using UnityEngine.Rendering;
 
 namespace Phantom.XRMOD.RenderAssistant.Runtime
 {
+    /// <summary>
+    /// Static utility class that provides core logic for applying baked lightmap data from a <see cref="PrefabBaker"/> to the scene.
+    /// </summary>
     public static class Utils
     {
+        /// <summary>
+        /// Applies the lightmap and light probe data from a <see cref="PrefabBaker"/> to the current scene.
+        /// This method merges the prefab's lightmaps into the global <see cref="LightmapSettings"/>.
+        /// </summary>
+        /// <param name="prefab">The <see cref="PrefabBaker"/> component containing the bake data.</param>
+        /// <returns>True if the lightmaps were successfully combined or updated; otherwise, false.</returns>
         public static bool Apply( PrefabBaker prefab )
         {
             if( prefab.renderers == null || prefab.renderers.Length == 0) return false;
@@ -138,6 +147,12 @@ namespace Phantom.XRMOD.RenderAssistant.Runtime
             }
         }
 
+        /// <summary>
+        /// Checks if the current global <see cref="LightmapSettings"/> contain all the textures provided.
+        /// Useful for determining if a bake has already been applied to the scene.
+        /// </summary>
+        /// <param name="texs">An array of textures to check for.</param>
+        /// <returns>True if all textures are found in the current scene lightmaps; otherwise, false.</returns>
         public static bool SceneHasAllLightmaps( Texture2D[] texs )
         {
             if(( texs?.Length ?? 0 ) < 1) return true;

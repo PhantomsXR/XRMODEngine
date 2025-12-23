@@ -16,23 +16,47 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.QuestModule.Runtime
 {
+    /// <summary>
+    /// Base abstract decorator for Meta Quest features.
+    /// <para>
+    /// Provides common functionality for registering feature decorators at runtime.
+    /// Implementations should override <see cref="StartAlgorithm"/>, <see cref="PauseAlgorithm"/>, and <see cref="StopAlgorithm"/>.
+    /// </para>
+    /// </summary>
     public abstract class BaseMetaQuestFeatureDecorator : IFeatureDecorator
     {
+        /// <summary>
+        /// Determines if the specific feature is supported on the current platform/device.
+        /// </summary>
+        /// <returns>True if supported, otherwise false.</returns>
         public abstract bool SupportThisFeature();
 
+        /// <summary>
+        /// Starts the feature algorithm.
+        /// <para>
+        /// By default, it calls <see cref="RuntimeFeatureRegister"/> to register the decorator.
+        /// </para>
+        /// </summary>
         public virtual void StartAlgorithm()
         {
             RuntimeFeatureRegister();
         }
 
+        /// <summary>
+        /// Pauses the feature algorithm.
+        /// </summary>
         public abstract void PauseAlgorithm();
 
+        /// <summary>
+        /// Stops the feature algorithm.
+        /// </summary>
         public abstract void StopAlgorithm();
         
-        
-        
         /// <summary>
-        /// Auto register the feature decorator to manager.
+        /// Automatically registers the feature decorator to the <see cref="XRRuntimeContextDataModel"/>.
+        /// <para>
+        /// This ensures the feature is tracked and managed by the runtime context for the current project.
+        /// </para>
         /// </summary>
         protected  void RuntimeFeatureRegister()
         {

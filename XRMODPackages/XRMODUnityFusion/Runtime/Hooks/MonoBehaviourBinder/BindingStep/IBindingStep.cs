@@ -13,9 +13,19 @@ using System.Threading.Tasks;
 
 namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
 {
+    /// <summary>
+    /// Interface for a single step in the <see cref="MonoBinder"/> binding process.
+    /// </summary>
     public interface IBindingStep
     {
+        /// <summary> The phase of the binding process this step belongs to. </summary>
         BindingPhase Phase { get; }
+        
+        /// <summary>
+        /// Executes the specific logic for this binding step.
+        /// </summary>
+        /// <param name="_monoBinder">The binder instance to operate on.</param>
+        /// <returns>A task representing the execution.</returns>
         Task Execute(MonoBinder _monoBinder);
     }
 }

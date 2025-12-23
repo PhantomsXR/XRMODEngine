@@ -15,19 +15,23 @@ using UnityEngine;
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
     /// <summary>
-    /// ClientNetworkTransform class is responsible for updating the
-    /// <see cref="NetworkTransform"/> from the local owner perspective.
+    /// Client-authoritative network transform that allows clients to update transform states.
     /// </summary>
+    /// <remarks>
+    /// Extends Unity's <see cref="NetworkTransform"/> to support client-side authority for transform updates.
+    /// This is essential for player-controlled objects where the owning client should drive position, rotation, and scale.
+    /// </remarks>
     [DisallowMultipleComponent]
     public class ClientNetworkTransform : NetworkTransform
     {
         /// <summary>
         /// If true, only the Server can update the transform of the object.
+        /// If false, the owner client can update the transform.
         /// </summary>
         [SerializeField, Tooltip("Determines Local or Server transform updating.")]
         bool isServerAuthoritative = false;
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         protected override bool OnIsServerAuthoritative()
         {
             return isServerAuthoritative;

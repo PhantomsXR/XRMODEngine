@@ -15,13 +15,18 @@ using UnityEngine.XR.OpenXR;
 namespace Phantom.XRMOD.OpenXRMOD.Runtime
 {
 #if QUEST_INSTALL || UNITY_OPENXR || ANDROID_XR
+    /// <summary>
+    /// Provides utilities to determine the current OpenXR runtime/platform at runtime.
+    /// This helps in executing platform-specific logic for Meta, Android XR, or other runtimes.
+    /// </summary>
     public class XRPlatformUnderstanding
     {
         private const string _CONST_RUNTIME_NAME_META = "Oculus";
         private const string _CONST_RUNTIME_NAME_ANDROID = "Android XR";
 
         /// <summary>
-        /// The current platform based on the active XRSessionSubsystem.
+        /// Gets the current platform type based on the active OpenXR session and runtime name.
+        /// Results are cached after the first retrieval.
         /// </summary>
         public static XRPlatformType CurrentPlatform
         {

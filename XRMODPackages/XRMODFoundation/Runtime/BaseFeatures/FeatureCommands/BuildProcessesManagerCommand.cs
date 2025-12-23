@@ -25,6 +25,11 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
+    /// <summary>
+    /// Core command that manages the lifecycle of multiple XR projects/processes.
+    /// It handles process registration, space type switching (Shared vs Exclusive),
+    /// and clean release of project assets and memory.
+    /// </summary>
     public class BuildProcessesManagerCommand : ICommand, IReleaseCommand
     {
         private readonly List<ProcessIdComponent> allProcesses;

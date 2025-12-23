@@ -63,6 +63,9 @@ namespace Phantom.XRMOD.BaseFeatures.Runtime
         [Tooltip("Directs the XR Origin's movement when using the hand-relative mode with the right hand.")]
         Transform m_RightControllerTransform;
 
+        /// <summary>
+        /// Directs the XR Origin's movement when using the hand-relative mode with the right hand.
+        /// </summary>
         public Transform rightControllerTransform
         {
             get => m_RightControllerTransform;

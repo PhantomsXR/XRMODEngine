@@ -20,6 +20,9 @@ using Phantom.XRMOD.SDKEntry.Runtime.Models;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Handler that downloads and parses the core configuration file for an XR experience package.
+    /// </summary>
     public class GetXRPackageConfigHandler : AbstractHandler
     {
         public override async void Handle()

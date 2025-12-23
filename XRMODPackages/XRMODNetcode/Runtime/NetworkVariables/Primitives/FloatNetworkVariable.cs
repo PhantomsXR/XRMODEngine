@@ -11,6 +11,12 @@
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// A MonoBehaviour-based network variable for synchronizing float values.
+    /// </summary>
+    /// <remarks>
+    /// Attach this component to a GameObject to expose a synchronized float value in the Inspector.
+    /// </remarks>
     public class FloatNetworkVariable:AbstractNetworkVariable<float>
     {
         

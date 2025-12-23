@@ -23,21 +23,27 @@ using System;
 using System.Collections;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime.NetworkInteractions
-{
+{ 
 #if USE_XRI
     /// <summary>
-    /// NetworkInteractableBase class synchronizes the <see cref=XRBaseInteractable"/> events over the network.
-    /// Options are exposed to determine which functionality you want to syncrhonize.
+    /// NetworkBaseInteractable class synchronizes <see cref="XRBaseInteractable"/> events over the network.
     /// </summary>
     /// <remarks>
-    /// This is meant to be a parent class that handles the core networking functionality.
-    /// Classes can interhit from this class and override where applicable.
-    /// See <see cref=NetworkPhysicsInteractable"/> for an example of how to extend this class.
+    /// This is the base class for networked XR interactions. It handles ownership transfer, interaction state synchronization,
+    /// and UnityEvent callbacks for hover, select, and activate interactions. Classes can inherit from this and override
+    /// methods as needed. See <see cref="NetworkPhysicsInteractable"/> for an example of extending this class.
+    /// 
+    /// Key features:
+    /// - Automatic ownership management with optional override
+    /// - Network synchronization of hover, select, and activate events
+    /// - Automatic ownership relinquishing after inactivity
+    /// - Object reset on disconnect support
     /// </remarks>
     [RequireComponent(typeof(XRBaseInteractable))]
     [DisallowMultipleComponent]
     public class NetworkBaseInteractable : NetworkBehaviour, IXRSelectFilter, IXRHoverFilter
     {
+
         /// <summary>
         /// Allow users to take ownership of currently controlled objects.
         /// </summary>

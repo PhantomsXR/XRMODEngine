@@ -16,9 +16,15 @@ using UnityEngine.Serialization;
 
 namespace Phantom.XRMOD.Localization.Runtime
 {
+    /// <summary>
+    /// Represents a single localization entry, containing translations for multiple languages.
+    /// </summary>
     [Serializable]
     public class LocalizationEntry
     {
+        /// <summary>
+        /// The unique key used to identify this localization entry.
+        /// </summary>
         public string Key;
 #if UNITY_EDITOR
         [FormerlySerializedAs("Lock")] [HideInInspector] public bool Sync;
@@ -38,6 +44,11 @@ namespace Phantom.XRMOD.Localization.Runtime
             }
         };
 
+        /// <summary>
+        /// Retrieves the localized text for a specific language.
+        /// </summary>
+        /// <param name="_lang">The desired language.</param>
+        /// <returns>The localized text if found; otherwise, returns the <see cref="Key"/> as a fallback.</returns>
         public string Get(SystemLanguage _lang)
         {
             foreach (var tmp_Pair in Translations)
@@ -62,10 +73,20 @@ namespace Phantom.XRMOD.Localization.Runtime
         }
     }
 
+    /// <summary>
+    /// A simple pair representing a language and its corresponding localized text.
+    /// </summary>
     [Serializable]
     public class SystemLanguageTextPair
     {
+        /// <summary>
+        /// The language for this pair.
+        /// </summary>
         public SystemLanguage Language;
+
+        /// <summary>
+        /// The localized text value.
+        /// </summary>
         public string Text;
     }
 }

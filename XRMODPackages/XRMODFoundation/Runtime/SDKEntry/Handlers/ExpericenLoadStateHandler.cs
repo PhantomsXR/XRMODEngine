@@ -13,6 +13,9 @@ using Phantom.XRMOD.XRMODUtilites.Runtime;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Handler that notifies the host application that asset loading is in progress.
+    /// </summary>
     public class ExpericenLoadStateHandler : AbstractHandler
     {
         public override void Handle()

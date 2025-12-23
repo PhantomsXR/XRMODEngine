@@ -20,6 +20,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.GLTFExtension.Runtime
 {
+    /// <summary>
+    /// Handles the asynchronous loading and instantiation of GLTF/GLB models.
+    /// Supports both local and network-based assets, with optional caching and event notifications.
+    /// </summary>
     public class GltfLoader : GltfAsset
     {
         [Tooltip("Create a box collider encapsulating the glTF asset")]

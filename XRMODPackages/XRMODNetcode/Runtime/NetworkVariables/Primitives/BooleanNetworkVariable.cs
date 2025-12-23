@@ -13,6 +13,12 @@ using System;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// A MonoBehaviour-based network variable for synchronizing Boolean values.
+    /// </summary>
+    /// <remarks>
+    /// Attach this component to a GameObject to expose a synchronized bool value in the Inspector.
+    /// </remarks>
     public class BooleanNetworkVariable : AbstractNetworkVariable<Boolean>
     {
     }

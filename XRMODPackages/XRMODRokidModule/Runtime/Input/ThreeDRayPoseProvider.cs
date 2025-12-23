@@ -22,6 +22,10 @@ using InputDevice = UnityEngine.XR.InputDevice;
 
 namespace Phantom.XRMOD.RokidModule.Runtime
 {
+    /// <summary>
+    /// Provides 3-DOF pose data for the ray interactor on Rokid devices.
+    /// Handles pose synchronization with the controller or phone input and supports vibration feedback.
+    /// </summary>
     public class ThreeDRayPoseProvider : MonoBehaviour
     {
         private Transform selfTransform;
@@ -47,6 +51,10 @@ namespace Phantom.XRMOD.RokidModule.Runtime
             Recenter();
         }
 
+        /// <summary>
+        /// Recalibrates the phone pose when the corresponding input action is performed.
+        /// Invokes the Rokid OpenXR API to recenter the pose.
+        /// </summary>
         private void Recenter()
         {
             if (Application.platform == RuntimePlatform.Android && !Application.isEditor)
@@ -87,6 +95,9 @@ namespace Phantom.XRMOD.RokidModule.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Triggers a haptic vibration feedback on the device.
+        /// </summary>
         public void Vibrate()
         {
             Vibration.VibratePeek();

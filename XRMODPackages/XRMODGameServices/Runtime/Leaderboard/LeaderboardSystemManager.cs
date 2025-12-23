@@ -2,11 +2,18 @@ using System.Threading.Tasks;
 
 namespace Phantom.XRMOD.GameServices.Runtime
 {
+    /// <summary>
+    /// Manages the Leaderboard system.
+    /// Provides methods to add/update scores and retrieve leaderboard rankings.
+    /// </summary>
     public class LeaderboardSystemManager
     {
         private ILeaderboardProvider leaderboardProvider;
         private static LeaderboardSystemManager _INSTANCE;
 
+        /// <summary>
+        /// Singleton instance of LeaderboardSystemManager.
+        /// </summary>
         public static LeaderboardSystemManager GetInstance => _INSTANCE ?? new LeaderboardSystemManager();
 
         private LeaderboardSystemManager()

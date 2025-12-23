@@ -1,228 +1,192 @@
 # XRMOD Game Services
 
-Take your game to the next level without having to worry about maintaining or scaling your back-end infrastructure.
-XRMOD-GS simplifies many game development tasks and challenges.
+Take your game to the next level without having to worry about maintaining or scaling your back-end infrastructure. **XRMOD Game Services (GS)** simplifies game development challenges by providing a unified set of tools for authentication, voice communication, leaderboards, cloud saving, and in-app purchases.
 
-[TOC]  
-[Authentication](#authentication)    
-[Voice](#voice)  
-[Leaderboard](#leaderboard)  
-[Cloud Save](#cloudsave)
-
-> You must manual to call `InitializeUnityServices(string _profileName = null)` to initialize XRMOD game services.
 ---
 
-# Authentication
+## 📖 Table of Contents
 
-# How to use?
+- [Overview](#overview)
+- [Quick Start](#quick-start)
+- [Core Modules](#core-modules)
+  - [Authentication](#authentication)
+  - [Voice](#voice)
+  - [Cloud Save](#cloud-save)
+  - [Leaderboard](#leaderboard)
+  - [In-App Purchase](#in-app-purchase)
+  - [Friends](#friends)
+- [Best Practices](#best-practices)
+- [Common Pitfalls](#common-pitfalls)
 
-if using it with special platform: Apple/Google/Meta etc, you must add define for you Unity Project.
+---
 
-## About Credential
+## 🌟 Overview
 
-```C#
-[System.Serializable]
-public class Credential
-{
-    public string Token;
-    public string Name;
-    public string Email;
-    public string AvatarUrl;
+XRMOD Game Services is designed to be a high-level wrapper around Unity Gaming Services (UGS) and other third-party providers. It offers a consistent API regardless of the underlying platform, allowing developers to focus on gameplay logic rather than infrastructure.
+
+---
+
+## 🚀 Quick Start
+
+To use XRMOD Game Services, you must initialize the core manager early in your game's lifecycle.
+
+> [!IMPORTANT]  
+> You must manually call `InitializeUnityServices` before using any other game services.
+
+```csharp
+using Phantom.XRMOD.GameServices.Runtime;
+
+// Basic initialization
+XRMODGameServicesManager.GetInstance.InitializeUnityServices();
+
+// Initialization with a specific profile (useful for testing)
+await XRMODGameServicesManager.GetInstance.InitializeUnityServicesAsync("Player_Alpha");
+```
+
+---
+
+## 📦 Core Modules
+
+### 🔐 Authentication
+
+The entry point for all player-related services. Supports multiple platforms and anonymous login.
+
+#### Supported Platforms
+- **Anonymous**: No credentials required.
+- **Username/Password**: Custom account management.
+- **Third-Party**: Apple (`USE_APPLE_AUTHENTICATION`), Google (`USE_GOOGLE_AUTHENTICATION`), Meta (`USE_META_AUTHENTICATION`).
+
+#### Usage Example
+```csharp
+// Sign in anonymously
+await AuthenticationSystemManager.SignInWithAnonymous();
+
+// Sign in with Username/Password
+await AuthenticationSystemManager.SignInUserNameWithPassword("myUser", "myPass", (err) => Debug.LogError(err));
+
+// Check state
+if (AuthenticationSystemManager.IsSignedIn) {
+    var userInfo = AuthenticationSystemManager.GetUserInfo();
+    Debug.Log($"Welcome, {userInfo.player_name}!");
 }
 ```
 
-> Apple platform has not provide avatar, so avatar url will empty.
+---
 
-## SignIn
+### 🎙️ Voice
 
-### Custom UserName with Password
+Scalable, cross-platform voice and text communication.
 
-**Method**
+#### Supported Providers
+- **Vivox**: Define `USE_VIVOX`.
+- **Agora**: Define `USE_AGORA_RTC`.
+- **Photon**: Define `USE_PHOTON_VOICE`.
 
-```C#
- public static void SignInUserNameWithPassword(String _userName,String _pwd);
- public static void SignUpUserNameWithPassword(String _userName,String _pwd);
- public static void UpdateUserNamePassword(String _userName,String _pwd);
+#### Usage Example
+```csharp
+// Join a spatialized voice channel
+VoiceSystemManager.GetInstance.JoinVoiceChannel("Room_01", JoinChannelType.Positional);
+
+// Mute self
+VoiceSystemManager.GetInstance.MuteSelfMicrophone(true);
 ```
 
-**Example**
-
-```C#
- AuthenticationManager.SignUpUserNameWithPassword("XRMODUser","XRMOD@User");
- AuthenticationManager.SignInUserNameWithPassword("XRMODUser","XRMOD@User");
- AuthenticationManager.UpdateUserNamePassword("XRMODUser","XRMOD@User");
-```
+> [!TIP]  
+> Register for voice events via the `ActionNotificationCenter` using `VoiceModuleNotifyActionKey.CONST_VOICE_EVENT_KEY`.
 
 ---
 
-### Apple platform
+### ☁️ Cloud Save
 
-1. Add **USE_APPLE_AUTHENTICATION** to your project setting
-2. Call **AuthenticationManager.SignInWithApple** to signin
+Store player data (levels, inventory, settings) securely in the cloud.
 
-**Method**
+#### Initialization
+Add `USE_UNITY_CLOUD_SAVE` to your project's scripting define symbols.
 
-```C#
- public static void SignInWithApple(Action<Credential> _signSuccess = null,Action<string> _signFailed = null);
-```
+#### Usage Example
+```csharp
+var myData = new Dictionary<string, object> { { "HighScore", 5000 }, { "Stage", "Volcano" } };
+await CloudSaveSystemManager.GetInstance.SavePlayerData(myData);
 
-**Example**
-
-```C#
-AuthenticationManager.SignInWithApple(_credential=>{},Debug.LogError);
-```
-
-----
-
-### Google platform
-
-1. Add **USE_Google_AUTHENTICATION** to your project setting
-2. Call **AuthenticationManager.SignInWithGoogle** to signin
-
-**Method**
-
-```C#
- public static void SignInWithGoogle(Action<Credential> _signSuccess = null,Action<string> _signFailed = null);
-```
-
-**Example**
-
-```C#
-AuthenticationManager.SignInWithGoogle(_credential=>{},Debug.LogError);
-```
-
-----
-
-### Meta platform
-
-1. Add **USE_META_AUTHENTICATION** to your project setting
-2. Call **AuthenticationManager.SignInWithMeta** to signin
-
-**Method**
-
-```C#
- public static void SignInWithMeta(Action<Credential> _signSuccess = null,Action<string> _signFailed = null);
-```
-
-**Example**
-
-```C#
-AuthenticationManager.SignInWithMeta(_credential=>{},Debug.LogError);
-```
-
-### SignInWithAnonymous
-
-**Method**
-
-```C#
-public static async Task SignInWithAnonymous()
-```
-
-**Example**
-
-```C#
-AuthenticationManager.SignInWithAnonymous();
-```
-
-### SignOut
-
-Nothing special needs to be done, just call **AuthenticationManager.SignOut()**
-
-### GetUserInfo
-
-Nothing special needs to be done, just call **AuthenticationManager.GetUserInfo()**
-
-### SignIn or Authorize State
-
-Nothing special needs to be done, just call
-
-- AuthenticationManager.IsSignedIn
-- AuthenticationManager.IsAuthorized
-- AuthenticationManager.IsExpired
-
----
-
-# Voice
-
-With Voice as your communication platform, you can offer cross-platform communications to your players and scale
-seamlessly as you grow.
-
-## How to use?
-
-You must Add `USE_XXXX` define to your project config of Unity. And must installed Authentication System.
-
-- Vivox -> USE_VIVOX
-- Agora -> USE_AGORA_RTC
-- PHOTON -> USE_PHOTON_VOICE
-
-## Event Callback
-
-You can register event callbacks with ActionNotificationCenter and use the VoiceEventKey in NotificationData to identify
-the event type.
-
-- ActionNotificationCenter.DefaultCenter.AddObserver(OnVoiceEvent,
-  VoiceModuleNotifyActionKey.CONST_VOICE_EVENT_KEY);
-- Convert BaseNotificationData to voiceNotificationDataArgs in OnVoiceEvent function.
-
-### Example
-
-```C#
-void Start(){
-    ActionNotificationCenter.DefaultCenter.AddObserver(OnVoiceEvent,
-  VoiceModuleNotifyActionKey.CONST_VOICE_EVENT_KEY);
-}
-
-void OnVoiceEvent(BaseNotificationData _data){
- if (_data is VoiceNotificationDataArgs tmp_VoiceNotification){
-       switch (tmp_VoiceNotification.VoiceEventKey){
-            //....    
-       }
- }    
+// Load data
+var keys = new HashSet<string> { "HighScore" };
+var results = await CloudSaveSystemManager.GetInstance.LoadPlayerData(keys);
+if (results.TryGetValue("HighScore", out var item)) {
+    int score = item.Value.GetAs<int>();
 }
 ```
 
-## APIs
+---
 
-- Initialize(string _configuration,Voice3DProperties _voice3DProperties)
-- DeInitialize()
-- CreateVoiceChannel(string _channelName, JoinChannelType _joinChannelType)
-- JoinVoiceChannel(string _channelName, JoinChannelType _joinChannelType)
-- LeaveVoiceChannel()
-- MuteSelfMicrophone(bool _muted)
-- MuteOtherMicrophone(bool _muted, string _channelId, string _userId)
-- BlockUser(bool _block, string _channelId, string _userId)
-- List<VoiceParticipant> GetParticipants()
+### 🏆 Leaderboard
+
+Track and display player rankings. Built on top of Unity Leaderboard.
+
+#### Initialization
+Add `USE_UNITY_LEADERBOARD` to your project's scripting define symbols.
+
+#### Usage Example
+```csharp
+// Update score
+var scoreArgs = new AddOrUpdateScoreArgs { LeaderboardId = "GlobalTop", Score = 100 };
+await LeaderboardSystemManager.GetInstance.AddOrUpdateScore(scoreArgs);
+
+// Get rankings
+var listArgs = new GetScoreListArgs { LeaderboardId = "GlobalTop", Limit = 10 };
+var scores = await LeaderboardSystemManager.GetInstance.GetScoreList(listArgs);
+```
 
 ---
 
-# Leaderboard
+### 💰 In-App Purchase
 
-XRMOD Leaderboard is an adaptation package for Unity Leaderboard.
+Standardized interface for purchasing digital goods.
 
-## How to use?
+#### Usage Example
+```csharp
+// Initialize products
+await InAppPurchaseManager.GetInstance.Initialization(myProductArray);
 
-You must Add `USE_UNITY_LEADERBOARD` define to your project config of Unity. And must installed Authentication System.
-
-## APIs
-
-> Before calling the leaderboard API, you must first try the Authentication System for user login.
-
-- LeaderboardSystemManager.AddOrUpdateScore
-- LeaderboardSystemManager.GetScoreList
-- LeaderboardSystemManager.GetPlayerScore
+// Buy a product
+bool success = await InAppPurchaseManager.GetInstance.BuyProduct("gold_pack_01");
+```
 
 ---
 
-# CloudSave
+### 👥 Friends
 
-## How to use?
+Manage player relationships, presence, and friend requests.
 
-You must Add `USE_UNITY_CLOUD_SAVE` define to your project config of Unity. And must installed Authentication System.
+#### Usage Example
+```csharp
+// Send friend request
+RelationshipsManager.GetInstance.AddFriendAsync("AwesomePlayer_99");
 
-## APIs
+// Check friends list
+var friends = RelationshipsManager.GetInstance.GetFriends();
+foreach(var friend in friends) {
+    Debug.Log($"{friend.Profile.Name} is currently {friend.Presence.Availability}");
+}
+```
 
-> Before calling the CloudSave API, you must first try the Authentication System for user login.
+---
 
-- Task<bool> SavePlayerData(Dictionary<string, object> _saveData)
-- Task<Dictionary<string, Item>> LoadPlayerData(HashSet<string> _keys)
-- void Delete(string _key)
+## 🛠 Best Practices
+
+1. **Async Await**: Most GS operations are network-based. Always use the `Async` versions with `await` to keep the UI responsive.
+2. **Profile Management**: Use unique profile names during `InitializeUnityServices` when testing multiple clients on the same machine.
+3. **Event Subscriptions**: Subscribe to `GameServicesReady` on the `XRMODGameServicesManager` to ensure all systems are up before starting gameplay.
+
+---
+
+## ⚠️ Common Pitfalls
+
+- **Missing Defines**: Many modules (Voice, IAP, Cloud Save) require specific scripting define symbols (e.g., `USE_VIVOX`). Check the module documentation for the correct symbol.
+- **Auth Not Initialized**: Calling Cloud Save or Leaderboard before the player is signed in will result in authorization errors.
+- **Profiling in Editor**: When testing in the Unity Editor, some services may behave differently than on a physical device (especially IAP and Voice).
+- **Unity Fusion**: This package explicitly ignores Unity Fusion networking modules by default.
+
+---
+
+*For licensing requests, contact [nswell@phantomsxr.com](mailto:nswell@phantomsxr.com).*
+*Copyright (C) 2024 PhantomsXR Ltd. All Rights Reserved.*

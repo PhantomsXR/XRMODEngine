@@ -12,17 +12,26 @@
 using System;
 using System.Reflection;
 using System.Threading.Tasks;
-using Phantom.XRMOD.Core.Runtime.Attribute;
+using Phantom.XRMOD.Core.Runtime; 
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityFusion.Runtime.Enviorment;
 
 namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
 {
+    /// <summary>
+    /// Default implementation of <see cref="IDataBinder"/>.
+    /// Uses a factory to get specific handlers for each field type in <see cref="MonoData"/>
+    /// and injects the processed values into the target ILRuntime/CLR instance.
+    /// </summary>
     public class DataBinding : IDataBinder
     {
         private readonly RuntimeFieldHandlerFactory runtimeFieldHandlerFactory = new(new DbAssetProvider());
 
+        /// <summary>
+        /// Processes the fields in <see cref="MonoData"/> and injects their values into the associated CLR instance.
+        /// </summary>
+        /// <param name="_data">The data container containing the target instance and field metadata.</param>
         public void BindData(MonoData _data)
         {
             if (_data.Fields.Count == 0)

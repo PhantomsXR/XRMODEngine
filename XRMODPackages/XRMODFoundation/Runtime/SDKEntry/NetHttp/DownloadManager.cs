@@ -16,6 +16,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Manages file downloads using a specified <see cref="IDownloadStrategy"/>.
+    /// Provides a high-level API for asynchronous downloads with progress reporting.
+    /// </summary>
     public class DownloadManager
     {
         private readonly IDownloadStrategy downloadStrategy;

@@ -19,6 +19,10 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
+    /// <summary>
+    /// OBSELETE. Previously used for in-game video and image recording.
+    /// Users are encouraged to use platform-native recording solutions.
+    /// </summary>
     [Obsolete("Deprecated. Use platform builtin record instead.",true)]
     public class BuildRecorderCommand : AbstractCommand, ICommand, IReleaseCommand
     {

@@ -18,6 +18,10 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
+    /// <summary>
+    /// Command responsible for ensuring an active Unity EventSystem exists in the scene.
+    /// It will automatically find an existing one or create a new one with an <see cref="InputSystemUIInputModule"/>.
+    /// </summary>
     public class BuildEventSystemCommand : ICommand, IReleaseCommand
     {
         readonly BaseFeatureModel baseFeatureModel = IocContainer.GetIoc.Resolve<BaseFeatureModel>();

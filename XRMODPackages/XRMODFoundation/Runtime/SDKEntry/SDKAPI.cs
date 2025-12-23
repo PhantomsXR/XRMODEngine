@@ -10,7 +10,7 @@
 // // ===============================================================================*/
 
 using System;
-using UnityEngine; 
+using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
@@ -18,19 +18,34 @@ using Phantom.XRMOD.Core.Runtime;
 using Phantom.XRMOD.Models.Runtime;
 using Phantom.XRMOD.XRMODUtilites.Runtime;
 using Phantom.XRMOD.ActionNotification.Runtime;
+using Phantom.XRMOD.SDKEntry.Runtime;
 using Phantom.XRMOD.SDKEntry.Runtime.Logic;
-
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+
+    /// <summary>
+    /// The main entry point for the XRMOD SDK.
+    /// This class provides high-level APIs for initializing the SDK, launching XR experiences,
+    /// and managing the SDK lifecycle.
+    /// </summary>
     public partial class SDKEntryPoint
     {
         #region SDK Interface
 
         /// <summary>
-        /// Initialize sdk through configure data
+        /// Initializes the SDK using a JSON configuration string.
         /// </summary>
-        /// <param name="_config">The <see cref="SDKConfiguration"/> json format string value.</param>
+        /// <param name="_config">A JSON string representing the <see cref="SDKConfiguration"/>.</param>
+        /// <remarks>
+        /// <b>Note:</b> This method must be called before any other SDK operations.
+        /// Ensure the JSON format matches the <see cref="SDKConfiguration"/> structure.
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// sdkEntryPoint.InitSDK("{\"AppModel\": 0, ...}");
+        /// </code>
+        /// </example>
         public void InitSDK(string _config)
         {
             try
@@ -63,10 +78,18 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
 
 
         /// <summary>
-        /// Initialize sdk through configure data
+        /// Initializes the SDK using a <see cref="SDKConfiguration"/> object.
         /// </summary>
-        /// <param name="_config">Parameters required to initialize the SDK. See <see cref="SDKConfiguration"/>.</param>
-        
+        /// <param name="_config">The configuration parameters for SDK initialization.</param>
+        /// <remarks>
+        /// This is the preferred way to initialize the SDK programmatically.
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// var config = new SDKConfiguration { AppModel = AppModel.Online };
+        /// sdkEntryPoint.InitSDK(config);
+        /// </code>
+        /// </example>
         public void InitSDK(SDKConfiguration _config)
         {
             try
@@ -99,10 +122,13 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
 
 
         /// <summary>
-        /// Query XR experiences content with id
+        /// Launches an XR experience query using a unique experience ID.
         /// </summary>
-        /// <param name="_experiencesId">The experiences id</param>
-        
+        /// <param name="_experiencesId">The unique identifier of the XR experience to launch.</param>
+        /// <exception cref="InvalidOperationException">Thrown if the SDK is not initialized.</exception>
+        /// <remarks>
+        /// This method triggers the XRMOD engine to fetch and start the specified experience.
+        /// </remarks>
         public void LaunchXRQuery(string _experiencesId)
         {
             try
@@ -131,9 +157,11 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         #region Image recognization
 
         /// <summary>
-        /// API for native app, querying project through pictures. It's a loop.
+        /// Starts the AR scanner for visual recognition-based experience queries.
         /// </summary>
-        
+        /// <remarks>
+        /// This API is primarily used by native application integrations to start a recognition loop.
+        /// </remarks>
         public void LaunchARScanner()
         {
             if (!sdkKernel.Model.SdkInitialed.Value) return;
@@ -204,9 +232,13 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         #endregion
 
         /// <summary>
-        /// Close SDK
+        /// Shuts down and cleans up the XRMOD SDK.
         /// </summary>
-        
+        /// <returns><c>true</c> if the SDK was disposed of successfully; otherwise, <c>false</c>.</returns>
+        /// <remarks>
+        /// Call this when the XR experience is finished or when the app is closing.
+        /// This will stop all running coroutines, clear invokes, and unload the AR session.
+        /// </remarks>
         public bool Dispose()
         {
             try
@@ -242,7 +274,6 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         /// </summary>
         /// <param name="_orientation">Display direction enumeration. See <see cref="ScreenOrientation"/>.</param>
         // ReSharper disable once InconsistentNaming
-        
         public void SetUIInterfaceOrientation(string _orientation)
         {
             Screen.orientation = (ScreenOrientation) int.Parse(_orientation);
@@ -251,7 +282,6 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         /// <summary>
         /// clean all cache
         /// </summary>
-        
         public void CleanCache()
         {
             if (Caching.ClearCache())
@@ -263,7 +293,6 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         /// <summary>
         /// Call this method will continue to download the assets
         /// </summary>
-        
         public void ContinueToDownloadAssets()
         {
             if (!sdkKernel.Model.BreakDownloadWhenGreaterPresetSize.Value) return;
@@ -276,7 +305,6 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         /// Receive the message data from Native App
         /// </summary>
         /// <param name="_data">Will receive message data</param>
-        
         protected void OnMessageReceived(string _data)
         {
             ActionNotificationCenter.DefaultCenter.PostNotification(nameof(ActionParameterDataType.OnEvent),
@@ -288,10 +316,12 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         }
 
         /// <summary>
-        /// Send the message data to XR experiences
+        /// Sends a message data string to all running XR experiences.
         /// </summary>
-        /// <param name="_data">Will send message data</param>
-        
+        /// <param name="_data">The message payload to send.</param>
+        /// <remarks>
+        /// Experiences can listen for these messages to trigger custom logic.
+        /// </remarks>
         public void SendMessageToXRExperience(string _data)
         {
             ActionNotificationCenter.DefaultCenter.PostNotification(nameof(ActionParameterDataType.OnEvent),
@@ -307,7 +337,6 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         /// Get all running experience processes 
         /// </summary>
         /// <returns>All processes</returns>
-        
         public Dictionary<string, List<string>> GetAllProcesses()
         {
             var tmp_Results = ActionNotificationCenter.DefaultCenter.PostNotificationWithResult(
@@ -326,7 +355,6 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         /// Release the specified process
         /// </summary>
         /// <param name="_processId">The unique ID of the process to be released</param>
-        
         public void ReleaseProcess(string _processId)
         {
             ActionNotificationCenter.DefaultCenter.PostNotification(nameof(ActionParameterDataType.ReleaseProject),
@@ -342,7 +370,6 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         /// <param name="_dimensions">The bounded dimensions</param>
         /// <param name="_boundPosition">The position of bounded</param>
         /// <param name="_cullingMask">Render mask. See <see cref="LayerMask"/></param>
-        
         public void ChangeSpaceType(SpaceType _spaceType, string _processId, BoundResizeMode _boundResizeMode,
             Vector3 _dimensions, Vector3 _boundPosition, LayerMask _cullingMask)
         {
@@ -362,7 +389,6 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         /// Get current App space type
         /// </summary>
         /// <returns>Current App space type. See <see cref="SpaceType"/>.</returns>
-        
         public SpaceType GetAppSpaceType()
         {
             return IocContainer.GetIoc.Resolve<BaseContextDataModel>().AppSpaceType;

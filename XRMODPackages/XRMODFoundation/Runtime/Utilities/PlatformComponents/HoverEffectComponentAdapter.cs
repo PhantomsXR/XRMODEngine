@@ -14,8 +14,14 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.XRMODUtilites.Runtime
 {
+    /// <summary>
+    /// Adapter component that provides hover interaction effects, specifically for Apple VisionOS via PolySpatial.
+    /// </summary>
     public class HoverEffectComponentAdapter : MonoBehaviour
     {
+        /// <summary>
+        /// Defines the types of hover effects available.
+        /// </summary>
         public enum HoverEffectType : int
         {
             /// <summary>
@@ -40,10 +46,29 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
         private float fadeOutDuration;
         private HoverEffectType effectType;
 
+        /// <summary>
+        /// The color of the hover effect.
+        /// </summary>
         public BindableProperty<Color> Color = new();
+
+        /// <summary>
+        /// Multiplier for the effect's intensity.
+        /// </summary>
         public BindableProperty<float> IntensityMultiplier = new();
+
+        /// <summary>
+        /// Duration of the fade-in animation.
+        /// </summary>
         public BindableProperty<float> FadeInDuration = new();
+
+        /// <summary>
+        /// Duration of the fade-out animation.
+        /// </summary>
         public BindableProperty<float> FadeOutDuration = new();
+
+        /// <summary>
+        /// The type of hover effect to apply.
+        /// </summary>
         public BindableProperty<HoverEffectType> EffectType = new();
 
 

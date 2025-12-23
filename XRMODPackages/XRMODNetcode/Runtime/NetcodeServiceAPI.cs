@@ -40,8 +40,11 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
         private List<GameObject> networkPrefabObjects = new List<GameObject>();
 
         /// <summary>
-        /// Get the current register network player prefab.
+        /// Gets the currently registered network player prefab.
         /// </summary>
+        /// <remarks>
+        /// This prefab is used to instantiate the player object for connected clients.
+        /// </remarks>
         public NetworkObject GetPlayerPrefab => _PLAYER_PREFAB;
 
         /// <summary>
@@ -49,8 +52,17 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
         /// </summary>
         public ISession GetCurrentSession => _SESSION;
 
+        /// <summary>
+        /// Gets the current session name.
+        /// </summary>
         public string GetCurrentSessionName => _SESSION.Name;
 
+        /// <summary>
+        /// Gets the unique code for the current session.
+        /// </summary>
+        /// <remarks>
+        /// Returns the session code if using Unity Multiplayer Services, or a fixed code based on the address if using Client-Server topology.
+        /// </remarks>
         public string GetCurrentSessionCode
         {
             get
@@ -77,7 +89,7 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
         public bool IsHost => _NETWORK_MANAGER.IsHost;
 
         /// <summary>
-        /// Gets current network topology types
+        /// Gets the current network topology type (e.g., ClientServer, UnityRelay, DistributedAuthority).
         /// </summary>
         public NetworkTopologyTypes NetworkTopologyTypes => _NETWORK_MANAGER_TYPES;
 
@@ -86,6 +98,9 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
         /// </summary>
         public NetworkManager GetNetworkManager => _NETWORK_MANAGER;
 
+        /// <summary>
+        /// Gets the underlying Unity <see cref="UnityTransport"/> instance.
+        /// </summary>
         public UnityTransport GetUnityTransport => _UNITY_TRANSPORT;
 
         /// <summary>
@@ -507,7 +522,11 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
             }
         }
 
-
+        /// <summary>
+        /// Generates a unique application ID based on the provided game name.
+        /// </summary>
+        /// <param name="_gameName">The name of the game.</param>
+        /// <returns>A unique 64-bit application ID.</returns>
         public long GetUniqueApplicationId(string _gameName)
         {
             var tmp_StrHashCode = _gameName.GetHashCode();
@@ -694,6 +713,11 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
                 new NetcodeReanticipateArgs() {Lastroundtriptime = _lastroundtriptime});
         }
 
+        /// <summary>
+        /// Callback invoked when a connection approval request is received. Posts a <see cref="NetcodeApprovalEventArgs"/> notification.
+        /// </summary>
+        /// <param name="_arg1">The connection approval request data.</param>
+        /// <param name="_arg2">The connection approval response data.</param>
         private void OnConnectionApprovalCallback(NetworkManager.ConnectionApprovalRequest _arg1,
             NetworkManager.ConnectionApprovalResponse _arg2)
         {

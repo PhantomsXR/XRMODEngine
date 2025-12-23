@@ -17,6 +17,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.RokidModule.Runtime
 {
+    /// <summary>
+    /// A threading utility for executing actions on the main Unity thread from background threads.
+    /// Helpful for dispatching Unity API calls that are not thread-safe.
+    /// </summary>
     public class Loom : MonoBehaviour
     {
         public static int maxThreads = 8;
@@ -66,11 +70,20 @@ namespace Phantom.XRMOD.RokidModule.Runtime
 
         List<DelayedQueueItem> _currentDelayed = new List<DelayedQueueItem>();
 
+        /// <summary>
+        /// Queues an action to be executed on the main thread.
+        /// </summary>
+        /// <param name="action">The action to execute.</param>
         public static void QueueOnMainThread(Action action)
         {
             QueueOnMainThread(action, 0f);
         }
 
+        /// <summary>
+        /// Queues an action to be executed on the main thread after a delay.
+        /// </summary>
+        /// <param name="action">The action to execute.</param>
+        /// <param name="time">The delay in seconds.</param>
         public static void QueueOnMainThread(Action action, float time)
         {
             if (time != 0)
@@ -89,6 +102,11 @@ namespace Phantom.XRMOD.RokidModule.Runtime
             }
         }
 
+        /// <summary>
+        /// Runs an action asynchronously on a thread pool thread.
+        /// </summary>
+        /// <param name="a">The action to run.</param>
+        /// <returns>The thread object (always null in this implementation).</returns>
         public static Thread RunAsync(Action a)
         {
             Initialize();

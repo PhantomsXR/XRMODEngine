@@ -13,6 +13,12 @@ using System;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// A MonoBehaviour-based network variable for synchronizing double-precision floating-point values.
+    /// </summary>
+    /// <remarks>
+    /// Attach this component to a GameObject to expose a synchronized double value in the Inspector.
+    /// </remarks>
     public class DoubleNetworkVariable : AbstractNetworkVariable<Double>
     {
     }

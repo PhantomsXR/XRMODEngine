@@ -13,13 +13,23 @@ using Phantom.XRMOD.Core.Runtime;
 
 namespace Phantom.XRMOD.RokidModule.Runtime
 {
+    /// <summary>
+    /// Command to build and initialize the plane detection feature for Rokid devices.
+    /// </summary>
     public class BuildPlaneDetectFeatureCommand : BaseBuildFeature<PlaneDetectorFeature>, ICommand, IReleaseCommand
     {
+        /// <summary>
+        /// Executes the command to create the plane detector feature.
+        /// </summary>
         public void Execute()
         {
             base.Create();
         }
 
+        /// <summary>
+        /// Releases the plane detector feature.
+        /// </summary>
+        /// <param name="_projectName">Optional project name (unused).</param>
         public void Release(string _projectName = default)
         {
             base.ReleaseFeature();

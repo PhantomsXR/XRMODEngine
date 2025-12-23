@@ -11,6 +11,10 @@ using AutoList = UnityFusion.Other.UncheckedList<object>;
 
 namespace UnityFusion.CLRBinding.Adapter
 {
+    /// <summary>
+    /// Adapter for Unity's <see cref="UnityEngine.UI.Selectable"/>.
+    /// Enables UI interaction logic to be implemented in the hot-reload domain.
+    /// </summary>
     public class SelectableAdapter : CrossBindingAdaptor
     {
         public override Type BaseCLRType
@@ -29,6 +33,9 @@ namespace UnityFusion.CLRBinding.Adapter
             return new Adapter(appdomain, instance);
         }
 
+        /// <summary>
+        /// The implementation class that bridges Selectable messages to the hot-reload domain.
+        /// </summary>
         public class Adapter : UnityEngine.UI.Selectable, CrossBindingAdaptorType
         {
             CrossBindingMethodInfo mAwake_0 = new CrossBindingMethodInfo("Awake");

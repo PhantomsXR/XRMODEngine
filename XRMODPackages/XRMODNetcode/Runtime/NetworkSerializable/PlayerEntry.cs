@@ -14,17 +14,33 @@ using Unity.Netcode;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// Represents a player entry in a networked list, containing the client ID and player object reference.
+    /// </summary>
     public struct PlayerEntry : INetworkSerializable, IEquatable<PlayerEntry>
     {
+        /// <summary>
+        /// The unique client ID for this player.
+        /// </summary>
         public ulong ClientId;
+        
+        /// <summary>
+        /// Reference to the player's NetworkObject.
+        /// </summary>
         public NetworkObjectReference PlayerObject;
 
+        /// <summary>
+        /// Serializes the player entry for network transmission.
+        /// </summary>
         public void NetworkSerialize<T>(BufferSerializer<T> _serializer) where T : IReaderWriter
         {
             _serializer.SerializeValue(ref ClientId);
             _serializer.SerializeValue(ref PlayerObject);
         }
 
+        /// <summary>
+        /// Determines whether this player entry equals another.
+        /// </summary>
         public bool Equals(PlayerEntry _other) =>
             ClientId == _other.ClientId && PlayerObject.Equals(_other.PlayerObject);
     }

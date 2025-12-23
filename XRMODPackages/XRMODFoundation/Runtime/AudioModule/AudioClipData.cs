@@ -14,6 +14,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.AudioModule.Runtime
 {
+    /// <summary>
+    /// Data container for one or more <see cref="AudioClip"/>s.
+    /// Provides settings for pitch randomization and automated audio data loading.
+    /// </summary>
     [CreateAssetMenu(fileName = "AudioClipData", menuName = "XR-MOD/Audio Module/Audio Clip Data")]
     public class AudioClipData : ScriptableObject
     {
@@ -21,6 +25,10 @@ namespace Phantom.XRMOD.AudioModule.Runtime
         [SerializeField] private float pitchBase = 1f;
         [SerializeField] private float pitchVariation = 0f;
 
+        /// <summary>
+        /// Pre-loads audio data into memory if requested.
+        /// </summary>
+        /// <param name="_loadIntoMemory">If true, forces the audio data to be loaded.</param>
         public void Initialize(bool _loadIntoMemory = true)
         {
             if (!_loadIntoMemory) return;
@@ -31,6 +39,13 @@ namespace Phantom.XRMOD.AudioModule.Runtime
             }
         }
 
+        /// <summary>
+        /// Initializes the data container with specific pitch settings and clips.
+        /// </summary>
+        /// <param name="_pitchBase">The base pitch value.</param>
+        /// <param name="_pitchVariation">The range of random pitch variation.</param>
+        /// <param name="_loadIntoMemory">Whether to load audio data into memory immediately.</param>
+        /// <param name="_audioClips">An array of audio clips to add to this container.</param>
         public void Initialize(float _pitchBase, float _pitchVariation, bool _loadIntoMemory = true,
             params AudioClip[] _audioClips)
         {
@@ -41,11 +56,19 @@ namespace Phantom.XRMOD.AudioModule.Runtime
             Initialize(_loadIntoMemory);
         }
 
+        /// <summary>
+        /// Retrieves a random audio clip from the collection.
+        /// </summary>
+        /// <returns>A randomly selected <see cref="AudioClip"/>.</returns>
         public AudioClip GetAudioClip()
         {
             return audioClips[Random.Range(0, audioClips.Count)];
         }
 
+        /// <summary>
+        /// Calculates a random pitch offset based on the base pitch and variation range.
+        /// </summary>
+        /// <returns>A randomized pitch value.</returns>
         public float GetPitchOffset()
         {
             float tmp_PitchVariationHalf = pitchVariation / 2f;

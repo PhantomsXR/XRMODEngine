@@ -14,6 +14,9 @@ using System.Threading.Tasks;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Interface for file download strategies.
+    /// </summary>
     public interface IDownloadStrategy
     {
         Task DownloadFileAsync(string _url, string _destinationPath, IProgress<float> _progress = null);

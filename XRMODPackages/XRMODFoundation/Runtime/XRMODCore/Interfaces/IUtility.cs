@@ -11,6 +11,10 @@
 
 namespace Phantom.XRMOD.Core.Runtime
 {
+    /// <summary>
+    /// Marker interface for utility classes within the XRMOD framework.
+    /// Used for dependency injection and identification of helper services.
+    /// </summary>
     public interface IUtility
     {
         

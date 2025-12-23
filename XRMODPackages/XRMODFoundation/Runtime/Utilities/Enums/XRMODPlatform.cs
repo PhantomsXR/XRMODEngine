@@ -11,6 +11,9 @@
 
 namespace Phantom.XRMOD.XRMODUtilites.Runtime
 {
+    /// <summary>
+    /// Enumeration of supported XR platforms within the XRMOD framework.
+    /// </summary>
     public enum XRMODPlatform : byte
     {
         Pico,

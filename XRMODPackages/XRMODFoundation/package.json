@@ -1,7 +1,7 @@
 {
   "name": "com.phantomsxr.foundation",
   "displayName": "XRMOD Foundation",
-  "version": "3.0.12",
+  "version": "3.0.13",
   "unity": "2021.3",
   "keywords": [
     "foundation",
@@ -13,7 +13,7 @@
     "email": "phantomxm2021@gmail.com"
   },
   "dependencies": {
-    "com.phantomsxr.unityfusion": "3.0.2",
+    "com.phantomsxr.unityfusion": "3.0.6",
     "com.unity.cloud.gltfast": "6.15.0",
     "com.unity.sharp-zip-lib": "1.3.9",
     "com.unity.scriptablebuildpipeline": "1.20.1"

@@ -15,6 +15,10 @@ using Phantom.XRMOD.SDKEntry.Runtime.Models;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Command that provides the current version of the XRMOD SDK.
+    /// Subscribes to the <c>TryAcquireSDKVersion</c> action notification.
+    /// </summary>
     public class BuildTryAcquireSDKVersionCommand : ICommand, IReleaseCommand
     {
         public BuildTryAcquireSDKVersionCommand()

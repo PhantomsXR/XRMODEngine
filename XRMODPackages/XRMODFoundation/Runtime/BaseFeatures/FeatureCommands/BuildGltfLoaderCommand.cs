@@ -21,6 +21,10 @@ using UnityEngine.Assertions;
 
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
+    /// <summary>
+    /// Command that initializes the GLTF asset loading system.
+    /// It subscribes to network mesh acquisition requests and handles shader resource management.
+    /// </summary>
     public class BuildGltfLoaderCommand : ICommand, IReleaseCommand
     {
         public BuildGltfLoaderCommand()

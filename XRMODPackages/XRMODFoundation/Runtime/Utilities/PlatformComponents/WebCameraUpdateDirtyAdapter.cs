@@ -13,9 +13,16 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.XRMODUtilites.Runtime
 {
+    /// <summary>
+    /// Component that ensures a <see cref="WebCamTexture"/> is marked dirty for updates, 
+    /// allowing webcam video to be correctly rendered on Apple VisionOS via PolySpatial.
+    /// </summary>
     public class WebCameraUpdateDirtyAdapter : MonoBehaviour
     {
 #if POLYSPATIAL_ENABLE_WEBCAM && VISIONOS_INSTALL
+    /// <summary>
+    /// The WebCamTexture to update.
+    /// </summary>
     public WebCamTexture texture;
 #endif
 

@@ -16,6 +16,10 @@ using Phantom.XRMOD.SDKEntry.Runtime.Models;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime.DataRequest
 {
+        /// <summary>
+    /// Command for querying project metadata from a legacy online backend service.
+    /// </summary>
+    /// <typeparam name="T">The expected type of the response data.</typeparam>
     public  readonly struct QueryXRProjectForOnlineLegacy<T> : IHttpRequestCommand<T>
     {
         private readonly QueryParameter queryParameter;

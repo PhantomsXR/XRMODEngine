@@ -13,6 +13,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.Core.Runtime
 {
+    /// <summary>
+    /// Base class for all Unity components within the XRMOD framework.
+    /// Extends <see cref="MonoBehaviour"/> to provide consistent lifecycle handling and identification.
+    /// </summary>
     public  class XRMODBehaviour:MonoBehaviour
     {
     }

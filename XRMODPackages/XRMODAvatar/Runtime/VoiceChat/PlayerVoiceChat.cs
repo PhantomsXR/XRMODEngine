@@ -21,6 +21,9 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.XRMODAvatar.Runtime
 {
+    /// <summary>
+    /// Handles networked voice chat for a player, including audio energy tracking and channel management.
+    /// </summary>
     public class PlayerVoiceChat : NetworkBehaviour
     {
         private const float _CONST_VOICE_AMPLITUDE_SPEED = 15f;
@@ -31,6 +34,9 @@ namespace Phantom.XRMOD.XRMODAvatar.Runtime
             NetworkVariableReadPermission.Everyone,
             NetworkVariableWritePermission.Owner);
 
+        /// <summary>
+        /// Gets the unique voice ID associated with this player.
+        /// </summary>
         public string GetPlayerVoiceId => playerVoiceIdNetworkVariable.Value.ToString();
 
         internal readonly NetworkVariable<FixedString128Bytes> playerVoiceIdNetworkVariable = new("",
@@ -46,6 +52,10 @@ namespace Phantom.XRMOD.XRMODAvatar.Runtime
         private float voiceAmplitudeDestination;
 
 
+        /// <summary>
+        /// Gets the current audio energy level (0 to 1). 
+        /// Useful for driving visual animations like mouth movement or voice bubbles.
+        /// </summary>
         public float GetVoiceAudioEnergy => currentVoiceAmplitude;
 
 
@@ -103,31 +113,44 @@ namespace Phantom.XRMOD.XRMODAvatar.Runtime
         }
 
 
+        /// <summary>
+        /// Connects this component to the underlying voice participant data.
+        /// </summary>
         public void SetUpPlayerVoice()
         {
             voiceParticipant = VoiceSystemManager.GetInstance.GetParticipant(GetPlayerVoiceId);
         }
 
 
+        /// <summary>
+        /// Toggles the local squelch (mute) state for this player.
+        /// </summary>
         public void ToggleSquelch()
         {
             if (voiceParticipant == null) return;
             if (voiceParticipant.IsMuted)
-                voiceParticipant.MuteUserLocally();
-            else
                 voiceParticipant.UnmuteUserLocally();
+            else
+                voiceParticipant.MuteUserLocally();
 
 
             selfMutedNetworkVariable.Value = voiceParticipant.IsMuted;
         }
 
+        /// <summary>
+        /// Sets the voice ID for this player and initializes voice tracking.
+        /// </summary>
+        /// <param name="_voiceId">The unique voice identifier.</param>
         public void SetVoiceId(string _voiceId)
         {
             playerVoiceIdNetworkVariable.Value = new FixedString128Bytes(_voiceId);
             SetUpPlayerVoice();
 
             // Manually trigger update locations to avoid being updated due to small changes in player positions
-            GetComponent<Voice3DTracking>().Set3DAudio();
+            if (TryGetComponent<Voice3DTracking>(out var tmp_Voice3D))
+            {
+                tmp_Voice3D.Set3DAudio();
+            }
         }
 
         protected override void OnNetworkPostSpawn()

@@ -15,6 +15,10 @@ using Phantom.XRMOD.Core.Runtime;
 
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
+    /// <summary>
+    /// Command that instantiates an in-game debug console if the experience is in debug mode.
+    /// Uses the "IngameDebugConsole" resource.
+    /// </summary>
     public class BuildRuntimeDebugConsoleCommand : AbstractCommand, ICommand, IReleaseCommand
     {
         private const string _CONST_DEBUG_CONSOLE = "IngameDebugConsole";

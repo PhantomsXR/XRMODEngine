@@ -15,6 +15,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.XRMODAvatar.Runtime.XR
 {
+    /// <summary>
+    /// Manages the visual appearance of the avatar, including toggling different parts (head, hands, etc.) 
+    /// and animating blend shapes based on voice chat energy.
+    /// </summary>
     public class AvatarVisualizer : MonoBehaviour
     {
         [SerializeField] private GameObject[] headTrackerParts;
@@ -56,37 +60,67 @@ namespace Phantom.XRMOD.XRMODAvatar.Runtime.XR
             }
         }
 
+        /// <summary>
+        /// Sets the visibility of general avatar body parts.
+        /// </summary>
+        /// <param name="_render">True to show, False to hide.</param>
         internal void SetAvatarPartsVisualizer(bool _render)
         {
             foreach (GameObject tmp_AvatarPart in avatarParts)
             {
-                tmp_AvatarPart.SetActive(_render);
+                if (tmp_AvatarPart) tmp_AvatarPart.SetActive(_render);
             }
         }
 
+        /// <summary>
+        /// Sets the visibility of hand objects.
+        /// </summary>
+        /// <param name="_render">True to show, False to hide.</param>
         internal void SetHandsVisualizer(bool _render)
         {
             foreach (GameObject tmp_Hand in hands)
             {
-                tmp_Hand.SetActive(_render);
+                if (tmp_Hand) tmp_Hand.SetActive(_render);
             }
         }
 
+        /// <summary>
+        /// Sets the visibility of head-tracked accessories.
+        /// </summary>
+        /// <param name="_render">True to show, False to hide.</param>
         internal void SetHeadTrackVisualizer(bool _render)
         {
             foreach (GameObject tmp_HeadTracker in headTrackerParts)
             {
-                tmp_HeadTracker.SetActive(_render);
+                if (tmp_HeadTracker) tmp_HeadTracker.SetActive(_render);
             }
         }
     }
 
+    /// <summary>
+    /// Configuration for a specific blend shape on a SkinnedMeshRenderer.
+    /// </summary>
     [System.Serializable]
     public class BlendShapeSetting
     {
+        /// <summary>
+        /// Descriptive name of the blend shape.
+        /// </summary>
         public string BlendShapeName;
+
+        /// <summary>
+        /// Index of the blend shape on the SkinnedMeshRenderer.
+        /// </summary>
         public int BlendShapeIndex;
-        public float BlendShapeValue = 1;
+
+        /// <summary>
+        /// Multiplier applied to the audio energy to drive blend shape weight.
+        /// </summary>
+        public float BlendShapeValue = 100f;
+
+        /// <summary>
+        /// The SkinnedMeshRenderer containing the blend shape.
+        /// </summary>
         public SkinnedMeshRenderer SkinnedMeshRenderer;
     }
 }

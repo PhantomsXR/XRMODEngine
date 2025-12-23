@@ -13,9 +13,17 @@
 namespace Phantom.XRMOD.ActionNotification.Runtime
 {
 #if UNITY_EDITOR
+    /// <summary>
+    /// A specialized notification center for use within the Unity Editor.
+    /// This allows editor-specific components and tools to communicate via the notification pattern.
+    /// </summary>
     public static class EditorNotificationCenter
     {
         private static readonly ActionNotificationCenter _EDITOR_CENTER = new();
+
+        /// <summary>
+        /// Gets the editor-specific instance of the notification center.
+        /// </summary>
         public static ActionNotificationCenter Center => _EDITOR_CENTER;
     }
 #endif

@@ -16,10 +16,19 @@ using UnityEngine.Assertions;
 
 namespace Phantom.XRMOD.GameServices.Runtime
 {
+    /// <summary>
+    /// Manages the Cloud Save system.
+    /// Provides methods to save and load player data to/from the cloud.
+    /// </summary>
     public class CloudSaveSystemManager : ICloudSaveGameData, IDeleteData
     {
         private static CloudSaveSystemManager _INSTANCE;
+
+        /// <summary>
+        /// Singleton instance of CloudSaveSystemManager.
+        /// </summary>
         public static CloudSaveSystemManager GetInstance => _INSTANCE ??= new CloudSaveSystemManager();
+        
         private ICloudSaveGameData iCloudSaveGameDataProvider;
         private IDeleteData iDeleteDataProvider;
 
@@ -34,19 +43,36 @@ namespace Phantom.XRMOD.GameServices.Runtime
             Assert.IsNotNull(iDeleteDataProvider);
         }
 
-        ///<inheritdoc/>
+        /// <summary>
+        /// Saves player data to the cloud.
+        /// </summary>
+        /// <param name="_saveData">A dictionary of key-value pairs to save.</param>
+        /// <returns>A Task representing the save operation, returning true if successful.</returns>
+        /// <example>
+        /// <code>
+        /// var data = new Dictionary&lt;string, object&gt; { { "Level", 10 } };
+        /// await CloudSaveSystemManager.GetInstance.SavePlayerData(data);
+        /// </code>
+        /// </example>
         public async Task<bool> SavePlayerData(Dictionary<string, object> _saveData)
         {
             return await iCloudSaveGameDataProvider.SavePlayerData(_saveData);
         }
 
-        ///<inheritdoc/>
+        /// <summary>
+        /// Loads player data from the cloud using the specified keys.
+        /// </summary>
+        /// <param name="_keys">A set of keys to load.</param>
+        /// <returns>A Task representing the load operation, returning a dictionary of items.</returns>
         public async Task<Dictionary<string, Item>> LoadPlayerData(HashSet<string> _keys)
         {
             return await iCloudSaveGameDataProvider.LoadPlayerData(_keys);
         }
 
-        ///<inheritdoc/>
+        /// <summary>
+        /// Deletes player data associated with the specified key.
+        /// </summary>
+        /// <param name="_key">The key to delete.</param>
         public void DeletePlayerData(string _key)
         {
             iDeleteDataProvider?.DeletePlayerData(_key);

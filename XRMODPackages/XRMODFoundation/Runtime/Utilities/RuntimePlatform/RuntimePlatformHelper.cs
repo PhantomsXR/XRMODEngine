@@ -3,8 +3,17 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.XRMODUtilites.Runtime
 {
+    /// <summary>
+    /// Helper class for detecting and identifying the current runtime platform and device model.
+    /// Provides methods to check for specific XR hardware and software configurations.
+    /// </summary>
     public static class RuntimePlatformHelper
     {
+        /// <summary>
+        /// Checks if the current execution environment matches the specified <see cref="PlatformType"/>.
+        /// </summary>
+        /// <param name="_platformType">The platform type to check against.</param>
+        /// <returns>True if the platform matches; otherwise, false.</returns>
         public static bool IsPlatform(PlatformType _platformType)
         {
             switch (_platformType)
@@ -78,6 +87,10 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
             return false;
         }
 
+        /// <summary>
+        /// Gets a string representation of the current platform based on defined symbols.
+        /// </summary>
+        /// <returns>The name of the platform.</returns>
         public static string GetPlatformName()
         {
 #if PICO_INSTALL && UNITY_ANDROID
@@ -119,6 +132,10 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Gets the runtime OS platform as a string.
+        /// </summary>
+        /// <returns>A string representing the OS (e.g., "iOS", "Android").</returns>
         public static string GetRuntimePlatform()
         {
 #if UNITY_IOS
@@ -134,10 +151,14 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Mapping from build-time defines to <see cref="XRMODPlatform"/> enum values.
+        /// </summary>
+        /// <returns>The <see cref="XRMODPlatform"/> for the current build.</returns>
         public static XRMODPlatform GetXRMODRuntimePlatformType()
         {
 #if PICO_INSTALL && UNITY_ANDROID
-            return "XRMODPlatform.Pico;
+            return XRMODPlatform.Pico;
 #elif HANDHELD_ARMODULE_INSTALL && (UNITY_IOS||UNITY_ANDROID)
             return XRMODPlatform.Mobile;
 #elif HOLOLENS_INSTALL && UNITY_WSA
@@ -159,6 +180,9 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Is the current platform Apple VisionOS?
+        /// </summary>
         public static bool IsVisionOS()
         {
 #if VISIONOS_INSTALL
@@ -168,6 +192,9 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Is the current platform Pico XR?
+        /// </summary>
         public static bool IsPico()
         {
 #if PICO_INSTALL && UNITY_ANDROID
@@ -177,6 +204,9 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Is the current platform Rokid?
+        /// </summary>
         public static bool IsRokid()
         {
 #if ROKID_INSTALL && UNITY_ANDROID
@@ -187,6 +217,9 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
         }
 
 
+        /// <summary>
+        /// Is the current platform Handheld AR (ARKit/ARCore on Mobile)?
+        /// </summary>
         public static bool IsHandheldAR()
         {
 #if HANDHELD_ARMODULE_INSTALL && (UNITY_ANDROID||UNITY_IOS)
@@ -196,6 +229,9 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Is the current platform XReal?
+        /// </summary>
         public static bool IsXReal()
         {
 #if (XREAL_INSTALL && UNITY_ANDROID) || UNITY_EDITOR
@@ -205,6 +241,9 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Is the current platform Hololens?
+        /// </summary>
         public static bool IsHololens()
         {
 #if HOLOLENS_INSTALL && UNITY_WSA
@@ -214,6 +253,9 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Is the current platform Meta Quest?
+        /// </summary>
         public static bool IsQuest()
         {
 #if QUEST_INSTALL && UNITY_ANDROID
@@ -223,6 +265,9 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Is the current platform WebAR?
+        /// </summary>
         public static bool IsWebAR()
         {
 #if WEB_AR_INSTALL && UNITY_WEBGL
@@ -232,6 +277,9 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Is the current platform WebVR?
+        /// </summary>
         public static bool IsWebVR()
         {
 #if WEB_VR_INSTALL && UNITY_WEBGL
@@ -241,6 +289,9 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Is the current platform Web 3D (Non-AR/VR)?
+        /// </summary>
         public static bool IsWeb3D()
         {
 #if WEB_3D_INSTALL && UNITY_WEBGL
@@ -250,6 +301,9 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Is the current platform Classic 3D (Non-XR)?
+        /// </summary>
         public static bool IsClassic3D()
         {
 #if CLASSIC_3D_INSTALL && (UNITY_IOS||UNITY_ANDROID||UNITY_STANDALONE)
@@ -260,6 +314,10 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
         }
 
 
+        /// <summary>
+        /// Internal method to detect the specific Meta Quest model.
+        /// </summary>
+        /// <returns>The detected <see cref="PlatformType"/> for Quest models.</returns>
         internal static PlatformType GetQuestModel()
         {
 #if UNITY_ANDROID && !UNITY_EDITOR

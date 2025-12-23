@@ -19,22 +19,26 @@ using Unity.XR.CoreUtils;
 
 namespace Phantom.XRMOD.XRMODAvatar.Runtime.XR
 {
+    /// <summary>
+    /// Represents a networked human avatar. Handles the replication of head and hand transforms 
+    /// from the local player to remote clients using Unity Netcode.
+    /// </summary>
     public class XRNetworkPlayerAvatar : NGOPlayerBase
     {
 #if USE_XR_HAND
         [Header("Avatar Transform References"), Tooltip("Assign to local avatar transform.")]
         /// <summary>
-        /// Non-Local player transforms.
+        /// The transform representing the avatar's head. Used for tracking replication.
         /// </summary>
         public Transform head;
 
         /// <summary>
-        /// Non-Local player transforms.
+        /// The transform representing the avatar's left hand.
         /// </summary>
         public Transform leftHand;
 
         /// <summary>
-        /// Non-Local player transforms.
+        /// The transform representing the avatar's right hand.
         /// </summary>
         public Transform rightHand;
 
@@ -45,7 +49,7 @@ namespace Phantom.XRMOD.XRMODAvatar.Runtime.XR
         // [SerializeField, Tooltip("Head Renderers to change rendering mode for local players.")] protected Renderer[] m_HeadRends;
 
         /// <summary>
-        /// Hand Objects to be disabled for the local player.
+        /// Array of hand objects that should be disabled on the local player to avoid obstructing the view.
         /// </summary>
         [Header("Networked Hands"), SerializeField, Tooltip("Hand Objects to be disabled for the local player.")]
         protected GameObject[] m_handsObjects;
@@ -127,10 +131,11 @@ namespace Phantom.XRMOD.XRMODAvatar.Runtime.XR
         }
 
         /// <summary>
-        /// Called from <see cref="NetworkXRHandPoseReplicator"/> when swapping between hand tracking and controllers.
+        /// Updates the local hand origins used for transform replication.
+        /// This is typically called from the <see cref="NetworkXRHandPoseReplicator"/> when switching input modes.
         /// </summary>
-        /// <param name="_left">Transform for Left Hand.</param>
-        /// <param name="_right">Transform for Right Hand.</param>
+        /// <param name="_left">The transform of the local left hand source.</param>
+        /// <param name="_right">The transform of the local right hand source.</param>
         public void SetHandOrigins(Transform _left, Transform _right)
         {
             m_LeftHandOrigin = _left;
@@ -138,12 +143,14 @@ namespace Phantom.XRMOD.XRMODAvatar.Runtime.XR
         }
 
         /// <summary>
-        /// Hides and disables Renderers and GameObjects on the Local Player.
+        /// Configures the visibility of avatar parts based on whether it is the local player.
+        /// Local players usually see their own hands but not their own head/body to prevent clipping.
         /// </summary>
-        /// <remarks>Only called on the Local Player.</remarks>
+        /// <param name="_renderState">True to show parts, False to hide.</param>
         protected virtual void SetupPlayerAvatarRenderState(bool _renderState = false)
         {
             var tmp_AvatarVisualizer = GetComponent<AvatarVisualizer>();
+            if (!tmp_AvatarVisualizer) return;
             tmp_AvatarVisualizer.SetAvatarPartsVisualizer(_renderState);
             tmp_AvatarVisualizer.SetHandsVisualizer(_renderState);
             tmp_AvatarVisualizer.SetHeadTrackVisualizer(_renderState);

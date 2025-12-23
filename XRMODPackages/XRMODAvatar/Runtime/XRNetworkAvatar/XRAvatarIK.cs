@@ -14,6 +14,11 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.XRMODAvatar.Runtime.XR
 {
+    /// <summary>
+    /// A simple Inverse Kinematics (IK) implementation for the avatar's body.
+    /// Synchronizes the position of the head visuals and torso based on the networked head transform.
+    /// Provides basic rotation smoothing for the body.
+    /// </summary>
     public class XRAvatarIK:MonoBehaviour
     {
         /// <summary>

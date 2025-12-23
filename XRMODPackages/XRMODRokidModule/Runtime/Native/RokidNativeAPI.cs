@@ -15,9 +15,20 @@ using UnityEngine.XR.OpenXR.Features;
 
 namespace Phantom.XRMOD.RokidModule.Runtime
 {
+    /// <summary>
+    /// Singleton class providing native APIs for interacting with Rokid device features.
+    /// Includes functionality for screen orientation, camera previews, and intrinsics/extrinsics.
+    /// </summary>
     public class RokidNativeAPI
     {
+        /// <summary>
+        /// Gets the singleton instance of the <see cref="RokidNativeAPI"/>.
+        /// </summary>
         public static RokidNativeAPI GetInstance => _INSTANCE ??= new RokidNativeAPI();
+
+        /// <summary>
+        /// Event invoked when the Unity screen orientation changes.
+        /// </summary>
         public static event Action<ScreenOrientation> OnUnityScreenOrientation;
 
         private int phoneScreenHeight = 0;
@@ -35,19 +46,19 @@ namespace Phantom.XRMOD.RokidModule.Runtime
         }
 
         /// <summary>
-        /// Controller screen height
+        /// Gets the phone controller screen height.
         /// </summary>
         public int PhoneScreenHeight => phoneScreenHeight;
 
         /// <summary>
-        /// Controller screen width
+        /// Gets the phone controller screen width.
         /// </summary>
         public int PhoneScreenWidth => phoneScreenWidth;
 
         /// <summary>
-        /// Set controller orientation
+        /// Sets the system screen orientation for the Android activity.
         /// </summary>
-        /// <param name="_orientation">Describes screen orientation.</param>
+        /// <param name="_orientation">The desired screen orientation.</param>
         public void SetSystemScreenOrientation(ScreenOrientation _orientation)
         {
             if (Application.isEditor || Application.platform != RuntimePlatform.Android) return;
@@ -75,9 +86,9 @@ namespace Phantom.XRMOD.RokidModule.Runtime
 
 
         /// <summary>
-        /// Set glasses orientation
+        /// Sets the Unity screen orientation and triggers the <see cref="OnUnityScreenOrientation"/> event.
         /// </summary>
-        /// <param name="_orientation">Describes screen orientation.</param>
+        /// <param name="_orientation">The new orientation.</param>
         public void SetUnityScreenOrientation(ScreenOrientation _orientation)
         {
             unityOrientation = _orientation;
@@ -85,28 +96,28 @@ namespace Phantom.XRMOD.RokidModule.Runtime
         }
 
         /// <summary>
-        /// Get Glasses orientation
+        /// Gets the current Unity screen orientation.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The current <see cref="ScreenOrientation"/>.</returns>
         public ScreenOrientation GetUnityScreenOrientation()
         {
             return unityOrientation;
         }
 
         /// <summary>
-        /// Get controller orientation
+        /// Gets the current system screen orientation.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The current system <see cref="ScreenOrientation"/>.</returns>
         public ScreenOrientation GetSystemScreenOrientation()
         {
             return systemOrientation;
         }
 
         /// <summary>
-        /// Access Camera frame.
+        /// Enables or disables the camera preview and sets the frame update callback.
         /// </summary>
-        /// <param name="_enable">If enable is true the glasses camera frame will allow to access, otherwise.</param>
-        /// <param name="_frameUpdateCallback">Callback of every frame.</param>
+        /// <param name="_enable">True to enable, false to disable.</param>
+        /// <param name="_frameUpdateCallback">Callback invoked with camera data: bytes, width, height, timestamp.</param>
         public void SetCameraPreview(bool _enable, Action<byte[], ushort, ushort, long> _frameUpdateCallback = null)
         {
             if (Application.isEditor || Application.platform != RuntimePlatform.Android) return;
@@ -125,10 +136,10 @@ namespace Phantom.XRMOD.RokidModule.Runtime
         }
 
         /// <summary>
-        /// Get the camera focal length
+        /// Gets the camera focal length.
         /// </summary>
-        /// <param name="_focalLength">Focal length</param>
-        /// <returns></returns>
+        /// <param name="_focalLength">Output array for focal length [fx, fy].</param>
+        /// <returns>True if successful.</returns>
         public bool GetCameraFocalLength(out float[] _focalLength)
         {
             _focalLength = null;
@@ -138,10 +149,10 @@ namespace Phantom.XRMOD.RokidModule.Runtime
         }
 
         /// <summary>
-        /// Get the camera principal point.
+        /// Gets the camera principal point.
         /// </summary>
-        /// <param name="_principalPoint">Principal point</param>
-        /// <returns></returns>
+        /// <param name="_principalPoint">Output array for principal point [cx, cy].</param>
+        /// <returns>True if successful.</returns>
         public bool GetPrincipalPoint(out float[] _principalPoint)
         {
             _principalPoint = null;
@@ -151,10 +162,10 @@ namespace Phantom.XRMOD.RokidModule.Runtime
         }
 
         /// <summary>
-        /// Get the camera frame image dimensions.
+        /// Gets the camera image dimensions.
         /// </summary>
-        /// <param name="_dimensions">Image dimensions</param>
-        /// <returns></returns>
+        /// <param name="_dimensions">Output array for dimensions [width, height].</param>
+        /// <returns>True if successful.</returns>
         public bool GetImageDimensions(out int[] _dimensions)
         {
             _dimensions = null;
@@ -164,10 +175,10 @@ namespace Phantom.XRMOD.RokidModule.Runtime
         }
 
         /// <summary>
-        /// Get the camera distortion params.
+        /// Gets the camera distortion parameters.
         /// </summary>
-        /// <param name="_distortionParams">Distortion params</param>
-        /// <returns></returns>
+        /// <param name="_distortionParams">Output array for distortion coefficients.</param>
+        /// <returns>True if successful.</returns>
         public bool GetDistortion(out float[] _distortionParams)
         {
             _distortionParams = null;
@@ -177,11 +188,11 @@ namespace Phantom.XRMOD.RokidModule.Runtime
         }
 
         /// <summary>
-        /// Get the history camera physics pose.
+        /// Retrieves the history camera pose for a given timestamp.
         /// </summary>
-        /// <param name="_timestamp">The frame timestamp</param>
-        /// <param name="_pose">The camera pose</param>
-        /// <returns></returns>
+        /// <param name="_timestamp">The timestamp to query.</param>
+        /// <param name="_pose">Output struct containing the position and rotation.</param>
+        /// <returns>True if the pose was successfully retrieved.</returns>
         public bool GetHistoryCameraPhysicsPose(long _timestamp, out Pose _pose)
         {
             _pose = new Pose();
@@ -196,7 +207,7 @@ namespace Phantom.XRMOD.RokidModule.Runtime
 
 
         /// <summary>
-        /// Get the touchpad controller size. 
+        /// Retrieves the Rokid Station 2 touchpad (screen) dimensions on Android functionality.
         /// </summary>
         private void GetRokidStation2TouchPadSize()
         {

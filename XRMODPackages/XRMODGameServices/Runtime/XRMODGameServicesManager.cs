@@ -21,19 +21,45 @@ using UnityEngine.Serialization;
 
 namespace Phantom.XRMOD.GameServices.Runtime
 {
+    /// <summary>
+    /// The core manager for XRMOD Game Services. 
+    /// Handles initialization and coordination of various game service modules like Voice, Friends, etc.
+    /// </summary>
     public class XRMODGameServicesManager : MonoBehaviour
     {
+        /// <summary>
+        /// Singleton instance of the XRMODGameServicesManager.
+        /// </summary>
         public static XRMODGameServicesManager GetInstance { get; private set; }
 
+        /// <summary>
+        /// Whether the Friend system should be initialized.
+        /// </summary>
         public bool EnableFriend = true;
 
+        /// <summary>
+        /// Whether the Voice system should be initialized.
+        /// </summary>
         [Header("Voice Properties")] public bool EnableVoice = true;
 
+        /// <summary>
+        /// Configuration arguments for the Voice system.
+        /// </summary>
         [SerializeField] private ConfigurationArgs voiceConfigurationArgs;
 
+        /// <summary>
+        /// 3D audio properties for the Voice system.
+        /// </summary>
         [SerializeField] private Voice3DProperties voice3DProperties;
 
+        /// <summary>
+        /// Invoked when all enabled Game Services are ready.
+        /// </summary>
         public UnityEvent GameServicesReady;
+
+        /// <summary>
+        /// Invoked when Game Services initialization fails.
+        /// </summary>
         public UnityEvent GameServicesFailed;
 
         private bool authReady;
@@ -65,6 +91,20 @@ namespace Phantom.XRMOD.GameServices.Runtime
             readyInvoked = false;
         }
 
+        /// <summary>
+        /// Initializes Unity Services with an optional profile name.
+        /// This is the entry point for starting all XRMOD game services.
+        /// </summary>
+        /// <param name="_profileName">Optional profile name for authentication (e.g., for multi-login testing).</param>
+        /// <example>
+        /// <code>
+        /// XRMODGameServicesManager.GetInstance.InitializeUnityServices("Player1");
+        /// </code>
+        /// </example>
+        /// <remarks>
+        /// Ensure this is called before using any other game services. 
+        /// Profile names must be alphanumeric.
+        /// </remarks>
         public async void InitializeUnityServices(string _profileName = null)
         {
             if (UnityServices.State != ServicesInitializationState.Uninitialized)
@@ -87,6 +127,17 @@ namespace Phantom.XRMOD.GameServices.Runtime
                 await UnityServices.InitializeAsync();
         }
 
+        /// <summary>
+        /// Asynchronously initializes Unity Services with an optional profile name.
+        /// Provides a Task that can be awaited.
+        /// </summary>
+        /// <param name="_profileName">Optional profile name for authentication.</param>
+        /// <returns>A Task representing the initialization process.</returns>
+        /// <example>
+        /// <code>
+        /// await XRMODGameServicesManager.GetInstance.InitializeUnityServicesAsync("TestUser");
+        /// </code>
+        /// </example>
         public async Task InitializeUnityServicesAsync(string _profileName = null)
         {
             if (UnityServices.State != ServicesInitializationState.Uninitialized)

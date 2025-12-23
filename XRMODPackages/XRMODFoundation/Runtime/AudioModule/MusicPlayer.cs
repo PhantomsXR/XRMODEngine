@@ -15,6 +15,10 @@ using UnityEngine.Serialization;
 
 namespace Phantom.XRMOD.AudioModule.Runtime
 {
+    /// <summary>
+    /// A singleton component that manages background music playback,
+    /// volume fading, and audio mixer effects like low-pass filters.
+    /// </summary>
     public class MusicPlayer : MonoBehaviour
     {
         [SerializeField] private AudioSource audioSource;
@@ -104,6 +108,10 @@ namespace Phantom.XRMOD.AudioModule.Runtime
             audioSource.volume = currentVolume;
         }
 
+        /// <summary>
+        /// Sets the direction for the low-pass filter transition.
+        /// </summary>
+        /// <param name="f">The direction value (typically 1 for increasing, -1 for decreasing cutoff frequency).</param>
         public void SetLowPassTranstionDirection(float f)
         {
             lowPassTransitionDirection = f;

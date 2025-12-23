@@ -15,12 +15,23 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
-    // IL: 简单的二进制读写器（你也可以上 MessagePack/Ceras，但这种最稳）
+    /// <summary>
+    /// Binary writer for serializing data packets for network transmission.
+    /// </summary>
+    /// <remarks>
+    /// Provides methods for writing primitives, Unity types (Vector3, Color, etc.), and collections to a binary stream.
+    /// Use <see cref="ToArray"/> to get the final byte array for network transmission.
+    /// This is a lightweight alternative to MessagePack or other serializers, optimized for Unity types.
+    /// </remarks>
+    // IL: 简单的二进制读写器（你也可以上 MessagePack/Ceras,但这种最稳）
     public partial class PacketWriter
     {
         private readonly System.IO.MemoryStream ms = new System.IO.MemoryStream();
         private readonly System.IO.BinaryWriter bw;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PacketWriter"/> class.
+        /// </summary>
         public PacketWriter()
         {
             bw = new System.IO.BinaryWriter(ms);
@@ -40,6 +51,10 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
             if (d is {Length: > 0}) bw.Write(d);
         }
 
+        /// <summary>
+        /// Converts the current buffered data into a byte array.
+        /// </summary>
+        /// <returns>The serialized byte array.</returns>
         public byte[] ToArray() => ms.ToArray();
     }
 
@@ -47,6 +62,10 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
     {
         private readonly System.IO.BinaryReader br;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PacketReader"/> class with the specified byte buffer.
+        /// </summary>
+        /// <param name="_buf">The byte array to read from.</param>
         public PacketReader(byte[] _buf)
         {
             br = new System.IO.BinaryReader(new System.IO.MemoryStream(_buf));

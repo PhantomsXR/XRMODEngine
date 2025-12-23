@@ -21,6 +21,9 @@ using Phantom.XRMOD.SDKEntry.Runtime.Mapper;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime.DataRequest
 {
+    /// <summary>
+    /// Commands for reporting application exceptions and device information to the backend.
+    /// </summary>
     public class ExceptionReporter : IHttpRequestCommand<ResponseMapper>
     {
         private readonly Dictionary<string, string> parameter;

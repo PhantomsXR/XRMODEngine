@@ -8,6 +8,10 @@ using UnityEngine;
 
 namespace UnityFusion.CLRBinding.Adapter
 {
+    /// <summary>
+    /// Adapter for standard Unity <see cref="MonoBehaviour"/>.
+    /// Enables scripts in the hot-reload domain to inherit from MonoBehaviour and use Unity lifecycle methods.
+    /// </summary>
     public class MonoBehaviourAdapter : CrossBindingAdaptor
     {
         public override Type BaseCLRType => typeof(MonoBehaviour);
@@ -21,6 +25,9 @@ namespace UnityFusion.CLRBinding.Adapter
             return new Adapter(_appdomain, _instance);
         }
 
+        /// <summary>
+        /// The implementation class that bridges Unity messages to the hot-reload domain.
+        /// </summary>
         public class Adapter : BaseMonoCrossBindingAdaptor
         {
             public Adapter()

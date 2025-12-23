@@ -13,10 +13,16 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
 {
 
     //Unity Scene
+    /// <summary>
+    /// Standard Unity scene names/tags used by the SDK for internal navigation and cleanup.
+    /// </summary>
     public enum SceneTags
     {
+        /// <summary> The initialization scene. </summary>
         Initilizer = 0,
+        /// <summary> The main XR experience scene. </summary>
         Main,
+        /// <summary> A utility scene used for clearing state. </summary>
         Clear
     }
 }

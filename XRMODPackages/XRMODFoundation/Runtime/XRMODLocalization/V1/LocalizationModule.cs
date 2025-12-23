@@ -1,13 +1,13 @@
-// // /*===============================================================================
-// // Copyright (C) 2024 PhantomsXR Ltd. All Rights Reserved.
-// //
-// // This file is part of the Phantom.XRMOD.Localization.Runtime.
-// //
-// // The Localization cannot be copied, distributed, or made available to
-// // third-parties for commercial purposes without written permission of PhantomsXR Ltd.
-// //
-// // Contact nswell@phantomsxr.com for licensing requests.
-// // ===============================================================================*/
+/*===============================================================================
+Copyright (C) 2024 PhantomsXR Ltd. All Rights Reserved.
+
+This file is part of the Phantom.XRMOD.Localization.Runtime.
+
+The Localization cannot be copied, distributed, or made available to
+third-parties for commercial purposes without written permission of PhantomsXR Ltd.
+
+Contact nswell@phantomsxr.com for licensing requests.
+===============================================================================*/
 
 using System.Collections.Generic;
 using System.IO;
@@ -19,44 +19,62 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.Localization.Runtime
 {
+    /// <summary>
+    /// Represents a single localization module for a specific project and scope.
+    /// Handles the parsing of localization tables, management of localizable components, 
+    /// and retrieval of localized assets (strings, sprites, audio clips).
+    /// </summary>
     public class LocalizationModule
     {
         /// <summary>
-        /// All text component of ugui
+        /// Tracks all text components registered for automatic localization within this module.
         /// </summary>
         private Dictionary<LocalizationScope, List<BaseLocalizedTextComponent>> textComponents;
 
+        /// <summary>
+        /// Tracks all image components registered for automatic localization within this module.
+        /// </summary>
         private Dictionary<LocalizationScope, List<BaseLocalizedImageComponent>> imgComponents;
+
+        /// <summary>
+        /// Tracks all audio components registered for automatic localization within this module.
+        /// </summary>
         private Dictionary<LocalizationScope, List<LocalizationAudioComponent>> audioComponents;
+
 #if USE_AUDIO_MODULE
+        /// <summary>
+        /// Tracks all audio module components registered for automatic localization within this module.
+        /// </summary>
         private Dictionary<LocalizationScope, List<LocalizationAudioModuleComponent>> audioModuleComponents;
 #endif
+
         /// <summary>
-        /// The current language dictionary in use.
+        /// The parsed localization table, mapping languages to key-value pairs.
         /// </summary>
         private Dictionary<string, Dictionary<string, string>> localizationTable;
 
         /// <summary>
-        /// Current language in use.
+        /// The current language code being used by this module.
         /// </summary>
         private string currentLanguage;
 
         /// <summary>
-        /// Current localization work space
+        /// The localization scope (e.g., InExperiences, InLauncher) of this module.
         /// </summary>
         private LocalizationScope localizationScope;
 
         /// <summary>
-        /// Current project name
+        /// The name of the project associated with this localization module.
         /// </summary>
         private string projectName;
 
         /// <summary>
-        /// Create a new localizationModule
+        /// Initializes a new instance of the <see cref="LocalizationModule"/> class.
         /// </summary>
-        /// <param name="_localizationTable">The language dictionary database</param>
-        /// <param name="_language">First language</param>
-        /// <param name="_place">Workspace</param>
+        /// <param name="_projectName">The name of the project.</param>
+        /// <param name="_localizationTable">The raw bytes of the localization table.</param>
+        /// <param name="_language">The initial language to use.</param>
+        /// <param name="_place">The localization scope.</param>
         public LocalizationModule(string _projectName, byte[] _localizationTable, string _language,
             LocalizationScope _place)
         {
@@ -65,11 +83,11 @@ namespace Phantom.XRMOD.Localization.Runtime
         }
 
         /// <summary>
-        /// Init current localization module
+        /// Internal initialization of the localization module.
         /// </summary>
-        /// <param name="_localizationTable">The language dictionary database</param>
-        /// <param name="_language">First language</param>
-        /// <param name="_place">Workspace</param>
+        /// <param name="_localizationTable">The raw bytes of the localization table.</param>
+        /// <param name="_language">The language to use.</param>
+        /// <param name="_place">The localization scope.</param>
         protected void Init(byte[] _localizationTable, string _language, LocalizationScope _place)
         {
             currentLanguage = _language;
@@ -87,10 +105,10 @@ namespace Phantom.XRMOD.Localization.Runtime
 
 
         /// <summary>
-        /// Get the localized string via a key.
+        /// Retrieves the localized string for a given key in the current language.
         /// </summary>
-        /// <param name="_key">The key for localized.</param>
-        /// <returns>The localized string.</returns>
+        /// <param name="_key">The unique key for the localized string.</param>
+        /// <returns>The localized string if found; otherwise, returns a formatted error message.</returns>
         public string GetLocalizedString(string _key)
         {
             if (localizationTable == null)
@@ -113,11 +131,11 @@ namespace Phantom.XRMOD.Localization.Runtime
         }
 
         /// <summary>
-        /// Change current localized language to other language
+        /// Changes the current language and refreshes all registered components.
         /// </summary>
-        /// <param name="_localizationTable">The language database(Dictionary)</param>
-        /// <param name="_language">Target language</param>
-        /// <param name="_place">Workspace</param>
+        /// <param name="_localizationTable">The new localization table data.</param>
+        /// <param name="_language">The target language.</param>
+        /// <param name="_place">The localization scope.</param>
         public void ChangeLanguage(byte[] _localizationTable, string _language, LocalizationScope _place)
         {
             textComponents.Clear();
@@ -150,10 +168,10 @@ namespace Phantom.XRMOD.Localization.Runtime
 
 
         /// <summary>
-        /// Manually add the text component to the localization
+        /// Manually registers a text component for automatic localization within this module's scope.
         /// </summary>
-        /// <param name="_contentComponent">The unity ugui component(Request:LocalizedTextMeshProUGUI/LocalizedText/LocalizedTextMeshPro)</param>
-        /// <param name="_place">Workspace</param>
+        /// <param name="_contentComponent">The text component to register.</param>
+        /// <param name="_place">The localization scope.</param>
         public void AddText(BaseLocalizedTextComponent _contentComponent, LocalizationScope _place)
         {
             if (textComponents.TryGetValue(_place, out var tmp_Text))
@@ -165,10 +183,10 @@ namespace Phantom.XRMOD.Localization.Runtime
 
 
         /// <summary>
-        /// Manually add the text component to the localization
+        /// Manually registers an image component for automatic localization within this module's scope.
         /// </summary>
-        /// <param name="_contentComponent">The unity ugui component(Request:LocalizedTextMeshProUGUI/LocalizedText/LocalizedTextMeshPro)</param>
-        /// <param name="_place">Workspace</param>
+        /// <param name="_contentComponent">The image component to register.</param>
+        /// <param name="_place">The localization scope.</param>
         public async void AddImage(BaseLocalizedImageComponent _contentComponent, LocalizationScope _place)
         {
             if (imgComponents.TryGetValue(_place, out var tmp_Img))
@@ -189,10 +207,10 @@ namespace Phantom.XRMOD.Localization.Runtime
         }
 
         /// <summary>
-        /// Manually add the text component to the localization
+        /// Manually registers an audio component for automatic localization within this module's scope.
         /// </summary>
-        /// <param name="_contentComponent">The unity ugui component(Request:LocalizedTextMeshProUGUI/LocalizedText/LocalizedTextMeshPro)</param>
-        /// <param name="_place">Workspace</param>
+        /// <param name="_contentComponent">The audio component to register.</param>
+        /// <param name="_place">The localization scope.</param>
         public async void AddAudio(LocalizationAudioComponent _contentComponent, LocalizationScope _place)
         {
             if (audioComponents.TryGetValue(_place, out var tmp_AudioComponents))
@@ -216,10 +234,10 @@ namespace Phantom.XRMOD.Localization.Runtime
 #if USE_AUDIO_MODULE
 
         /// <summary>
-        /// Manually add the text component to the localization
+        /// Manually registers an audio module component for automatic localization within this module's scope.
         /// </summary>
-        /// <param name="_contentComponent">The unity ugui component(Request:LocalizedTextMeshProUGUI/LocalizedText/LocalizedTextMeshPro)</param>
-        /// <param name="_place">Workspace</param>
+        /// <param name="_contentComponent">The audio module component to register.</param>
+        /// <param name="_place">The localization scope.</param>
         public async void AddAudioModule(LocalizationAudioModuleComponent _contentComponent, LocalizationScope _place)
         {
             if (audioModuleComponents.TryGetValue(_place, out var tmp_AudioComponents))
@@ -245,8 +263,9 @@ namespace Phantom.XRMOD.Localization.Runtime
 #endif
 
         /// <summary>
-        /// Refresh all text component
+        /// Refreshes all registered components for the specified scope.
         /// </summary>
+        /// <param name="_place">The localization scope to refresh.</param>
         internal void Refresh(LocalizationScope _place)
         {
             RefreshTextComps(_place);
@@ -398,14 +417,14 @@ namespace Phantom.XRMOD.Localization.Runtime
         }
 
         /// <summary>
-        ///  Load the language db(Parsing from csv file)
+        /// Loads the localization database from the provided raw bytes (CSV format).
         /// </summary>
-        /// <param name="_localizationTable"></param>
+        /// <param name="_localizationTable">The raw bytes of the CSV file.</param>
         private void LoadLanguageDb(byte[] _localizationTable)
         {
             List<string> tmp_AllRows = new List<string>(0);
-            MemoryStream tmp_Stream = new MemoryStream(_localizationTable);
-            StreamReader tmp_Sr = new StreamReader(tmp_Stream, Encoding.UTF8);
+            using MemoryStream tmp_Stream = new MemoryStream(_localizationTable);
+            using StreamReader tmp_Sr = new StreamReader(tmp_Stream, Encoding.UTF8);
             while (tmp_Sr.ReadLine() is { } tmp_Line)
             {
                 tmp_AllRows.Add(tmp_Line);
@@ -434,10 +453,10 @@ namespace Phantom.XRMOD.Localization.Runtime
         }
 
         /// <summary>
-        /// Get the value string from the cvs file
+        /// Parses a CSV value string, removing quotes and handling escaped quotes.
         /// </summary>
-        /// <param name="_val"></param>
-        /// <returns></returns>
+        /// <param name="_val">The raw CSV value.</param>
+        /// <returns>The cleaned string value.</returns>
         private string GetExactValue(string _val)
         {
             if (_val[0] == '"' && _val[^1] == '"')
@@ -453,10 +472,10 @@ namespace Phantom.XRMOD.Localization.Runtime
         }
 
         /// <summary>
-        /// The error key tips
+        /// Formats an error message for display when a localization key or table is missing.
         /// </summary>
-        /// <param name="_error"></param>
-        /// <returns></returns>
+        /// <param name="_error">The error message.</param>
+        /// <returns>A rich text formatted error string.</returns>
         private string GetErrorFormat(string _error)
         {
             return $"<color=red><size=10>{_error}</size></color>";

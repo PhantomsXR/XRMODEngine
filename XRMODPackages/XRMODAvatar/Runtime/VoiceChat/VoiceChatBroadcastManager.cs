@@ -19,6 +19,9 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.XRMODAvatar.Runtime
 {
+    /// <summary>
+    /// Distributes voice chat events (like participant joined/removed) to the relevant networked players.
+    /// </summary>
     public class VoiceChatBroadcastManager : MonoBehaviour
     {
         private void Awake()

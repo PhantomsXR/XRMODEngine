@@ -15,6 +15,10 @@ using Phantom.XRMOD.XRMODUtilites.Runtime;
 
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
+    /// <summary>
+    /// Command that facilitates acquiring native platform information, such as user IDs or device details.
+    /// Subscribes to the <c>TryAcquireAppInfo</c> action notification.
+    /// </summary>
     public class BuildTryAcquireInformationCommand : ICommand, IReleaseCommand
     {
         public BuildTryAcquireInformationCommand()

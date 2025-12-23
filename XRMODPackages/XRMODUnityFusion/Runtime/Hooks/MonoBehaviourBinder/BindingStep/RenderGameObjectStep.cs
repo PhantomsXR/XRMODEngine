@@ -14,6 +14,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
 {
+    /// <summary>
+    /// A binding step responsible for resetting the GameObject state.
+    /// It removes old scripts and sets up the initial render state (visible or hidden).
+    /// </summary>
     public class RenderGameObjectStep : IBindingStep
     {
         public BindingPhase Phase { get; } = BindingPhase.SetRenderer;

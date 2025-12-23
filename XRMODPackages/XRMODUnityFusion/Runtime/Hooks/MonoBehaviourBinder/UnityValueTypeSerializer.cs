@@ -16,6 +16,9 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
 {
+    /// <summary>
+    /// Serializable wrapper for Unity's <see cref="Vector3"/>.
+    /// </summary>
     [System.Serializable]
     public class SerializableVector3
     {
@@ -36,6 +39,9 @@ namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
         }
     }
 
+    /// <summary>
+    /// Serializable wrapper for Unity's <see cref="Vector2"/>.
+    /// </summary>
     [System.Serializable]
     public class SerializableVector2
     {
@@ -54,6 +60,9 @@ namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
         }
     }
 
+    /// <summary>
+    /// Serializable wrapper for Unity's <see cref="Vector4"/>.
+    /// </summary>
     [System.Serializable]
     public class SerializableVector4
     {
@@ -77,6 +86,9 @@ namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
     }
 
 
+    /// <summary>
+    /// Provides static methods and extensions for serializing Unity value types.
+    /// </summary>
     public static class UnityValueTypeSerializer
     {
         public static string Serializer(this Vector2 _vector2)

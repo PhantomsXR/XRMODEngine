@@ -21,6 +21,10 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime.DataRequest
 {
+    /// <summary>
+    /// Command for querying project metadata from a Supabase backend service.
+    /// Maps the Supabase-specific response to the SDK's internal <see cref="ResponseMapper"/>.
+    /// </summary>
     public class QueryXRProjectForOnlineSupabase : IHttpRequestCommand<ResponseMapper>
     {
         private readonly QueryParameter queryParameter;

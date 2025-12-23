@@ -20,6 +20,10 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
+    /// <summary>
+    /// Command responsible for loading Unity Objects (GameObjects, TextAssets) from downloaded asset bundles.
+    /// Subscribes to the <c>TryAcquireLoadObject</c> action notification.
+    /// </summary>
     public class BuildTryAcquireLoadObjectCommand : ICommand, IReleaseCommand
     {
         public BuildTryAcquireLoadObjectCommand()

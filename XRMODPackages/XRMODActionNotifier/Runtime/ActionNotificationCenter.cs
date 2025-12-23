@@ -17,26 +17,43 @@ using System.Threading.Tasks;
 
 namespace Phantom.XRMOD.ActionNotification.Runtime
 {
+    /// <summary>
+    /// The central hub for posting and receiving notifications within the XRMOD system.
+    /// It supports synchronous, asynchronous, and result-returning notifications.
+    /// </summary>
     public partial class ActionNotificationCenter : IActionNotificationCenter<Action<BaseNotificationData>>
     {
         private static readonly ActionNotificationCenter _DEFAULT_CENTER = new();
  
 
+        /// <summary>
+        /// Releases all registered handlers. Use this to clean up the notification center.
+        /// </summary>
         public void Release()
         { 
             handlers.Clear();
         }
 
 
+        /// <summary>
+        /// Gets the default instance of the notification center.
+        /// </summary>
         public static ActionNotificationCenter DefaultCenter => _DEFAULT_CENTER;
  
 
 
         /// <summary>
-        /// add the method observer from notification actions
+        /// Adds a synchronous observer that performs an action when a specific notification is posted.
         /// </summary>
-        /// <param name="_name">Will add notification name</param>
-        /// <param name="_action">Will executed method</param>
+        /// <param name="_action">The action to execute (delegate).</param>
+        /// <param name="_name">The name of the notification to observe.</param>
+        /// <example>
+        /// <code>
+        /// ActionNotificationCenter.DefaultCenter.AddObserver(data => {
+        ///     Debug.Log($"Notification received: {data}");
+        /// }, "MyEventName");
+        /// </code>
+        /// </example>
         public void AddObserver(Action<BaseNotificationData> _action, string _name)
         {
             if (string.IsNullOrEmpty(_name))
@@ -49,10 +66,13 @@ namespace Phantom.XRMOD.ActionNotification.Runtime
         }
 
         /// <summary>
-        /// add the method observer from notification actions
+        /// Adds an asynchronous observer that can be awaited when a notification is posted via PostNotificationAsync.
         /// </summary>
-        /// <param name="_name">Will add notification name</param>
-        /// <param name="_action">Will executed method</param>
+        /// <param name="_action">The async function to execute. It should return a Task of object.</param>
+        /// <param name="_name">The name of the notification to observe.</param>
+        /// <remarks>
+        /// This is useful for operations that involve networking, file I/O, or other long-running tasks.
+        /// </remarks>
         public void AddAsyncObserver(Func<BaseNotificationData, Task<object>> _action, string _name)
         {
             if (string.IsNullOrEmpty(_name))
@@ -65,10 +85,10 @@ namespace Phantom.XRMOD.ActionNotification.Runtime
         }
 
         /// <summary>
-        /// add the method observer from notification actions
+        /// Adds a synchronous observer that returns a result object.
         /// </summary>
-        /// <param name="_name">Will add notification name</param>
-        /// <param name="_action">Will executed method</param>
+        /// <param name="_action">The function to execute that returns a result.</param>
+        /// <param name="_name">The name of the notification to observe.</param>
         public void AddObserver(Func<BaseNotificationData, object> _action, string _name)
         {
             if (string.IsNullOrEmpty(_name))
@@ -81,29 +101,29 @@ namespace Phantom.XRMOD.ActionNotification.Runtime
         }
 
         /// <summary>
-        /// Remove the method observer from notification actions
+        /// Removes a specific synchronous action observer from a notification.
         /// </summary>
-        /// <param name="_name">Will remove notification name</param>
-        /// <param name="_action">Will executed method</param>
+        /// <param name="_name">The name of the notification.</param>
+        /// <param name="_action">The action to remove.</param>
         public void RemoveObserver(string _name, Action<BaseNotificationData> _action)
         {
             RemoveHandler(_name); 
         }
 
         /// <summary>
-        /// Remove the method observer from notification actions
+        /// Removes a specific synchronous function observer from a notification.
         /// </summary>
-        /// <param name="_name">Will remove notification name</param>
-        /// <param name="_action">Will executed method</param>
+        /// <param name="_name">The name of the notification.</param>
+        /// <param name="_action">The function to remove.</param>
         public void RemoveObserver(string _name, Func<BaseNotificationData, object> _action)
         {
             RemoveHandler(_name, new SyncNotificationHandler(_name, _action)); 
         }
 
         /// <summary>
-        /// Remove the method observer from notification actions
+        /// Removes all observers associated with a specific notification name.
         /// </summary>
-        /// <param name="_name">Will remove notification name</param>
+        /// <param name="_name">The name of the notification.</param>
         public void RemoveObserver(string _name)
         {
             RemoveHandler(_name); 
@@ -111,10 +131,10 @@ namespace Phantom.XRMOD.ActionNotification.Runtime
 
 
         /// <summary>
-        /// Post notification event
+        /// Posts a notification to all registered observers synchronously.
         /// </summary>
-        /// <param name="_name">Trigger method name</param>
-        /// <param name="_object">The parameters to the method</param>
+        /// <param name="_name">The name of the notification to post.</param>
+        /// <param name="_object">The data to pass to observers.</param>
         public void PostNotification(string _name, BaseNotificationData _object)
         {
             if (string.IsNullOrEmpty(_name))
@@ -127,10 +147,11 @@ namespace Phantom.XRMOD.ActionNotification.Runtime
 
 
         /// <summary>
-        /// Post notification event
+        /// Posts a notification synchronously and collects results from all observers that return a value.
         /// </summary>
-        /// <param name="_name">Trigger method name</param>
-        /// <param name="_object">The parameters to the method</param>
+        /// <param name="_name">The name of the notification.</param>
+        /// <param name="_object">The data to pass to observers.</param>
+        /// <returns>A list of results from observers. Returns null if name is empty.</returns>
         public List<object> PostNotificationWithResult(string _name, BaseNotificationData _object)
         {
             if (string.IsNullOrEmpty(_name))
@@ -145,10 +166,11 @@ namespace Phantom.XRMOD.ActionNotification.Runtime
         }
 
         /// <summary>
-        /// Post notification event
+        /// Posts a notification asynchronously and awaits all async observers.
         /// </summary>
-        /// <param name="_name">Trigger method name</param>
-        /// <param name="_data">The parameters to the method</param>
+        /// <param name="_name">The name of the notification.</param>
+        /// <param name="_data">The data to pass to observers.</param>
+        /// <returns>A task returning a list of result objects from async observers.</returns>
         public async Task<List<object>> PostNotificationAsync(string _name, BaseNotificationData _data)
         {
             if (string.IsNullOrEmpty(_name))

@@ -15,6 +15,10 @@ using Phantom.XRMOD.XRMODUtilites.Runtime;
 
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
+    /// <summary>
+    /// Command that enables opening URLs in the platform's built-in web browser or a customized in-app browser.
+    /// Subscribes to the <c>OpenBuiltInBrowser</c> action notification.
+    /// </summary>
     public class BuildOpenBuiltInBrowserCommand : ICommand, IReleaseCommand
     {
         public BuildOpenBuiltInBrowserCommand()

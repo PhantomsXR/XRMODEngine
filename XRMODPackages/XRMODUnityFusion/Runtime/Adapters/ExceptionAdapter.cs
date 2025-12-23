@@ -5,6 +5,10 @@ using UnityFusion.Runtime.Intepreter;
 
 namespace UnityFusion.CLRBinding.Adapter
 {
+    /// <summary>
+    /// Adapter for <see cref="System.Exception"/>.
+    /// Allows custom exception types to be defined and thrown within the hot-reload domain.
+    /// </summary>
     public class ExceptionAdapter : CrossBindingAdaptor
     {
         public override Type BaseCLRType
@@ -30,6 +34,9 @@ namespace UnityFusion.CLRBinding.Adapter
         }
 
         //实际的适配器类需要继承你想继承的那个类，并且实现CrossBindingAdaptorType接口
+        /// <summary>
+        /// The implementation class that bridges Exception properties and methods to the hot-reload domain.
+        /// </summary>
         public class Adaptor : System.Exception, CrossBindingAdaptorType
         {
             ILTypeInstance instance;

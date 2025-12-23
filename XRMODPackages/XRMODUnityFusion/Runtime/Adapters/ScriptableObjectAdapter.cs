@@ -10,6 +10,10 @@ using AutoList = UnityFusion.Other.UncheckedList<object>;
 
 namespace UnityFusion.CLRBinding.Adapter
 {   
+    /// <summary>
+    /// Adapter for <see cref="UnityEngine.ScriptableObject"/>.
+    /// Enables scripts in the hot-reload domain to inherit from ScriptableObject.
+    /// </summary>
     public class ScriptableObjectAdapter : CrossBindingAdaptor
     {
         public override Type BaseCLRType
@@ -33,6 +37,9 @@ namespace UnityFusion.CLRBinding.Adapter
             return new Adapter(appdomain, instance);
         }
 
+        /// <summary>
+        /// The implementation class that bridges ScriptableObject messages to the hot-reload domain.
+        /// </summary>
         public class Adapter : UnityEngine.ScriptableObject, CrossBindingAdaptorType
         {
 

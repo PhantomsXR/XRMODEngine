@@ -11,6 +11,9 @@
 
 namespace Phantom.XRMOD.SDKEntry.Runtime.Mapper
 {
+    /// <summary>
+    /// Specific server response that includes <see cref="ExperienceResourceMapper"/> data.
+    /// </summary>
     public class ResponseMapper:BaseServerResponse
     {
         public ExperienceResourceMapper data;

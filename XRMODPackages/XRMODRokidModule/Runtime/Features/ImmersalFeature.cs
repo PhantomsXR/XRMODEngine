@@ -28,6 +28,10 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.RokidModule.Runtime
 {
+    /// <summary>
+    /// Implementation of <see cref="IFeatureDecorator"/> for integrating Immersal AR capabilities on Rokid devices.
+    /// Manages Immersal SDK lifecycle, localization, map loading, and event handling.
+    /// </summary>
     public class ImmersalFeature : IFeatureDecorator
     {
         private GameObject immersalGameObject;
@@ -52,11 +56,19 @@ namespace Phantom.XRMOD.RokidModule.Runtime
             Initialize(); 
         }
 
+        /// <summary>
+        /// Checks if the Immersal feature is supported.
+        /// </summary>
+        /// <returns>Always true for this implementation.</returns>
         public bool SupportThisFeature()
         {
             return true;
         }
 
+        /// <summary>
+        /// Starts the Immersal localization algorithm.
+        /// Enables the SDK and localizer, and initiates map loading or auto-start based on configuration.
+        /// </summary>
         public void StartAlgorithm()
         {
             immersalSDK.enabled = true;
@@ -146,6 +158,10 @@ namespace Phantom.XRMOD.RokidModule.Runtime
             }
         }
 
+        /// <summary>
+        /// Pauses the Immersal algorithm.
+        /// Disables the localizer, SDK, and all active AR maps.
+        /// </summary>
         public void PauseAlgorithm()
         {
             arLocalizer.enabled = false;
@@ -157,6 +173,10 @@ namespace Phantom.XRMOD.RokidModule.Runtime
             }
         }
 
+        /// <summary>
+        /// Stops the Immersal algorithm and cleans up all resources.
+        /// Destroys the SDK instance, frees maps, and unregisters event listeners.
+        /// </summary>
         public void StopAlgorithm()
         {
             ActionNotificationCenter.DefaultCenter.RemoveObserver(nameof(ActionParameterDataType
