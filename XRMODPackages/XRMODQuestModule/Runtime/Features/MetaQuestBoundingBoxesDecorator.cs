@@ -15,11 +15,23 @@ using UnityEngine.XR.ARFoundation;
 
 namespace Phantom.XRMOD.QuestModule.Runtime
 {
+    /// <summary>
+    /// Feature decorator for handling AR Bounding Boxes on Meta Quest.
+    /// <para>
+    /// Initializes the <see cref="ARBoundingBoxManager"/> and listens for trackable changes, notifying the system via <see cref="ActionNotificationCenter"/>.
+    /// </para>
+    /// </summary>
     public class MetaQuestBoundingBoxesDecorator : BaseMetaQuestFeatureDecorator
     {
         private ArchitectureComponentsModel architectureComponentsModel;
         private ARBoundingBoxArgs boundingBoxArgs;
 
+        /// <summary>
+        /// Starts the bounding box algorithm.
+        /// <para>
+        /// Sets up the <see cref="ARBoundingBoxManager"/> if missing and subscribes to trackable changes.
+        /// </para>
+        /// </summary>
         public override void StartAlgorithm()
         {
             base.StartAlgorithm();
@@ -35,6 +47,13 @@ namespace Phantom.XRMOD.QuestModule.Runtime
             architectureComponentsModel.BoundingBoxManager.trackablesChanged.AddListener(TrackableChanged);
         }
 
+        /// <summary>
+        /// Callback for when AR Bounding Boxes change (added, updated, removed).
+        /// <para>
+        /// Posts notifications with <see cref="ARBoundingBoxArgs"/> containing updated data.
+        /// </para>
+        /// </summary>
+        /// <param name="_arg0">The event arguments containing changed bounding boxes.</param>
         private void TrackableChanged(ARTrackablesChangedEventArgs<ARBoundingBox> _arg0)
         {
             foreach (var tmp_Updated in _arg0.added)
@@ -60,15 +79,25 @@ namespace Phantom.XRMOD.QuestModule.Runtime
             }
         }
 
+        /// <summary>
+        /// Determines if this feature is supported.
+        /// </summary>
+        /// <returns>Always returns true.</returns>
         public override bool SupportThisFeature()
         {
             return true;
         }
 
+        /// <summary>
+        /// Pauses the bounding box algorithm.
+        /// </summary>
         public override void PauseAlgorithm()
         {
         }
 
+        /// <summary>
+        /// Stops the bounding box algorithm.
+        /// </summary>
         public override void StopAlgorithm()
         {
         }

@@ -16,6 +16,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.RokidModule.Runtime
 {
+    /// <summary>
+    /// Automatically registers the Rokid module and initializes the runtime context when running on a Rokid device.
+    /// This script should be attached to a GameObject in the scene to ensure early initialization.
+    /// </summary>
     public class AutoRegisterModule : MonoBehaviour
     {
         private void Awake()

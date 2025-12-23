@@ -14,6 +14,10 @@ using Phantom.XRMOD.SDKEntry.Runtime.Models;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime.DataRequest
 {
+        /// <summary>
+    /// Generic command for downloading a JSON manifest for an asset bundle.
+    /// </summary>
+    /// <typeparam name="T">The type to deserialize the JSON result into.</typeparam>
     public class DownloadAssetBundleJson<T> : IHttpRequestCommand<T> 
     {
         private readonly QueryParameter queryParameter;

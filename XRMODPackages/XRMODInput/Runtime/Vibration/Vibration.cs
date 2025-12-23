@@ -10,17 +10,18 @@
 // // ===============================================================================*/
 
 using System;
-using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
 
 #if UNITY_IOS
-using System.Collections;
 using System.Runtime.InteropServices;
 #endif
 
 
 namespace Phantom.XRMOD.XRMODInput.Runtime
 {
+    /// <summary>
+    /// Static utility class for triggering haptic feedback and vibrations on mobile devices (iOS and Android).
+    /// </summary>
     public static class Vibration
     {
 #if UNITY_IOS
@@ -68,6 +69,9 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
             Init();
         }
 
+        /// <summary>
+        /// Initializes the vibration system. This is called automatically on load.
+        /// </summary>
         public static void Init()
         {
             if (_INITIALIZED) return;
@@ -93,6 +97,10 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
         }
 
 
+        /// <summary>
+        /// Triggers a haptic feedback on iOS using a specific impact style.
+        /// </summary>
+        /// <param name="_style">The impact feedback style (Heavy, Medium, Light, Rigid, Soft).</param>
         public static void VibrateIOS(ImpactFeedbackStyle _style)
         {
 #if UNITY_IOS
@@ -100,6 +108,10 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Triggers a haptic feedback on iOS using a specific notification style.
+        /// </summary>
+        /// <param name="_style">The notification feedback style (Error, Success, Warning).</param>
         public static void VibrateIOS(NotificationFeedbackStyle _style)
         {
 #if UNITY_IOS
@@ -107,6 +119,9 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Triggers a selection change haptic feedback on iOS.
+        /// </summary>
         public static void VibrateIOS_SelectionChanged()
 
         {
@@ -116,9 +131,9 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
         }
 
 
-        ///<summary>
-        /// Tiny pop vibration
-        ///</summary>
+        /// <summary>
+        /// Triggers a tiny pop vibration.
+        /// </summary>
         public static void VibratePop()
         {
             if (Application.isMobilePlatform)
@@ -131,9 +146,9 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
             }
         }
 
-        ///<summary>
-        /// Small peek vibration
-        ///</summary>
+        /// <summary>
+        /// Triggers a small peek vibration.
+        /// </summary>
         public static void VibratePeek()
         {
             if (Application.isMobilePlatform)
@@ -146,9 +161,9 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
             }
         }
 
-        ///<summary>
-        /// 3 small vibrations
-        ///</summary>
+        /// <summary>
+        /// Triggers a series of three small vibrations (often used for negative feedback).
+        /// </summary>
         public static void VibrateNope()
         {
             if (!Application.isMobilePlatform) return;
@@ -162,10 +177,10 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
 
 
 #if UNITY_ANDROID
-        ///<summary>
-        /// Only on Android
-        /// https://developer.android.com/reference/android/os/Vibrator.html#vibrate(long)
-        ///</summary>
+        /// <summary>
+        /// Triggers a vibration for a specific number of milliseconds on Android.
+        /// </summary>
+        /// <param name="_milliseconds">The duration of the vibration in milliseconds.</param>
         public static void VibrateAndroid(long _milliseconds)
         {
             if (Application.isMobilePlatform)
@@ -187,10 +202,11 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
             }
         }
 
-        ///<summary>
-        /// Only on Android
-        /// https://proandroiddev.com/using-vibrate-in-android-b0e3ef5d5e07
-        ///</summary>
+        /// <summary>
+        /// Triggers a vibration with a specific pattern and repeat index on Android.
+        /// </summary>
+        /// <param name="pattern">The vibration pattern (alternating off/on durations).</param>
+        /// <param name="repeat">The index into the pattern to begin repeating from, or -1 to not repeat.</param>
         public static void VibrateAndroid(long[] pattern, int repeat)
         {
             if (Application.isMobilePlatform)
@@ -198,7 +214,7 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
 #if !ROKID_INSTALL
                 if (AndroidVersion >= 26)
                 {
-                    long[] tmp_Amplitudes;
+                    _ = new long[pattern.Length];
                     AndroidJavaObject tmp_CreateWaveform =
                         VibrationEffect.CallStatic<AndroidJavaObject>("createWaveform", pattern, repeat);
                     Vibrator.Call("vibrate", tmp_CreateWaveform);
@@ -214,9 +230,9 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
         }
 #endif
 
-        ///<summary>
-        ///Only on Android
-        ///</summary>
+        /// <summary>
+        /// Cancels any ongoing vibration on Android.
+        /// </summary>
         public static void CancelAndroid()
         {
             if (Application.isMobilePlatform)
@@ -227,6 +243,10 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
             }
         }
 
+        /// <summary>
+        /// Checks if the device has a vibration motor.
+        /// </summary>
+        /// <returns><c>true</c> if the device has a vibrator, <c>false</c> otherwise.</returns>
         public static bool HasVibrator()
         {
             if (Application.isMobilePlatform)
@@ -252,6 +272,9 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
         }
 
 
+        /// <summary>
+        /// Triggers a generic short vibration.
+        /// </summary>
         public static void Vibrate()
         {
 #if UNITY_ANDROID || UNITY_IOS
@@ -264,6 +287,9 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Gets the Android SDK version.
+        /// </summary>
         public static int AndroidVersion
         {
             get
@@ -281,19 +307,49 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
         }
     }
 
+    /// <summary>
+    /// Styles for iOS impact haptic feedback.
+    /// </summary>
     public enum ImpactFeedbackStyle
     {
+        /// <summary>
+        /// A heavy impact feel.
+        /// </summary>
         Heavy,
+        /// <summary>
+        /// A medium impact feel.
+        /// </summary>
         Medium,
+        /// <summary>
+        /// A light impact feel.
+        /// </summary>
         Light,
+        /// <summary>
+        /// A rigid impact feel.
+        /// </summary>
         Rigid,
+        /// <summary>
+        /// A soft impact feel.
+        /// </summary>
         Soft
     }
 
+    /// <summary>
+    /// Styles for iOS notification haptic feedback.
+    /// </summary>
     public enum NotificationFeedbackStyle
     {
+        /// <summary>
+        /// An error notification feel.
+        /// </summary>
         Error,
+        /// <summary>
+        /// A success notification feel.
+        /// </summary>
         Success,
+        /// <summary>
+        /// A warning notification feel.
+        /// </summary>
         Warning
     }
 }

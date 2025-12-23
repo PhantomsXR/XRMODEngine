@@ -33,9 +33,11 @@ namespace Phantom.XRMOD.XRMODAvatar.Runtime.XR
 #if USE_XR_HAND && USE_XRI && (QUEST_INSTALL || PICO_INSTALL || ROKID_INSTALL || ANDROID_XR_INSTALL)
         /// <summary>
         /// Determines the level of detail for hand tracking replication.
-        /// 0: Highest fidelity (all finger joint rotations).
-        /// 1: Medium fidelity (average finger curl per finger).
-        /// 2: Lowest fidelity (average finger curl for thumb, index, and combined other fingers).
+        /// <list type="bullet">
+        /// <item><description>0: High fidelity (all finger joint rotations).</description></item>
+        /// <item><description>1: Medium fidelity (average finger curl per finger).</description></item>
+        /// <item><description>2: Low fidelity (average finger curl for thumb, index, and combined other fingers).</description></item>
+        /// </list>
         /// </summary>
         [FormerlySerializedAs("m_FidelityLevel")]
         [Header("Hands and Fingers"), Tooltip("0 is highest, 2 is lowest")]
@@ -424,11 +426,13 @@ namespace Phantom.XRMOD.XRMODAvatar.Runtime.XR
         }
 
         /// <summary>
-        /// Adjusts the hand fidelity and applies controller offsets based on the specified input mode.
-        /// If switching to motion controller mode, fidelity is set to 2 (lowest) and offsets are applied.
-        /// Otherwise, the original fidelity level is restored and hands are reset to their start poses.
+        /// Switches the avatar's hand representation between tracked hands and motion controllers.
         /// </summary>
-        /// <param name="_inputMode">The target <see cref="XRInputModalityManager.InputMode"/>.</param>
+        /// <param name="_inputMode">The new input mode to use (e.g., TrackedHand, MotionController).</param>
+        /// <remarks>
+        /// When using controllers, the fidelity is automatically set to level 2 (lowest) 
+        /// and predefined offsets are applied to the hand visuals.
+        /// </remarks>
         public void ChangeControllerType(XRInputModalityManager.InputMode _inputMode)
         {
             if (_inputMode == XRInputModalityManager.InputMode.MotionController)

@@ -17,22 +17,38 @@ using PCD = Phantom.XRMOD.QuestModule.Runtime.PassthroughCameraDebugger;
 
 namespace Phantom.XRMOD.QuestModule.Runtime
 {
+    /// <summary>
+    /// Manages permission requests for Passthrough Camera access on Meta Quest.
+    /// </summary>
     public class PassthroughCameraPermissions : MonoBehaviour
     {
+        /// <summary>
+        /// List of additional permissions to request on startup.
+        /// <para>Default includes "com.oculus.permission.USE_SCENE".</para>
+        /// </summary>
         [SerializeField] public List<string> PermissionRequestsOnStartup = new() {"com.oculus.permission.USE_SCENE"};
 
+        /// <summary>
+        /// Required permissions for accessing the Passthrough Camera.
+        /// </summary>
         public static readonly string[] CameraPermissions =
         {
             "android.permission.CAMERA", // Required to use WebCamTexture object.
             "horizonos.permission.HEADSET_CAMERA" // Required to access the Passthrough Camera API in Horizon OS v74 and above.
         };
 
+        /// <summary>
+        /// Indicates whether camera permissions have been granted.
+        /// </summary>
         public static bool? HasCameraPermission { get; private set; }
         private static bool s_askedOnce;
 
 #if UNITY_ANDROID
         /// <summary>
         /// Request camera permission if the permission is not authorized by the user.
+        /// <para>
+        /// Checks if permissions are already granted. If not, requests them via <see cref="Permission.RequestUserPermissions"/>.
+        /// </para>
         /// </summary>
         public void AskCameraPermissions()
         {
@@ -65,7 +81,7 @@ namespace Phantom.XRMOD.QuestModule.Runtime
         /// <summary>
         /// Permission Granted callback
         /// </summary>
-        /// <param name="permissionName"></param>
+        /// <param name="permissionName">Name of the granted permission.</param>
         private static void PermissionCallbacksPermissionGranted(string permissionName)
         {
             PCD.DebugMessage(LogType.Log, $"PCA: Permission {permissionName} Granted");
@@ -80,7 +96,7 @@ namespace Phantom.XRMOD.QuestModule.Runtime
         /// <summary>
         /// Permission Denied callback.
         /// </summary>
-        /// <param name="permissionName"></param>
+        /// <param name="permissionName">Name of the denied permission.</param>
         private static void PermissionCallbacksPermissionDenied(string permissionName)
         {
             PCD.DebugMessage(LogType.Warning, $"PCA: Permission {permissionName} Denied");
@@ -88,6 +104,10 @@ namespace Phantom.XRMOD.QuestModule.Runtime
             s_askedOnce = false;
         }
 
+        /// <summary>
+        /// Checks if all required camera permissions are authorized.
+        /// </summary>
+        /// <returns>True if all permissions in <see cref="CameraPermissions"/> are granted.</returns>
         private static bool IsAllCameraPermissionsGranted() =>
             CameraPermissions.All(Permission.HasUserAuthorizedPermission);
 #endif

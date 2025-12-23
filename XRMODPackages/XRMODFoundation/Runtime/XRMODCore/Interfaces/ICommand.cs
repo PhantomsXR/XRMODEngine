@@ -11,8 +11,15 @@
 
 namespace Phantom.XRMOD.Core.Runtime
 {
+    /// <summary>
+    /// Base interface for command pattern implementation within XRMOD.
+    /// Provides a standard way to encapsulate and execute specific logic.
+    /// </summary>
     public interface ICommand
     {
+        /// <summary>
+        /// Executes the encapsulated command logic.
+        /// </summary>
         void Execute();
     }
 }

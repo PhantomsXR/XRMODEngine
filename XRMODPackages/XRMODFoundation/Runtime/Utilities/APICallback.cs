@@ -23,6 +23,10 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
 {
     // ReSharper disable once InconsistentNaming
 
+    /// <summary>
+    /// Provides static methods and events for communication between the XRMOD SDK and the host application (Native or Unity).
+    /// Handles callbacks for lifecycle events, errors, progress, and data exchange.
+    /// </summary>
     public class APICallback
     {
         #region Native implement

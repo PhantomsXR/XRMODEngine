@@ -20,8 +20,18 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.XRMODPackageTools.Runtime
 {
+    /// <summary>
+    /// Utility class for zipping and unzipping files, as well as calculating MD5 hashes
+    /// for verify data integrity.
+    /// </summary>
     public class ZipFileUtility
     {
+        /// <summary>
+        /// Zips a list of source files into a single zip file, optionally protected by a password.
+        /// </summary>
+        /// <param name="_sourceFiles">An array of full paths to the files to be zipped.</param>
+        /// <param name="_zipFilePath">The full path where the zip file will be created.</param>
+        /// <param name="_password">An optional password to protect the zip file.</param>
         public static void ZipFiles(string[] _sourceFiles, string _zipFilePath, string _password)
         {
             try
@@ -135,6 +145,11 @@ namespace Phantom.XRMOD.XRMODPackageTools.Runtime
         }
 
 
+        /// <summary>
+        /// Calculates the MD5 hash of a file.
+        /// </summary>
+        /// <param name="_filePath">The full path to the file.</param>
+        /// <returns>The hexadecimal MD5 hash string.</returns>
         public static string CalculateFileMD5(string _filePath)
         {
             if (!File.Exists(_filePath))

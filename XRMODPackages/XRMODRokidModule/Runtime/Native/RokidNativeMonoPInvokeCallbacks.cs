@@ -16,13 +16,24 @@ using UnityEngine.XR.OpenXR.Features;
 
 namespace Phantom.XRMOD.RokidModule.Runtime
 {
+    /// <summary>
+    /// Contains static callbacks for P/Invoke calls from the Rokid native SDK.
+    /// Handles camera data updates and marshaling to managed code.
+    /// </summary>
     public static class RokidNativeMonoPInvokeCallbacks
     {
         internal static Action<byte[], ushort, ushort, long> FrameUpdateCallback;
 
 
-        // 使用MonoPInvokeCallback特性来指定这个函数是由C代码通过P/Invoke调用的，  
-        // 它的签名需要与C代码中的函数指针类型RokidExtensionAPI.OnCameraDataUpdateC相匹配  
+        /// <summary>
+        /// Callback method for receiving camera data from native code.
+        /// Marshals byte data and dispatches the update to the main thread.
+        /// </summary>
+        /// <param name="_ptr">Pointer to the camera image data.</param>
+        /// <param name="_size">Size of the data in bytes.</param>
+        /// <param name="_width">Image width.</param>
+        /// <param name="_height">Image height.</param>
+        /// <param name="_timestamp">Capture timestamp.</param>
         [MonoPInvokeCallback(typeof(RokidExtensionAPI.OnCameraDataUpdateC))]
         internal static void OnCameraDataUpdateCallWithImage(IntPtr _ptr, int _size, ushort _width, ushort _height,
             long _timestamp)

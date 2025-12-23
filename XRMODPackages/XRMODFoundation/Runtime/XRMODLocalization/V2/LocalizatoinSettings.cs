@@ -14,15 +14,20 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.Localization.Runtime
 {
+    /// <summary>
+    /// Configuration settings for the localization system, including supported languages and default scope.
+    /// </summary>
     [Icon("Packages/com.phantomsxr.foundation/Editor/XRMODLocalization/Assets/Icons/SettingIcon.png")]
     public class LocalizatoinSettings : ScriptableObject
     {
+        /// <summary> The list of languages supported by the project. </summary>
         public List<SystemLanguage> SupportLanguages = new List<SystemLanguage>()
         {
             SystemLanguage.English,
             SystemLanguage.ChineseSimplified
         };
 
+        /// <summary> The default localization scope. </summary>
         public LocalizationScope LocalizationScope;
     }
 }

@@ -16,6 +16,10 @@ using System.Threading.Tasks;
 
 namespace Phantom.XRMOD.InAppPurchase.Runtime
 {
+    /// <summary>
+    /// Manages In-App Purchases (IAP).
+    /// Handles product initialization, purchase flow, and restoration.
+    /// </summary>
     public class InAppPurchaseManager
     {
         public Action<bool> OnPurchaseStateChange;

@@ -18,6 +18,18 @@ using UnityEngine.Pool;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// Manages object pooling for NetworkObjects to reduce instantiation overhead.
+    /// </summary>
+    /// <remarks>
+    /// This singleton class provides:
+    /// - Efficient object pooling for networked prefabs
+    /// - Automatic registration with Unity's NetworkManager
+    /// - Pre-warming support to reduce runtime allocation spikes
+    /// - Synchronized spawn/despawn behavior across all clients
+    /// 
+    /// Use <see cref="BuildPool(List{PoolConfigObject})"/> to register prefabs before spawning.
+    /// </remarks>
     public class NetworkObjectPool : NetworkBehaviour
     {
         public static NetworkObjectPool Singleton { get; private set; }
@@ -48,6 +60,10 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
             allowToBuildPool = true;
         }
 
+        /// <summary>
+        /// Builds initial object pools from a list of configuration objects.
+        /// </summary>
+        /// <param name="_pooledPrefabsList">List of prefab and count configurations.</param>
         public void BuildPool(List<PoolConfigObject> _pooledPrefabsList)
         {
             foreach (var tmp_ConfigObject in _pooledPrefabsList)
@@ -57,6 +73,10 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
             }
         }
 
+        /// <summary>
+        /// Builds a pool for a single prefab configuration.
+        /// </summary>
+        /// <param name="_pooledPrefab">The prefab configuration.</param>
         public void BuildPool(PoolConfigObject _pooledPrefab)
         {
             RegisterPrefabInternal(_pooledPrefab.Prefab, _pooledPrefab.PrewarmCount, _pooledPrefab.ParentTransform);

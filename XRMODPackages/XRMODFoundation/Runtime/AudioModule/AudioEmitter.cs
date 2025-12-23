@@ -15,6 +15,10 @@ using UnityEngine.Serialization;
 
 namespace Phantom.XRMOD.AudioModule.Runtime
 {
+    /// <summary>
+    /// A component that facilitates playing specified audio clips with configurable
+    /// start/stop actions based on the object's lifecycle (<c>OnEnable</c>/<c>OnDisable</c>).
+    /// </summary>
     public class AudioEmitter : MonoBehaviour
     {
         enum State
@@ -30,6 +34,10 @@ namespace Phantom.XRMOD.AudioModule.Runtime
         [SerializeField] private AudioClipData audioClipData;
         [SerializeField] private AudioSource audioSource;
 
+        /// <summary>
+        /// Gets the <see cref="AudioSource"/> component associated with this emitter.
+        /// Lazily initializes if not already assigned.
+        /// </summary>
         public AudioSource AudioSource
         {
             get
@@ -64,34 +72,56 @@ namespace Phantom.XRMOD.AudioModule.Runtime
                 StopClip();
         }
 
+        /// <summary>
+        /// Plays the default audio clip assigned to this emitter.
+        /// </summary>
         public void Play()
         {
             PlayClip();
         }
 
+        /// <summary>
+        /// Plays a specific <see cref="AudioClipData"/> instead of the default one.
+        /// </summary>
+        /// <param name="_audioClipData">The audio clip data to play.</param>
         public void Play(AudioClipData _audioClipData)
         {
             this.audioClipData = _audioClipData;
             PlayClip();
         }
 
+        /// <summary>
+        /// Stops the current audio playback.
+        /// </summary>
         public void Stop()
         {
             StopClip();
         }
 
+        /// <summary>
+        /// Plays the current audio clip as a one-shot effect.
+        /// Useful for short sound effects that shouldn't cut each other off.
+        /// </summary>
         public void PlayOneShot()
         {
             SetAudioClipAndPitch();
             AudioSource.PlayOneShot(AudioSource.clip);
         }
 
+        /// <summary>
+        /// Plays a specific <see cref="AudioClipData"/> as a one-shot effect.
+        /// </summary>
+        /// <param name="_audioClip">The audio clip data to play.</param>
         public void PlayOneShot(AudioClipData _audioClip)
         {
             this.audioClipData = _audioClip;
             PlayOneShot();
         }
 
+        /// <summary>
+        /// Sets a new <see cref="AudioClipData"/> for this emitter.
+        /// </summary>
+        /// <param name="_audioClipData">The new audio clip data.</param>
         public void SetAudioClipData(AudioClipData _audioClipData)
         {
             audioClipData = _audioClipData;

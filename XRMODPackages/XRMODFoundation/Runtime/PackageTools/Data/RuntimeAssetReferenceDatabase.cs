@@ -22,8 +22,14 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.XRMODPackageTools.Runtime
 {
+    /// <summary>
+    /// A runtime database that manages a collection of <see cref="AssetReferenceData"/>.
+    /// It provides various methods for retrieving assets by name and type, and handles
+    /// asynchronous loading from XRMOD packages.
+    /// </summary>
     public class RuntimeAssetReferenceDatabase : ScriptableObject
     {
+        /// <summary> The list of asset references managed by this database. </summary>
         public List<AssetReferenceData> assetReferences;
 #if UNITY_EDITOR
         public void AddAssetReference(AssetReferenceData _assetReference)
@@ -53,6 +59,11 @@ namespace Phantom.XRMOD.XRMODPackageTools.Runtime
                 assetReferences.Remove(tmp_Asset);
         }
 #endif
+        /// <summary>
+        /// Retrieves a generic <see cref="UnityEngine.Object"/> reference by its asset name.
+        /// </summary>
+        /// <param name="_assetName">The name of the asset to find.</param>
+        /// <param name="_asset">Output parameter that receives the asset if found; otherwise, null.</param>
         public void GetAssetReference(string _assetName, out Object _asset)
         {
             var tmp_Asset = assetReferences.Find(_data => _data.AssetName == _assetName);
@@ -67,6 +78,12 @@ namespace Phantom.XRMOD.XRMODPackageTools.Runtime
             }
         }
 
+        /// <summary>
+        /// Retrieves a typed asset reference by its asset name.
+        /// </summary>
+        /// <typeparam name="T">The expected type of the asset (e.g., <see cref="GameObject"/>, <see cref="Texture2D"/>).</typeparam>
+        /// <param name="_assetName">The name of the asset to find.</param>
+        /// <param name="_asset">Output parameter that receives the asset as type <typeparamref name="T"/> if found; otherwise, null.</param>
         public void GetAssetReference<T>(string _assetName, out T _asset) where T : Object
         {
             var tmp_Asset = assetReferences.Find(_data => _data.AssetName == _assetName);
@@ -81,6 +98,12 @@ namespace Phantom.XRMOD.XRMODPackageTools.Runtime
             }
         }
 
+        /// <summary>
+        /// Retrieves an array of typed asset references by their asset names.
+        /// </summary>
+        /// <typeparam name="T">The expected type of the assets.</typeparam>
+        /// <param name="_assetName">An array of asset names to find.</param>
+        /// <param name="_asset">Output parameter that receives the found assets as an array of type <typeparamref name="T"/>.</param>
         public void GetAssetReferences<T>(string[] _assetName, out T[] _asset) where T : UnityEngine.Object
         {
             var tmp_AssetRefData = assetReferences.Where(_data => _assetName.Contains(_data.AssetName));
@@ -89,6 +112,12 @@ namespace Phantom.XRMOD.XRMODPackageTools.Runtime
         }
 
 
+        /// <summary>
+        /// Asynchronously initializes the database by loading all referenced assets from the specified project package.
+        /// This method automatically handles various Unity asset types.
+        /// </summary>
+        /// <param name="_projectName">The name of the XRMOD project whose package should be loaded.</param>
+        /// <returns>A task representing the asynchronous initialization operation.</returns>
         public async Task Initialize(string _projectName)
         {
             try
@@ -97,6 +126,7 @@ namespace Phantom.XRMOD.XRMODPackageTools.Runtime
                 {
                     var tmp_Loader = new Dictionary<string, Func<Task<Object>>>()
                     {
+                        // (Loader mapping remains unchanged)
                         {
                             typeof(GameObject).FullName, async () =>
                                 await BasePackageLoaderUtility.LoadAssetFromPackage<GameObject>(

@@ -11,6 +11,10 @@ using AutoList = UnityFusion.Other.UncheckedList<object>;
 
 namespace UnityFusion.CLRBinding.Adapter
 {
+    /// <summary>
+    /// Adapter for Unity's <see cref="UnityEngine.UI.MaskableGraphic"/>.
+    /// Allows UI components in the hot-reload domain to inherit from MaskableGraphic.
+    /// </summary>
     public class MaskableGraphicAdapter : CrossBindingAdaptor
     {
         public override Type BaseCLRType
@@ -29,6 +33,9 @@ namespace UnityFusion.CLRBinding.Adapter
             return new Adapter(appdomain, instance);
         }
 
+        /// <summary>
+        /// The implementation class that bridges MaskableGraphic messages to the hot-reload domain.
+        /// </summary>
         public class Adapter : UnityEngine.UI.MaskableGraphic, CrossBindingAdaptorType
         {
             CrossBindingFunctionInfo<UnityEngine.Material, UnityEngine.Material> mGetModifiedMaterial_0 =

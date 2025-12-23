@@ -31,19 +31,33 @@ namespace Phantom.XRMOD.OpenXRMOD.Runtime
         BuildTargetGroups = new[] {BuildTargetGroup.Android},
         FeatureId = featureId)]
 #endif
+    /// <summary>
+    /// OpenXR feature that implements Support for Meta's Application SpaceWarp.
+    /// This feature requires the <c>XR_FB_space_warp</c> extension.
+    /// </summary>
     public class SpacewarpFeature : OpenXRFeature
     {
         // The feature id string. This is used to give the feature a well known id for reference.
         public const string featureId = "com.unity.openxr.feature.Spacewarp";
 
 
-        // Turn spacewarp on or off.
+        /// <summary>
+        /// Enables or disables Application SpaceWarp at the OpenXR runtime level.
+        /// </summary>
+        /// <param name="enabled">True to enable, false to disable.</param>
+        /// <returns>True if the operation was successful, false otherwise.</returns>
         public static bool SetSpacewarp(bool enabled)
         {
             return MetaSetSpaceWarp(enabled);
         }
 
-        // Update spacewarp for camera movement.
+        /// <summary>
+        /// Updates the application space transform (position and rotation) for SpaceWarp calculations.
+        /// This should be called every frame when SpaceWarp is active, typically using the camera's transform.
+        /// </summary>
+        /// <param name="position">The current world position of the application's reference space (e.g., Camera position).</param>
+        /// <param name="rotation">The current world rotation of the application's reference space (e.g., Camera rotation).</param>
+        /// <returns>True if the transform was successfully updated, false otherwise.</returns>
         public static bool SetAppSpaceTransform(Vector3 position, Quaternion rotation)
         {
             return MetaSetAppSpacePosition(

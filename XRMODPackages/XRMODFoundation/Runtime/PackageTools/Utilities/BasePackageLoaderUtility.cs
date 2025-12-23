@@ -32,8 +32,8 @@ using UnityEngine.Assertions;
 namespace Phantom.XRMOD.XRMODPackageTools.Runtime
 {
     /// <summary>
-    /// Provides utility methods for loading and managing asset bundles and assets within the XRMOD framework.
-    /// Handles both local file loading and remote URL loading with caching mechanisms.
+    /// Utility class for loading assets and scenes from XRMOD asset bundles.
+    /// Provides low-level methods for bundle management, asset instantiation, and handling both local/remote loading.
     /// </summary>
     public static class BasePackageLoaderUtility
     {

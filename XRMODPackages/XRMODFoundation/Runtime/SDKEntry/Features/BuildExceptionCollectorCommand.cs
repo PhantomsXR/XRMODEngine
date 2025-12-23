@@ -18,6 +18,10 @@ using Phantom.XRMOD.SDKEntry.Runtime.DataRequest;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Command that observes Unity's threaded log messages and reports exceptions/errors
+    /// back to the PhantomsXR backend for debugging and telemetry.
+    /// </summary>
     public class BuildExceptionCollectorCommand : ICommand, IReleaseCommand
     {
         private Dictionary<string, string> body;

@@ -14,9 +14,16 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.XRMODUtilites.Runtime
 {
+    /// <summary>
+    /// Adapter component that adds and manages a billboard effect, specifically for Apple VisionOS via PolySpatial.
+    /// </summary>
     public class BillboardComponentAdapter : MonoBehaviour
     {
         [SerializeField] private float blendFactor;
+
+        /// <summary>
+        /// The blend factor for the billboard effect.
+        /// </summary>
         public BindableProperty<float> BlendFactor = new();
 
 #if VISIONOS_INSTALL
@@ -25,7 +32,7 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime
 
         private void Start()
         {
-            visionOSBillboard = gameObject.AddComponent<Unity.PolySpatial.VisionOSBillboard>();
+             visionOSBillboard = gameObject.AddComponent<Unity.PolySpatial.VisionOSBillboard>();
             BlendFactor.OnValueChanged = _value => { visionOSBillboard.BlendFactor = _value; };
             BlendFactor.Value = blendFactor;
         }

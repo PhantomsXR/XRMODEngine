@@ -1,7 +1,7 @@
 {
   "name": "com.phantomsxr.xrmodinput",
   "displayName": "XRMOD Input",
-  "version": "1.4.8",
+  "version": "1.4.9",
   "unity": "2022.3",
   "description": "The XRMOD Universal input module.",
   "author": {

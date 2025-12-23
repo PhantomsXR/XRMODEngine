@@ -18,7 +18,8 @@ using UnityEngine;
 namespace Phantom.XRMOD.XRMODUtilites.Runtime.UniPool
 {
     /// <summary>
-    /// Manages a pool of GameObjects for efficient reuse.
+    /// Manages a pool of GameObjects for efficient reuse. 
+    /// Handles registration, retrieval, and recycling of objects to minimize instantiation overhead.
     /// </summary>
     public class PoolManager : MonoBehaviour
     {
@@ -41,6 +42,9 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime.UniPool
         /// </summary>
         internal bool isXRMOD;
 
+        /// <summary>
+        /// Internal initialization of the pool manager.
+        /// </summary>
         void Init()
         {
             if (container == null)
@@ -672,6 +676,12 @@ namespace Phantom.XRMOD.XRMODUtilites.Runtime.UniPool
             }
         }
 
+        /// <summary>
+        /// Pre-fills the pool for a specific GameObject prefab with a given amount of instances, parented under a specific transform.
+        /// </summary>
+        /// <param name="_prefab">The GameObject prefab to pre-fill.</param>
+        /// <param name="_amount">The number of instances to create and add to the pool.</param>
+        /// <param name="_parent">The parent transform for the newly created instances.</param>
         internal void Fill(GameObject _prefab, int _amount, Transform _parent)
         {
             if (!prefabCellStackMap.TryGetValue(_prefab, out var tmp_CellStack)) return;

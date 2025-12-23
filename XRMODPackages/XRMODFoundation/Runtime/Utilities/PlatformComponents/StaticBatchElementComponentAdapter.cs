@@ -14,13 +14,23 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.XRMODUtilites.Runtime
 {
+    /// <summary>
+    /// Adapter component for defining static batching elements, specifically for Apple VisionOS via PolySpatial.
+    /// Helps optimize rendering performance by batching static geometry.
+    /// </summary>
     public class StaticBatchElementComponentAdapter : MonoBehaviour
     {
         [SerializeField] private GameObject root;
         [SerializeField] private bool applyToDescendants;
 
-
+        /// <summary>
+        /// The root GameObject for the static batch.
+        /// </summary>
         public BindableProperty<GameObject> Root = new();
+
+        /// <summary>
+        /// Whether the static batch should include all descendant GameObjects.
+        /// </summary>
         public BindableProperty<bool> ApplyToDescendants = new();
 
 #if UNITY_VISIONOS

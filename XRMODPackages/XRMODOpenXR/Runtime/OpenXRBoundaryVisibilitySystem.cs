@@ -21,18 +21,38 @@ using UnityEngine.XR.OpenXR.Features.Meta;
 
 namespace Phantom.XRMOD.OpenXRMOD.Runtime
 {
+    /// <summary>
+    /// Provides functionality to manage and listen for platform boundary visibility changes,
+    /// specifically tailored for Meta OpenXR runtimes.
+    /// </summary>
     public static class OpenXRBoundaryVisibilitySystem
     {
+        /// <summary>
+        /// Event triggered when the platform boundary visibility state changes.
+        /// <list type="bullet">
+        /// <item><term>bool</term><description>True if the visibility was successfully changed; false if an error occurred.</description></item>
+        /// <item><term>string</term><description>Error message or status information.</description></item>
+        /// </list>
+        /// </summary>
         public static UnityEvent<bool, string> OnBoundaryVisibilityChanged { get; private set; } = new();
 #if UNITY_OPENXR && META_OPENXR && PLATFORM_ANDROID
         private static UnityEngine.XR.OpenXR.Features.Meta.XrBoundaryVisibility boundaryVisibility =
             UnityEngine.XR.OpenXR.Features.Meta.XrBoundaryVisibility.VisibilitySuppressed;
 #endif
         /// <summary>
-        /// Change current platform boundary visibility state
+        /// Requests a change in the platform's boundary visibility state.
         /// </summary>
-        /// <param name="_boundaryVisibility">Represents the visibility of the Meta OpenXR runtime's boundary.
-        /// <see cref="XrBoundaryVisibility"/></param>
+        /// <param name="_boundaryVisibility">The desired visibility state (Suppressed or Not Suppressed).</param>
+        /// <example>
+        /// <code>
+        /// // To suppress the boundary visibility
+        /// OpenXRBoundaryVisibilitySystem.ChangeBoundaryVisibility(XrBoundaryVisibility.VisibilitySuppressed);
+        /// </code>
+        /// </example>
+        /// <remarks>
+        /// This feature is primarily supported on Meta Quest devices via the Meta OpenXR Boundary Visibility extension.
+        /// Suppression might not be allowed in all contexts (e.g., if safety protocols are active).
+        /// </remarks>
         public static void ChangeBoundaryVisibility(XrBoundaryVisibility _boundaryVisibility)
         {
 #if UNITY_OPENXR && META_OPENXR && PLATFORM_ANDROID
@@ -65,15 +85,18 @@ namespace Phantom.XRMOD.OpenXRMOD.Runtime
     }
 
 
+    /// <summary>
+    /// Defines the visibility states for the OpenXR boundary.
+    /// </summary>
     public enum XrBoundaryVisibility
     {
         /// <summary>
-        /// Boundary visibility is not suppressed.
+        /// The boundary is visible and following default system behavior.
         /// </summary>
         VisibilityNotSuppressed = 1,
 
         /// <summary>
-        /// Boundary visibility is suppressed.
+        /// The boundary visibility is suppressed (hidden).
         /// </summary>
         VisibilitySuppressed = 2,
     }

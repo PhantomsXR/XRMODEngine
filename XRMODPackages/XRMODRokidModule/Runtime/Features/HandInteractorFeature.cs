@@ -14,6 +14,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.RokidModule.Runtime
 {
+    /// <summary>
+    /// Implementation of <see cref="IFeatureDecorator"/> for enabling natural hand interactions on Rokid devices.
+    /// Manages the activation and deactivation of hand tracking and visualization components.
+    /// </summary>
     public class HandInteractorFeature : IFeatureDecorator
     {
         private RokidRuntimeContextModel rokidRuntimeContextModel;
@@ -24,11 +28,19 @@ namespace Phantom.XRMOD.RokidModule.Runtime
         }
 
 
+        /// <summary>
+        /// Checks if the current hardware/software configuration supports hand interaction.
+        /// </summary>
+        /// <returns>True if supported.</returns>
         public bool SupportThisFeature()
         {
             return true;
         }
 
+        /// <summary>
+        /// Activates the hand interaction algorithm.
+        /// Enables the XR input modality manager and hand-related game objects.
+        /// </summary>
         public void StartAlgorithm()
         {
             rokidRuntimeContextModel.XRInputModalityManager.enabled = true;
@@ -43,6 +55,10 @@ namespace Phantom.XRMOD.RokidModule.Runtime
         {
         }
 
+        /// <summary>
+        /// Stops the hand interaction algorithm.
+        /// Disables all hand-related components and the XR input modality manager.
+        /// </summary>
         public void StopAlgorithm()
         {
             rokidRuntimeContextModel.XRInputModalityManager.enabled = false;

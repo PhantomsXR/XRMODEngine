@@ -17,6 +17,10 @@ using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
 namespace Phantom.XRMOD.RokidModule.Runtime
 {
+    /// <summary>
+    /// Holds references to runtime objects in the Rokid scene hierarchy.
+    /// Manages access to hands, controllers, visualizers, and AR subsystems.
+    /// </summary>
     public class RokidRuntimeContextModel : IModel
     {
         internal GameObject RightHand, LeftHand, HandVisualizer, HandPostProcessor, ThreeDRay;
@@ -29,11 +33,18 @@ namespace Phantom.XRMOD.RokidModule.Runtime
         internal ARPlaneManager arPlaneManager;
         internal ARTrackedImageManager arTrackedImageManager;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RokidRuntimeContextModel"/>.
+        /// </summary>
+        /// <param name="_xrmodRigTransform">The transform of the XRMOD Rig.</param>
         public RokidRuntimeContextModel(Transform _xrmodRigTransform)
         {
             xrmodRigTransform = _xrmodRigTransform;
         }
 
+        /// <summary>
+        /// Initializes the runtime context by finding and assigning references to scene objects.
+        /// </summary>
         public void Initialize()
         {
             xrmodRigTransform.TryGetComponent(out XROrigin);

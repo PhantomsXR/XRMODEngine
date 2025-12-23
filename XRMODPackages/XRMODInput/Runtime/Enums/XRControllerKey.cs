@@ -12,13 +12,34 @@
 
 namespace Phantom.XRMOD.XRMODInput.Runtime
 {
+    /// <summary>
+    /// Constants representing specific buttons or keys on an XR controller.
+    /// </summary>
     public enum XRControllerKey
     {
+        /// <summary>
+        /// The A button (typically right hand).
+        /// </summary>
         AButton,
+        /// <summary>
+        /// The B button (typically right hand).
+        /// </summary>
         BButton,
+        /// <summary>
+        /// The X button (typically left hand).
+        /// </summary>
         XButton,
+        /// <summary>
+        /// The Y button (typically left hand).
+        /// </summary>
         YButton,
+        /// <summary>
+        /// The trigger button.
+        /// </summary>
         Trigger,
+        /// <summary>
+        /// The grip button.
+        /// </summary>
         Grip,
     }
 }

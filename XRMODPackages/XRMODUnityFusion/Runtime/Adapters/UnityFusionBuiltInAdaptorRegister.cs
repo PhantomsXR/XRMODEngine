@@ -17,8 +17,15 @@ using UnityFusion.Runtime.Enviorment;
 
 namespace UnityFusion.CLRBinding.Adapter
 {
+    /// <summary>
+    /// Static registry for built-in cross-binding adapters.
+    /// Automatically registers all standard adapters when the UnityFusion environment is initialized.
+    /// </summary>
     public class UnityFusionBuiltInAdaptorRegister
     {
+        /// <summary>
+        /// Automatically registers standard adapters on script load.
+        /// </summary>
         [RuntimeInitializeOnLoadMethod]
         public static void Register()
         {

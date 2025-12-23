@@ -17,10 +17,17 @@ using UnityEngine;
 namespace Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation
 {
     /// <summary>
-    /// The main class for controlling lag compensation
+    /// The main class for controlling lag compensation in networked gameplay.
     /// </summary>
+    /// <remarks>
+    /// Lag compensation allows the server to "rewind" object positions to compensate for client latency,
+    /// enabling more accurate hit detection and gameplay logic. This is essential for fast-paced multiplayer games.
+    /// </remarks>
     public class LagCompensationManager : MonoBehaviour
     {
+        /// <summary>
+        /// Gets the singleton instance of the LagCompensationManager.
+        /// </summary>
         public static LagCompensationManager Singleton { get; private set; }
 
         NetworkManager m_NetworkManager;
@@ -33,7 +40,7 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation
         bool m_SyncTransforms = true;
 
         /// <summary>
-        /// Simulation objects
+        /// Gets the list of simulation objects being tracked for lag compensation.
         /// </summary>
         public readonly List<TrackedObject> SimulationObjects = new List<TrackedObject>();
 
@@ -73,21 +80,22 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation
         }
 
         /// <summary>
-        /// Turns time back a given amount of seconds, invokes an action and turns it back
+        /// Turns time back a given amount of seconds, invokes an action, and then restores the current state.
         /// </summary>
-        /// <param name="secondsAgo">The amount of seconds</param>
-        /// <param name="action">The action to invoke when time is turned back</param>
+        /// <param name="secondsAgo">The amount of seconds to rewind.</param>
+        /// <param name="action">The action to invoke when time is turned back (e.g., perform raycasts or collision checks).</param>
         public void Simulate(float secondsAgo, Action action)
         {
             Simulate(secondsAgo, SimulationObjects, action);
         }
 
         /// <summary>
-        /// Turns time back a given amount of second on the given objects, invokes an action and turns it back
+        /// Turns time back a given amount of seconds on the given objects, invokes an action, and then restores the current state.
         /// </summary>
-        /// <param name="secondsAgo">The amount of seconds</param>
-        /// <param name="simulatedObjects">The object to simulate back in time</param>
-        /// <param name="action">The action to invoke when time is turned back</param>
+        /// <param name="secondsAgo">The amount of seconds to rewind.</param>
+        /// <param name="simulatedObjects">The objects to simulate back in time.</param>
+        /// <param name="action">The action to invoke when time is turned back.</param>
+        /// <exception cref="NotServerException">Thrown if called from a client.</exception>
         public void Simulate(float secondsAgo, IList<TrackedObject> simulatedObjects, Action action)
         {
             if (!NetworkManager.Singleton.IsServer)
@@ -119,10 +127,11 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation
         }
 
         /// <summary>
-        /// Turns time back a given amount of seconds, invokes an action and turns it back. The time is based on the estimated RTT of a clientId
+        /// Turns time back based on the estimated RTT of a client, invokes an action, and then restores the current state.
         /// </summary>
-        /// <param name="clientId">The clientId's RTT to use</param>
-        /// <param name="action">The action to invoke when time is turned back</param>
+        /// <param name="clientId">The client ID whose RTT to use for compensation.</param>
+        /// <param name="action">The action to invoke when time is turned back.</param>
+        /// <exception cref="NotServerException">Thrown if called from a client.</exception>
         public void Simulate(ulong clientId, Action action)
         {
             if (!NetworkManager.Singleton.IsServer)

@@ -9,9 +9,17 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.GameServices.Runtime
 {
+    /// <summary>
+    /// Manages relationships between players, including friends, friend requests, and blocking.
+    /// Wraps Unity's Friends Service.
+    /// </summary>
     public class RelationshipsManager : IDisposable
     {
         private static RelationshipsManager _RELATIONSHIPS_MANAGER;
+
+        /// <summary>
+        /// Singleton instance of RelationshipsManager.
+        /// </summary>
         public static RelationshipsManager GetInstance => _RELATIONSHIPS_MANAGER ??= new();
 
 
@@ -42,6 +50,11 @@ namespace Phantom.XRMOD.GameServices.Runtime
             await SetPresence(Availability.Offline);
         }
 
+        /// <summary>
+        /// Initializes the Friend provider with user data.
+        /// Sets up the service, binds views, and signs in the local player.
+        /// </summary>
+        /// <param name="_data">The user data model for the local player.</param>
         public async void InitFriendProvider(UserInfoModel _data)
         {
             try

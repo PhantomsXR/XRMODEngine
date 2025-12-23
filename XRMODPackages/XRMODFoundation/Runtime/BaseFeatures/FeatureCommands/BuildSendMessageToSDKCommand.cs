@@ -16,7 +16,8 @@ using Phantom.XRMOD.XRMODUtilites.Runtime;
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
     /// <summary>
-    ///  Send message from xr-experience to sdk
+    /// Command that enables an XR experience to send messages back to the host SDK/App.
+    /// Wraps the platform-specific callback mechanism.
     /// </summary>
     public class BuildSendMessageToSDKCommand : ICommand, IReleaseCommand
     {

@@ -23,6 +23,10 @@ using UnityEngine.XR.OpenXR.Features;
 
 namespace Immersal.XR.Rokid
 {
+    /// <summary>
+    /// Struct containing camera data captured from the Rokid device.
+    /// Includes timestamp, dimensions, image data, pose, and calibration parameters.
+    /// </summary>
     public struct RokidCameraData
     {
         public long Timestamp;
@@ -35,15 +39,25 @@ namespace Immersal.XR.Rokid
         public Vector4 Intrinsics;
     }
 
+    /// <summary>
+    /// Enumeration of supported camera types.
+    /// </summary>
     public enum CameraType
     {
         NV21 = 2 //ARGB not supported.
     }
 
+    /// <summary>
+    /// Localizer implementation for Rokid devices using Immersal SDK.
+    /// Handles camera data capture, image undistortion, and localization requests.
+    /// </summary>
     public class RokidLocalizer : LocalizerBase
     {
         private static RokidLocalizer instance = null;
 
+        /// <summary>
+        /// Singleton instance of the RokidLocalizer.
+        /// </summary>
         public static RokidLocalizer Instance
         {
             get
@@ -92,6 +106,9 @@ namespace Immersal.XR.Rokid
             xrOrigin.CameraYOffset = 0;
         }
 
+        /// <summary>
+        /// Initializes the localizer, opens camera preview, and starts tracking.
+        /// </summary>
         public void Init()
         {
             // Alignment Y to zero
@@ -116,12 +133,13 @@ namespace Immersal.XR.Rokid
         }
 
         /// <summary>
-        /// Listener of Camera data
+        /// Callback for receiving camera frame updates.
+        /// Captures pose, varying distortion, and intrinsics for each frame.
         /// </summary>
-        /// <param name="data">camera image</param>
-        /// <param name="width">preview size width</param>
-        /// <param name="height">preview size height</param>
-        /// <param name="ts">timestamp</param> 
+        /// <param name="data">Raw image data.</param>
+        /// <param name="width">Image width.</param>
+        /// <param name="height">Image height.</param>
+        /// <param name="ts">Timestamp of the frame.</param>
         public void OnCameraDataUpdate(byte[] data, ushort width, ushort height, long ts)
         {
             Pose pose = new Pose();
@@ -155,6 +173,9 @@ namespace Immersal.XR.Rokid
             };
         }
 
+        /// <summary>
+        /// Releases resources and stops camera preview.
+        /// </summary>
         public void Release()
         {
             if (m_IsInitialized)
@@ -196,6 +217,10 @@ namespace Immersal.XR.Rokid
             base.Update();
         }
 
+        /// <summary>
+        /// Performs on-device localization using the latest captured camera frame.
+        /// Undistorts the image and calls the Immersal CoreizeImage function.
+        /// </summary>
         public override async void Localize()
         {
             var data = m_LatestCameraData;
@@ -321,6 +346,10 @@ namespace Immersal.XR.Rokid
             base.Localize();
         }
 
+        /// <summary>
+        /// Performs server-side localization using the latest captured camera frame.
+        /// </summary>
+        /// <param name="mapIds">Array of map IDs to localize against.</param>
         public override async void LocalizeServer(SDKMapId[] mapIds)
         {
             if (m_LatestCameraData.Bytes != null)
@@ -457,6 +486,11 @@ namespace Immersal.XR.Rokid
             base.LocalizeServer(mapIds);
         }
 
+        /// <summary>
+        /// Performs GeoPose localization (server-side) using the latest captured camera frame.
+        /// Note: Currently stated as not supported in the backend.
+        /// </summary>
+        /// <param name="mapIds">Array of map IDs.</param>
         public override async void LocalizeGeoPose(SDKMapId[] mapIds)
         {
             //NOT SUPPORTED IN BACKEND. KNOWN ISSUE AS OF 2nd FEB 2024.

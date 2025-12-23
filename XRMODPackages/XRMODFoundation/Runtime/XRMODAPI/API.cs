@@ -207,6 +207,14 @@ namespace Phantom.XRMOD.XRMODAPI.Runtime
         /// Determines whether a UGUI object is currently being touched by the pointer.
         /// This helps prevent raycast penetration when interacting with UI elements.
         /// </summary>
+        /// <example>
+        /// <code>
+        /// if (api.IsPointerOverUi()) {
+        ///     // Do not perform in-world raycast
+        ///     return;
+        /// }
+        /// </code>
+        /// </example>
         /// <returns>True if a UGUI object is touched, otherwise False.</returns>
         public bool IsPointerOverUi()
         {
@@ -222,8 +230,8 @@ namespace Phantom.XRMOD.XRMODAPI.Runtime
             List<RaycastResult> tmp_List = new List<RaycastResult>();
             if (null == graphicRaycaster)
                 graphicRaycaster = Object.FindFirstObjectByType<GraphicRaycaster>();
-            else
-                graphicRaycaster.Raycast(tmp_EventData, tmp_List);
+            
+            graphicRaycaster?.Raycast(tmp_EventData, tmp_List);
             return tmp_List.Count > 0;
         }
 
@@ -267,6 +275,11 @@ namespace Phantom.XRMOD.XRMODAPI.Runtime
         /// <summary>
         /// Asynchronously loads all assets of a specified type from the current package.
         /// </summary>
+        /// <example>
+        /// <code>
+        /// var textures = await api.LoadAssetsAsync&lt;Texture2D&gt;();
+        /// </code>
+        /// </example>
         /// <typeparam name="T">The Unity Asset type to load.</typeparam>
         /// <returns>An array of the loaded assets.</returns>
         public async Task<T[]> LoadAssetsAsync<T>() where T : Object
@@ -301,6 +314,11 @@ namespace Phantom.XRMOD.XRMODAPI.Runtime
         /// <summary>
         /// Asynchronously loads and adds a new Unity scene from the package.
         /// </summary>
+        /// <example>
+        /// <code>
+        /// await api.LoadUnityScene("MainGameScene");
+        /// </code>
+        /// </example>
         /// <param name="_sceneName">The Unity scene asset name as defined in the PackageTools Content tab.</param>
         /// <exception cref="UnityException">Thrown if the scene fails to load.</exception>
         public async Task LoadUnityScene(string _sceneName)
@@ -529,6 +547,13 @@ namespace Phantom.XRMOD.XRMODAPI.Runtime
         /// <summary>
         /// Casts a ray from a point in screen space against trackables (e.g., detected planes). This only works in Handheld AR.
         /// </summary>
+        /// <example>
+        /// <code>
+        /// api.ARRaycast(Input.mousePosition, TrackableTypeEnum.PlaneWithinPolygon, (pose) => {
+        ///     Instantiate(prefab, pose.position, pose.rotation);
+        /// });
+        /// </code>
+        /// </example>
         /// <param name="_inputPosition">The input screen point for the raycast.</param>
         /// <param name="_trackableType">The type of trackables to hit. See <see cref="TrackableTypeEnum"/>.</param>
         /// <param name="_callback">A callback action that is invoked with the <see cref="Pose"/> result of the raycast.</param>

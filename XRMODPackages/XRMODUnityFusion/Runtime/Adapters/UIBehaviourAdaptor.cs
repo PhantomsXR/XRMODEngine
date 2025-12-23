@@ -21,6 +21,10 @@ using AppDomain = UnityFusion.Runtime.Enviorment.AppDomain;
 
 namespace UnityFusion.CLRBinding.Adapter
 {
+    /// <summary>
+    /// Adapter for the custom <see cref="UIMonoBehaviour"/>.
+    /// Handles specialized UI lifecycle and event systems for hot-reload UI components.
+    /// </summary>
     public class UIBehaviourAdaptor : CrossBindingAdaptor
     {
         public override Type BaseCLRType => typeof(UIMonoBehaviour);
@@ -34,6 +38,9 @@ namespace UnityFusion.CLRBinding.Adapter
             return new Adapter(_appdomain, _instance);
         }
 
+        /// <summary>
+        /// The implementation class that bridges UIBehaviour messages and input events to the hot-reload domain.
+        /// </summary>
         public class Adapter : UIMonoBehaviour,CrossBindingAdaptorType, IDragHandler, IBeginDragHandler,
             IEndDragHandler, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerClickHandler,
             IPointerExitHandler, IPointerMoveHandler

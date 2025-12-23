@@ -19,6 +19,10 @@ using Phantom.XRMOD.XRMODUtilites.Runtime;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Handler that validates the total asset package size against the defined maximum limit
+    /// and triggers a warning callback if the limit is exceeded.
+    /// </summary>
     public class OversizeCheckHandler : AbstractHandler
     {
         private XRExperienceData xrExperienceData;

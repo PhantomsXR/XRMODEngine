@@ -21,6 +21,10 @@ using Phantom.XRMOD.Core.Runtime;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// A utility component for simulating XRMOD behaviors within the Unity Editor.
+    /// Provides GUI buttons to launch/disable XR, clean cache, and test mesh downloads.
+    /// </summary>
     public class Simulater : MonoBehaviour
     {
         public string configure;

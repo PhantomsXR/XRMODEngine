@@ -13,6 +13,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
 {
+    /// <summary>
+    /// Represents a serializable version of the Unity <see cref="AnimationCurve"/>.
+    /// This is used to store curve data in a way that can be easily serialized (e.g., to JSON).
+    /// </summary>
     [System.Serializable]
     public class AnimationCurveData
     {
@@ -20,16 +24,28 @@ namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
         public WrapMode preWrapMode;
         public WrapMode postWrapMode;
 
+        /// <summary>
+        /// Represents the data for a single keyframe in the animation curve.
+        /// </summary>
         [System.Serializable]
         public class KeyframeData
         {
+            /// <summary> The time of the keyframe. </summary>
             public float time;
+            /// <summary> The value of the curve at this time. </summary>
             public float value;
+            /// <summary> The incoming tangent. </summary>
             public float inTangent;
+            /// <summary> The outgoing tangent. </summary>
             public float outTangent;
+            /// <summary> The tangent mode (auto, linear, constant, etc.). </summary>
             public int tangentMode;
         }
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="AnimationCurveData"/> from a Unity <see cref="AnimationCurve"/>.
+        /// </summary>
+        /// <param name="_curve">The source Unity animation curve.</param>
         public AnimationCurveData(AnimationCurve _curve)
         {
             keys = new KeyframeData[_curve.keys.Length];
@@ -51,14 +67,27 @@ namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
         }
     }
 
+    /// <summary>
+    /// Extension methods for serializing and deserializing animation curves.
+    /// </summary>
     public static class Extensions
     {
+        /// <summary>
+        /// Serializes an <see cref="AnimationCurve"/> into a JSON string.
+        /// </summary>
+        /// <param name="_curve">The curve to serialize.</param>
+        /// <returns>A JSON string representation of the curve.</returns>
         public static string SerializeAnimationCurve(this AnimationCurve _curve)
         {
             AnimationCurveData tmp_CurveData = new AnimationCurveData(_curve);
             return JsonUtility.ToJson(tmp_CurveData);
         }
         
+        /// <summary>
+        /// Deserializes a JSON string into an <see cref="AnimationCurve"/>.
+        /// </summary>
+        /// <param name="_json">The JSON string representing the curve.</param>
+        /// <returns>A new <see cref="AnimationCurve"/> instance.</returns>
         public static AnimationCurve DeserializeAnimationCurve(this string _json)
         {
             AnimationCurveData tmp_CurveData = JsonUtility.FromJson<AnimationCurveData>(_json);

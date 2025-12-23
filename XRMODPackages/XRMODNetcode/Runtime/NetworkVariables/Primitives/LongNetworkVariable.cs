@@ -11,6 +11,12 @@
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// A MonoBehaviour-based network variable for synchronizing 64-bit signed integer (long) values.
+    /// </summary>
+    /// <remarks>
+    /// Attach this component to a GameObject to expose a synchronized long value in the Inspector.
+    /// </remarks>
     public class LongNetworkVariable:AbstractNetworkVariable<long>
     {
         

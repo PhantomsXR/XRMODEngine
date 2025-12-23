@@ -18,10 +18,16 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Supported HMAC hashing algorithms for JWT signing.
+    /// </summary>
     public enum JwtHashAlgorithm
     {
+        /// <summary> HMAC using SHA-256. </summary>
         HS256,
+        /// <summary> HMAC using SHA-384. </summary>
         HS384,
+        /// <summary> HMAC using SHA-512. </summary>
         HS512
     }
 

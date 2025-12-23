@@ -21,6 +21,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
+    /// <summary>
+    /// Command that handles importing and instantiating entire Unity scenes that were serialized at runtime.
+    /// It binds scripts (MonoBinders) and applies lighting bakes after importing.
+    /// </summary>
     public class RuntimeSceneSerializationCommand : ICommand, IReleaseCommand
     {
         public void Execute()

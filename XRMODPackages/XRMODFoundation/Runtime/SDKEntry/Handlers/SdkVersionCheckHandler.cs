@@ -19,6 +19,10 @@ using Phantom.XRMOD.XRMODUtilites.Runtime;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Handler that compares the project's required XRMOD SDK version with the version currently running in the host app.
+    /// Throws an exception if the version is incompatible.
+    /// </summary>
     public class SdkVersionCheckHandler : AbstractHandler
     {
         public override void Handle()

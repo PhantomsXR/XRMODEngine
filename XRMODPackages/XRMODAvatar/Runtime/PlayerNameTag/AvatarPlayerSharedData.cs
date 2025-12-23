@@ -18,6 +18,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.XRMODAvatar.PlayerNameTag
 {
+    /// <summary>
+    /// A central component for synchronizing shared player data (name, voice state, device type) 
+    /// between network variables and local UI/visuals.
+    /// </summary>
     public class AvatarPlayerSharedData : MonoBehaviour
     {
         internal BindableProperty<bool> selfMutedProperty = new();
@@ -64,6 +68,10 @@ namespace Phantom.XRMOD.XRMODAvatar.PlayerNameTag
 #endif
         }
 
+        /// <summary>
+        /// Synchronizes the local bindable properties with the current values of network variables.
+        /// Typically used when a remote player joins and their initial state needs to be reflected locally.
+        /// </summary>
         public void SyncSharedDataSnapshot()
         {
             OnMicrophoneMuted(playerVoiceChat.selfMutedNetworkVariable.Value,

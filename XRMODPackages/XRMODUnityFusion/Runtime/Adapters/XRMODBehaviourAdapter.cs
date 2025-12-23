@@ -8,6 +8,10 @@ using UnityEngine;
 
 namespace UnityFusion.CLRBinding.Adapter
 {
+    /// <summary>
+    /// Specialized adapter for <see cref="XRMODBehaviour"/>.
+    /// Handles custom XRMOD lifecycle and event notifications for hot-reload scripts.
+    /// </summary>
     public class XRMODBehaviourAdapter : CrossBindingAdaptor
     {
         public override Type BaseCLRType => typeof(XRMODBehaviour);
@@ -21,6 +25,9 @@ namespace UnityFusion.CLRBinding.Adapter
             return new Adapter(_appdomain, _instance);
         }
 
+        /// <summary>
+        /// The implementation class that bridges XRMOD events and Unity messages to the hot-reload domain.
+        /// </summary>
         public class Adapter : BaseMonoCrossBindingAdaptor
         {
             public Adapter(UnityFusion.Runtime.Enviorment.AppDomain _appdomain, ILTypeInstance _instance) : base(

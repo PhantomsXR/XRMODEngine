@@ -13,9 +13,14 @@ using System.Threading.Tasks;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Interface for all handlers in the SDK's project loading and lifecycle pipeline.
+    /// </summary>
     public interface IHandler
     {
+        /// <summary> Specifies the next handler in the execution chain. </summary>
         IHandler SetNext(IHandler _header);
+        /// <summary> Executes the logic associated with this handler. </summary>
         void Handle();
     }
 }

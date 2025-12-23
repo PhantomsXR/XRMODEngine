@@ -16,6 +16,10 @@ using Phantom.XRMOD.Core.Runtime;
 
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
+    /// <summary>
+    /// Command that provides information about the current XR experience project.
+    /// Returns a JSON-serialized representation of the <see cref="ExperienceInfo"/>.
+    /// </summary>
     public class BuildTryAcquireProjectInfoCommand : ICommand, IReleaseCommand
     {
         public BuildTryAcquireProjectInfoCommand()

@@ -14,9 +14,20 @@ using UnityEngine;
 namespace Phantom.XRMOD.OpenXRMOD.Runtime
 {
 #if UNITY_OPENXR
+    /// <summary>
+    /// Singleton component that controls Application SpaceWarp (ASW) state and updates the application space transform.
+    /// Application SpaceWarp allows the app to render at half the display rate while providing a smooth experience.
+    /// </summary>
     public class SpacewarpController : MonoBehaviour
     {
+        /// <summary>
+        /// Singleton instance of the SpacewarpController.
+        /// </summary>
         public static SpacewarpController Instance { get; private set; }
+
+        /// <summary>
+        /// Current state of Spacewarp (Enabled/Disabled).
+        /// </summary>
         public bool EnableSpacewarp = false;
 
         private void Awake()
@@ -33,9 +44,15 @@ namespace Phantom.XRMOD.OpenXRMOD.Runtime
         }
 
         /// <summary>
-        /// Set Spacewarp state
+        /// Enables or disables Application SpaceWarp.
         /// </summary>
-        /// <param name="_enabled"></param>
+        /// <param name="_enabled">True to enable, false to disable.</param>
+        /// <example>
+        /// <code>
+        /// // Enable Spacewarp
+        /// SpacewarpController.Instance.SetSpacewarpEnabled(true);
+        /// </code>
+        /// </example>
         public void SetSpacewarpEnabled(bool _enabled)
         {
             EnableSpacewarp = _enabled;

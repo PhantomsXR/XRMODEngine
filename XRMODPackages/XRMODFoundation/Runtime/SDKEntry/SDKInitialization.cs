@@ -16,6 +16,10 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Handles the automatic or manual initialization of the XRMOD SDK entry point.
+    /// This class is responsible for instantiating the SDK prefab and setting initial application settings.
+    /// </summary>
     public static class SDKInitialization
     {
         private const string CONST_SDK_ENTRY_PREFAB_PATH = "Prefabs/EntryPoint";
@@ -24,6 +28,10 @@ namespace Phantom.XRMOD.SDKEntry.Runtime
         [RuntimeInitializeOnLoadMethod]
 #endif
 
+        /// <summary>
+        /// Initializes the SDK by loading the EntryPoint prefab and setting the target frame rate.
+        /// If an <see cref="SDKEntryPoint"/> already exists in the scene, this method does nothing.
+        /// </summary>
         public static void Initialize()
         {
             QualitySettings.SetQualityLevel(0, true);

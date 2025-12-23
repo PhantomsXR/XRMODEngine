@@ -21,6 +21,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime.DataRequest
 {
+    /// <summary>
+    /// Command for retrieving project metadata when running in the simulation environment (Unity Editor).
+    /// Typically looks for assets in a local 'ServerData' folder.
+    /// </summary>
     public readonly struct QueryARProjectForSimulator : IHttpRequestCommand<ResponseMapper>
     {
         private const string _CONST_ASSETS_FOLDER = "Assets";

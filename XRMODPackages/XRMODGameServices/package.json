@@ -1,7 +1,7 @@
 {
   "name": "com.phantomsxr.xrmodgameservices",
   "displayName": "XRMOD Game Services",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Take your game to the next level without having to worry about maintaining or scaling your back-end infrastructure. XRMOD-GS simplifies many game development tasks and challenges.",
   "author": {
     "name": "Phantoms",

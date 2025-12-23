@@ -19,10 +19,24 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.QuestModule.Runtime
 {
+    /// <summary>
+    /// The main module class for Meta Quest support in XR-MOD.
+    /// <para>
+    /// This class implements the <see cref="IModule"/> interface and is responsible for managing the lifecycle of Quest-specific features
+    /// such as Mixed Reality, Occlusion, and Meshing. It listens for configuration changes and initializes the appropriate systems.
+    /// </para>
+    /// </summary>
     public class MetaQuestModule : IModule
     {
         readonly RuntimeExperienceConfig configures = IocContainer.GetIoc.Resolve<RuntimeExperienceConfig>();
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MetaQuestModule"/> class.
+        /// <para>
+        /// Subscribes to configuration updates and notification center events.
+        /// call <see cref="MakeSureDependencies"/> to register necessary components.
+        /// </para>
+        /// </summary>
         public MetaQuestModule()
         {
             configures.CurrentConfigures.OnValueChanged += OnConfigUpdated;
@@ -32,7 +46,13 @@ namespace Phantom.XRMOD.QuestModule.Runtime
             MakeSureDependencies();
         }
 
-
+        /// <summary>
+        /// Starts the module.
+        /// <para>
+        /// Posts a notification to fetch project details.
+        /// </para>
+        /// </summary>
+        /// <returns>True if started successfully, otherwise false.</returns>
         public bool StartModule()
         {
             try
@@ -50,11 +70,19 @@ namespace Phantom.XRMOD.QuestModule.Runtime
             }
         }
 
+        /// <summary>
+        /// Pauses the module.
+        /// </summary>
+        /// <returns>Always returns true.</returns>
         public bool PauseModule()
         {
             return true;
         }
 
+        /// <summary>
+        /// Stops the module and unregisters dependencies from the IoC container.
+        /// </summary>
+        /// <returns>Always returns true.</returns>
         public bool StopModule()
         {
             IocContainer.GetIoc.UnRegister<BuildMetaQuestMRFeatureCommand>();
@@ -71,11 +99,18 @@ namespace Phantom.XRMOD.QuestModule.Runtime
             return true;
         }
 
+        /// <summary>
+        /// Checks if the module is available on the current platform.
+        /// </summary>
+        /// <returns>Always returns true.</returns>
         public bool IsModuleAvailability()
         {
             return true;
         }
 
+        /// <summary>
+        /// Registers necessary dependencies (Models, Commands, Decorators) into the IoC container.
+        /// </summary>
         public void MakeSureDependencies()
         {
             IocContainer.GetIoc.Register(new ArchitectureComponentsModel());
@@ -90,11 +125,10 @@ namespace Phantom.XRMOD.QuestModule.Runtime
             IocContainer.GetIoc.Register(new BuildMetaQuestInteracterSwitcherFeatureCommand());
         }
 
-
         /// <summary>
-        /// Remove the features for a given experience. 
+        /// Callback to remove feature decorators when receiving the 'RemoveFeatures' notification.
         /// </summary>
-        /// <param name="_data"></param>
+        /// <param name="_data">Notification data containing the project name.</param>
         private void RemoveFeatureDecorators(BaseNotificationData _data)
         {
             var tmp_ProjectName = _data.BaseData;
@@ -106,6 +140,11 @@ namespace Phantom.XRMOD.QuestModule.Runtime
             }
         }
 
+        /// <summary>
+        /// Validates and parses the configuration model.
+        /// </summary>
+        /// <param name="_config">The configuration model to check.</param>
+        /// <returns>True if the configuration is valid or updated successfully, false otherwise.</returns>
         private bool CheckConfig(IModel _config)
         {
             if (_config is XRConfiguresModel _) return true;
@@ -116,6 +155,10 @@ namespace Phantom.XRMOD.QuestModule.Runtime
             return true;
         }
 
+        /// <summary>
+        /// Ensures the appropriate algorithm features are executed based on the algorithm type.
+        /// </summary>
+        /// <param name="_arAlgorithmType">The type of algorithm (e.g., Meshing, Anchor).</param>
         private void MakeSureAlgorithm(AlgorithmType _arAlgorithmType)
         {
             ICommand tmp_XRFeatureCommand = null;
@@ -140,6 +183,10 @@ namespace Phantom.XRMOD.QuestModule.Runtime
             tmp_XRFeatureCommand?.Execute();
         }
 
+        /// <summary>
+        /// Adds feature decorators based on the configuration (e.g., Mixed Reality, Occlusion).
+        /// </summary>
+        /// <param name="_config">The Quest configuration model.</param>
         private void AddFeatureDecorator(XRConfiguresModel _config)
         {
             if (_config.MixedReality)
@@ -153,6 +200,13 @@ namespace Phantom.XRMOD.QuestModule.Runtime
             }
         }
 
+        /// <summary>
+        /// Callback invoked when the module configuration is updated.
+        /// <para>
+        /// Updates the current configuration value, checks device compatibility, and establishes feature decorators and algorithms.
+        /// </para>
+        /// </summary>
+        /// <param name="_config">The updated configuration model.</param>
         private void OnConfigUpdated(BaseExperienceConfigModel _config)
         {
             if (!CheckConfig(_config)) return;

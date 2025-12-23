@@ -11,11 +11,17 @@
 
 namespace Phantom.XRMOD.SDKEntry.Runtime.Models
 {
+    /// <summary>
+    /// Represents a license for offline usage of the XRMOD SDK.
+    /// </summary>
     [System.Serializable]
     public class OfflineLicense
     {
+        /// <summary> The name associated with the license. </summary>
         public string name;
+        /// <summary> The Unix timestamp (seconds) when the license validity starts. </summary>
         public long start_time;
+        /// <summary> The Unix timestamp (seconds) when the license expires. </summary>
         public long expiration_time;
     }
 }

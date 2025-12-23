@@ -16,6 +16,10 @@ using Phantom.XRMOD.Core.Runtime;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Command that facilitates acquiring the custom configuration JSON associated with the current project's launch.
+    /// Subscribes to the <c>TryAcquireCustomConfig</c> action notification.
+    /// </summary>
     public class BuildTryAcquireLaunchConfigCommand : ICommand, IReleaseCommand
     {
         public BuildTryAcquireLaunchConfigCommand()

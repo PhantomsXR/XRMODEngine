@@ -14,8 +14,16 @@ using Phantom.XRMOD.Models.Runtime;
 
 namespace Phantom.XRMOD.RokidModule.Runtime
 {
+    /// <summary>
+    /// Command to build and initialize the Immersal feature for Rokid devices.
+    /// Configures the Immersal context with settings from the project configuration.
+    /// </summary>
     public class BuildImmersalFeatureCommand : BaseBuildFeature<ImmersalFeature>, ICommand, IReleaseCommand
     {
+        /// <summary>
+        /// Executes the command to create the Immersal feature.
+        /// Extracts Immersal parameters from the current configuration and initializes the context.
+        /// </summary>
         public void Execute()
         {
             if (IocContainer.GetIoc.Resolve<RuntimeExperienceConfig>().CurrentConfigures.Value is not
@@ -35,6 +43,10 @@ namespace Phantom.XRMOD.RokidModule.Runtime
             base.Create();
         }
 
+        /// <summary>
+        /// Releases the Immersal feature and cleans up resources.
+        /// </summary>
+        /// <param name="_projectName">Optional project name (unused).</param>
         public void Release(string _projectName = default)
         {
             base.ReleaseFeature();

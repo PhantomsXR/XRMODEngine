@@ -14,9 +14,17 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.XRMODUtilites.Runtime
 {
+    /// <summary>
+    /// Component that ensures a <see cref="RenderTexture"/> is marked dirty for updates, 
+    /// primarily used for PolySpatial on Apple VisionOS.
+    /// </summary>
     public class RenderTextureUpdaterComponentAdapter : MonoBehaviour
     {
         [SerializeField] private RenderTexture renderTexture;
+
+        /// <summary>
+        /// The RenderTexture to update.
+        /// </summary>
         public RenderTexture RenderTexture
         {
             get => renderTexture;

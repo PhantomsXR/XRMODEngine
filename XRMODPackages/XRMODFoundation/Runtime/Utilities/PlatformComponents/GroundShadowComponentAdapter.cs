@@ -13,6 +13,9 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.XRMODUtilites.Runtime
 {
+    /// <summary>
+    /// Adapter component that adds a grounding shadow effect, specifically for Apple VisionOS via PolySpatial.
+    /// </summary>
     public class GroundShadowComponentAdapter : MonoBehaviour
     {
 #if VISIONOS_INSTALL

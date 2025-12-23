@@ -40,6 +40,10 @@ namespace Phantom.XRMOD.SDKEntry.Runtime.Mapper
 
     #region v2
 
+    /// <summary>
+    /// Maps backend resource information (URLs, sizes, platforms) for an XR experience.
+    /// Supports both v1 and v2 (Supabase) data formats.
+    /// </summary>
     [System.Serializable]
     public class ExperienceResourceMapper
     {

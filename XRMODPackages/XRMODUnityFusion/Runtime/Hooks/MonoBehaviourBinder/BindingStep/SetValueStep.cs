@@ -14,6 +14,9 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
 {
+    /// <summary>
+    /// A binding step responsible for assigning serialized field values to the newly created hot-reload script instances.
+    /// </summary>
     public class SetValueStep : IBindingStep
     {
         public BindingPhase Phase { get; } = BindingPhase.SetValue;

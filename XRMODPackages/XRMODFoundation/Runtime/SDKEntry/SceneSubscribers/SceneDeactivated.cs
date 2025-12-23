@@ -22,6 +22,10 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Subscriber that handles cleanup when an XR scene is deactivated.
+    /// Releases memory, unregisters models, and handles player unloading.
+    /// </summary>
     public class SceneDeactivated
     {
         /// <summary>

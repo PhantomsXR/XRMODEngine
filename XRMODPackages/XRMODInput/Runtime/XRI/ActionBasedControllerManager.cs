@@ -113,6 +113,10 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
         [Tooltip("Event fired when the active ray interactor changes between interaction and teleport.")]
         UnityEvent<UnityEngine.XR.Interaction.Toolkit.Interactors.IXRRayProvider> m_RayInteractorChanged;
 
+        /// <summary>
+        /// Gets or sets whether smooth (continuous) motion is enabled.
+        /// If <c>true</c>, smooth movement is active; if <c>false</c>, teleportation is active.
+        /// </summary>
         public bool SmoothMotionEnabled
         {
             get => smoothMotionEnabled;
@@ -123,6 +127,10 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
             }
         }
 
+        /// <summary>
+        /// Gets or sets whether smooth (continuous) turning is enabled.
+        /// If <c>true</c>, smooth turn is active; if <c>false</c>, snap turn is active.
+        /// </summary>
         public bool SmoothTurnEnabled
         {
             get => smoothTurnEnabled;
@@ -133,6 +141,9 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
             }
         }
 
+        /// <summary>
+        /// Gets or sets whether UI scrolling is enabled for the controllers.
+        /// </summary>
         public bool UIScrollingEnabled
         {
             get => uiScrollingEnabled;

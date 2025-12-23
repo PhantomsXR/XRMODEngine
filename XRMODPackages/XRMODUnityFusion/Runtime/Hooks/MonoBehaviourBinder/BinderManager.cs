@@ -18,14 +18,25 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
 {
+    /// <summary>
+    /// Defines the different phases of the binding process.
+    /// </summary>
     public enum BindingPhase
     {
+        /// <summary> Adding the runtime script to the GameObject. </summary>
         AddClass,
+        /// <summary> Setting public field values on the script. </summary>
         SetValue,
+        /// <summary> Activating/enabling the script. </summary>
         Activate,
+        /// <summary> Updating rendering state if necessary. </summary>
         SetRenderer
     }
     
+    /// <summary>
+    /// Singleton manager that orchestrates the binding of MonoBehaviours across the scene.
+    /// High-level entry point for processing <see cref="MonoBinder"/> components.
+    /// </summary>
     public class BinderManager : MonoBehaviourSingleton<BinderManager>
     {
         private BindingOrchestrator bindingOrchestrator;
@@ -59,11 +70,19 @@ namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
             DoBind(tmp_MonoBinders);
         }
 
+        /// <summary>
+        /// Initiates binding for a list of MonoBinders.
+        /// </summary>
+        /// <param name="_monoBinders">The list of binders to process.</param>
         public void DoBind(List<MonoBinder> _monoBinders)
         {
             DoBind(_monoBinders.ToArray());
         }
 
+        /// <summary>
+        /// Initiates binding for an array of MonoBinders asynchronously.
+        /// </summary>
+        /// <param name="_monoBinders">The array of binders to process.</param>
         public async void DoBind(MonoBinder[] _monoBinders)
         {
             try
@@ -78,6 +97,10 @@ namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
             }
         }
 
+        /// <summary>
+        /// Initiates binding for a single MonoBinder asynchronously.
+        /// </summary>
+        /// <param name="_monoBinder">The binder to process.</param>
         public async void DoBind(MonoBinder _monoBinder)
         {
             try
@@ -91,6 +114,9 @@ namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
             }
         }
 
+        /// <summary>
+        /// Initiates binding for all <see cref="MonoBinder"/> components currently in the scene.
+        /// </summary>
         public async void DoBind()
         {
             try

@@ -18,6 +18,10 @@ using UnityEngine.UI;
 
 namespace Phantom.XRMOD.XRMODAvatar.PlayerNameTag
 {
+    /// <summary>
+    /// Manages the floating name tag and voice chat indicators above a player's head.
+    /// Handles billboard rotation towards the camera and updates based on player state.
+    /// </summary>
     public class PlayerNameTag : MonoBehaviour
     {
         [SerializeField] private bool worldUp;

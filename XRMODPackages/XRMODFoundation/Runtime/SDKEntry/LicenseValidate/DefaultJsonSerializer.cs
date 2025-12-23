@@ -13,8 +13,8 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
-    // <summary>
-    /// JSON Serializer using JavaScriptSerializer
+    /// <summary>
+    /// Default JSON Serializer implementation using Unity's <see cref="JsonUtility"/>.
     /// </summary>
     public class DefaultJsonSerializer : IJsonSerializer
     {

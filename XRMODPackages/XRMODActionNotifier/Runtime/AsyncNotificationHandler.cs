@@ -15,6 +15,9 @@ using System.Threading.Tasks;
 
 namespace Phantom.XRMOD.ActionNotification.Runtime
 {
+    /// <summary>
+    /// Asynchronous implementation of INotificationHandler.
+    /// </summary>
     public class AsyncNotificationHandler: INotificationHandler
     {
         private readonly Func<BaseNotificationData, Task<object>> _asyncFunc;

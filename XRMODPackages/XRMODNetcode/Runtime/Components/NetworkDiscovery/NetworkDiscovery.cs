@@ -20,6 +20,16 @@ using Random = UnityEngine.Random;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery
 {
+    /// <summary>
+    /// Base class for network discovery functionality using UDP broadcasts.
+    /// </summary>
+    /// <typeparam name="TBroadCast">The type of data sent in broadcast messages.</typeparam>
+    /// <typeparam name="TResponse">The type of data sent in response messages.</typeparam>
+    /// <remarks>
+    /// This class enables automatic server discovery on local networks. Clients broadcast a request,
+    /// and servers respond with their connection information. Extend this class to define custom
+    /// broadcast and response data structures.
+    /// </remarks>
     [DisallowMultipleComponent]
     public abstract class NetworkDiscovery<TBroadCast, TResponse> : MonoBehaviour
         where TBroadCast : INetworkSerializable, new()
@@ -53,19 +63,18 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery
         /// </summary>
         public bool IsClient { get; private set; }
 
+        /// <summary>
+        /// Called when the application quits. Stops the discovery.
+        /// </summary>
         public void OnApplicationQuit()
         {
             StopDiscovery();
         }
 
-        // void OnValidate()
-        // {
-        //     if (uniqueApplicationId == 0)
-        //     {
-        //         uniqueApplicationId = GetUniqueApplicationId();
-        //     }
-        // }
-
+        /// <summary>
+        /// Generates a unique application ID for filtering discovery packets.
+        /// </summary>
+        /// <returns>A unique 64-bit identifier.</returns>
         public long GetUniqueApplicationId()
         {
             var tmp_Value1 = (long) Random.Range(int.MinValue, int.MaxValue);
@@ -73,11 +82,20 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery
             return tmp_Value1 + (tmp_Value2 << 32);
         }
 
+        /// <summary>
+        /// Sets the unique application ID used for filtering discovery packets.
+        /// </summary>
+        /// <param name="_uniqueApplicationId">The unique application ID.</param>
         public void SetupUniqueApplicationId(long _uniqueApplicationId)
         {
             uniqueApplicationId = _uniqueApplicationId;
         }
 
+        /// <summary>
+        /// Sends a broadcast message from the client to discover available servers.
+        /// </summary>
+        /// <param name="broadCast">The broadcast data to send.</param>
+        /// <exception cref="InvalidOperationException">Thrown if not running in client mode.</exception>
         public void ClientBroadcast(TBroadCast broadCast)
         {
             if (!IsClient)
@@ -123,6 +141,9 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery
             StartDiscovery(false);
         }
 
+        /// <summary>
+        /// Stops the discovery process and closes the UDP socket.
+        /// </summary>
         public void StopDiscovery()
         {
             IsClient = false;
@@ -147,17 +168,17 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery
         /// <summary>
         /// Gets called whenever a broadcast is received. Creates a response based on the incoming broadcast data.
         /// </summary>
-        /// <param name="sender">The sender of the broadcast</param>
-        /// <param name="broadCast">The broadcast data which was sent</param>
-        /// <param name="response">The response to send back</param>
-        /// <returns>True if a response should be sent back else false</returns>
+        /// <param name="sender">The sender of the broadcast.</param>
+        /// <param name="broadCast">The broadcast data which was sent.</param>
+        /// <param name="response">The response to send back.</param>
+        /// <returns>True if a response should be sent back, false otherwise.</returns>
         protected abstract bool ProcessBroadcast(IPEndPoint sender, TBroadCast broadCast, out TResponse response);
 
         /// <summary>
-        /// Gets called when a response to a broadcast gets received
+        /// Gets called when a response to a broadcast is received.
         /// </summary>
-        /// <param name="sender">The sender of the response</param>
-        /// <param name="response">The value of the response</param>
+        /// <param name="sender">The sender of the response.</param>
+        /// <param name="response">The value of the response.</param>
         protected abstract void ResponseReceived(IPEndPoint sender, TResponse response);
 
         void StartDiscovery(bool isServer)

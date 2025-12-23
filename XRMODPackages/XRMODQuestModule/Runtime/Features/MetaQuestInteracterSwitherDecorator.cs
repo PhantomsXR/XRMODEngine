@@ -16,15 +16,30 @@ using Phantom.XRMOD.XRMODInput.Runtime;
 
 namespace Phantom.XRMOD.QuestModule.Runtime
 {
+    /// <summary>
+    /// Feature decorator for switching between different interaction inputs on Meta Quest.
+    /// <para>
+    /// Listens for input switch notifications and activates/deactivates corresponding controllers (Hands, XR Controllers, etc.).
+    /// </para>
+    /// </summary>
     public class MetaQuestInteracterSwitherDecorator : BaseMetaQuestFeatureDecorator
     {
         private ArchitectureComponentsModel architectureComponentsModel;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MetaQuestInteracterSwitherDecorator"/> class.
+        /// </summary>
         public MetaQuestInteracterSwitherDecorator()
         {
             architectureComponentsModel = IocContainer.GetIoc.Resolve<ArchitectureComponentsModel>();
         }
 
+        /// <summary>
+        /// Starts the input switcher algorithm.
+        /// <para>
+        /// Subscribes to the "SwitchInput" notification.
+        /// </para>
+        /// </summary>
         public override void StartAlgorithm()
         {
             base.StartAlgorithm();
@@ -32,21 +47,35 @@ namespace Phantom.XRMOD.QuestModule.Runtime
         }
 
 
+        /// <summary>
+        /// Determines if this feature is supported.
+        /// </summary>
+        /// <returns>Always returns true.</returns>
         public override bool SupportThisFeature()
         {
             return true;
         }
 
+        /// <summary>
+        /// Pauses the algorithm. (No implementation).
+        /// </summary>
         public override void PauseAlgorithm()
         {
         }
 
+        /// <summary>
+        /// Stops the algorithm and unsubscribes from the "SwitchInput" notification.
+        /// </summary>
         public override void StopAlgorithm()
         {
             ActionNotificationCenter.DefaultCenter.RemoveObserver(nameof(SwitchInput));
         }
 
 
+        /// <summary>
+        /// Callback handler for input switching notifications.
+        /// </summary>
+        /// <param name="_notification">Notification data containing the <see cref="InputType"/> to switch to.</param>
         private void SwitchInput(BaseNotificationData _notification)
         {
             architectureComponentsModel.XRInputModalityManager.enabled = false;

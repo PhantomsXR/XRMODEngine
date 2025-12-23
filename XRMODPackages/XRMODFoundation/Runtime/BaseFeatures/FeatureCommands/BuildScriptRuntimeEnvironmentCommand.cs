@@ -21,6 +21,10 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
+    /// <summary>
+    /// Command responsible for initializing the script execution environment.
+    /// Supports both C# (via IL2CPP/JIT hooks) and Visual Scripting entry points.
+    /// </summary>
     public class BuildScriptRuntimeEnvironmentCommand : AbstractCommand, ICommand, IReleaseCommand
     {
         public async void Execute()

@@ -89,6 +89,10 @@ namespace Phantom.XRMOD.BaseFeatures.Runtime
         [Tooltip("If true, continuous turn will be enabled. If false, snap turn will be enabled. Note: If smooth motion is enabled and enable strafe is enabled on the continuous move provider, turn will be overriden in favor of strafe.")]
         bool m_SmoothTurnEnabled;
 
+        /// <summary>
+        /// Gets or sets whether smooth (continuous) motion is enabled.
+        /// Setting this automatically updates locomotion action states.
+        /// </summary>
         public bool smoothMotionEnabled
         {
             get => m_SmoothMotionEnabled;
@@ -99,6 +103,10 @@ namespace Phantom.XRMOD.BaseFeatures.Runtime
             }
         }
 
+        /// <summary>
+        /// Gets or sets whether smooth (continuous) turning is enabled.
+        /// Setting this automatically updates turn action states.
+        /// </summary>
         public bool smoothTurnEnabled
         {
             get => m_SmoothTurnEnabled;

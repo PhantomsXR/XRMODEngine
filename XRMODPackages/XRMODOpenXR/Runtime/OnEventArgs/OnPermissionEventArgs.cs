@@ -13,8 +13,14 @@ using Phantom.XRMOD.ActionNotification.Runtime;
 
 namespace Phantom.XRMOD.OpenXRMOD.Runtime.OnEventArgs
 {
+    /// <summary>
+    /// Event arguments for permission-related notifications.
+    /// </summary>
     public class OnPermissionEventArgs:BaseNotificationData
     {
+        /// <summary>
+        /// Indicates whether the permission was granted or denied.
+        /// </summary>
         public bool Granted;
     }
 }

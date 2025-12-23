@@ -18,6 +18,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime.DataRequest
 {
+    /// <summary>
+    /// Command for locating and retrieving project metadata for offline experiences
+    /// stored in the StreamingAssets folder.
+    /// </summary>
     public readonly struct QueryARProjectForOffline : IHttpRequestCommand<ResponseMapper>
     {
         private readonly QueryParameter queryParameter;

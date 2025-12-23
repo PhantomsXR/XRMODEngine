@@ -118,8 +118,15 @@ namespace Phantom.XRMOD.Models.Runtime
         Simulator
     }
 
+    /// <summary>
+    /// Managed model that stores the global XRMOD SDK configuration.
+    /// This includes backend settings, dashboard connectivity, and cloud recognition parameters.
+    /// </summary>
     public class SdkConfigModel : IModel
     {
+        /// <summary>
+        /// The global SDK configuration, wrapped in a <see cref="BindableProperty{T}"/> for reactive updates.
+        /// </summary>
         public BindableProperty<SDKConfiguration> SDKConfiguration { get; private set; }
 
         public SdkConfigModel()
@@ -127,6 +134,9 @@ namespace Phantom.XRMOD.Models.Runtime
             Initialize();
         }
 
+        /// <summary>
+        /// Initializes the configuration model and its bindable properties.
+        /// </summary>
         public void Initialize()
         {
             SDKConfiguration = new BindableProperty<SDKConfiguration>();

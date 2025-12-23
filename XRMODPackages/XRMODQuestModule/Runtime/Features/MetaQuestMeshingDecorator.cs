@@ -18,6 +18,12 @@ using UnityEngine.XR.ARFoundation;
 
 namespace Phantom.XRMOD.QuestModule.Runtime
 {
+    /// <summary>
+    /// Feature decorator for Meta Quest Meshing.
+    /// <para>
+    /// Manages the <see cref="ARMeshManager"/> and dispatches notifications when meshes are added, updated, or removed.
+    /// </para>
+    /// </summary>
     public class MetaQuestMeshingDecorator : BaseMetaQuestFeatureDecorator
     { 
         private OnEventMeshEventArgs onEventMeshEventArgs;
@@ -25,6 +31,12 @@ namespace Phantom.XRMOD.QuestModule.Runtime
         private ArchitectureComponentsModel architectureComponentsModel;
         private List<XRMeshSubsystem> subsystems = new();
 
+        /// <summary>
+        /// Starts the meshing algorithm.
+        /// <para>
+        /// Activates the Mesh Manager and subscribes to mesh change events.
+        /// </para>
+        /// </summary>
         public override void StartAlgorithm()
         {
             base.StartAlgorithm();
@@ -36,6 +48,13 @@ namespace Phantom.XRMOD.QuestModule.Runtime
             meshManager.gameObject.SetActive(true);
         }
 
+        /// <summary>
+        /// Callback for mesh changes.
+        /// <para>
+        /// Posts an <see cref="ActionParameterDataType.OnEvent"/> notification with mesh data.
+        /// </para>
+        /// </summary>
+        /// <param name="_obj">Event arguments containing changed meshes.</param>
         private void OnMeshesChanged(ARMeshesChangedEventArgs _obj)
         {
             onEventMeshEventArgs.Added = _obj.added;
@@ -45,15 +64,28 @@ namespace Phantom.XRMOD.QuestModule.Runtime
                 onEventMeshEventArgs);
         }
 
+        /// <summary>
+        /// Determines if this feature is supported.
+        /// </summary>
+        /// <returns>True if XR Mesh Subsystems are available.</returns>
         public override bool SupportThisFeature()
         {
             return subsystems.Count > 0;
         }
 
+        /// <summary>
+        /// Pauses the algorithm.
+        /// </summary>
         public override void PauseAlgorithm()
         {
         }
 
+        /// <summary>
+        /// Stops the meshing algorithm.
+        /// <para>
+        /// Destroys all meshes and deactivates the Mesh Manager.
+        /// </para>
+        /// </summary>
         public override void StopAlgorithm()
         {
             meshManager?.DestroyAllMeshes();

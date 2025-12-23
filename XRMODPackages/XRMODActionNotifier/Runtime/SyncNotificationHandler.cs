@@ -15,6 +15,9 @@ using System.Threading.Tasks;
 
 namespace Phantom.XRMOD.ActionNotification.Runtime
 {
+    /// <summary>
+    /// Synchronous implementation of INotificationHandler.
+    /// </summary>
     public class SyncNotificationHandler : INotificationHandler
     {
         private readonly Action<BaseNotificationData> _action;

@@ -15,6 +15,9 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.XRMODUtilites.Runtime
 {
+    /// <summary>
+    /// Component used to store and manage the unique process identifier for an XR experience.
+    /// </summary>
     public class ProcessIdComponent : MonoBehaviour
     {
         private string processId;

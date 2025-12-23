@@ -11,9 +11,21 @@
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime.TableSystem
 {
+    /// <summary>
+    /// Interface for handling player lifecycle events in a tabletop network environment.
+    /// </summary>
     public interface IPlayerConnection
     {
+        /// <summary>
+        /// Called when a player joins the network.
+        /// </summary>
+        /// <param name="_playerRef">The unique ID/reference of the joining player.</param>
         void PlayerJoin(ulong _playerRef);
+
+        /// <summary>
+        /// Called when a player leaves the network.
+        /// </summary>
+        /// <param name="_playerRef">The unique ID/reference of the departing player.</param>
         void PlayerLeft(ulong _playerRef);
     }
 }

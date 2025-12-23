@@ -21,9 +21,14 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.NetworkInteractions
 {
 #if USE_XRI
     /// <summary>
-    /// NetworkSocketInteractor class is responsible for synchronizing the
-    /// <see cref="XRSocketInteractor"/> functionality over the network.
+    /// NetworkSocketInteractor synchronizes <see cref="XRSocketInteractor"/> functionality over the network.
     /// </summary>
+    /// <remarks>
+    /// This class ensures that socket interactions (snap zones) work correctly across the network by:
+    /// - Disabling the socket temporarily on spawn to prevent race conditions
+    /// - Properly handling object reset when the socket despawns
+    /// - Maintaining consistent socket selection state across all clients
+    /// </remarks>
     [RequireComponent(typeof(XRSocketInteractor))]
     public class NetworkSocketInteractor : NetworkBehaviour
     {

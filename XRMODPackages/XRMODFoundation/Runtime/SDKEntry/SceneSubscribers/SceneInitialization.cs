@@ -17,6 +17,10 @@ using Object = UnityEngine.Object;
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Subscriber that handles initialization when the main XR scene is loaded.
+    /// Instantiates the device launcher and sets up initial scene state.
+    /// </summary>
     public class SceneInitialization
     {
         private Camera uiCamera;

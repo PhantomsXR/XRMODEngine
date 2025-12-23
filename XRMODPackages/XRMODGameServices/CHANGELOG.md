@@ -1,3 +1,6 @@
+# 1.0.8
+## Updated
+- Update commit and docs
 # 1.0.6
 
 ## Fixed

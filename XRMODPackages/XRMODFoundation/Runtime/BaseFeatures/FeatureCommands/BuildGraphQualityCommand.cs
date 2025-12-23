@@ -14,6 +14,10 @@ using Phantom.XRMOD.Core.Runtime;
 
 namespace Phantom.XRMOD.BaseFeatures.Runtime
 {
+    /// <summary>
+    /// Command that applies the project-level graphical quality settings to the Unity engine.
+    /// Inherits from <see cref="AbstractCommand"/> to access project configuration.
+    /// </summary>
     public class BuildGraphQualityCommand : AbstractCommand, ICommand, IReleaseCommand
     {
         public void Execute()

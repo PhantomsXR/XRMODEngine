@@ -11,6 +11,10 @@
 
 namespace Phantom.XRMOD.SDKEntry.Runtime
 {
+    /// <summary>
+    /// Contains constant keys and values used throughout the SDK, including configuration names,
+    /// scene tags, network request parameters, and resource paths.
+    /// </summary>
     public class ConstKey
     {
         public const float CONST_INVOKE_TIME = 1;

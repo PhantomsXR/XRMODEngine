@@ -8,9 +8,18 @@ using PCD = Phantom.XRMOD.QuestModule.Runtime.PassthroughCameraDebugger;
 
 namespace Phantom.XRMOD.QuestModule.Runtime
 {
+    /// <summary>
+    /// Utility class for interacting with the Meta Quest Passthrough Camera API.
+    /// <para>
+    /// Provides methods to access camera intrinsics, poses, and frames via Android Java calls.
+    /// </para>
+    /// </summary>
     public class PassthroughCameraUtils
     {
         // The Horizon OS starts supporting PCA with v74.
+        /// <summary>
+        /// Minimum supported Horizon OS version for Passthrough Camera Access (v74).
+        /// </summary>
         public const int MINSUPPORTOSVERSION = 74;
 
         // The only pixel format supported atm
