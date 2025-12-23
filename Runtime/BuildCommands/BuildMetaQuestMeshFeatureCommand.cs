@@ -18,6 +18,12 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.QuestModule.Runtime
 {
+    /// <summary>
+    /// Command to build and initialize the Meta Quest Meshing feature.
+    /// <para>
+    /// This command handles loading the mesh visualizer (either default or custom) and initializing the <see cref="MetaQuestMeshingDecorator"/>.
+    /// </para>
+    /// </summary>
     public class BuildMetaQuestMeshFeatureCommand : BaseBuildFeature<MetaQuestMeshingDecorator>, ICommand,
         IReleaseCommand
     {
@@ -25,6 +31,9 @@ namespace Phantom.XRMOD.QuestModule.Runtime
         const string CONST_PREFAB_FOLDER_NAME = "Prefabs";
 
 
+        /// <summary>
+        /// Executes the command to load the mesh visualizer and create the meshing feature.
+        /// </summary>
         public async void Execute()
         {
             try
@@ -56,6 +65,10 @@ namespace Phantom.XRMOD.QuestModule.Runtime
             }
         }
 
+        /// <summary>
+        /// Releases the feature.
+        /// </summary>
+        /// <param name="_projectName">Optional project name context.</param>
         public void Release(string _projectName = default)
         {
             base.ReleaseFeature();

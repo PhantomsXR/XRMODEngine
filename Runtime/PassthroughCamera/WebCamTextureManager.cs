@@ -17,12 +17,33 @@ using PCD = Phantom.XRMOD.QuestModule.Runtime.PassthroughCameraDebugger;
 
 namespace Phantom.XRMOD.QuestModule.Runtime
 {
+    /// <summary>
+    /// Manages the creation and lifecycle of a <see cref="WebCamTexture"/> for a specific passthrough camera eye.
+    /// <para>
+    /// Handles permission checks and initializes the webcam texture with the requested resolution.
+    /// </para>
+    /// </summary>
     public class WebCamTextureManager: MonoBehaviour
     {
+        /// <summary>
+        /// Specifies which eye (Left/Right) this manager controls.
+        /// </summary>
         [SerializeField] public PassthroughCameraEye Eye = PassthroughCameraEye.Left;
+
+        /// <summary>
+        /// The requested resolution of the camera.
+        /// <para>
+        /// If (0,0), the highest supported resolution will be used.
+        /// If the exact resolution is not supported, the closest available one will be chosen.
+        /// </para>
+        /// </summary>
         [SerializeField, Tooltip("The requested resolution of the camera may not be supported by the chosen camera. In such cases, the closest available values will be used.\n\n" +
                                  "When set to (0,0), the highest supported resolution will be used.")]
         public Vector2Int RequestedResolution;
+
+        /// <summary>
+        /// Reference to the permissions manager.
+        /// </summary>
         [SerializeField] public PassthroughCameraPermissions CameraPermissions;
 
         /// <summary>

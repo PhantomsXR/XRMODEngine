@@ -24,6 +24,13 @@ using UnityEngine.XR.Interaction.Toolkit.Locomotion.Turning;
 
 namespace Phantom.XRMOD.QuestModule.Runtime
 {
+    /// <summary>
+    /// Holds references to the essential architectural components of the Quest XR rig.
+    /// <para>
+    /// This model is responsible for locating and caching references to cameras, managers (AR, Input, Occlusion),
+    /// providers (Locomotion, Turn, Climb), and controller transforms. It acts as a central registry for accessing these components.
+    /// </para>
+    /// </summary>
     public class ArchitectureComponentsModel : IModel, IReleaseCommand
     {
         internal Camera ARCamera;
@@ -74,11 +81,20 @@ namespace Phantom.XRMOD.QuestModule.Runtime
         private GameObject defaultQuestLauncherGo;
 
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ArchitectureComponentsModel"/> class.
+        /// <para>
+        /// automatically calls <see cref="Initialize"/> to find and cache component references.
+        /// </para>
+        /// </summary>
         public ArchitectureComponentsModel()
         {
             Initialize();
         }
 
+        /// <summary>
+        /// Initializes the model by finding the "DefaultQuestLauncher(Clone)" GameObject and caching its child components.
+        /// </summary>
         public void Initialize()
         {
             defaultQuestLauncherGo = GameObject.Find("DefaultQuestLauncher(Clone)");
@@ -133,6 +149,10 @@ namespace Phantom.XRMOD.QuestModule.Runtime
             RightHandControllerVisualizer = RightHandController.Find("Right Hand Visualizer");
         }
 
+        /// <summary>
+        /// Releases resources. (Currently empty).
+        /// </summary>
+        /// <param name="_projectName">Optional project name context.</param>
         public void Release(string _projectName = default)
         {
         }
