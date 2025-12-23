@@ -13,8 +13,14 @@ using Phantom.XRMOD.ActionNotification.Runtime;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// Event arguments for custom network messaging events.
+    /// </summary>
     public class OnEventCustomNetworkMessagingEventArgs : OnEventBaseArgs
     {
+        /// <summary>
+        /// The raw message data sent over the network.
+        /// </summary>
         public byte[] MessagingData;
     }
 }

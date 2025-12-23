@@ -17,17 +17,30 @@ using UnityEngine.Assertions;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime.TableSystem
 {
+    /// <summary>
+    /// Command to handle client disconnection from a tabletop session.
+    /// </summary>
     public class ClientDisconnected : IConnectionCommand
     {
-        PlayerListNetworkVariable playerListNetworkVariable;
-        NetworkManager networkManager;
+        private PlayerListNetworkVariable playerListNetworkVariable;
+        private NetworkManager networkManager;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ClientDisconnected"/> command.
+        /// </summary>
+        /// <param name="_networkManager">The NetworkManager instance.</param>
+        /// <param name="_playerListNetworkVariable">The network variable tracking the player list.</param>
         public ClientDisconnected(NetworkManager _networkManager, PlayerListNetworkVariable _playerListNetworkVariable)
         {
             playerListNetworkVariable = _playerListNetworkVariable;
             networkManager = _networkManager;
         }
 
+        /// <summary>
+        /// Executes the disconnection logic for a specific player.
+        /// </summary>
+        /// <param name="_playerId">The ID of the player who disconnected.</param>
+        /// <returns><c>true</c> if the player was successfully removed and their object despawned, <c>false</c> otherwise.</returns>
         public bool Execute(ulong _playerId)
         {
             if (!Application.isPlaying || networkManager.ShutdownInProgress) return false;
@@ -45,21 +58,35 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.TableSystem
     }
 
 
+    /// <summary>
+    /// Command to handle client connection to a tabletop session.
+    /// </summary>
     public class ClientConnected : IConnectionCommand
     {
-        PlayerListNetworkVariable playerListNetworkVariable;
-        NetworkManager networkManager;
+        private PlayerListNetworkVariable playerListNetworkVariable;
+        private NetworkManager networkManager;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ClientConnected"/> command.
+        /// </summary>
+        /// <param name="_networkManager">The NetworkManager instance.</param>
+        /// <param name="_playerListNetworkVariable">The network variable tracking the player list.</param>
         public ClientConnected(NetworkManager _networkManager, PlayerListNetworkVariable _playerListNetworkVariable)
         {
             playerListNetworkVariable = _playerListNetworkVariable;
             networkManager = _networkManager;
         }
 
+        /// <summary>
+        /// Executes the connection logic for a specific player, including spawning their avatar.
+        /// </summary>
+        /// <param name="_playerId">The ID of the player who connected.</param>
+        /// <returns><c>true</c> if the player was successfully added to the list, <c>false</c> otherwise.</returns>
         public bool Execute(ulong _playerId)
         {
             Assert.IsNotNull(NetcodeServiceAPI.GetInstance.GetPlayerPrefab.gameObject);
-            // 生成avatar
+            
+            // Spawn avatar
             NetcodeServiceAPI.GetInstance.SpawnPlayerGameObject(_playerId,
                 NetcodeServiceAPI.GetInstance.GetPlayerPrefab.gameObject,
                 Vector3.zero, Quaternion.identity, _onBeforeSpawned: (_go) =>
@@ -69,7 +96,7 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.TableSystem
                 }
             );
 
-            // 添加到玩家列表
+            // Add to player list
             return playerListNetworkVariable.JoinPlayer(_playerId);
         }
     }

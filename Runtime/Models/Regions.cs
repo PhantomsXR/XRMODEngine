@@ -13,23 +13,78 @@ using System;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// Defines geographic regions for Unity multiplayer services.
+    /// </summary>
     public enum RegionType
     {
+        /// <summary>
+        /// South Carolina, USA (us-east1).
+        /// </summary>
         SouthCarolina,
+        
+        /// <summary>
+        /// Iowa, USA (us-central1).
+        /// </summary>
         Iowa,
+        
+        /// <summary>
+        /// Oregon, USA (us-west1).
+        /// </summary>
         Oregon,
+        
+        /// <summary>
+        /// São Paulo, Brazil (southamerica-east1).
+        /// </summary>
         SaoPaulo,
+        
+        /// <summary>
+        /// Finland (europe-north1).
+        /// </summary>
         Finland,
+        
+        /// <summary>
+        /// Poland (europe-central2).
+        /// </summary>
         Poland,
+        
+        /// <summary>
+        /// Netherlands (europe-west4).
+        /// </summary>
         Netherlands,
+        
+        /// <summary>
+        /// Singapore (asia-southeast1).
+        /// </summary>
         Singapore,
+        
+        /// <summary>
+        /// Tokyo, Japan (asia-northeast1).
+        /// </summary>
         Tokyo,
+        
+        /// <summary>
+        /// Mumbai, India (asia-south1).
+        /// </summary>
         Mumbai,
+        
+        /// <summary>
+        /// Sydney, Australia (australia-southeast1).
+        /// </summary>
         Sydney
     }
 
+    /// <summary>
+    /// Extension methods for <see cref="RegionType"/>.
+    /// </summary>
     public static class RegionTypeExtensions
     {
+        /// <summary>
+        /// Converts a <see cref="RegionType"/> to its corresponding Unity region string identifier.
+        /// </summary>
+        /// <param name="_regionType">The region type to convert.</param>
+        /// <returns>The Unity region string identifier.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">Thrown if the region type is not recognized.</exception>
         public static string ToRegionString(this RegionType _regionType)
         {
             switch (_regionType)

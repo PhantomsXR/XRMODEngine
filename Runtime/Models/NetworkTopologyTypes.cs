@@ -11,10 +11,24 @@
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// Defines the available network topology types for multiplayer sessions.
+    /// </summary>
     public enum NetworkTopologyTypes
     {
+        /// <summary>
+        /// Traditional client-server architecture with a dedicated server or host.
+        /// </summary>
         ClientServer,
+        
+        /// <summary>
+        /// Unity Relay-based peer-to-peer networking.
+        /// </summary>
         UnityRelay,
+        
+        /// <summary>
+        /// Distributed authority with no single authoritative server.
+        /// </summary>
         DistributedAuthority,
     }
 }

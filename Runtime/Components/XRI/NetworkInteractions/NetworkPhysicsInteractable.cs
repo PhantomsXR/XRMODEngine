@@ -25,9 +25,18 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.NetworkInteractions
 {
 #if USE_XRI
     /// <summary>
-    /// NetworkInteractableGrab adds some extra functionality to the NetworkBaseInteractable class
-    /// to allow for better immediate feedback on non owner players.
+    /// NetworkPhysicsInteractable extends <see cref="NetworkBaseInteractable"/> to add physics-based networking features.
     /// </summary>
+    /// <remarks>
+    /// This class provides:
+    /// - Collision-based ownership transfer for physics interactions
+    /// - Smooth client-side prediction during ownership transfer
+    /// - Velocity tracking and application on ownership gain
+    /// - Spawn locking to prevent premature interactions
+    /// - Rigidbody state management aligned with network ownership
+    /// 
+    /// Use this class for grabbable objects that require physics interactions across the network.
+    /// </remarks>
     [RequireComponent(typeof(Rigidbody), typeof(ClientNetworkTransform))]
     public class NetworkPhysicsInteractable : NetworkBaseInteractable
     {

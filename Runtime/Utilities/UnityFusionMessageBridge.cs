@@ -18,6 +18,17 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// Singleton message bridge for Unity Fusion networking, providing custom messaging between server and clients.
+    /// </summary>
+    /// <remarks>
+    /// This class manages bidirectional custom message communication:
+    /// - Client-to-Server: Clients can send targeted messages to specific clients via the server
+    /// - Server-to-Client: Server broadcasts messages to individual or all clients
+    /// 
+    /// Messages are automatically serialized and forwarded through named channels.
+    /// Call <see cref="Register"/> after NetworkManager initialization to set up message handlers.
+    /// </remarks>
     public class UnityFusionMessageBridge : SingletonTemplate<UnityFusionMessageBridge>
     {
         private const string _CONST_MSG_SERVER_CHANNEL = "UF_MSG_Forward";
@@ -31,6 +42,13 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
         private CustomMessagingManager msgMgr;
 
 
+        /// <summary>
+        /// Registers the message handlers with the NetworkManager.
+        /// </summary>
+        /// <remarks>
+        /// This should be called once the <see cref="NetworkManager"/> is initialized and ready.
+        /// It sets up the appropriate channels for both server and client messaging.
+        /// </remarks>
         public void Register()
         {
             msgMgr = NetworkManager.Singleton.CustomMessagingManager;
@@ -51,6 +69,14 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
 
         #region Custom Messaging
 
+        /// <summary>
+        /// Sends a custom message to a specific client.
+        /// </summary>
+        /// <param name="_clientId">The target client ID.</param>
+        /// <param name="_data">The raw data to send.</param>
+        /// <remarks>
+        /// If called on a client, the message is first forwarded to the server, which then delivers it to the target client.
+        /// </remarks>
         public void SendToClient(ulong _clientId, byte[] _data)
         {
             if (!NetworkManager.Singleton.IsClient) return;
@@ -62,6 +88,13 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
                 tmp_Writer);
         }
 
+        /// <summary>
+        /// Broadcasts a custom message to all connected clients.
+        /// </summary>
+        /// <param name="_data">The raw data to broadcast.</param>
+        /// <remarks>
+        /// If called on a client, the message is forwarded to the server for global broadcasting.
+        /// </remarks>
         public void SendToAll(byte[] _data)
         {
             if (!NetworkManager.Singleton.IsClient) return;

@@ -18,10 +18,24 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// Extension methods for Unity's NetworkManager providing additional utility functions.
+    /// </summary>
+    /// <remarks>
+    /// Provides:
+    /// - Local player reference caching
+    /// - Convenient player lookup methods
+    /// - Fixed-code generation for session codes
+    /// </remarks>
     public static class NetworkManagerExtension
     {
         private static ulong _LOCAL_PLAYER_REF = ulong.MaxValue;
 
+        /// <summary>
+        /// Gets the cached local player client ID.
+        /// </summary>
+        /// <param name="_networkManager">The NetworkManager instance.</param>
+        /// <returns>The local client ID.</returns>
         public static ulong LocalPlayerRef(this NetworkManager _networkManager)
         {
             if (_LOCAL_PLAYER_REF == ulong.MaxValue)
@@ -29,12 +43,25 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
             return _LOCAL_PLAYER_REF;
         }
 
+        /// <summary>
+        /// Manually sets the local player reference ID.
+        /// </summary>
+        /// <param name="_networkManager">The NetworkManager instance.</param>
+        /// <param name="_playerRef">The client ID to set as local.</param>
+        /// <returns>The newly set client ID.</returns>
         public static ulong SetLocalPlayerRef(this NetworkManager _networkManager, ulong _playerRef)
         {
             _LOCAL_PLAYER_REF = _playerRef;
             return _LOCAL_PLAYER_REF;
         }
 
+        /// <summary>
+        /// Attempts to find a player object by their client ID.
+        /// </summary>
+        /// <param name="_networkManager">The NetworkManager instance.</param>
+        /// <param name="_playerID">The client ID to look for.</param>
+        /// <param name="_player">The found NGOPlayerBase component, if successful.</param>
+        /// <returns>True if the player was found, false otherwise.</returns>
         public static bool TryGetPlayerById(this NetworkManager _networkManager, ulong _playerID,
             out NGOPlayerBase _player)
         {
@@ -61,6 +88,12 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime
         }
 
 
+        /// <summary>
+        /// Generates a short, fixed-length alphanumeric code from an input string (e.g., for session codes).
+        /// </summary>
+        /// <param name="_manager">The NetworkManager instance.</param>
+        /// <param name="_input">The input string to hash.</param>
+        /// <returns>A 6-character alphanumeric code.</returns>
         public static string GetFixedCode(this NetworkManager _manager, string _input)
         {
             const string tmp_const_ConstCharSet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";

@@ -11,6 +11,12 @@
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// A MonoBehaviour-based network variable for synchronizing byte values.
+    /// </summary>
+    /// <remarks>
+    /// Attach this component to a GameObject to expose a synchronized byte value (0-255) in the Inspector.
+    /// </remarks>
     public class ByteNetworkVariable : AbstractNetworkVariable<byte>
     {
     }

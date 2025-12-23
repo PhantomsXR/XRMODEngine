@@ -17,6 +17,9 @@ using UnityEngine.Events;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime.TableSystem
 {
+    /// <summary>
+    /// Manages the networked tabletop system, including seat assignment and player connection events.
+    /// </summary>
     [RequireComponent(typeof(PlayerListNetworkVariable))]
     public class TableTopNetworkedSystem : NetworkBehaviour
     {
@@ -24,12 +27,34 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.TableSystem
         private NetworkList<NetworkedSeat> networkedSeats;
 
 
+        /// <summary>
+        /// Gets the singleton instance of the TableTopNetworkedSystem.
+        /// </summary>
         public static TableTopNetworkedSystem GetInstance => _INSTANCE;
+        
+        /// <summary>
+        /// The network variable tracking the list of connected players.
+        /// </summary>
         public PlayerListNetworkVariable PlayerListNetworkVariable;
+        
+        /// <summary>
+        /// Event triggered when a local player joins a seat.
+        /// </summary>
         public UnityEvent OnJoinSeat;
+        
+        /// <summary>
+        /// Event triggered when a player leaves a seat.
+        /// </summary>
         public UnityEvent<int> OnLeaveSeat;
+        
+        /// <summary>
+        /// Event triggered when seat occupancy changes.
+        /// </summary>
         public UnityEvent<NetworkedSeat, NetworkedSeat> OnOccupiedSeatsChange;
 
+        /// <summary>
+        /// Gets or sets the maximum number of seats available at the table.
+        /// </summary>
         public int MaxSeat
         {
             get => maxSeats;
@@ -40,12 +65,22 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.TableSystem
         [SerializeField] private TableSeatSystem tableSeatSystem;
         [SerializeField] private TableTop tableTop;
 
+        /// <summary>
+        /// Gets the associated TableSeatSystem instance.
+        /// </summary>
         public TableSeatSystem TableSeatSystem => tableSeatSystem;
+        
+        /// <summary>
+        /// Gets the associated TableTop instance.
+        /// </summary>
         public TableTop TableTop => tableTop;
 
         /// <summary>
-        /// Action for when a player connects or disconnects.
+        /// Action invoked when a player connects or disconnects.
         /// </summary>
+        /// <remarks>
+        /// Parameters: (playerId, isConnected)
+        /// </remarks>
         public Action<ulong, bool> OnPlayerStateChanged;
 
         private void Awake()
@@ -85,6 +120,9 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.TableSystem
             }
         }
 
+        /// <summary>
+        /// Called when the network object spawns.
+        /// </summary>
         public override void OnNetworkSpawn()
         {
             if (IsServer)
@@ -102,6 +140,9 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.TableSystem
             RequestAnySeat(NetworkManager.LocalClientId);
         }
 
+        /// <summary>
+        /// Called when the network object despawns.
+        /// </summary>
         public override void OnNetworkDespawn()
         {
             base.OnNetworkDespawn();
@@ -114,6 +155,10 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.TableSystem
             tableSeatSystem.ResetToSeatDefault();
         }
 
+        /// <summary>
+        /// Requests any available seat for the specified player.
+        /// </summary>
+        /// <param name="_playerId">The ID of the player requesting a seat.</param>
         public void RequestAnySeat(ulong _playerId)
         {
             if (!IsValidPlayerId(_playerId))
@@ -125,11 +170,20 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.TableSystem
             RequestSeatServerRpc(_playerId, tableTop.CurrentSeatId);
         }
 
+        /// <summary>
+        /// Requests a specific seat for the local player.
+        /// </summary>
+        /// <param name="_newSeatChoice">The ID of the desired seat.</param>
         public void RequestSeat(int _newSeatChoice)
         {
             RequestSeatServerRpc(NetworkManager.LocalClientId, tableTop.CurrentSeatId, _newSeatChoice);
         }
 
+        /// <summary>
+        /// Gets the player entry for a specific seat.
+        /// </summary>
+        /// <param name="_seatId">The seat ID to query.</param>
+        /// <returns>The player entry occupying that seat.</returns>
         public PlayerEntry GetPlayerBySeatId(int _seatId) => PlayerListNetworkVariable.GetPlayerList[_seatId];
 
 
@@ -140,6 +194,11 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.TableSystem
 
         #region AssignSeat Methods
 
+        /// <summary>
+        /// Checks if a specific seat is occupied.
+        /// </summary>
+        /// <param name="_seatId">The seat ID to check.</param>
+        /// <returns><c>true</c> if the seat is occupied, <c>false</c> otherwise.</returns>
         public bool IsSeatOccupied(int _seatId)
         {
             if (_seatId < 0) return false;
@@ -147,6 +206,12 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.TableSystem
             return networkedSeats[_seatId].isOccupied;
         }
 
+        /// <summary>
+        /// Checks if a specific seat is occupied by a specific player.
+        /// </summary>
+        /// <param name="_seatId">The seat ID to check.</param>
+        /// <param name="_playerId">The player ID to verify.</param>
+        /// <returns><c>true</c> if the seat is occupied by the specified player, <c>false</c> otherwise.</returns>
         public bool IsSeatOccupied(int _seatId, ulong _playerId)
         {
             if (_seatId < 0) return false;

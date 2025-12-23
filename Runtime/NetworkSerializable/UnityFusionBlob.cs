@@ -14,11 +14,27 @@ using Unity.Netcode;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// A network-serializable blob for transmitting arbitrary byte arrays over the network.
+    /// </summary>
+    /// <remarks>
+    /// This struct provides a flexible way to serialize any binary data for network transmission.
+    /// It automatically handles null or empty arrays and efficiently serializes the length and data.
+    /// Use this when you need to send custom binary data that doesn't fit standard serializable types.
+    /// </remarks>
     public struct UnityFusionBlob : INetworkSerializable
     {
         private byte[] data;
+        
+        /// <summary>
+        /// Initializes a new UnityFusionBlob with the specified byte array.
+        /// </summary>
+        /// <param name="_data">The byte array to serialize.</param>
         public UnityFusionBlob(byte[] _data) => data = _data;
 
+        /// <summary>
+        /// Serializes the blob data for network transmission.
+        /// </summary>
         public void NetworkSerialize<T>(BufferSerializer<T> _serializer) where T : IReaderWriter
         {
             if (_serializer.IsWriter)

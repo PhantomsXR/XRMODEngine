@@ -13,6 +13,13 @@ using Unity.Netcode;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// A MonoBehaviour-based network variable for synchronizing integer values.
+    /// </summary>
+    /// <remarks>
+    /// This class extends AbstractNetworkVariable to provide a simple integer synchronization across the network.
+    /// Attach this component to a GameObject to expose a synchronized int value in the Inspector.
+    /// </remarks>
     public class IntegerNetworkVariable : AbstractNetworkVariable<int>
     {
     }

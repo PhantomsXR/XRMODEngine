@@ -11,6 +11,14 @@
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// A MonoBehaviour-based network variable for synchronizing Vector3 values.
+    /// </summary>
+    /// <remarks>
+    /// This class extends AbstractNetworkVariable to provide Vector3 synchronization across the network.
+    /// Useful for synchronizing positions, directions, or any 3D vector data.
+    /// Attach this component to a GameObject to expose a synchronized Vector3 value in the Inspector.
+    /// </remarks>
     public class Vector3NetworkVariable:AbstractNetworkVariable<UnityEngine.Vector3>
     {
         

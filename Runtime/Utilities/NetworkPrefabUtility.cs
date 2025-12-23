@@ -14,8 +14,19 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// Utility class for network prefab validation and management.
+    /// </summary>
     public class NetworkPrefabUtility
     {
+        /// <summary>
+        /// Checks if a given prefab is registered in the <see cref="NetworkManager"/>'s prefab list.
+        /// </summary>
+        /// <param name="_prefab">The GameObject prefab to check.</param>
+        /// <returns>True if the prefab is registered for network spawning, false otherwise.</returns>
+        /// <remarks>
+        /// This is essential to check before calling spawn methods to ensure the server knows about the object.
+        /// </remarks>
         public static bool IsInNetworkPrefabList(GameObject _prefab)
         {
             if (NetworkManager.Singleton == null)

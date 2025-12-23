@@ -14,6 +14,10 @@ using Phantom.XRMOD.NetcodeModule.Runtime.Gameplay;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime.TableSystem
 {
+    /// <summary>
+    /// Represents a player in a tabletop networked environment.
+    /// Extends NGOPlayerBase to integrate with the tabletop system.
+    /// </summary>
     public class TableTopPlayer : NGOPlayerBase
     {
         private TableTopNetworkedSystem tableTopNetworkedSystem;
@@ -23,6 +27,9 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.TableSystem
             tableTopNetworkedSystem = FindFirstObjectByType<TableTopNetworkedSystem>();
         }
 
+        /// <summary>
+        /// Called when the network object spawns.
+        /// </summary>
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
@@ -30,6 +37,9 @@ namespace Phantom.XRMOD.NetcodeModule.Runtime.TableSystem
             // tableTopManager.PlayerJoin(tmp_PlayerRef);
         }
 
+        /// <summary>
+        /// Called when the object is destroyed.
+        /// </summary>
         public override void OnDestroy()
         {
             base.OnDestroy();

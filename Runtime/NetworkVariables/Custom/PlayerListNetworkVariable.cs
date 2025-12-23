@@ -18,6 +18,16 @@ using UnityEngine.Events;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// A network list that manages player entries and provides caching for efficient player lookups.
+    /// </summary>
+    /// <remarks>
+    /// This class maintains a synchronized list of players across the network and provides:
+    /// - Automatic caching of NGOPlayerBase components for quick access
+    /// - Events for player add/remove
+    /// - Ready state tracking for all players
+    /// - Automatic cache rebuilding when the network list changes
+    /// </remarks>
     public class PlayerListNetworkVariable : BaseNetworkVariable, IDisposable
     {
         public readonly NetworkList<PlayerEntry> PlayerList = new();

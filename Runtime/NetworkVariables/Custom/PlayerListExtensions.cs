@@ -14,8 +14,21 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.NetcodeModule.Runtime
 {
+    /// <summary>
+    /// Extension methods for <see cref="PlayerListNetworkVariable"/>.
+    /// </summary>
     public static class PlayerListExtensions
     {
+        /// <summary>
+        /// Retrieves a player GameObject by player ID.
+        /// </summary>
+        /// <param name="_playerList">The player list to search.</param>
+        /// <param name="_playerId">The unique player ID to find.</param>
+        /// <returns>The player's GameObject if found, otherwise null.</returns>
+        /// <remarks>
+        /// This method searches through all NGOPlayerBase components in the scene (including inactive objects)
+        /// to find the matching player. For performance-critical scenarios, consider caching player references.
+        /// </remarks>
         public static GameObject GetPlayer(this PlayerListNetworkVariable _playerList, ulong _playerId)
         {
             var tmp_NgoPlayers =
