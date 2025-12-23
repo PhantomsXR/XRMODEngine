@@ -14,6 +14,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.RokidModule.Runtime
 {
+    /// <summary>
+    /// Implementation of <see cref="IFeatureDecorator"/> for 3-DOF ray interaction on Rokid devices.
+    /// Manages the activation of the 3D ray controller and deactivates hand tracking components.
+    /// </summary>
     public class ThreeDRayInteractorFeature : IFeatureDecorator
     {
         private RokidRuntimeContextModel rokidRuntimeContextModel;
@@ -29,6 +33,10 @@ namespace Phantom.XRMOD.RokidModule.Runtime
             return true;
         }
 
+        /// <summary>
+        /// Starts the 3D ray interaction algorithm.
+        /// Disables hand tracking components and enables the 3D ray controller.
+        /// </summary>
         public void StartAlgorithm()
         {
             rokidRuntimeContextModel.XRInputModalityManager.enabled = false;
@@ -44,6 +52,10 @@ namespace Phantom.XRMOD.RokidModule.Runtime
         {
         }
 
+        /// <summary>
+        /// Stops the 3D ray interaction algorithm.
+        /// Disables the 3D ray controller and all other input related components.
+        /// </summary>
         public void StopAlgorithm()
         {
             rokidRuntimeContextModel.XRInputModalityManager.enabled = false;

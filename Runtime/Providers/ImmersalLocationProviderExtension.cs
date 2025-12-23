@@ -20,16 +20,37 @@ using UnityEngine.Android;
 
 namespace Phantom.XRMOD.RokidModule.Runtime
 {
+    /// <summary>
+    /// Provides location services for Immersal SDK on Rokid devices.
+    /// Extends Unity's location functionality to support Immersal's requirements.
+    /// </summary>
     public class ImmersalLocationProviderExtension : MonoBehaviour
     {
+        /// <summary>
+        /// Current latitude.
+        /// </summary>
         public double latitude { get; private set; } = 0;
+
+        /// <summary>
+        /// Current longitude.
+        /// </summary>
         public double longitude { get; private set; } = 0;
+
+        /// <summary>
+        /// Current altitude.
+        /// </summary>
         public double altitude { get; private set; } = 0.0;
 
         private static ImmersalLocationProviderExtension INSTANCE;
 
+        /// <summary>
+        /// Action triggered when geolocation tracking starts.
+        /// </summary>
         public Action StartGeolocationTracking;
 
+        /// <summary>
+        /// Checks if GPS is enabled and running.
+        /// </summary>
         public bool gpsOn
         {
 #if (UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR
@@ -39,6 +60,9 @@ namespace Phantom.XRMOD.RokidModule.Runtime
 #endif
         }
 
+        /// <summary>
+        /// Singleton instance of the location provider.
+        /// </summary>
         public static ImmersalLocationProviderExtension Instance
         {
             get

@@ -13,13 +13,23 @@ using Phantom.XRMOD.Core.Runtime;
 
 namespace Phantom.XRMOD.RokidModule.Runtime
 {
+    /// <summary>
+    /// Command to build and initialize natural hand input interactions for Rokid devices.
+    /// </summary>
     public class BuildNatureHandInputFeatureCommand : BaseBuildFeature<HandInteractorFeature>, ICommand, IReleaseCommand
     {
+        /// <summary>
+        /// Executes the command to create the hand interactor feature.
+        /// </summary>
         public void Execute()
         {
             base.Create();
         }
 
+        /// <summary>
+        /// Releases the hand interactor feature.
+        /// </summary>
+        /// <param name="_projectName">Optional project name (unused).</param>
         public void Release(string _projectName = default)
         {
             base.ReleaseFeature();

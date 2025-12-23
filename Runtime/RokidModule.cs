@@ -23,10 +23,18 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.RokidModule.Runtime
 {
+    /// <summary>
+    /// The main entry point for the Rokid module integration in XRMOD.
+    /// Manages lifecycle, feature activation, input switching, and configuration updates for Rokid devices.
+    /// </summary>
     public class RokidModule : IModule
     {
         private const string CONST_SWITH_INPUT_KEY = "SwitchInput";
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RokidModule"/>.
+        /// Sets up observers for dependency registration, input switching, and configuration data.
+        /// </summary>
         public RokidModule()
         {
             ActionNotificationCenter.DefaultCenter.AddObserver((_data) => { MakeSureDependencies(); },
@@ -64,6 +72,11 @@ namespace Phantom.XRMOD.RokidModule.Runtime
         }
 
 
+        /// <summary>
+        /// Starts the Rokid module.
+        /// Triggers the project detail fetch notification.
+        /// </summary>
+        /// <returns>True if started successfully.</returns>
         public bool StartModule()
         {
             ActionNotificationCenter.DefaultCenter.PostNotification(nameof(ActionParameterDataType.FetchProjectDetail),
@@ -74,11 +87,20 @@ namespace Phantom.XRMOD.RokidModule.Runtime
         }
 
 
+        /// <summary>
+        /// Pauses the module. Currently not implemented.
+        /// </summary>
+        /// <returns>Always false.</returns>
         public bool PauseModule()
         {
             return false;
         }
 
+        /// <summary>
+        /// Stops the module and releases resources.
+        /// Unregisters features and event listeners.
+        /// </summary>
+        /// <returns>Always false.</returns>
         public bool StopModule()
         {
             IocContainer.GetIoc.Resolve<BuildNatureHandInputFeatureCommand>().Release();
@@ -92,11 +114,18 @@ namespace Phantom.XRMOD.RokidModule.Runtime
             return false;
         }
 
+        /// <summary>
+        /// Checks if the module is available on the current platform.
+        /// </summary>
+        /// <returns>True if available.</returns>
         public bool IsModuleAvailability()
         {
             return true;
         }
 
+        /// <summary>
+        /// Ensures all necessary dependencies are registered.
+        /// </summary>
         public void MakeSureDependencies()
         {
         }

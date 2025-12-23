@@ -13,6 +13,9 @@ using Phantom.XRMOD.ActionNotification.Runtime;
 
 namespace Phantom.XRMOD.RokidModule.Runtime
 {
+    /// <summary>
+    /// Constants used within the Rokid module.
+    /// </summary>
     public class ConstKey
     {
         public const string CONST_ON_EVENT = nameof(ActionParameterDataType.OnEvent);

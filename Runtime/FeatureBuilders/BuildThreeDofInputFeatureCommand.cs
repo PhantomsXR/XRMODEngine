@@ -13,13 +13,23 @@ using Phantom.XRMOD.Core.Runtime;
 
 namespace Phantom.XRMOD.RokidModule.Runtime
 {
+    /// <summary>
+    /// Command to build and initialize 3-DOF ray interaction for Rokid devices.
+    /// </summary>
     public class BuildThreeDofInputFeatureCommand: BaseBuildFeature<ThreeDRayInteractorFeature>, ICommand, IReleaseCommand
     {
+        /// <summary>
+        /// Executes the command to create the 3-DOF ray interactor feature.
+        /// </summary>
         public void Execute()
         {
             base.Create();
         }
 
+        /// <summary>
+        /// Releases the 3-DOF ray interactor feature.
+        /// </summary>
+        /// <param name="_projectName">Optional project name (unused).</param>
         public void Release(string _projectName = default)
         {
             base.ReleaseFeature();
