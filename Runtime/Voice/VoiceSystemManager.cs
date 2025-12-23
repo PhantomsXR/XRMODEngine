@@ -15,22 +15,47 @@ using UnityEngine.Assertions;
 
 namespace Phantom.XRMOD.GameServices.Runtime
 {
+    /// <summary>
+    /// Types of voice channels that can be joined.
+    /// </summary>
     public enum JoinChannelType
     {
+        /// <summary>
+        /// Standard group voice channel.
+        /// </summary>
         Group,
+        /// <summary>
+        /// Echo channel for testing the user's voice.
+        /// </summary>
         Echo,
+        /// <summary>
+        /// Positional audio channel for 3D spatialized voice.
+        /// </summary>
         Positional
     }
-
+    /// <summary>
+    /// Manages the Voice communication system.
+    /// Supports various providers like Vivox, Agora, and Photon Voice.
+    /// </summary>
     public class VoiceSystemManager : IVoiceProvider, ITextMessage
     {
         private IVoiceProvider voiceProvider;
 
         private static VoiceSystemManager _INSTANCE;
 
+        /// <summary>
+        /// Singleton instance of VoiceSystemManager.
+        /// </summary>
         public static VoiceSystemManager GetInstance => _INSTANCE ??= new VoiceSystemManager();
+
+        /// <summary>
+        /// The name of the current voice channel.
+        /// </summary>
         public string ChannelName;
 
+        /// <summary>
+        /// Whether the voice system is initialized.
+        /// </summary>
         public bool Initialized { get; private set; }
 
         private VoiceSystemManager()
@@ -45,7 +70,11 @@ namespace Phantom.XRMOD.GameServices.Runtime
             Assert.IsNotNull(voiceProvider, "Voice provider is empty.");
         }
 
-
+        /// <summary>
+        /// Initializes the voice provider with a JSON configuration and 3D audio properties.
+        /// </summary>
+        /// <param name="_configuration">JSON configuration string for the voice provider.</param>
+        /// <param name="_voice3DProperties">Properties for 3D audio positioning.</param>
         public void Initialize(string _configuration, Voice3DProperties _voice3DProperties)
         {
             if (Initialized) return;
@@ -53,9 +82,13 @@ namespace Phantom.XRMOD.GameServices.Runtime
             Initialized = true;
         }
 
+        /// <summary>
+        /// De-initializes the voice provider.
+        /// </summary>
         public void DeInitialize()
         {
             voiceProvider.DeInitialize();
+            Initialized = false;
         }
 
         /// <summary>
