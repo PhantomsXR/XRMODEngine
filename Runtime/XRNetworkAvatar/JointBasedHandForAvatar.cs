@@ -21,11 +21,15 @@ using UnityEngine.XR.Hands;
 
 namespace Phantom.XRMOD.XRMODAvatar.Runtime.XR
 {
+    /// <summary>
+    /// Controls the animation of an avatar's hand based on joint data or simplified curl values.
+    /// Supports different levels of fidelity for finger movements.
+    /// </summary>
     public class JointBasedHandForAvatar : MonoBehaviour
     {
 #if USE_XR_HAND
         /// <summary>
-        /// Controls how the fingers are updated.
+        /// Gets or sets whether simplified curl values are used for finger animation.
         /// Curl allows for a much more lightweight approximation of finger movements.
         /// </summary>
         public bool useCurl
@@ -37,9 +41,12 @@ namespace Phantom.XRMOD.XRMODAvatar.Runtime.XR
         bool m_UseCurl;
 
         /// <summary>
-        /// Controls the level of fidelity for fingers.
+        /// Gets or sets the level of fidelity for finger animations.
+        /// 0: High fidelity (per-joint rotations).
+        /// 1: Medium (curl-based).
+        /// 2: Low (mitten-like curl).
         /// </summary>
-        /// <remarks>Set from <see cref="XRHandPoseReplicator.SetFidelity(int)"/>.</remarks>
+        /// <remarks>Typically controlled by <see cref="NetworkXRHandPoseReplicator"/>.</remarks>
         public int fidelityLevel
         {
             get => m_FidelityLevel;
@@ -122,11 +129,10 @@ namespace Phantom.XRMOD.XRMODAvatar.Runtime.XR
         }
 
         /// <summary>
-        /// Controls the Curl level of fingers.
+        /// Sets the curl amount for a specific finger.
         /// </summary>
-        /// <remarks>Called from <see cref="XRHandPoseReplicator.GetNetworkCurl()"/>.</remarks>
-        /// <param name="fingerID">ID of the specific finger.</param>
-        /// <param name="curlAmount">Amount to curl the finger.</param>
+        /// <param name="fingerID">The index of the finger (0: Thumb, 1: Index, etc.).</param>
+        /// <param name="curlAmount">The normalized curl amount (0: Open, 1: Closed).</param>
         public void SetCurl(int fingerID, float curlAmount)
         {
             handFidelityOptions[m_FidelityLevel].FingerJoints[fingerID].CurlAmount = curlAmount;

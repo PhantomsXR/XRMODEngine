@@ -14,10 +14,16 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.XRMODAvatar.Runtime.XR
 {
-#if USE_XR_HAND
+#if USE_XR_HAND 
+    /// <summary>
+    /// Configuration options for different hand fidelity levels.
+    /// </summary>
     [System.Serializable]
     public struct HandFidelityOption
     {
+        /// <summary>
+        /// Array of finger joint configurations for this fidelity level.
+        /// </summary>
         public FingerJoints[] FingerJoints;
     }
 
