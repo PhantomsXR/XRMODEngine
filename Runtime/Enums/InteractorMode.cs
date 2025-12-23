@@ -12,10 +12,22 @@
 
 namespace Phantom.XRMOD.XRMODInput.Runtime
 {
+    /// <summary>
+    /// Specifies the interaction range mode.
+    /// </summary>
     public enum InteractorMode
     {
+        /// <summary>
+        /// Distant interaction (e.g., ray casting).
+        /// </summary>
         Far,
+        /// <summary>
+        /// Close-range interaction (e.g., direct touch).
+        /// </summary>
         Near,
+        /// <summary>
+        /// Both far and near interaction modes.
+        /// </summary>
         Both,
     }
 }

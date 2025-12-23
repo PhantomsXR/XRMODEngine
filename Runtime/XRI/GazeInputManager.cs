@@ -31,7 +31,7 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
         bool fallbackIfEyeTrackingUnavailable = true;
 
         /// <summary>
-        /// Enable fallback to head tracking if eye tracking is unavailable.
+        /// Gets or sets whether to enable fallback to head tracking if eye tracking is unavailable.
         /// </summary>
         public bool FallbackIfEyeTrackingUnavailable
         {

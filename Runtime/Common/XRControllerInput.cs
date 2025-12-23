@@ -87,13 +87,13 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
 
 
         /// <summary>
-        /// Get XR controller input state.
+        /// Attempts to get the button input state from an XR controller.
         /// </summary>
-        /// <param name="_handedness">Left or right xr controller</param>
-        /// <param name="_controllerKey">The input key from xr controller</param>
-        /// <param name="_value">The input result 0-1.</param>
-        /// <returns>If true the key was pressed,otherwise</returns>
-        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <param name="_handedness">The handedness (Left or Right) of the controller to query.</param>
+        /// <param name="_controllerKey">The specific button/key on the controller.</param>
+        /// <param name="_value">The resulting input value (0.0 to 1.0).</param>
+        /// <returns><c>true</c> if the button is determined to be pressed (value > 0.9), <c>false</c> otherwise.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">Thrown if an invalid controller key is provided.</exception>
         public bool TryGetXRControllerButtonInput(Handedness _handedness, XRControllerKey _controllerKey,
             out float _value)
         {
@@ -139,11 +139,11 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
         }
 
         /// <summary>
-        /// Get xr controller joystick axis
+        /// Attempts to get the joystick/thumbstick axis value from an XR controller.
         /// </summary>
-        /// <param name="_handedness">Left or right xr controller</param>
-        /// <param name="_axis">The xr controller input axis value</param>
-        /// <returns>If False, it means that your current input device is not XRController</returns>
+        /// <param name="_handedness">The handedness (Left or Right) of the controller to query.</param>
+        /// <param name="_axis">The resulting 2D axis value.</param>
+        /// <returns><c>true</c> if the axis value was successfully retrieved, <c>false</c> otherwise (e.g., if the current input modality is not XRController).</returns>
         public bool TryGetXRControllerAxis(Handedness _handedness, out Vector2 _axis)
         {
             _axis = Vector2.zero;
@@ -156,13 +156,13 @@ namespace Phantom.XRMOD.XRMODInput.Runtime
 
 
         /// <summary>
-        /// Get the XR Controller position and rotation
+        /// Attempts to get the world space position and rotation (pose) of an XR controller.
         /// </summary>
-        /// <param name="_handedness">Left or right xr controller</param>
-        /// <param name="_position">The XRController position</param>
-        /// <param name="_rotation">The XRController rotation</param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <param name="_handedness">The handedness (Left or Right) of the controller to query.</param>
+        /// <param name="_position">The resulting world position of the controller.</param>
+        /// <param name="_rotation">The resulting world rotation of the controller.</param>
+        /// <returns><c>true</c> if the pose was successfully retrieved, <c>false</c> otherwise.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">Thrown if an invalid handedness is provided.</exception>
         public bool TryGetXRControllerPose(Handedness _handedness, out Vector3 _position, out Quaternion _rotation)
         {
             _position = Vector3.zero;
