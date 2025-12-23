@@ -39,7 +39,7 @@ We believe in the democratization of the Spatial Web. XRMOD is fully open-source
 - Roblox-like Capability: Use XRMOD as a bottom-layer driver to allow your users to create content within your
   framework.
 
-- No "Tax": You own t[README.zh.md](README.zh.md)he user. You own the data. You own the monetization.
+- No "Tax": You own the user. You own the data. You own the monetization.
 
 ## The Universal Language (Write Once, Flow Everywhere)
 
