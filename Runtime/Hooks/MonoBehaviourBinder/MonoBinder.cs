@@ -19,9 +19,20 @@ using Phantom.XRMOD.ActionNotification.Runtime;
 
 namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
 {
+    /// <summary>
+    /// Component responsible for binding runtime scripts to a GameObject and setting their field values.
+    /// It acts as a bridge between the serialized script data and the live ILRuntime/CLR instances.
+    /// </summary>
     public class MonoBinder : MonoBehaviour
     {
+        /// <summary>
+        /// List of script data to be instantiated and bound to this GameObject.
+        /// </summary>
         public List<MonoData> ScriptList;
+
+        /// <summary>
+        /// The default render state for this GameObject when scripts are added.
+        /// </summary>
         public RenderStateType DefaultRenderState = RenderStateType.None;
 
         private readonly RuntimeFieldHandlerFactory runtimeFieldHandlerFactory = new(new DbAssetProvider());
@@ -52,6 +63,10 @@ namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
                 ProcessMonoBinderTrigger);
         }
 
+        /// <summary>
+        /// Manually triggers the binding process for this MonoBinder.
+        /// </summary>
+        /// <param name="_baseNotification">Notification data (optional).</param>
         public void ProcessMonoBinderTrigger(BaseNotificationData _baseNotification)
         {
             if (isConverting) return;

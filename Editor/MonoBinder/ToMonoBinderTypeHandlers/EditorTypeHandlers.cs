@@ -16,7 +16,6 @@ using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
 using Phantom.XRMOD.Core.Runtime;
-using Phantom.XRMOD.Core.Runtime.Attribute;
 using Phantom.XRMOD.UnityFusion.Runtime;
 using Phantom.XRMOD.UnityFusion.Runtime.CodeHook;
 using UnityEngine;

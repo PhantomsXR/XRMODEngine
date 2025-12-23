@@ -8,6 +8,10 @@ using AppDomain = UnityFusion.Runtime.Enviorment.AppDomain;
 
 namespace UnityFusion.CLRBinding.Adapter
 {
+    /// <summary>
+    /// Adapter for <see cref="IAsyncStateMachine"/>.
+    /// Enables async/await functionality for methods within the hot-reload domain.
+    /// </summary>
     public class AsyncStateMachineClassInheritanceAdaptor : CrossBindingAdaptor
     {
         public override Type BaseCLRType => typeof(IAsyncStateMachine);
@@ -19,6 +23,9 @@ namespace UnityFusion.CLRBinding.Adapter
             return new AsyncStateMachineAdaptor(_appdomain, _instance);
         }
 
+        /// <summary>
+        /// The implementation class that bridges async state machine calls to the hot-reload domain.
+        /// </summary>
         public class AsyncStateMachineAdaptor : IAsyncStateMachine, CrossBindingAdaptorType
         {
             private readonly ILTypeInstance instance;

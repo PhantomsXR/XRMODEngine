@@ -13,6 +13,10 @@ using System.Threading.Tasks;
 
 namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
 {
+    /// <summary>
+    /// A binding step responsible for adding runtime-defined classes as components to the target GameObject.
+    /// This is typically the first step in the binding process after preparing the render state.
+    /// </summary>
     public class AddRuntimeScriptStep : IBindingStep
     {
         public BindingPhase Phase { get; } = BindingPhase.AddClass;

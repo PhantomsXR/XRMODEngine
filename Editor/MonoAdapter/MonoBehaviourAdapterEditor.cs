@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
-using Phantom.XRMOD.Core.Runtime.Attribute;
+using Phantom.XRMOD.Core.Runtime;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;

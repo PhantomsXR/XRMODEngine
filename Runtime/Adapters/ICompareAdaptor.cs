@@ -5,6 +5,10 @@ using UnityFusion.Runtime.Intepreter;
 
 namespace  UnityFusion.CLRBinding.Adapter
 {   
+    /// <summary>
+    /// Adapter for <see cref="System.Collections.Generic.IComparer{Transform}"/>.
+    /// Allows custom sorting logic for Unity Transforms within the hot-reload domain.
+    /// </summary>
     public class IComparer_1_TransformAdapter : CrossBindingAdaptor
     {
         static CrossBindingFunctionInfo<UnityEngine.Transform, UnityEngine.Transform, System.Int32> mCompare_0 = new CrossBindingFunctionInfo<UnityEngine.Transform, UnityEngine.Transform, System.Int32>("Compare");
@@ -29,6 +33,9 @@ namespace  UnityFusion.CLRBinding.Adapter
             return new Adapter(appdomain, instance);
         }
 
+        /// <summary>
+        /// The implementation class that bridges IComparer calls to the hot-reload domain.
+        /// </summary>
         public class Adapter : System.Collections.Generic.IComparer<UnityEngine.Transform>, CrossBindingAdaptorType
         {
             ILTypeInstance instance;

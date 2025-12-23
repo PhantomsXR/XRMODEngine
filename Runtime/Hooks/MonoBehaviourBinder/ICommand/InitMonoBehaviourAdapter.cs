@@ -17,6 +17,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook.ICommand
 {
+    /// <summary>
+    /// Command to initialize and add an <see cref="XRMODBehaviourAdapter.Adapter"/> to a GameObject.
+    /// Handles the setup of the ILRuntime instance, AppDomain, and constructor invocation.
+    /// </summary>
     public class InitMonoBehaviourAdapter : BaseInitCommandAdapter<XRMODBehaviourAdapter.Adapter>
     {
         public InitMonoBehaviourAdapter(GameObject _gameObject, ILTypeInstance _instance, MonoData _monoData,

@@ -16,6 +16,10 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook.ICommand
 {
+    /// <summary>
+    /// Command to initialize and add a <see cref="UIBehaviourAdaptor.Adapter"/> to a GameObject.
+    /// Specifically tailored for hot-reload UI components.
+    /// </summary>
     public class InitUIMonoBehaviourAdaptor : BaseInitCommandAdapter<UIBehaviourAdaptor.Adapter>
     {
         public InitUIMonoBehaviourAdaptor(GameObject _gameObject, ILTypeInstance _instance, MonoData _monoData,

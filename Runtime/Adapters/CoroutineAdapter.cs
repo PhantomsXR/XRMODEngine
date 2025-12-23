@@ -7,6 +7,10 @@ using UnityFusion.Runtime.Intepreter;
 
 namespace UnityFusion.CLRBinding.Adapter
 {
+    /// <summary>
+    /// Adapter for serializing and managing coroutines across the domain boundary.
+    /// Supports <see cref="IEnumerator"/> and <see cref="IDisposable"/>.
+    /// </summary>
     public class CoroutineAdapter : CrossBindingAdaptor
     {
         public override Type BaseCLRType => null;
@@ -20,6 +24,10 @@ namespace UnityFusion.CLRBinding.Adapter
             return new CoroutineAdaptor(appdomain, instance);
         }
         //Coroutine生成的类实现了IEnumerator<System.Object>, IEnumerator, IDisposable,所以都要实现，这个可以通过reflector之类的IL反编译软件得知
+        /// <summary>
+        /// Internal implementation of the coroutine adapter.
+        /// Coroutine generated classes implement <see cref="IEnumerator{object}"/>, <see cref="IEnumerator"/>, and <see cref="IDisposable"/>.
+        /// </summary>
         public class CoroutineAdaptor : IEnumerator<System.Object>, IEnumerator, IDisposable, CrossBindingAdaptorType
         {
             ILTypeInstance instance;

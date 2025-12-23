@@ -13,6 +13,10 @@ using System.Threading.Tasks;
 
 namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook
 {
+    /// <summary>
+    /// A binding step responsible for activating runtime scripts that haven't been activated yet.
+    /// Part of the <see cref="MonoBinder"/> initialization lifecycle.
+    /// </summary>
     public class ActivateStep : IBindingStep
     {
         public BindingPhase Phase { get; } = BindingPhase.Activate;

@@ -15,6 +15,11 @@ using UnityEngine;
 
 namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook.ICommand
 {
+    /// <summary>
+    /// Abstract base class for commands that initialize a specific type of adapter.
+    /// Stores the context required for setting up a hot-reload script on a Unity GameObject.
+    /// </summary>
+    /// <typeparam name="T">The type of adapter being initialized.</typeparam>
     public abstract class BaseInitCommandAdapter<T> 
     {
         protected readonly GameObject GameObject;
@@ -31,6 +36,10 @@ namespace Phantom.XRMOD.UnityFusion.Runtime.CodeHook.ICommand
             ILType = _iLType;
         }
 
+        /// <summary>
+        /// Executes the initialization logic for the adapter.
+        /// </summary>
+        /// <returns>The initialized adapter instance.</returns>
         public abstract T Execute();
     }
 }

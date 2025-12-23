@@ -5,6 +5,10 @@ using UnityFusion.Runtime.Intepreter;
 
 namespace UnityFusion.CLRBinding.Adapter
 {
+    /// <summary>
+    /// Adapter for <see cref="BaseNotificationData"/>.
+    /// Enables cross-domain notification data transmission and inheritance.
+    /// </summary>
     public class BaseNotificationDataAdapter : CrossBindingAdaptor
     {
         public override Type BaseCLRType => typeof(Phantom.XRMOD.ActionNotification.Runtime.BaseNotificationData);
@@ -16,6 +20,9 @@ namespace UnityFusion.CLRBinding.Adapter
             return new Adapter(_appdomain, _instance);
         }
 
+        /// <summary>
+        /// The implementation class that bridges BaseNotificationData to the hot-reload domain.
+        /// </summary>
         public class Adapter : Phantom.XRMOD.ActionNotification.Runtime.BaseNotificationData, CrossBindingAdaptorType
         {
             readonly ILTypeInstance instance;
