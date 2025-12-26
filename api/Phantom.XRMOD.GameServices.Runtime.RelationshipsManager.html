@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RelationshipsManager |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RelationshipsManager |  |  ">
+      
+      <meta name="description" content="Manages relationships between players, including friends, friend requests, and blocking. Wraps Unity&#39;s Friends Service.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Phantom_XRMOD_GameServices_Runtime_RelationshipsManager.md&amp;value=---%0Auid%3A%20Phantom.XRMOD.GameServices.Runtime.RelationshipsManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager">
+
+
+
+  <h1 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager" class="text-break">
+Class RelationshipsManager  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Phantom.html">Phantom</a>.<a class="xref" href="Phantom.XRMOD.html">XRMOD</a>.<a class="xref" href="Phantom.XRMOD.GameServices.html">GameServices</a>.<a class="xref" href="Phantom.XRMOD.GameServices.Runtime.html">Runtime</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Manages relationships between players, including friends, friend requests, and blocking.
+Wraps Unity's Friends Service.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RelationshipsManager : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">RelationshipsManager</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Cysharp.Threading.Tasks.CancellationTokenExtensions.html#Cysharp_Threading_Tasks_CancellationTokenExtensions_AddTo_System_IDisposable_System_Threading_CancellationToken_">CancellationTokenExtensions.AddTo(IDisposable, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_relationshipsView" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.relationshipsView">
+  relationshipsView
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IRelationshipsView relationshipsView</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.GameServices.Runtime.IRelationshipsView.html">IRelationshipsView</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_GetInstance_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.GetInstance*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_GetInstance" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.GetInstance">
+  GetInstance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Singleton instance of RelationshipsManager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RelationshipsManager GetInstance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.html">RelationshipsManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_AcceptRequestAsync_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.AcceptRequestAsync*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_AcceptRequestAsync_System_String_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.AcceptRequestAsync(System.String)">
+  AcceptRequestAsync(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AcceptRequestAsync(string _name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_AddFriendAsync_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.AddFriendAsync*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_AddFriendAsync_System_String_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.AddFriendAsync(System.String)">
+  AddFriendAsync(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddFriendAsync(string _name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_BlockFriendAsync_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.BlockFriendAsync*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_BlockFriendAsync_System_String_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.BlockFriendAsync(System.String)">
+  BlockFriendAsync(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BlockFriendAsync(string _id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_ChangeAvailability_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.ChangeAvailability*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_ChangeAvailability_Availability_System_String_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.ChangeAvailability(Availability,System.String)">
+  ChangeAvailability(Availability, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L349"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ChangeAvailability(Availability _availability, string _status)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_availability</code> <span class="xref">Availability</span></dt>
+    <dd></dd>
+    <dt><code>_status</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_DeclineRequestAsync_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.DeclineRequestAsync*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_DeclineRequestAsync_System_String_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.DeclineRequestAsync(System.String)">
+  DeclineRequestAsync(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DeclineRequestAsync(string _id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_Dispose_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.Dispose*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_Dispose" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_GetFriends_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.GetFriends*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_GetFriends" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.GetFriends">
+  GetFriends()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get an amount of friends (including presence data).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Member&gt; GetFriends()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Member</span>&gt;</dt>
+    <dd><p>List of friends.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_GetRequests_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.GetRequests*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_GetRequests" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.GetRequests">
+  GetRequests()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L344"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get an amount of Requests. The friends SDK maintains relationships unless explicitly deleted, even those
+towards blocked players. We don't want to show blocked players' requests, so we filter them out.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Member&gt; GetRequests()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Member</span>&gt;</dt>
+    <dd><p>List of players.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_InitFriendProvider_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.InitFriendProvider*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_InitFriendProvider_Phantom_XRMOD_GameServices_Runtime_UserInfoModel_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.InitFriendProvider(Phantom.XRMOD.GameServices.Runtime.UserInfoModel)">
+  InitFriendProvider(UserInfoModel)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the Friend provider with user data.
+Sets up the service, binds views, and signs in the local player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitFriendProvider(UserInfoModel _data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_data</code> <a class="xref" href="Phantom.XRMOD.GameServices.Runtime.UserInfoModel.html">UserInfoModel</a></dt>
+    <dd><p>The user data model for the local player.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_RefreshAll_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.RefreshAll*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_RefreshAll" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.RefreshAll">
+  RefreshAll()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RefreshAll()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_RefreshBlocks_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.RefreshBlocks*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_RefreshBlocks" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.RefreshBlocks">
+  RefreshBlocks()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RefreshBlocks()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_RefreshFriends_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.RefreshFriends*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_RefreshFriends" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.RefreshFriends">
+  RefreshFriends()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RefreshFriends()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_RefreshRequests_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.RefreshRequests*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_RefreshRequests" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.RefreshRequests">
+  RefreshRequests()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RefreshRequests()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_RemoveFriendAsync_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.RemoveFriendAsync*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_RemoveFriendAsync_System_String_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.RemoveFriendAsync(System.String)">
+  RemoveFriendAsync(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveFriendAsync(string _id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_SetPresenceAsync_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.SetPresenceAsync*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_SetPresenceAsync_System_ValueTuple_Availability_System_String__" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.SetPresenceAsync(System.ValueTuple{Availability,System.String})">
+  SetPresenceAsync((Availability presence, string activity))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPresenceAsync((Availability presence, string activity) _status)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_status</code> (<span class="xref">Availability</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-availability,system.string-.presence">presence</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-availability,system.string-.activity">activity</a>)</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_UnblockFriendAsync_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.UnblockFriendAsync*"></a>
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_UnblockFriendAsync_System_String_" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.UnblockFriendAsync(System.String)">
+  UnblockFriendAsync(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnblockFriendAsync(string _id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Phantom_XRMOD_GameServices_Runtime_RelationshipsManager_FriendSignedIn" data-uid="Phantom.XRMOD.GameServices.Runtime.RelationshipsManager.FriendSignedIn">
+  FriendSignedIn
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGameServices/Runtime/Friends/Managers/RelationshipsManager.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action FriendSignedIn</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

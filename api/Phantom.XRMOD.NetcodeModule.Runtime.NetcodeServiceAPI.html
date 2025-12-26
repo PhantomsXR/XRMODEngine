@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NetcodeServiceAPI |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NetcodeServiceAPI |  |  ">
+      
+      <meta name="description" content="Manages Unity Netcode for GameObjects services, including session creation, joining, and network object spawning. This class provides a simplified API for common multiplayer operations and integrates with a notification system.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI.md&amp;value=---%0Auid%3A%20Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI">
+
+
+
+  <h1 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI" class="text-break">
+Class NetcodeServiceAPI  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Phantom.html">Phantom</a>.<a class="xref" href="Phantom.XRMOD.html">XRMOD</a>.<a class="xref" href="Phantom.XRMOD.NetcodeModule.html">NetcodeModule</a>.<a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.html">Runtime</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Manages Unity Netcode for GameObjects services, including session creation, joining, and network object spawning.
+This class provides a simplified API for common multiplayer operations and integrates with a notification system.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NetcodeServiceAPI</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NetcodeServiceAPI</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetCurrentSession_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.GetCurrentSession*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetCurrentSession" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.GetCurrentSession">
+  GetCurrentSession
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current active multiplayer session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISession GetCurrentSession { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ISession</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetCurrentSessionCode_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.GetCurrentSessionCode*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetCurrentSessionCode" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.GetCurrentSessionCode">
+  GetCurrentSessionCode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the unique code for the current session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetCurrentSessionCode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetCurrentSessionCode_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Returns the session code if using Unity Multiplayer Services, or a fixed code based on the address if using Client-Server topology.</p>
+</div>
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetCurrentSessionName_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.GetCurrentSessionName*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetCurrentSessionName" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.GetCurrentSessionName">
+  GetCurrentSessionName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current session name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetCurrentSessionName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetInstance_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.GetInstance*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetInstance" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.GetInstance">
+  GetInstance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the singleton instance of the <a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.html">NetcodeServiceAPI</a>.
+If no instance exists, a new one is created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NetcodeServiceAPI GetInstance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.html">NetcodeServiceAPI</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetNetworkManager_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.GetNetworkManager*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetNetworkManager" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.GetNetworkManager">
+  GetNetworkManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the underlying Unity NetworkManager instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetworkManager GetNetworkManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">NetworkManager</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetPlayerPrefab_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.GetPlayerPrefab*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetPlayerPrefab" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.GetPlayerPrefab">
+  GetPlayerPrefab
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the currently registered network player prefab.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetworkObject GetPlayerPrefab { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">NetworkObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetPlayerPrefab_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This prefab is used to instantiate the player object for connected clients.</p>
+</div>
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetUnityTransport_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.GetUnityTransport*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetUnityTransport" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.GetUnityTransport">
+  GetUnityTransport
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the underlying Unity UnityTransport instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityTransport GetUnityTransport { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UnityTransport</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_IsClient_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.IsClient*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_IsClient" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.IsClient">
+  IsClient
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the current instance is acting as a client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsClient { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_IsHost_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.IsHost*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_IsHost" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.IsHost">
+  IsHost
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the current instance is acting as a host (both server and client).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsHost { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_IsServer_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.IsServer*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_IsServer" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.IsServer">
+  IsServer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the current instance is acting as a server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsServer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_NetworkTopologyTypes_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.NetworkTopologyTypes*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_NetworkTopologyTypes" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.NetworkTopologyTypes">
+  NetworkTopologyTypes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current network topology type (e.g., ClientServer, UnityRelay, DistributedAuthority).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetworkTopologyTypes NetworkTopologyTypes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.NetworkTopologyTypes.html">NetworkTopologyTypes</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_CreateOrJoinSession_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.CreateOrJoinSession*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_CreateOrJoinSession_System_String_Phantom_XRMOD_NetcodeModule_Runtime_BaseSessionConfig_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.CreateOrJoinSession(System.String,Phantom.XRMOD.NetcodeModule.Runtime.BaseSessionConfig)">
+  CreateOrJoinSession(string, BaseSessionConfig)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L335"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new multiplayer session or attempts to join an existing one based on the provided configuration.
+It first attempts to quick-join a session matching the criteria in <code class="paramref">_baseSessionConfig</code>.
+If quick-join fails, it proceeds to create a new session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ISession&gt; CreateOrJoinSession(string _gameName, BaseSessionConfig _baseSessionConfig)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_gameName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string identifier for the game, used for filtering sessions.</p>
+</dd>
+    <dt><code>_baseSessionConfig</code> <a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.BaseSessionConfig.html">BaseSessionConfig</a></dt>
+    <dd><p>The base session configuration containing details like session code, max players, privacy, and custom properties.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">ISession</span>&gt;</dt>
+    <dd><p>An ISession object representing the created or joined session.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>Thrown if both matchmake and create session operations fail.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_DespawnNetworkGameObject_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.DespawnNetworkGameObject*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_DespawnNetworkGameObject_GameObject_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.DespawnNetworkGameObject(GameObject)">
+  DespawnNetworkGameObject(GameObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Despawns and destroys a network object on the server and all connected clients.
+The object will be marked to not be destroyed with its owner before despawning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DespawnNetworkGameObject(GameObject _networkGameObject)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_networkGameObject</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject to despawn, which must have a NetworkObject component.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_DisconnectSession_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.DisconnectSession*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_DisconnectSession" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.DisconnectSession">
+  DisconnectSession()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L495"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disconnects from the current game session and shuts down the NetworkManager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DisconnectSession()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetUniqueApplicationId_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.GetUniqueApplicationId*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_GetUniqueApplicationId_System_String_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.GetUniqueApplicationId(System.String)">
+  GetUniqueApplicationId(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L530"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a unique application ID based on the provided game name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long GetUniqueApplicationId(string _gameName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_gameName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the game.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>A unique 64-bit application ID.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_JoinRandomSession_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.JoinRandomSession*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_JoinRandomSession_System_String_Phantom_XRMOD_NetcodeModule_Runtime_BaseSessionConfig_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.JoinRandomSession(System.String,Phantom.XRMOD.NetcodeModule.Runtime.BaseSessionConfig)">
+  JoinRandomSession(string, BaseSessionConfig)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L430"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to join a random available game session based on the provided game name and session configuration.
+It searches for sessions with at least one available slot and matching the specified game name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ISession&gt; JoinRandomSession(string _gameName, BaseSessionConfig _baseSessionConfig)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_gameName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string identifier for the game, used for filtering sessions.</p>
+</dd>
+    <dt><code>_baseSessionConfig</code> <a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.BaseSessionConfig.html">BaseSessionConfig</a></dt>
+    <dd><p>The base session configuration, primarily used for custom properties and topology type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">ISession</span>&gt;</dt>
+    <dd><p>An ISession object representing the joined session.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>Thrown if joining a random session fails.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_RegisterPlayerObject_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.RegisterPlayerObject*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_RegisterPlayerObject_GameObject_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.RegisterPlayerObject(GameObject)">
+  RegisterPlayerObject(GameObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a network player prefab at runtime, allowing it to be spawned over the network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterPlayerObject(GameObject _networkPlayerPrefab)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_networkPlayerPrefab</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The Player prefab to register, which must have a NetworkObject component.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_RegisterPrefab_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.RegisterPrefab*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_RegisterPrefab_GameObject_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.RegisterPrefab(GameObject)">
+  RegisterPrefab(GameObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L276"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a network prefab at runtime, allowing it to be spawned over the network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterPrefab(GameObject _networkPrefab)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_networkPrefab</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject prefab to register, which must have a NetworkObject component.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_SpawnNetworkGameObject_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.SpawnNetworkGameObject*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_SpawnNetworkGameObject_GameObject_Vector3_Quaternion_Transform_System_Boolean_System_Action_GameObject__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.SpawnNetworkGameObject(GameObject,Vector3,Quaternion,Transform,System.Boolean,System.Action{GameObject})">
+  SpawnNetworkGameObject(GameObject, Vector3, Quaternion, Transform, bool, Action&lt;GameObject&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Spawns a network object for all connected clients. This method should only be called on the server or host.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject SpawnNetworkGameObject(GameObject _networkPrefab, Vector3 _position, Quaternion _rotation, Transform _parent = null, bool _destroyWithScene = false, Action&lt;GameObject&gt; _onBeforeSpawned = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_networkPrefab</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject prefab to spawn, which must have a NetworkObject component.</p>
+</dd>
+    <dt><code>_position</code> <span class="xref">Vector3</span></dt>
+    <dd><p>The world position to spawn the object at.</p>
+</dd>
+    <dt><code>_rotation</code> <span class="xref">Quaternion</span></dt>
+    <dd><p>The world rotation to spawn the object with.</p>
+</dd>
+    <dt><code>_parent</code> <span class="xref">Transform</span></dt>
+    <dd><p>The parent Transform(NetworkObject have) for the spawned object. Defaults to null (no parent).</p>
+</dd>
+    <dt><code>_destroyWithScene</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, the object will be destroyed when the scene changes. Defaults to false.</p>
+</dd>
+    <dt><code>_onBeforeSpawned</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">GameObject</span>&gt;</dt>
+    <dd><p>An optional action to invoke on the instantiated GameObject before it is spawned over the network.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd><p>The spawned GameObject, or null if the prefab does not have a NetworkObject component or instantiation fails.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_SpawnPlayerGameObject_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.SpawnPlayerGameObject*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_SpawnPlayerGameObject_System_UInt64_GameObject_Vector3_Quaternion_Transform_System_Boolean_System_Action_GameObject__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.SpawnPlayerGameObject(System.UInt64,GameObject,Vector3,Quaternion,Transform,System.Boolean,System.Action{GameObject})">
+  SpawnPlayerGameObject(ulong, GameObject, Vector3, Quaternion, Transform, bool, Action&lt;GameObject&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Spawns a player network object for a specific client. This method should only be called on the server or host.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetworkObject SpawnPlayerGameObject(ulong _clientId, GameObject _playerPrefab, Vector3 _position, Quaternion _rotation, Transform _parent = null, bool _destroyWithScene = false, Action&lt;GameObject&gt; _onBeforeSpawned = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_clientId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The client ID for whom to spawn the player object.</p>
+</dd>
+    <dt><code>_playerPrefab</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject prefab for the player, which must have a NetworkObject component.</p>
+</dd>
+    <dt><code>_position</code> <span class="xref">Vector3</span></dt>
+    <dd><p>The world position to spawn the player at.</p>
+</dd>
+    <dt><code>_rotation</code> <span class="xref">Quaternion</span></dt>
+    <dd><p>The world rotation to spawn the player with.</p>
+</dd>
+    <dt><code>_parent</code> <span class="xref">Transform</span></dt>
+    <dd><p>The parent Transform(NetworkObject have)  for the spawned player object. Defaults to null (no parent).</p>
+</dd>
+    <dt><code>_destroyWithScene</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, the player object will be destroyed when the scene changes. Defaults to false.</p>
+</dd>
+    <dt><code>_onBeforeSpawned</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">GameObject</span>&gt;</dt>
+    <dd><p>An optional action to invoke on the instantiated GameObject before it is spawned as a player object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">NetworkObject</span></dt>
+    <dd><p>The spawned NetworkObject for the player, or null if the prefab does not have a NetworkObject component or instantiation fails.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_UnRegisterPrefab_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.UnRegisterPrefab*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetcodeServiceAPI_UnRegisterPrefab_GameObject_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetcodeServiceAPI.UnRegisterPrefab(GameObject)">
+  UnRegisterPrefab(GameObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/NetcodeServiceAPI.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unregisters a network prefab at runtime, preventing it from being spawned over the network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnRegisterPrefab(GameObject _networkPrefab)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_networkPrefab</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject prefab to unregister.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

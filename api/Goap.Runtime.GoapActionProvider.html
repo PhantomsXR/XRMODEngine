@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GoapActionProvider |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GoapActionProvider |  |  ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Goap_Runtime_GoapActionProvider.md&amp;value=---%0Auid%3A%20Goap.Runtime.GoapActionProvider%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Goap.Runtime.GoapActionProvider">
+
+
+
+  <h1 id="Goap_Runtime_GoapActionProvider" data-uid="Goap.Runtime.GoapActionProvider" class="text-break">
+Class GoapActionProvider  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Goap.html">Goap</a>.<a class="xref" href="Goap.Runtime.html">Runtime</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GoapActionProvider : ActionProviderBase, IMonoGoapActionProvider, IGoapActionProvider, IActionProvider, IMonoBehaviour</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Goap.Agent.Runtime.ActionProviderBase.html">ActionProviderBase</a></div>
+      <div><span class="xref">GoapActionProvider</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Goap.Core.IMonoGoapActionProvider.html">IMonoGoapActionProvider</a></div>
+      <div><a class="xref" href="Goap.Core.IGoapActionProvider.html">IGoapActionProvider</a></div>
+      <div><a class="xref" href="Goap.Agent.Core.IActionProvider.html">IActionProvider</a></div>
+      <div><a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html">IMonoBehaviour</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Goap.Agent.Runtime.ActionProviderBase.html#Goap_Agent_Runtime_ActionProviderBase_IsDisabled_Goap_Agent_Core_IAction_">ActionProviderBase.IsDisabled(IAction)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Runtime.ActionProviderBase.html#Goap_Agent_Runtime_ActionProviderBase_Enable_Goap_Agent_Core_IAction_">ActionProviderBase.Enable(IAction)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Runtime.ActionProviderBase.html#Goap_Agent_Runtime_ActionProviderBase_Disable_Goap_Agent_Core_IAction_Goap_Agent_Core_IActionDisabler_">ActionProviderBase.Disable(IAction, IActionDisabler)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Goap_Runtime_GoapActionProvider_AgentType_" data-uid="Goap.Runtime.GoapActionProvider.AgentType*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_AgentType" data-uid="Goap.Runtime.GoapActionProvider.AgentType">
+  AgentType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAgentType AgentType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Core.IAgentType.html">IAgentType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_AgentTypeBehaviour_" data-uid="Goap.Runtime.GoapActionProvider.AgentTypeBehaviour*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_AgentTypeBehaviour" data-uid="Goap.Runtime.GoapActionProvider.AgentTypeBehaviour">
+  AgentTypeBehaviour
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AgentTypeBehaviour AgentTypeBehaviour { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.AgentTypeBehaviour.html">AgentTypeBehaviour</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_CurrentGoal_" data-uid="Goap.Runtime.GoapActionProvider.CurrentGoal*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_CurrentGoal" data-uid="Goap.Runtime.GoapActionProvider.CurrentGoal">
+  CurrentGoal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L469"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use CurrentPlan.Goal instead&quot;)]
+public object CurrentGoal { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_CurrentPlan_" data-uid="Goap.Runtime.GoapActionProvider.CurrentPlan*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_CurrentPlan" data-uid="Goap.Runtime.GoapActionProvider.CurrentPlan">
+  CurrentPlan
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IGoalResult CurrentPlan { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Core.IGoalResult.html">IGoalResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_DistanceMultiplier_" data-uid="Goap.Runtime.GoapActionProvider.DistanceMultiplier*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_DistanceMultiplier" data-uid="Goap.Runtime.GoapActionProvider.DistanceMultiplier">
+  DistanceMultiplier
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DistanceMultiplier { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_Events_" data-uid="Goap.Runtime.GoapActionProvider.Events*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_Events" data-uid="Goap.Runtime.GoapActionProvider.Events">
+  Events
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IGoapAgentEvents Events { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Core.IGoapAgentEvents.html">IGoapAgentEvents</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_GoalRequest_" data-uid="Goap.Runtime.GoapActionProvider.GoalRequest*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_GoalRequest" data-uid="Goap.Runtime.GoapActionProvider.GoalRequest">
+  GoalRequest
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IGoalRequest GoalRequest { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Core.IGoalRequest.html">IGoalRequest</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_GoapSet_" data-uid="Goap.Runtime.GoapActionProvider.GoapSet*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_GoapSet" data-uid="Goap.Runtime.GoapActionProvider.GoapSet">
+  GoapSet
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L472"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use AgentType instead&quot;)]
+public object GoapSet { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_Logger_" data-uid="Goap.Runtime.GoapActionProvider.Logger*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_Logger" data-uid="Goap.Runtime.GoapActionProvider.Logger">
+  Logger
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILogger&lt;IMonoGoapActionProvider&gt; Logger { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Core.ILogger-1.html">ILogger</a>&lt;<a class="xref" href="Goap.Core.IMonoGoapActionProvider.html">IMonoGoapActionProvider</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_LoggerConfig_" data-uid="Goap.Runtime.GoapActionProvider.LoggerConfig*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_LoggerConfig" data-uid="Goap.Runtime.GoapActionProvider.LoggerConfig">
+  LoggerConfig
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoggerConfig LoggerConfig { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Runtime.LoggerConfig.html">LoggerConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_Position_" data-uid="Goap.Runtime.GoapActionProvider.Position*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_Position" data-uid="Goap.Runtime.GoapActionProvider.Position">
+  Position
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Position { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_Receiver_" data-uid="Goap.Runtime.GoapActionProvider.Receiver*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_Receiver" data-uid="Goap.Runtime.GoapActionProvider.Receiver">
+  Receiver
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L390"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IActionReceiver Receiver { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Core.IActionReceiver.html">IActionReceiver</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_WorldData_" data-uid="Goap.Runtime.GoapActionProvider.WorldData*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_WorldData" data-uid="Goap.Runtime.GoapActionProvider.WorldData">
+  WorldData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILocalWorldData WorldData { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Core.ILocalWorldData.html">ILocalWorldData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Goap_Runtime_GoapActionProvider_AreEqual_" data-uid="Goap.Runtime.GoapActionProvider.AreEqual*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_AreEqual__1_System_Collections_Generic_List___0__System_Collections_Generic_List___0__" data-uid="Goap.Runtime.GoapActionProvider.AreEqual``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{``0})">
+  AreEqual&lt;T&gt;(List&lt;T&gt;, List&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool AreEqual&lt;T&gt;(List&lt;T&gt; array1, List&lt;T&gt; array2) where T : class</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>array1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>array2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_ClearGoal_" data-uid="Goap.Runtime.GoapActionProvider.ClearGoal*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_ClearGoal" data-uid="Goap.Runtime.GoapActionProvider.ClearGoal">
+  ClearGoal()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears the current goal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearGoal()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_GetActions_" data-uid="Goap.Runtime.GoapActionProvider.GetActions*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_GetActions" data-uid="Goap.Runtime.GoapActionProvider.GetActions">
+  GetActions()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L465"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;IGoapAction&gt; GetActions()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Goap.Core.IGoapAction.html">IGoapAction</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_GetActions_" data-uid="Goap.Runtime.GoapActionProvider.GetActions*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_GetActions__1" data-uid="Goap.Runtime.GoapActionProvider.GetActions``1">
+  GetActions&lt;TAction&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L463"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the actions of the specified type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;TAction&gt; GetActions&lt;TAction&gt;() where TAction : IGoapAction</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;TAction&gt;</dt>
+    <dd><p>A list of actions of the specified type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TAction</code></dt>
+    <dd><p>The type of the actions.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_RequestGoal_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_RequestGoal_Goap_Core_IGoal_System_Boolean_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal(Goap.Core.IGoal,System.Boolean)">
+  RequestGoal(IGoal, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Requests a specific goal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RequestGoal(IGoal goal, bool resolve)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>goal</code> <a class="xref" href="Goap.Core.IGoal.html">IGoal</a></dt>
+    <dd><p>The goal to request.</p>
+</dd>
+    <dt><code>resolve</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to resolve the action after requesting the goal.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_RequestGoal_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_RequestGoal_Goap_Core_IGoalRequest_System_Boolean_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal(Goap.Core.IGoalRequest,System.Boolean)">
+  RequestGoal(IGoalRequest, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Requests a goal based on the provided goal request. This will allow you to request multiple goals at once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RequestGoal(IGoalRequest request, bool resolve = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="Goap.Core.IGoalRequest.html">IGoalRequest</a></dt>
+    <dd><p>The goal request.</p>
+</dd>
+    <dt><code>resolve</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to resolve the action after requesting the goal.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_RequestGoal_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_RequestGoal_System_Type_System_Boolean_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal(System.Type,System.Boolean)">
+  RequestGoal(Type, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Request goals of the specified type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RequestGoal(Type _goalType, bool _resolve = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_goalType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>_resolve</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_RequestGoal_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_RequestGoal_System_Type___System_Boolean_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal(System.Type[],System.Boolean)">
+  RequestGoal(Type[], bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Request goals of the specified types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RequestGoal(Type[] goalTypes, bool resolve = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>goalTypes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>[]</dt>
+    <dd></dd>
+    <dt><code>resolve</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_RequestGoal_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_RequestGoal__1_System_Boolean_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal``1(System.Boolean)">
+  RequestGoal&lt;TGoal&gt;(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Requests a goal of type TGoal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RequestGoal&lt;TGoal&gt;(bool resolve = true) where TGoal : IGoal</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>resolve</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to resolve the action after requesting the goal. Defaults to true.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TGoal</code></dt>
+    <dd><p>The type of the goal.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_RequestGoal_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_RequestGoal__2_System_Boolean_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal``2(System.Boolean)">
+  RequestGoal&lt;TGoal1, TGoal2&gt;(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RequestGoal&lt;TGoal1, TGoal2&gt;(bool resolve = true) where TGoal1 : IGoal where TGoal2 : IGoal</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>resolve</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TGoal1</code></dt>
+    <dd></dd>
+    <dt><code>TGoal2</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_RequestGoal_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_RequestGoal__3_System_Boolean_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal``3(System.Boolean)">
+  RequestGoal&lt;TGoal1, TGoal2, TGoal3&gt;(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Requests three goals of types TGoal1, TGoal2, and TGoal3.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RequestGoal&lt;TGoal1, TGoal2, TGoal3&gt;(bool resolve = true) where TGoal1 : IGoal where TGoal2 : IGoal where TGoal3 : IGoal</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>resolve</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to resolve the action after requesting the goals. Defaults to true.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TGoal1</code></dt>
+    <dd><p>The type of the first goal.</p>
+</dd>
+    <dt><code>TGoal2</code></dt>
+    <dd><p>The type of the second goal.</p>
+</dd>
+    <dt><code>TGoal3</code></dt>
+    <dd><p>The type of the third goal.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_RequestGoal_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_RequestGoal__4_System_Boolean_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal``4(System.Boolean)">
+  RequestGoal&lt;TGoal1, TGoal2, TGoal3, TGoal4&gt;(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Requests four goals of types TGoal1, TGoal2, TGoal3, and TGoal4.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RequestGoal&lt;TGoal1, TGoal2, TGoal3, TGoal4&gt;(bool resolve = true) where TGoal1 : IGoal where TGoal2 : IGoal where TGoal3 : IGoal where TGoal4 : IGoal</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>resolve</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to resolve the action after requesting the goals. Defaults to true.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TGoal1</code></dt>
+    <dd><p>The type of the first goal.</p>
+</dd>
+    <dt><code>TGoal2</code></dt>
+    <dd><p>The type of the second goal.</p>
+</dd>
+    <dt><code>TGoal3</code></dt>
+    <dd><p>The type of the third goal.</p>
+</dd>
+    <dt><code>TGoal4</code></dt>
+    <dd><p>The type of the fourth goal.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_RequestGoal_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_RequestGoal__5_System_Boolean_" data-uid="Goap.Runtime.GoapActionProvider.RequestGoal``5(System.Boolean)">
+  RequestGoal&lt;TGoal1, TGoal2, TGoal3, TGoal4, TGoal5&gt;(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Requests five goals of types TGoal1, TGoal2, TGoal3, TGoal4, and TGoal5.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RequestGoal&lt;TGoal1, TGoal2, TGoal3, TGoal4, TGoal5&gt;(bool resolve = true) where TGoal1 : IGoal where TGoal2 : IGoal where TGoal3 : IGoal where TGoal4 : IGoal where TGoal5 : IGoal</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>resolve</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to resolve the action after requesting the goals. Defaults to true.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TGoal1</code></dt>
+    <dd><p>The type of the first goal.</p>
+</dd>
+    <dt><code>TGoal2</code></dt>
+    <dd><p>The type of the second goal.</p>
+</dd>
+    <dt><code>TGoal3</code></dt>
+    <dd><p>The type of the third goal.</p>
+</dd>
+    <dt><code>TGoal4</code></dt>
+    <dd><p>The type of the fourth goal.</p>
+</dd>
+    <dt><code>TGoal5</code></dt>
+    <dd><p>The type of the fifth goal.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_ResolveAction_" data-uid="Goap.Runtime.GoapActionProvider.ResolveAction*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_ResolveAction" data-uid="Goap.Runtime.GoapActionProvider.ResolveAction">
+  ResolveAction()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L403"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Will try and resolve for a new action based on the current goal request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ResolveAction()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_SetAction_" data-uid="Goap.Runtime.GoapActionProvider.SetAction*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_SetAction_Goap_Core_IGoalResult_" data-uid="Goap.Runtime.GoapActionProvider.SetAction(Goap.Core.IGoalResult)">
+  SetAction(IGoalResult)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L358"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the action based on the provided goal result. This method is called by the resolver.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAction(IGoalResult result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>result</code> <a class="xref" href="Goap.Core.IGoalResult.html">IGoalResult</a></dt>
+    <dd><p>The goal result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_SetDistanceMultiplier_" data-uid="Goap.Runtime.GoapActionProvider.SetDistanceMultiplier*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_SetDistanceMultiplier_System_Single_" data-uid="Goap.Runtime.GoapActionProvider.SetDistanceMultiplier(System.Single)">
+  SetDistanceMultiplier(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L424"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the distance multiplier for the agent. This is used by the resolver to calculate the cost of distance between
+actions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDistanceMultiplier(float multiplier)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>multiplier</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The distance multiplier.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_SetDistanceMultiplierSpeed_" data-uid="Goap.Runtime.GoapActionProvider.SetDistanceMultiplierSpeed*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_SetDistanceMultiplierSpeed_System_Single_" data-uid="Goap.Runtime.GoapActionProvider.SetDistanceMultiplierSpeed(System.Single)">
+  SetDistanceMultiplierSpeed(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L438"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the distance multiplier for the agent based on speed, based on the assumption that speed is in units per
+second and cost is similar to a second.
+This is used by the resolver to calculate the cost of distance between actions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDistanceMultiplierSpeed(float speed)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>speed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_SetGoal_" data-uid="Goap.Runtime.GoapActionProvider.SetGoal*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_SetGoal_Goap_Core_IGoal_System_Boolean_" data-uid="Goap.Runtime.GoapActionProvider.SetGoal(Goap.Core.IGoal,System.Boolean)">
+  SetGoal(IGoal, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use RequestGoal instead.&quot;)]
+public void SetGoal(IGoal goal, bool endAction = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>goal</code> <a class="xref" href="Goap.Core.IGoal.html">IGoal</a></dt>
+    <dd></dd>
+    <dt><code>endAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_SetGoal_" data-uid="Goap.Runtime.GoapActionProvider.SetGoal*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_SetGoal__1_System_Boolean_" data-uid="Goap.Runtime.GoapActionProvider.SetGoal``1(System.Boolean)">
+  SetGoal&lt;TGoal&gt;(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use RequestGoal&lt;TGoal&gt; instead.&quot;)]
+public void SetGoal&lt;TGoal&gt;(bool endAction = false) where TGoal : IGoal</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>endAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TGoal</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_GoapActionProvider_StopAction_" data-uid="Goap.Runtime.GoapActionProvider.StopAction*"></a>
+
+  <h3 id="Goap_Runtime_GoapActionProvider_StopAction_System_Boolean_" data-uid="Goap.Runtime.GoapActionProvider.StopAction(System.Boolean)">
+  StopAction(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Behaviours/GoapActionProvider.cs/#L382"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use agent.StopAction() instead&quot;)]
+public void StopAction(bool resolveAction = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>resolveAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

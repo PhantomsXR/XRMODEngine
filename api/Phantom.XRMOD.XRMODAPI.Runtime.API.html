@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class API |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class API |  |  ">
+      
+      <meta name="description" content="Provides a comprehensive API for interacting with the XRMOD Engine, covering project management, UI, asset loading, device information, and XR functionalities.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Phantom_XRMOD_XRMODAPI_Runtime_API.md&amp;value=---%0Auid%3A%20Phantom.XRMOD.XRMODAPI.Runtime.API%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API">
+
+
+
+  <h1 id="Phantom_XRMOD_XRMODAPI_Runtime_API" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API" class="text-break">
+Class API  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Phantom.html">Phantom</a>.<a class="xref" href="Phantom.XRMOD.html">XRMOD</a>.<a class="xref" href="Phantom.XRMOD.XRMODAPI.html">XRMODAPI</a>.<a class="xref" href="Phantom.XRMOD.XRMODAPI.Runtime.html">Runtime</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Provides a comprehensive API for interacting with the XRMOD Engine,
+covering project management, UI, asset loading, device information, and XR functionalities.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class API</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">API</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API__ctor_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.#ctor*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API__ctor_System_String_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.#ctor(System.String)">
+  API(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Phantom.XRMOD.XRMODAPI.Runtime.API.html">API</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public API(string _projectName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the current project.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_GetProcessContainer_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.GetProcessContainer*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_GetProcessContainer" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.GetProcessContainer">
+  GetProcessContainer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the transform of the GameObject that acts as a container for processes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform GetProcessContainer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_GetProcessId_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.GetProcessId*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_GetProcessId" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.GetProcessId">
+  GetProcessId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the unique process ID for the current project instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetProcessId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_ARRaycast_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.ARRaycast*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_ARRaycast_Vector3_Phantom_XRMOD_ActionNotification_Runtime_TrackableTypeEnum_System_Action_Pose__" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.ARRaycast(Vector3,Phantom.XRMOD.ActionNotification.Runtime.TrackableTypeEnum,System.Action{Pose})">
+  ARRaycast(Vector3, TrackableTypeEnum, Action&lt;Pose&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L560"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Casts a ray from a point in screen space against trackables (e.g., detected planes). This only works in Handheld AR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ARRaycast(Vector3 _inputPosition, TrackableTypeEnum _trackableType = TrackableTypeEnum.PlaneWithinPolygon, Action&lt;Pose&gt; _callback = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_inputPosition</code> <span class="xref">Vector3</span></dt>
+    <dd><p>The input screen point for the raycast.</p>
+</dd>
+    <dt><code>_trackableType</code> <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.TrackableTypeEnum.html">TrackableTypeEnum</a></dt>
+    <dd><p>The type of trackables to hit. See <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.TrackableTypeEnum.html">TrackableTypeEnum</a>.</p>
+</dd>
+    <dt><code>_callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">Pose</span>&gt;</dt>
+    <dd><p>A callback action that is invoked with the Pose result of the raycast.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Phantom_XRMOD_XRMODAPI_Runtime_API_ARRaycast_Vector3_Phantom_XRMOD_ActionNotification_Runtime_TrackableTypeEnum_System_Action_Pose___examples">Examples</h4>
+  <pre><code class="lang-csharp">api.ARRaycast(Input.mousePosition, TrackableTypeEnum.PlaneWithinPolygon, (pose) =&gt; {
+    Instantiate(prefab, pose.position, pose.rotation);
+});</code></pre>
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_AddNewImageForTracking_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.AddNewImageForTracking*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_AddNewImageForTracking_System_Collections_Generic_List_Phantom_XRMOD_ActionNotification_Runtime_DynamicLibraryArgs_ImageData__System_Action_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.AddNewImageForTracking(System.Collections.Generic.List{Phantom.XRMOD.ActionNotification.Runtime.DynamicLibraryArgs.ImageData},System.Action)">
+  AddNewImageForTracking(List&lt;ImageData&gt;, Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L652"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds new image targets for runtime tracking. This only works in Handheld AR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddNewImageForTracking(List&lt;DynamicLibraryArgs.ImageData&gt; _imageData, Action _callback = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_imageData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.DynamicLibraryArgs.html">DynamicLibraryArgs</a>.<a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.DynamicLibraryArgs.ImageData.html">ImageData</a>&gt;</dt>
+    <dd><p>A list of image data for the track targets. See <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.DynamicLibraryArgs.ImageData.html">DynamicLibraryArgs.ImageData</a>.</p>
+</dd>
+    <dt><code>_callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>An action that is invoked when all processes are completed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_CaptureEnvironment_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.CaptureEnvironment*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_CaptureEnvironment" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.CaptureEnvironment">
+  CaptureEnvironment()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L743"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initiates the capture of current environment data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CaptureEnvironment()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_ChangeARAlgorithmLife_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.ChangeARAlgorithmLife*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_ChangeARAlgorithmLife_Phantom_XRMOD_ActionNotification_Runtime_ARAlgorithmArgs_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.ChangeARAlgorithmLife(Phantom.XRMOD.ActionNotification.Runtime.ARAlgorithmArgs)">
+  ChangeARAlgorithmLife(ARAlgorithmArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L520"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Controls the life cycle of AR algorithms, allowing multiple algorithms to be mixed. This only works in Handheld AR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ChangeARAlgorithmLife(ARAlgorithmArgs _data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_data</code> <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.ARAlgorithmArgs.html">ARAlgorithmArgs</a></dt>
+    <dd><p>The <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.ARAlgorithmArgs.html">ARAlgorithmArgs</a> data controlling the algorithm's life cycle.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_ChangeSpaceType_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.ChangeSpaceType*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_ChangeSpaceType_Phantom_XRMOD_ActionNotification_Runtime_SpaceType_System_Nullable_Vector3__System_Nullable_Vector3__System_String___Phantom_XRMOD_ActionNotification_Runtime_BoundResizeMode_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.ChangeSpaceType(Phantom.XRMOD.ActionNotification.Runtime.SpaceType,System.Nullable{Vector3},System.Nullable{Vector3},System.String[],Phantom.XRMOD.ActionNotification.Runtime.BoundResizeMode)">
+  ChangeSpaceType(SpaceType, Vector3?, Vector3?, string[], BoundResizeMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Changes the current experience space type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ChangeSpaceType(SpaceType _spaceType, Vector3? _dimensions = null, Vector3? _boundPosition = null, string[] _cullingMask = null, BoundResizeMode _boundResizeMode = BoundResizeMode.None)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_spaceType</code> <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.SpaceType.html">SpaceType</a></dt>
+    <dd><p>The new space type. See <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.SpaceType.html">SpaceType</a>.</p>
+</dd>
+    <dt><code>_dimensions</code> <span class="xref">Vector3</span>?</dt>
+    <dd><p>Optional: The dimensions for the new space. Defaults to Vector3.one.</p>
+</dd>
+    <dt><code>_boundPosition</code> <span class="xref">Vector3</span>?</dt>
+    <dd><p>Optional: The bound position for the new space. Defaults to Vector3.up * 0.5f.</p>
+</dd>
+    <dt><code>_cullingMask</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>Optional: An array of layer names to be used for culling. If null, no culling mask is applied.</p>
+</dd>
+    <dt><code>_boundResizeMode</code> <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.BoundResizeMode.html">BoundResizeMode</a></dt>
+    <dd><p>Optional: The bound resize mode. Defaults to <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.BoundResizeMode.html#Phantom_XRMOD_ActionNotification_Runtime_BoundResizeMode_None">None</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_CheckARAvailability_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.CheckARAvailability*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_CheckARAvailability" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.CheckARAvailability">
+  CheckARAvailability()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L634"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether the current device supports ARKit or ARCore. This only works in Handheld AR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CheckARAvailability()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if AR is available, otherwise False.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_CheckFeatureAvailability_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.CheckFeatureAvailability*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_CheckFeatureAvailability_System_String_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.CheckFeatureAvailability(System.String)">
+  CheckFeatureAvailability(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L670"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if a specific AR feature is supported on the current device. This only works in Handheld AR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CheckFeatureAvailability(string _featureName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_featureName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the AR feature to check.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the feature is available, otherwise False.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_CreateAnchor_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.CreateAnchor*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_CreateAnchor_Phantom_XRMOD_ActionNotification_Runtime_CreateAnchorArgs_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.CreateAnchor(Phantom.XRMOD.ActionNotification.Runtime.CreateAnchorArgs)">
+  CreateAnchor(CreateAnchorArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L723"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an anchor and places a GameObject at its position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAnchor(CreateAnchorArgs _createAnchorArgs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_createAnchorArgs</code> <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.CreateAnchorArgs.html">CreateAnchorArgs</a></dt>
+    <dd><p>The data required to create the anchor. See <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.CreateAnchorArgs.html">CreateAnchorArgs</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_DeleteEnvironmentMapping_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.DeleteEnvironmentMapping*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_DeleteEnvironmentMapping_System_String_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.DeleteEnvironmentMapping(System.String)">
+  DeleteEnvironmentMapping(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L785"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deletes an environment map from disk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DeleteEnvironmentMapping(string _mapName = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_mapName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the environment map to delete (only supported in Handheld AR - iOS platform).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_DestroyAnchor_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.DestroyAnchor*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_DestroyAnchor_System_Guid_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.DestroyAnchor(System.Guid)">
+  DestroyAnchor(Guid)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L734"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a specified anchor by its unique ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DestroyAnchor(Guid _anchorId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_anchorId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a> of the anchor to destroy.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_DownloadNetworkMesh_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.DownloadNetworkMesh*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_DownloadNetworkMesh_System_String_System_Action_System_String__" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.DownloadNetworkMesh(System.String,System.Action{System.String})">
+  DownloadNetworkMesh(string, Action&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L392"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Downloads a GLTF model from a URL and caches it locally without instantiating it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DownloadNetworkMesh(string _url, Action&lt;string&gt; _result = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_url</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The URL of the GLTF file.</p>
+</dd>
+    <dt><code>_result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>A callback action that is invoked with the local path of the downloaded model.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_Exit_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.Exit*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_Exit" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.Exit">
+  Exit()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L704"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Exits the XR Mod application. This only works on Handheld AR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Exit()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_GetAllAnchors_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.GetAllAnchors*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_GetAllAnchors" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.GetAllAnchors">
+  GetAllAnchors()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L716"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves all <a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.XRMODAnchor.html">XRMODAnchor</a> components currently in the runtime,
+regardless of their active state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XRMODAnchor[] GetAllAnchors()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.XRMODAnchor.html">XRMODAnchor</a>[]</dt>
+    <dd><p>An array of all found <a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.XRMODAnchor.html">XRMODAnchor</a> components.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_GetCurrentExperienceSpaceType_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.GetCurrentExperienceSpaceType*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_GetCurrentExperienceSpaceType" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.GetCurrentExperienceSpaceType">
+  GetCurrentExperienceSpaceType()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L800"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the current experience <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.SpaceType.html">SpaceType</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpaceType GetCurrentExperienceSpaceType()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.SpaceType.html">SpaceType</a></dt>
+    <dd><p>The current <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.SpaceType.html">SpaceType</a>, or <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.SpaceType.html#Phantom_XRMOD_ActionNotification_Runtime_SpaceType_ExclusiveSpace">ExclusiveSpace</a> if not determined.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_GetDeviceInfo_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.GetDeviceInfo*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_GetDeviceInfo" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.GetDeviceInfo">
+  GetDeviceInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L430"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves detailed information about the current device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetDeviceInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A JSON string containing various device specifications.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_GetSystemLanguage_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.GetSystemLanguage*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_GetSystemLanguage" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.GetSystemLanguage">
+  GetSystemLanguage()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L473"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the system language of the device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetSystemLanguage()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The system language as a string.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_GetValueByKey_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.GetValueByKey*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_GetValueByKey_System_String_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.GetValueByKey(System.String)">
+  GetValueByKey(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads data temporarily stored on the device using PlayerPrefs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetValueByKey(string _key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The unique key for the data.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The queried data as a string.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_IsPlatform_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.IsPlatform*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_IsPlatform_Phantom_XRMOD_XRMODUtilites_Runtime_PlatformType_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.IsPlatform(Phantom.XRMOD.XRMODUtilites.Runtime.PlatformType)">
+  IsPlatform(PlatformType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L484"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if the current content is running on a specific platform type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPlatform(PlatformType _platform)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_platform</code> <a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.PlatformType.html">PlatformType</a></dt>
+    <dd><p>The platform category to detect.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if it is the specified platform, otherwise False.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_IsPointerOverUi_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.IsPointerOverUi*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_IsPointerOverUi" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.IsPointerOverUi">
+  IsPointerOverUi()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether a UGUI object is currently being touched by the pointer.
+This helps prevent raycast penetration when interacting with UI elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPointerOverUi()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if a UGUI object is touched, otherwise False.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Phantom_XRMOD_XRMODAPI_Runtime_API_IsPointerOverUi_examples">Examples</h4>
+  <pre><code class="lang-csharp">if (api.IsPointerOverUi()) {
+    // Do not perform in-world raycast
+    return;
+}</code></pre>
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_LoadAssetAsync_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.LoadAssetAsync*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_LoadAssetAsync__1_System_String_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.LoadAssetAsync``1(System.String)">
+  LoadAssetAsync&lt;T&gt;(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously loads a single Unity asset of a specified type from the current package.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;T&gt; LoadAssetAsync&lt;T&gt;(string _wannaLoadedAssetName) where T : UnityEngine.Object</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_wannaLoadedAssetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the asset to load.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</dt>
+    <dd><p>The loaded asset.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The Unity Asset type to load.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_LoadAssetsAsync_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.LoadAssetsAsync*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_LoadAssetsAsync__1" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.LoadAssetsAsync``1">
+  LoadAssetsAsync&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously loads all assets of a specified type from the current package.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;T[]&gt; LoadAssetsAsync&lt;T&gt;() where T : UnityEngine.Object</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T[]&gt;</dt>
+    <dd><p>An array of the loaded assets.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The Unity Asset type to load.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Phantom_XRMOD_XRMODAPI_Runtime_API_LoadAssetsAsync__1_examples">Examples</h4>
+  <pre><code class="lang-csharp">var textures = await api.LoadAssetsAsync&lt;Texture2D&gt;();</code></pre>
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_LoadAssetsAsync_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.LoadAssetsAsync*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_LoadAssetsAsync__1_System_String___" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.LoadAssetsAsync``1(System.String[])">
+  LoadAssetsAsync&lt;T&gt;(string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L297"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously loads specified Unity assets of a given type from the current package.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;T[]&gt; LoadAssetsAsync&lt;T&gt;(string[] _assetNames) where T : UnityEngine.Object</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_assetNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>An array of asset names to load.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T[]&gt;</dt>
+    <dd><p>An array of the loaded assets.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The Unity Asset type to load.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_LoadEnvironmentMapping_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.LoadEnvironmentMapping*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_LoadEnvironmentMapping_System_String_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.LoadEnvironmentMapping(System.String)">
+  LoadEnvironmentMapping(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L766"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads an environment map from disk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadEnvironmentMapping(string _mapName = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_mapName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the environment map to load (only supported in Handheld AR).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_LoadUnityScene_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.LoadUnityScene*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_LoadUnityScene_System_String_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.LoadUnityScene(System.String)">
+  LoadUnityScene(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L324"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously loads and adds a new Unity scene from the package.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task LoadUnityScene(string _sceneName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_sceneName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The Unity scene asset name as defined in the PackageTools Content tab.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Phantom_XRMOD_XRMODAPI_Runtime_API_LoadUnityScene_System_String__examples">Examples</h4>
+  <pre><code class="lang-csharp">await api.LoadUnityScene("MainGameScene");</code></pre>
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_MakeContentAppearAt_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.MakeContentAppearAt*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_MakeContentAppearAt_Transform_Vector3_Quaternion_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.MakeContentAppearAt(Transform,Vector3,Quaternion)">
+  MakeContentAppearAt(Transform, Vector3, Quaternion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L532"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Moves and orients the ARSessionOrigin such that the content appears at the specified raycast hit position. This does not move the content itself. This only works in Handheld AR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MakeContentAppearAt(Transform _contentTrans, Vector3 _position, Quaternion _rotation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_contentTrans</code> <span class="xref">Transform</span></dt>
+    <dd><p>The transform of the content to be positioned.</p>
+</dd>
+    <dt><code>_position</code> <span class="xref">Vector3</span></dt>
+    <dd><p>The world position where the content should appear.</p>
+</dd>
+    <dt><code>_rotation</code> <span class="xref">Quaternion</span></dt>
+    <dd><p>The world rotation for the content to appear.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_OpenBuiltInBrowser_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.OpenBuiltInBrowser*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_OpenBuiltInBrowser_Phantom_XRMOD_ActionNotification_Runtime_OpenInBuiltInBrowserArgs_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.OpenBuiltInBrowser(Phantom.XRMOD.ActionNotification.Runtime.OpenInBuiltInBrowserArgs)">
+  OpenBuiltInBrowser(OpenInBuiltInBrowserArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L815"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens a URL using the application's built-in browser.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OpenBuiltInBrowser(OpenInBuiltInBrowserArgs _data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_data</code> <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.OpenInBuiltInBrowserArgs.html">OpenInBuiltInBrowserArgs</a></dt>
+    <dd><p>The data containing the URL and other browser parameters. See <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.OpenInBuiltInBrowserArgs.html">OpenInBuiltInBrowserArgs</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_OverrideRenderPipelineAtRuntime_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.OverrideRenderPipelineAtRuntime*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_OverrideRenderPipelineAtRuntime_UniversalRenderPipelineAsset_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.OverrideRenderPipelineAtRuntime(UniversalRenderPipelineAsset)">
+  OverrideRenderPipelineAtRuntime(UniversalRenderPipelineAsset)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L856"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overrides the current render pipeline at runtime.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated. Use QualitySettings.renderPipeline instead&quot;)]
+public void OverrideRenderPipelineAtRuntime(UniversalRenderPipelineAsset _pipelineAsset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_pipelineAsset</code> <span class="xref">UniversalRenderPipelineAsset</span></dt>
+    <dd><p>The Universal Render Pipeline Asset to apply.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_OverrideSkyBox_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.OverrideSkyBox*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_OverrideSkyBox_Material_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.OverrideSkyBox(Material)">
+  OverrideSkyBox(Material)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L871"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overrides the scene's skybox with a custom material.
+This also updates reflection probes and the global environment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverrideSkyBox(Material _material)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_material</code> <span class="xref">Material</span></dt>
+    <dd><p>The material to use for the skybox.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_ReleaseProject_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.ReleaseProject*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_ReleaseProject_System_String_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.ReleaseProject(System.String)">
+  ReleaseProject(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L412"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases all assets associated with a specified project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReleaseProject(string _projectName = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the project whose assets will be released. If null or empty, the current project's assets are released.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_RemoveKeyAndValue_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.RemoveKeyAndValue*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_RemoveKeyAndValue_System_String_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.RemoveKeyAndValue(System.String)">
+  RemoveKeyAndValue(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes data and its associated key from local temporary storage (PlayerPrefs).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveKeyAndValue(string _key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The unique key of the data to be removed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_ResizeARWorldScale_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.ResizeARWorldScale*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_ResizeARWorldScale_System_Single_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.ResizeARWorldScale(System.Single)">
+  ResizeARWorldScale(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L508"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resizes the AR world scale. This only works in Handheld AR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResizeARWorldScale(float _worldScale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_worldScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The new world scale value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_SaveEnvironmentMapping_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.SaveEnvironmentMapping*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_SaveEnvironmentMapping_System_String_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.SaveEnvironmentMapping(System.String)">
+  SaveEnvironmentMapping(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L753"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Saves all runtime environment maps to disk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SaveEnvironmentMapping(string _mapName = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_mapName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name for the environment map (only supported in Handheld AR).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_SaveKeyAndValue_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.SaveKeyAndValue*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_SaveKeyAndValue_System_String_System_String_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.SaveKeyAndValue(System.String,System.String)">
+  SaveKeyAndValue(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores temporary data locally using PlayerPrefs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SaveKeyAndValue(string _key, string _value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The unique key for the data.</p>
+</dd>
+    <dt><code>_value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string data to be saved.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_SendMessageToSDK_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.SendMessageToSDK*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_SendMessageToSDK_System_String_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.SendMessageToSDK(System.String)">
+  SendMessageToSDK(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L838"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a message to the SDK. The message can be a string or JSON.
+The <code>ReceivedMessage</code> method on the SDK side will receive this message (available from SDK 2.0.0-pre.12).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendMessageToSDK(string _data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The message data to send.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_SetScreenOrientation_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.SetScreenOrientation*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_SetScreenOrientation_ScreenOrientation_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.SetScreenOrientation(ScreenOrientation)">
+  SetScreenOrientation(ScreenOrientation)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L493"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the screen orientation of the device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetScreenOrientation(ScreenOrientation _orientation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_orientation</code> <span class="xref">ScreenOrientation</span></dt>
+    <dd><p>The desired screen orientation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireAROcclusionFrame_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireAROcclusionFrame*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireAROcclusionFrame_Phantom_XRMOD_ActionNotification_Runtime_AROcclusionArgs_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireAROcclusionFrame(Phantom.XRMOD.ActionNotification.Runtime.AROcclusionArgs)">
+  TryAcquireAROcclusionFrame(AROcclusionArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L601"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the AR occlusion frame as a Texture2D. This only works in iOS Handheld AR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture2D TryAcquireAROcclusionFrame(AROcclusionArgs _data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_data</code> <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.AROcclusionArgs.html">AROcclusionArgs</a></dt>
+    <dd><p>Parameters for acquiring the AR occlusion frame. See <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.AROcclusionArgs.html">AROcclusionArgs</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Texture2D</span></dt>
+    <dd><p>The AR occlusion frame as a Texture2D, or null if not available.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireAppInfo_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireAppInfo*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireAppInfo_Phantom_XRMOD_ActionNotification_Runtime_TryAcquireAppInfoArgs_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireAppInfo(Phantom.XRMOD.ActionNotification.Runtime.TryAcquireAppInfoArgs)">
+  TryAcquireAppInfo(TryAcquireAppInfoArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L826"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to acquire application information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TryAcquireAppInfo(TryAcquireAppInfoArgs _data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_data</code> <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.TryAcquireAppInfoArgs.html">TryAcquireAppInfoArgs</a></dt>
+    <dd><p>The arguments specifying the type of app information to acquire. See <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.TryAcquireAppInfoArgs.html">TryAcquireAppInfoArgs</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireCurrentFrame_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireCurrentFrame*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireCurrentFrame_Phantom_XRMOD_ActionNotification_Runtime_TryAcquireCurrentFrameArgs_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireCurrentFrame(Phantom.XRMOD.ActionNotification.Runtime.TryAcquireCurrentFrameArgs)">
+  TryAcquireCurrentFrame(TryAcquireCurrentFrameArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L583"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the current AR frame as a Texture2D. This only works in Handheld AR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture2D TryAcquireCurrentFrame(TryAcquireCurrentFrameArgs _data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_data</code> <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.TryAcquireCurrentFrameArgs.html">TryAcquireCurrentFrameArgs</a></dt>
+    <dd><p>Parameters for acquiring the current frame. See <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.TryAcquireCurrentFrameArgs.html">TryAcquireCurrentFrameArgs</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Texture2D</span></dt>
+    <dd><p>The current AR frame as a Texture2D, or null if not available.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireLaunchConfig_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireLaunchConfig*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireLaunchConfig" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireLaunchConfig">
+  TryAcquireLaunchConfig()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves custom configuration data from the SDK (available from SDK 2.0.0-pre.12).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TryAcquireLaunchConfig()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Configuration data as a string, or null if not available.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireLightEstimateValue_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireLightEstimateValue*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireLightEstimateValue" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireLightEstimateValue">
+  TryAcquireLightEstimateValue()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L618"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the light estimate value from the AR environment. This only works in Handheld AR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Light TryAcquireLightEstimateValue()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Light</span></dt>
+    <dd><p>A Light component representing the estimated light, or null if not available.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireNetworkMesh_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireNetworkMesh*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireNetworkMesh_System_String_System_Action_GameObject__" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireNetworkMesh(System.String,System.Action{GameObject})">
+  TryAcquireNetworkMesh(string, Action&lt;GameObject&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L370"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to acquire and instantiate a GLTF model from a network URL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TryAcquireNetworkMesh(string _url, Action&lt;GameObject&gt; _result = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_url</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The URL of the GLTF file.</p>
+</dd>
+    <dt><code>_result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">GameObject</span>&gt;</dt>
+    <dd><p>A callback action that is invoked with the loaded GameObject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireProcesses_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireProcesses*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireProcesses" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireProcesses">
+  TryAcquireProcesses()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves all active processes for the current application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, List&lt;string&gt;&gt; TryAcquireProcesses()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd><p>A dictionary where keys are project names and values are lists of process IDs.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireProjectInfo_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireProjectInfo*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireProjectInfo" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireProjectInfo">
+  TryAcquireProjectInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves current AR Experience project information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TryAcquireProjectInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Project information as a string, typically in JSON format.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireSDKVersion_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireSDKVersion*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireSDKVersion" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireSDKVersion">
+  TryAcquireSDKVersion()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L691"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the current SDK version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TryAcquireSDKVersion()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The SDK version as a string (e.g., &quot;1.0.0&quot;), or null if not available.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireSdkType_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireSdkType*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireSdkType" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireSdkType">
+  TryAcquireSdkType()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the current SDK type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TryAcquireSdkType()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The current SDK type as a string.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireXRMODEngineCachePath_" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireXRMODEngineCachePath*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODAPI_Runtime_API_TryAcquireXRMODEngineCachePath" data-uid="Phantom.XRMOD.XRMODAPI.Runtime.API.TryAcquireXRMODEngineCachePath">
+  TryAcquireXRMODEngineCachePath()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/XRMODAPI/API.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the temporary cache path for the current application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TryAcquireXRMODEngineCachePath()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The temporary cache path as a string.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

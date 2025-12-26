@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ILIntepreter |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ILIntepreter |  |  ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=UnityFusion_Runtime_Intepreter_ILIntepreter.md&amp;value=---%0Auid%3A%20UnityFusion.Runtime.Intepreter.ILIntepreter%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter">
+
+
+
+  <h1 id="UnityFusion_Runtime_Intepreter_ILIntepreter" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter" class="text-break">
+Class ILIntepreter  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/RegisterVM/ILIntepreter.Register.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="UnityFusion.html">UnityFusion</a>.<a class="xref" href="UnityFusion.Runtime.html">Runtime</a>.<a class="xref" href="UnityFusion.Runtime.Intepreter.html">Intepreter</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ILIntepreter</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ILIntepreter</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter__ctor_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.#ctor*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter__ctor_UnityFusion_Runtime_Enviorment_AppDomain_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.#ctor(UnityFusion.Runtime.Enviorment.AppDomain)">
+  ILIntepreter(AppDomain)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILIntepreter(AppDomain domain)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>domain</code> <a class="xref" href="UnityFusion.Runtime.Enviorment.AppDomain.html">AppDomain</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_AppDomain_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.AppDomain*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_AppDomain" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.AppDomain">
+  AppDomain
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AppDomain AppDomain { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Enviorment.AppDomain.html">AppDomain</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_CurrentStepType_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.CurrentStepType*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_CurrentStepType" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.CurrentStepType">
+  CurrentStepType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StepTypes CurrentStepType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Debugger.StepTypes.html">StepTypes</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_LastStepFrameBase_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.LastStepFrameBase*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_LastStepFrameBase" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.LastStepFrameBase">
+  LastStepFrameBase
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StackObject* LastStepFrameBase { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_LastStepInstructionIndex_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.LastStepInstructionIndex*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_LastStepInstructionIndex" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.LastStepInstructionIndex">
+  LastStepInstructionIndex
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LastStepInstructionIndex { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_ShouldBreak_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.ShouldBreak*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_ShouldBreak" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.ShouldBreak">
+  ShouldBreak
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShouldBreak { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_Add_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.Add*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_Add_UnityFusion_Runtime_Stack_StackObject__System_Int32_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.Add(UnityFusion.Runtime.Stack.StackObject*,System.Int32)">
+  Add(StackObject*, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L6238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StackObject* Add(StackObject* a, int b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_AllocValueType_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.AllocValueType*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_AllocValueType_UnityFusion_Runtime_Stack_StackObject__UnityFusion_CLR_TypeSystem_IType_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.AllocValueType(UnityFusion.Runtime.Stack.StackObject*,UnityFusion.CLR.TypeSystem.IType)">
+  AllocValueType(StackObject*, IType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L6290"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AllocValueType(StackObject* ptr, IType type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ptr</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>type</code> <a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_Break_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.Break*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_Break" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.Break">
+  Break()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Break()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_ClearDebugState_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.ClearDebugState*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_ClearDebugState" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.ClearDebugState">
+  ClearDebugState()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearDebugState()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_CopyStackValueType_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.CopyStackValueType*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_CopyStackValueType_UnityFusion_Runtime_Stack_StackObject__UnityFusion_Runtime_Stack_StackObject__UnityFusion_Other_UncheckedList_System_Object__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.CopyStackValueType(UnityFusion.Runtime.Stack.StackObject*,UnityFusion.Runtime.Stack.StackObject*,UnityFusion.Other.UncheckedList{System.Object})">
+  CopyStackValueType(StackObject*, StackObject*, UncheckedList&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L5067"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyStackValueType(StackObject* src, StackObject* dst, UncheckedList&lt;object&gt; mStack)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>dst</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>mStack</code> <a class="xref" href="UnityFusion.Other.UncheckedList-1.html">UncheckedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_CopyStackValueType_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.CopyStackValueType*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_CopyStackValueType_UnityFusion_Runtime_Stack_StackObject__UnityFusion_Runtime_Stack_StackObject__UnityFusion_Other_UncheckedList_System_Object__UnityFusion_Other_UncheckedList_System_Object__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.CopyStackValueType(UnityFusion.Runtime.Stack.StackObject*,UnityFusion.Runtime.Stack.StackObject*,UnityFusion.Other.UncheckedList{System.Object},UnityFusion.Other.UncheckedList{System.Object})">
+  CopyStackValueType(StackObject*, StackObject*, UncheckedList&lt;object&gt;, UncheckedList&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L5080"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyStackValueType(StackObject* src, StackObject* dst, UncheckedList&lt;object&gt; mStack, UncheckedList&lt;object&gt; dstmStack)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>dst</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>mStack</code> <a class="xref" href="UnityFusion.Other.UncheckedList-1.html">UncheckedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>dstmStack</code> <a class="xref" href="UnityFusion.Other.UncheckedList-1.html">UncheckedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_CopyToStack_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.CopyToStack*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_CopyToStack_UnityFusion_Runtime_Stack_StackObject__UnityFusion_Runtime_Stack_StackObject__UnityFusion_Other_UncheckedList_System_Object__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.CopyToStack(UnityFusion.Runtime.Stack.StackObject*,UnityFusion.Runtime.Stack.StackObject*,UnityFusion.Other.UncheckedList{System.Object})">
+  CopyToStack(StackObject*, StackObject*, UncheckedList&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L5981"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyToStack(StackObject* dst, StackObject* src, UncheckedList&lt;object&gt; mStack)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dst</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>src</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>mStack</code> <a class="xref" href="UnityFusion.Other.UncheckedList-1.html">UncheckedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_Free_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.Free*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_Free_UnityFusion_Runtime_Stack_StackObject__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.Free(UnityFusion.Runtime.Stack.StackObject*)">
+  Free(StackObject*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L6256"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Free(StackObject* esp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_FreeStackValueType_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.FreeStackValueType*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_FreeStackValueType_UnityFusion_Runtime_Stack_StackObject__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.FreeStackValueType(UnityFusion.Runtime.Stack.StackObject*)">
+  FreeStackValueType(StackObject*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L6278"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FreeStackValueType(StackObject* esp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_GetObjectAndResolveReference_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.GetObjectAndResolveReference*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_GetObjectAndResolveReference_UnityFusion_Runtime_Stack_StackObject__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.GetObjectAndResolveReference(UnityFusion.Runtime.Stack.StackObject*)">
+  GetObjectAndResolveReference(StackObject*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L5943"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StackObject* GetObjectAndResolveReference(StackObject* esp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_Minus_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.Minus*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_Minus_UnityFusion_Runtime_Stack_StackObject__System_Int32_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.Minus(UnityFusion.Runtime.Stack.StackObject*,System.Int32)">
+  Minus(StackObject*, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L6247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StackObject* Minus(StackObject* a, int b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_PushNull_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.PushNull*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_PushNull_UnityFusion_Runtime_Stack_StackObject__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.PushNull(UnityFusion.Runtime.Stack.StackObject*)">
+  PushNull(StackObject*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L6068"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StackObject* PushNull(StackObject* esp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_PushObject_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.PushObject*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_PushObject_UnityFusion_Runtime_Stack_StackObject__System_Collections_Generic_IList_System_Object__System_Object_System_Boolean_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.PushObject(UnityFusion.Runtime.Stack.StackObject*,System.Collections.Generic.IList{System.Object},System.Object,System.Boolean)">
+  PushObject(StackObject*, IList&lt;object&gt;, object, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L6181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete]
+public static StackObject* PushObject(StackObject* esp, IList&lt;object&gt; mStack, object obj, bool isBox = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>mStack</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>isBox</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_PushObject_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.PushObject*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_PushObject_UnityFusion_Runtime_Stack_StackObject__UnityFusion_Other_UncheckedList_System_Object__System_Object_System_Boolean_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.PushObject(UnityFusion.Runtime.Stack.StackObject*,UnityFusion.Other.UncheckedList{System.Object},System.Object,System.Boolean)">
+  PushObject(StackObject*, UncheckedList&lt;object&gt;, object, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L6187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StackObject* PushObject(StackObject* esp, UncheckedList&lt;object&gt; mStack, object obj, bool isBox = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>mStack</code> <a class="xref" href="UnityFusion.Other.UncheckedList-1.html">UncheckedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>isBox</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_PushOne_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.PushOne*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_PushOne_UnityFusion_Runtime_Stack_StackObject__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.PushOne(UnityFusion.Runtime.Stack.StackObject*)">
+  PushOne(StackObject*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L6046"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StackObject* PushOne(StackObject* esp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_PushZero_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.PushZero*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_PushZero_UnityFusion_Runtime_Stack_StackObject__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.PushZero(UnityFusion.Runtime.Stack.StackObject*)">
+  PushZero(StackObject*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L6057"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StackObject* PushZero(StackObject* esp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_ResolveReference_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.ResolveReference*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_ResolveReference_UnityFusion_Runtime_Stack_StackObject__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.ResolveReference(UnityFusion.Runtime.Stack.StackObject*)">
+  ResolveReference(StackObject*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L5933"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StackObject* ResolveReference(StackObject* esp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_Resume_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.Resume*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_Resume" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.Resume">
+  Resume()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Resume()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_RetriveDouble_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.RetriveDouble*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_RetriveDouble_UnityFusion_Runtime_Stack_StackObject__UnityFusion_Other_UncheckedList_System_Object__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.RetriveDouble(UnityFusion.Runtime.Stack.StackObject*,UnityFusion.Other.UncheckedList{System.Object})">
+  RetriveDouble(StackObject*, UncheckedList&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L5530"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double RetriveDouble(StackObject* esp, UncheckedList&lt;object&gt; mStack)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>mStack</code> <a class="xref" href="UnityFusion.Other.UncheckedList-1.html">UncheckedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_RetriveFloat_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.RetriveFloat*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_RetriveFloat_UnityFusion_Runtime_Stack_StackObject__UnityFusion_Other_UncheckedList_System_Object__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.RetriveFloat(UnityFusion.Runtime.Stack.StackObject*,UnityFusion.Other.UncheckedList{System.Object})">
+  RetriveFloat(StackObject*, UncheckedList&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L5451"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RetriveFloat(StackObject* esp, UncheckedList&lt;object&gt; mStack)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>mStack</code> <a class="xref" href="UnityFusion.Other.UncheckedList-1.html">UncheckedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_RetriveInt32_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.RetriveInt32*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_RetriveInt32_UnityFusion_Runtime_Stack_StackObject__UnityFusion_Other_UncheckedList_System_Object__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.RetriveInt32(UnityFusion.Runtime.Stack.StackObject*,UnityFusion.Other.UncheckedList{System.Object})">
+  RetriveInt32(StackObject*, UncheckedList&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L5295"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RetriveInt32(StackObject* esp, UncheckedList&lt;object&gt; mStack)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>mStack</code> <a class="xref" href="UnityFusion.Other.UncheckedList-1.html">UncheckedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_RetriveInt64_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.RetriveInt64*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_RetriveInt64_UnityFusion_Runtime_Stack_StackObject__UnityFusion_Other_UncheckedList_System_Object__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.RetriveInt64(UnityFusion.Runtime.Stack.StackObject*,UnityFusion.Other.UncheckedList{System.Object})">
+  RetriveInt64(StackObject*, UncheckedList&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L5372"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long RetriveInt64(StackObject* esp, UncheckedList&lt;object&gt; mStack)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>mStack</code> <a class="xref" href="UnityFusion.Other.UncheckedList-1.html">UncheckedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_RetriveObject_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.RetriveObject*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_RetriveObject_UnityFusion_Runtime_Stack_StackObject__System_Collections_Generic_IList_System_Object__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.RetriveObject(UnityFusion.Runtime.Stack.StackObject*,System.Collections.Generic.IList{System.Object})">
+  RetriveObject(StackObject*, IList&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L5232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete]
+public object RetriveObject(StackObject* esp, IList&lt;object&gt; mStack)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>mStack</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_RetriveObject_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.RetriveObject*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_RetriveObject_UnityFusion_Runtime_Stack_StackObject__UnityFusion_Other_UncheckedList_System_Object__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.RetriveObject(UnityFusion.Runtime.Stack.StackObject*,UnityFusion.Other.UncheckedList{System.Object})">
+  RetriveObject(StackObject*, UncheckedList&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L5238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object RetriveObject(StackObject* esp, UncheckedList&lt;object&gt; mStack)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>mStack</code> <a class="xref" href="UnityFusion.Other.UncheckedList-1.html">UncheckedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_Run_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.Run*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_Run_UnityFusion_CLR_Method_ILMethod_System_Object_System_Object___" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.Run(UnityFusion.CLR.Method.ILMethod,System.Object,System.Object[])">
+  Run(ILMethod, object, object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Run(ILMethod method, object instance, object[] p)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>method</code> <a class="xref" href="UnityFusion.CLR.Method.ILMethod.html">ILMethod</a></dt>
+    <dd></dd>
+    <dt><code>instance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>p</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_UnboxObject_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.UnboxObject*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_UnboxObject_UnityFusion_Runtime_Stack_StackObject__System_Object_System_Collections_Generic_IList_System_Object__UnityFusion_Runtime_Enviorment_AppDomain_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.UnboxObject(UnityFusion.Runtime.Stack.StackObject*,System.Object,System.Collections.Generic.IList{System.Object},UnityFusion.Runtime.Enviorment.AppDomain)">
+  UnboxObject(StackObject*, object, IList&lt;object&gt;, AppDomain)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L6076"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete]
+public static void UnboxObject(StackObject* esp, object obj, IList&lt;object&gt; mStack = null, AppDomain domain = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>mStack</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>domain</code> <a class="xref" href="UnityFusion.Runtime.Enviorment.AppDomain.html">AppDomain</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_UnboxObject_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.UnboxObject*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_UnboxObject_UnityFusion_Runtime_Stack_StackObject__System_Object_UnityFusion_Other_UncheckedList_System_Object__UnityFusion_Runtime_Enviorment_AppDomain_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.UnboxObject(UnityFusion.Runtime.Stack.StackObject*,System.Object,UnityFusion.Other.UncheckedList{System.Object},UnityFusion.Runtime.Enviorment.AppDomain)">
+  UnboxObject(StackObject*, object, UncheckedList&lt;object&gt;, AppDomain)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/ILIntepreter.cs/#L6083"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UnboxObject(StackObject* esp, object obj, UncheckedList&lt;object&gt; mStack = null, AppDomain domain = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>mStack</code> <a class="xref" href="UnityFusion.Other.UncheckedList-1.html">UncheckedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>domain</code> <a class="xref" href="UnityFusion.Runtime.Enviorment.AppDomain.html">AppDomain</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_WriteOne_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.WriteOne*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_WriteOne_UnityFusion_Runtime_Stack_StackObject__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.WriteOne(UnityFusion.Runtime.Stack.StackObject*)">
+  WriteOne(StackObject*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/RegisterVM/ILIntepreter.Register.cs/#L5692"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteOne(StackObject* esp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Runtime_Intepreter_ILIntepreter_WriteZero_" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.WriteZero*"></a>
+
+  <h3 id="UnityFusion_Runtime_Intepreter_ILIntepreter_WriteZero_UnityFusion_Runtime_Stack_StackObject__" data-uid="UnityFusion.Runtime.Intepreter.ILIntepreter.WriteZero(UnityFusion.Runtime.Stack.StackObject*)">
+  WriteZero(StackObject*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Intepreter/RegisterVM/ILIntepreter.Register.cs/#L5698"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteZero(StackObject* esp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

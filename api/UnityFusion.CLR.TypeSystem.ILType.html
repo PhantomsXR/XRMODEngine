@@ -1,0 +1,2425 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ILType |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ILType |  |  ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=UnityFusion_CLR_TypeSystem_ILType.md&amp;value=---%0Auid%3A%20UnityFusion.CLR.TypeSystem.ILType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="UnityFusion.CLR.TypeSystem.ILType">
+
+
+
+  <h1 id="UnityFusion_CLR_TypeSystem_ILType" data-uid="UnityFusion.CLR.TypeSystem.ILType" class="text-break">
+Class ILType  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="UnityFusion.html">UnityFusion</a>.<a class="xref" href="UnityFusion.CLR.html">CLR</a>.<a class="xref" href="UnityFusion.CLR.TypeSystem.html">TypeSystem</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ILType : IType</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ILType</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType__ctor_" data-uid="UnityFusion.CLR.TypeSystem.ILType.#ctor*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType__ctor_TypeReference_UnityFusion_Runtime_Enviorment_AppDomain_" data-uid="UnityFusion.CLR.TypeSystem.ILType.#ctor(TypeReference,UnityFusion.Runtime.Enviorment.AppDomain)">
+  ILType(TypeReference, AppDomain)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L300"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>初始化IL类型</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILType(TypeReference def, AppDomain domain)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>def</code> <span class="xref">TypeReference</span></dt>
+    <dd><p>MONO返回的类型定义</p>
+</dd>
+    <dt><code>domain</code> <a class="xref" href="UnityFusion.Runtime.Enviorment.AppDomain.html">AppDomain</a></dt>
+    <dd><p>ILdomain</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_AppDomain_" data-uid="UnityFusion.CLR.TypeSystem.ILType.AppDomain*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_AppDomain" data-uid="UnityFusion.CLR.TypeSystem.ILType.AppDomain">
+  AppDomain
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AppDomain AppDomain { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Enviorment.AppDomain.html">AppDomain</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_ArrayRank_" data-uid="UnityFusion.CLR.TypeSystem.ILType.ArrayRank*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_ArrayRank" data-uid="UnityFusion.CLR.TypeSystem.ILType.ArrayRank">
+  ArrayRank
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L352"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ArrayRank { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_ArrayType_" data-uid="UnityFusion.CLR.TypeSystem.ILType.ArrayType*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_ArrayType" data-uid="UnityFusion.CLR.TypeSystem.ILType.ArrayType">
+  ArrayType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L442"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IType ArrayType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_BaseType_" data-uid="UnityFusion.CLR.TypeSystem.ILType.BaseType*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_BaseType" data-uid="UnityFusion.CLR.TypeSystem.ILType.BaseType">
+  BaseType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IType BaseType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_ByRefType_" data-uid="UnityFusion.CLR.TypeSystem.ILType.ByRefType*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_ByRefType" data-uid="UnityFusion.CLR.TypeSystem.ILType.ByRefType">
+  ByRefType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L437"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IType ByRefType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_DefaultObject_" data-uid="UnityFusion.CLR.TypeSystem.ILType.DefaultObject*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_DefaultObject" data-uid="UnityFusion.CLR.TypeSystem.ILType.DefaultObject">
+  DefaultObject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L517"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StackObject DefaultObject { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_ElementType_" data-uid="UnityFusion.CLR.TypeSystem.ILType.ElementType*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_ElementType" data-uid="UnityFusion.CLR.TypeSystem.ILType.ElementType">
+  ElementType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L345"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IType ElementType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_EqualsMethod_" data-uid="UnityFusion.CLR.TypeSystem.ILType.EqualsMethod*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_EqualsMethod" data-uid="UnityFusion.CLR.TypeSystem.ILType.EqualsMethod">
+  EqualsMethod
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMethod EqualsMethod { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.Method.IMethod.html">IMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_FieldMapping_" data-uid="UnityFusion.CLR.TypeSystem.ILType.FieldMapping*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_FieldMapping" data-uid="UnityFusion.CLR.TypeSystem.ILType.FieldMapping">
+  FieldMapping
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, int&gt; FieldMapping { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_FieldTypes_" data-uid="UnityFusion.CLR.TypeSystem.ILType.FieldTypes*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_FieldTypes" data-uid="UnityFusion.CLR.TypeSystem.ILType.FieldTypes">
+  FieldTypes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IType[] FieldTypes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_FirstCLRBaseType_" data-uid="UnityFusion.CLR.TypeSystem.ILType.FirstCLRBaseType*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_FirstCLRBaseType" data-uid="UnityFusion.CLR.TypeSystem.ILType.FirstCLRBaseType">
+  FirstCLRBaseType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IType FirstCLRBaseType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_FirstCLRInterface_" data-uid="UnityFusion.CLR.TypeSystem.ILType.FirstCLRInterface*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_FirstCLRInterface" data-uid="UnityFusion.CLR.TypeSystem.ILType.FirstCLRInterface">
+  FirstCLRInterface
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IType FirstCLRInterface { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_FullName_" data-uid="UnityFusion.CLR.TypeSystem.ILType.FullName*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_FullName" data-uid="UnityFusion.CLR.TypeSystem.ILType.FullName">
+  FullName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L472"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FullName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_FullNameForNested_" data-uid="UnityFusion.CLR.TypeSystem.ILType.FullNameForNested*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_FullNameForNested" data-uid="UnityFusion.CLR.TypeSystem.ILType.FullNameForNested">
+  FullNameForNested
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L454"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FullNameForNested { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GenericArguments_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GenericArguments*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GenericArguments" data-uid="UnityFusion.CLR.TypeSystem.ILType.GenericArguments">
+  GenericArguments
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L340"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValuePair&lt;string, IType&gt;[] GenericArguments { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a>&gt;[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetHashCodeMethod_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetHashCodeMethod*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetHashCodeMethod" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetHashCodeMethod">
+  GetHashCodeMethod
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMethod GetHashCodeMethod { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.Method.IMethod.html">IMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_HasGenericParameter_" data-uid="UnityFusion.CLR.TypeSystem.ILType.HasGenericParameter*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_HasGenericParameter" data-uid="UnityFusion.CLR.TypeSystem.ILType.HasGenericParameter">
+  HasGenericParameter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasGenericParameter { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_Implements_" data-uid="UnityFusion.CLR.TypeSystem.ILType.Implements*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_Implements" data-uid="UnityFusion.CLR.TypeSystem.ILType.Implements">
+  Implements
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IType[] Implements { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_IsArray_" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsArray*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_IsArray" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsArray">
+  IsArray
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsArray { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_IsByRef_" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsByRef*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_IsByRef" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsByRef">
+  IsByRef
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L354"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsByRef { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_IsDelegate_" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsDelegate*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_IsDelegate" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsDelegate">
+  IsDelegate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L374"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDelegate { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_IsEnum_" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsEnum*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_IsEnum" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsEnum">
+  IsEnum
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L447"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEnum { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_IsGenericInstance_" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsGenericInstance*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_IsGenericInstance" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsGenericInstance">
+  IsGenericInstance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L330"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsGenericInstance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_IsGenericParameter_" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsGenericParameter*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_IsGenericParameter" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsGenericParameter">
+  IsGenericParameter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsGenericParameter { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_IsInterface_" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsInterface*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_IsInterface" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsInterface">
+  IsInterface
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L389"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInterface { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_IsPrimitive_" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsPrimitive*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_IsPrimitive" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsPrimitive">
+  IsPrimitive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L384"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPrimitive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_IsValueType_" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsValueType*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_IsValueType" data-uid="UnityFusion.CLR.TypeSystem.ILType.IsValueType">
+  IsValueType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValueType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_Name_" data-uid="UnityFusion.CLR.TypeSystem.ILType.Name*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_Name" data-uid="UnityFusion.CLR.TypeSystem.ILType.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L512"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_ReflectionType_" data-uid="UnityFusion.CLR.TypeSystem.ILType.ReflectionType*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_ReflectionType" data-uid="UnityFusion.CLR.TypeSystem.ILType.ReflectionType">
+  ReflectionType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L427"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type ReflectionType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_StaticFieldDefinitions_" data-uid="UnityFusion.CLR.TypeSystem.ILType.StaticFieldDefinitions*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_StaticFieldDefinitions" data-uid="UnityFusion.CLR.TypeSystem.ILType.StaticFieldDefinitions">
+  StaticFieldDefinitions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FieldDefinition[] StaticFieldDefinitions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FieldDefinition</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_StaticFieldMapping_" data-uid="UnityFusion.CLR.TypeSystem.ILType.StaticFieldMapping*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_StaticFieldMapping" data-uid="UnityFusion.CLR.TypeSystem.ILType.StaticFieldMapping">
+  StaticFieldMapping
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, int&gt; StaticFieldMapping { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_StaticFieldTypes_" data-uid="UnityFusion.CLR.TypeSystem.ILType.StaticFieldTypes*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_StaticFieldTypes" data-uid="UnityFusion.CLR.TypeSystem.ILType.StaticFieldTypes">
+  StaticFieldTypes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IType[] StaticFieldTypes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_StaticInstance_" data-uid="UnityFusion.CLR.TypeSystem.ILType.StaticInstance*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_StaticInstance" data-uid="UnityFusion.CLR.TypeSystem.ILType.StaticInstance">
+  StaticInstance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILTypeStaticInstance StaticInstance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Intepreter.ILTypeStaticInstance.html">ILTypeStaticInstance</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_ToStringMethod_" data-uid="UnityFusion.CLR.TypeSystem.ILType.ToStringMethod*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_ToStringMethod" data-uid="UnityFusion.CLR.TypeSystem.ILType.ToStringMethod">
+  ToStringMethod
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMethod ToStringMethod { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.Method.IMethod.html">IMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_TotalFieldCount_" data-uid="UnityFusion.CLR.TypeSystem.ILType.TotalFieldCount*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_TotalFieldCount" data-uid="UnityFusion.CLR.TypeSystem.ILType.TotalFieldCount">
+  TotalFieldCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TotalFieldCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_TypeDefinition_" data-uid="UnityFusion.CLR.TypeSystem.ILType.TypeDefinition*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_TypeDefinition" data-uid="UnityFusion.CLR.TypeSystem.ILType.TypeDefinition">
+  TypeDefinition
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TypeDefinition TypeDefinition { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TypeDefinition</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_TypeForCLR_" data-uid="UnityFusion.CLR.TypeSystem.ILType.TypeForCLR*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_TypeForCLR" data-uid="UnityFusion.CLR.TypeSystem.ILType.TypeForCLR">
+  TypeForCLR
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L394"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type TypeForCLR { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_TypeIndex_" data-uid="UnityFusion.CLR.TypeSystem.ILType.TypeIndex*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_TypeIndex" data-uid="UnityFusion.CLR.TypeSystem.ILType.TypeIndex">
+  TypeIndex
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L522"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TypeIndex { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_TypeReference_" data-uid="UnityFusion.CLR.TypeSystem.ILType.TypeReference*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_TypeReference" data-uid="UnityFusion.CLR.TypeSystem.ILType.TypeReference">
+  TypeReference
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TypeReference TypeReference { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TypeReference</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_CanAssignTo_" data-uid="UnityFusion.CLR.TypeSystem.ILType.CanAssignTo*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_CanAssignTo_UnityFusion_CLR_TypeSystem_IType_" data-uid="UnityFusion.CLR.TypeSystem.ILType.CanAssignTo(UnityFusion.CLR.TypeSystem.IType)">
+  CanAssignTo(IType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanAssignTo(IType type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_FindGenericArgument_" data-uid="UnityFusion.CLR.TypeSystem.ILType.FindGenericArgument*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_FindGenericArgument_System_String_" data-uid="UnityFusion.CLR.TypeSystem.ILType.FindGenericArgument(System.String)">
+  FindGenericArgument(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IType FindGenericArgument(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetConstructor_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetConstructor*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetConstructor_System_Collections_Generic_List_UnityFusion_CLR_TypeSystem_IType__" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetConstructor(System.Collections.Generic.List{UnityFusion.CLR.TypeSystem.IType})">
+  GetConstructor(List&lt;IType&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1047"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMethod GetConstructor(List&lt;IType&gt; param)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>param</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.Method.IMethod.html">IMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetConstructor_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetConstructor*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetConstructor_System_Collections_Generic_List_UnityFusion_CLR_TypeSystem_IType__System_Boolean_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetConstructor(System.Collections.Generic.List{UnityFusion.CLR.TypeSystem.IType},System.Boolean)">
+  GetConstructor(List&lt;IType&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1052"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMethod GetConstructor(List&lt;IType&gt; param, bool exactMatch = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>param</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>exactMatch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.Method.IMethod.html">IMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetConstructor_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetConstructor*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetConstructor_System_Int32_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetConstructor(System.Int32)">
+  GetConstructor(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1032"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMethod GetConstructor(int paramCnt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>paramCnt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.Method.IMethod.html">IMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetConstructors_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetConstructors*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetConstructors" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetConstructors">
+  GetConstructors()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1018"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ILMethod&gt; GetConstructors()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="UnityFusion.CLR.Method.ILMethod.html">ILMethod</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetField_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetField*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetField_System_Int32_FieldDefinition__" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetField(System.Int32,FieldDefinition@)">
+  GetField(int, out FieldDefinition)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IType GetField(int fieldIdx, out FieldDefinition fd)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fieldIdx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>fd</code> <span class="xref">FieldDefinition</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetField_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetField*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetField_System_String_System_Int32__" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetField(System.String,System.Int32@)">
+  GetField(string, out int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IType GetField(string name, out int fieldIdx)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>fieldIdx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetFieldIndex_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetFieldIndex*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetFieldIndex_System_Object_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetFieldIndex(System.Object)">
+  GetFieldIndex(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1079"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetFieldIndex(object token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetGenericDefinition_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetGenericDefinition*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetGenericDefinition" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetGenericDefinition">
+  GetGenericDefinition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L335"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILType GetGenericDefinition()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.ILType.html">ILType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetHashCode_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetHashCode*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetHashCode" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1484"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A hash code for the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetMethod_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetMethod*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetMethod_System_String_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetMethod(System.String)">
+  GetMethod(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L683"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMethod GetMethod(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.Method.IMethod.html">IMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetMethod_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetMethod*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetMethod_System_String_System_Collections_Generic_List_UnityFusion_CLR_TypeSystem_IType__UnityFusion_CLR_TypeSystem_IType___UnityFusion_CLR_TypeSystem_IType_System_Boolean_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetMethod(System.String,System.Collections.Generic.List{UnityFusion.CLR.TypeSystem.IType},UnityFusion.CLR.TypeSystem.IType[],UnityFusion.CLR.TypeSystem.IType,System.Boolean)">
+  GetMethod(string, List&lt;IType&gt;, IType[], IType, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L835"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a specified Method in this type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMethod GetMethod(string name, List&lt;IType&gt; param, IType[] genericArguments, IType returnType = null, bool declaredOnly = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Name of the Type</p>
+</dd>
+    <dt><code>param</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a>&gt;</dt>
+    <dd><p>List of parameter's types</p>
+</dd>
+    <dt><code>genericArguments</code> <a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a>[]</dt>
+    <dd><p>List of Generic Arguments</p>
+</dd>
+    <dt><code>returnType</code> <a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd><p>Return Type</p>
+</dd>
+    <dt><code>declaredOnly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True to search the methods decleared in this type only, false to search base types.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.Method.IMethod.html">IMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetMethod_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetMethod*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetMethod_System_String_System_Int32_System_Boolean_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetMethod(System.String,System.Int32,System.Boolean)">
+  GetMethod(string, int, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L696"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a specified Method in this type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMethod GetMethod(string name, int paramCount, bool declaredOnly = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Name of the Type</p>
+</dd>
+    <dt><code>paramCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Parameter count</p>
+</dd>
+    <dt><code>declaredOnly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True to search the methods decleared in this type only, false to search base types.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.Method.IMethod.html">IMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetMethodBodySizeInMemory_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetMethodBodySizeInMemory*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetMethodBodySizeInMemory" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetMethodBodySizeInMemory">
+  GetMethodBodySizeInMemory()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1417"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetMethodBodySizeInMemory()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetMethods_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetMethods*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetMethods" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetMethods">
+  GetMethods()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L532"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;IMethod&gt; GetMethods()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="UnityFusion.CLR.Method.IMethod.html">IMethod</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetStaticConstroctor_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetStaticConstroctor*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetStaticConstroctor" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetStaticConstroctor">
+  GetStaticConstroctor()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1025"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMethod GetStaticConstroctor()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.Method.IMethod.html">IMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetStaticFieldSizeInMemory_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetStaticFieldSizeInMemory*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetStaticFieldSizeInMemory_System_Collections_Generic_HashSet_System_Object__" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetStaticFieldSizeInMemory(System.Collections.Generic.HashSet{System.Object})">
+  GetStaticFieldSizeInMemory(HashSet&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1412"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetStaticFieldSizeInMemory(HashSet&lt;object&gt; traversed)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>traversed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetValueTypeSize_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetValueTypeSize*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetValueTypeSize_System_Int32__System_Int32__" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetValueTypeSize(System.Int32@,System.Int32@)">
+  GetValueTypeSize(out int, out int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1437"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetValueTypeSize(out int fieldCout, out int managedCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fieldCout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>managedCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_GetVirtualMethod_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetVirtualMethod*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_GetVirtualMethod_UnityFusion_CLR_Method_IMethod_" data-uid="UnityFusion.CLR.TypeSystem.ILType.GetVirtualMethod(UnityFusion.CLR.Method.IMethod)">
+  GetVirtualMethod(IMethod)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L793"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMethod GetVirtualMethod(IMethod method)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>method</code> <a class="xref" href="UnityFusion.CLR.Method.IMethod.html">IMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.Method.IMethod.html">IMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_Instantiate_" data-uid="UnityFusion.CLR.TypeSystem.ILType.Instantiate*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_Instantiate_System_Boolean_" data-uid="UnityFusion.CLR.TypeSystem.ILType.Instantiate(System.Boolean)">
+  Instantiate(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILTypeInstance Instantiate(bool callDefaultConstructor = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callDefaultConstructor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Intepreter.ILTypeInstance.html">ILTypeInstance</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_Instantiate_" data-uid="UnityFusion.CLR.TypeSystem.ILType.Instantiate*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_Instantiate_System_Object___" data-uid="UnityFusion.CLR.TypeSystem.ILType.Instantiate(System.Object[])">
+  Instantiate(object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1288"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILTypeInstance Instantiate(object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Intepreter.ILTypeInstance.html">ILTypeInstance</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_MakeArrayType_" data-uid="UnityFusion.CLR.TypeSystem.ILType.MakeArrayType*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_MakeArrayType_System_Int32_" data-uid="UnityFusion.CLR.TypeSystem.ILType.MakeArrayType(System.Int32)">
+  MakeArrayType(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1354"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IType MakeArrayType(int rank)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rank</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_MakeByRefType_" data-uid="UnityFusion.CLR.TypeSystem.ILType.MakeByRefType*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_MakeByRefType" data-uid="UnityFusion.CLR.TypeSystem.ILType.MakeByRefType">
+  MakeByRefType()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1341"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IType MakeByRefType()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_MakeGenericInstance_" data-uid="UnityFusion.CLR.TypeSystem.ILType.MakeGenericInstance*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_MakeGenericInstance_System_Collections_Generic_KeyValuePair_System_String_UnityFusion_CLR_TypeSystem_IType____" data-uid="UnityFusion.CLR.TypeSystem.ILType.MakeGenericInstance(System.Collections.Generic.KeyValuePair{System.String,UnityFusion.CLR.TypeSystem.IType}[])">
+  MakeGenericInstance(KeyValuePair&lt;string, IType&gt;[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1313"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IType MakeGenericInstance(KeyValuePair&lt;string, IType&gt;[] genericArguments)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>genericArguments</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a>&gt;[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_ResolveGenericType_" data-uid="UnityFusion.CLR.TypeSystem.ILType.ResolveGenericType*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_ResolveGenericType_UnityFusion_CLR_TypeSystem_IType_" data-uid="UnityFusion.CLR.TypeSystem.ILType.ResolveGenericType(UnityFusion.CLR.TypeSystem.IType)">
+  ResolveGenericType(IType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1373"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IType ResolveGenericType(IType contextType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>contextType</code> <a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.IType.html">IType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLR_TypeSystem_ILType_ToString_" data-uid="UnityFusion.CLR.TypeSystem.ILType.ToString*"></a>
+
+  <h3 id="UnityFusion_CLR_TypeSystem_ILType_ToString" data-uid="UnityFusion.CLR.TypeSystem.ILType.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/CLR/TypeSystem/ILType.cs/#L1491"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string that represents the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

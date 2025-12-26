@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UniPool |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UniPool |  |  ">
+      
+      <meta name="description" content="Provides a static interface for interacting with the UniPool object pooling system. All operations are delegated to an internal PoolManager instance.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool.md&amp;value=---%0Auid%3A%20Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool">
+
+
+
+  <h1 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool" class="text-break">
+Class UniPool  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Phantom.html">Phantom</a>.<a class="xref" href="Phantom.XRMOD.html">XRMOD</a>.<a class="xref" href="Phantom.XRMOD.XRMODUtilites.html">XRMODUtilites</a>.<a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.html">Runtime</a>.<a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.html">UniPool</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Provides a static interface for interacting with the UniPool object pooling system.
+All operations are delegated to an internal PoolManager instance.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class UniPool</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">UniPool</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_DestroyAll_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.DestroyAll*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_DestroyAll" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.DestroyAll">
+  DestroyAll()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears and destroys all instances and registrations within the entire pooling system.
+Resets the UniPool to its initial state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DestroyAll()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_DestroyAll_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.DestroyAll*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_DestroyAll_GameObject_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.DestroyAll(GameObject)">
+  DestroyAll(GameObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L310"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Destroys all instances of a specific GameObject prefab, regardless of their active state or pool status.
+This does not unregister the prefab from the pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DestroyAll(GameObject _prefab)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_prefab</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject prefab whose instances are to be destroyed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_DestroyAll_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.DestroyAll*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_DestroyAll_System_String_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.DestroyAll(System.String)">
+  DestroyAll(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L320"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Destroys all instances of GameObjects registered under a specific name, regardless of their active state or pool status.
+This does not unregister the prefab from the pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DestroyAll(string _name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The registered name of the GameObject prefab.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Fill_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Fill*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Fill_GameObject_System_Int32_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Fill(GameObject,System.Int32)">
+  Fill(GameObject, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L245"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pre-fills the pool with a specified amount of instances for a given GameObject prefab.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Fill(GameObject _prefab, int _amount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_prefab</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject prefab to fill the pool with.</p>
+</dd>
+    <dt><code>_amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of instances to create and add to the pool.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Fill_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Fill*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Fill_GameObject_System_Int32_Transform_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Fill(GameObject,System.Int32,Transform)">
+  Fill(GameObject, int, Transform)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Fill(GameObject _prefab, int _amount, Transform _parent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_prefab</code> <span class="xref">GameObject</span></dt>
+    <dd></dd>
+    <dt><code>_amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>_parent</code> <span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Fill_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Fill*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Fill_System_String_System_Int32_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Fill(System.String,System.Int32)">
+  Fill(string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pre-fills the pool with a specified amount of instances for a GameObject registered under a specific name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Fill(string _name, int _amount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The registered name of the GameObject prefab.</p>
+</dd>
+    <dt><code>_amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of instances to create and add to the pool.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Get_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Get*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Get_GameObject_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Get(GameObject)">
+  Get(GameObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves an available instance of a GameObject from the pool based on its prefab.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PoolCell Get(GameObject _prefab)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_prefab</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject prefab to retrieve an instance of.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.PoolCell.html">PoolCell</a></dt>
+    <dd><p>A PoolCell containing the retrieved GameObject instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Get_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Get*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Get_System_String_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Get(System.String)">
+  Get(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves an available instance of a GameObject from the pool based on its registered name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PoolCell Get(string _name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The registered name of the GameObject prefab.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.PoolCell.html">PoolCell</a></dt>
+    <dd><p>A PoolCell containing the retrieved GameObject instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Get_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Get*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Get__1_GameObject_System_Boolean_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Get``1(GameObject,System.Boolean)">
+  Get&lt;T&gt;(GameObject, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves an available instance of a GameObject from the pool, and attempts to get a component of type T from it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PoolCell Get&lt;T&gt;(GameObject _prefab, bool _componentInChildren = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_prefab</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject prefab to retrieve an instance of.</p>
+</dd>
+    <dt><code>_componentInChildren</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, searches for the component in children as well.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.PoolCell.html">PoolCell</a></dt>
+    <dd><p>A PoolCell containing the retrieved GameObject instance and its component.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of component to retrieve from the pooled GameObject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Register_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Register*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Register_GameObject_System_String_Transform_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Register(GameObject,System.String,Transform)">
+  Register(GameObject, string, Transform)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a GameObject prefab with the pooling system under a specific name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Register(GameObject _prefab, string _name, Transform _container = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_prefab</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject prefab to register.</p>
+</dd>
+    <dt><code>_name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name to register the prefab under.</p>
+</dd>
+    <dt><code>_container</code> <span class="xref">Transform</span></dt>
+    <dd><p>The Transform to parent pooled instances under. If null, instances will be parented under the PoolManager's default container.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if registration was successful, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Register_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Register*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Register_GameObject_Transform_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Register(GameObject,Transform)">
+  Register(GameObject, Transform)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a GameObject prefab with the pooling system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Register(GameObject _prefab, Transform _container = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_prefab</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject prefab to register.</p>
+</dd>
+    <dt><code>_container</code> <span class="xref">Transform</span></dt>
+    <dd><p>The Transform to parent pooled instances under. If null, instances will be parented under the PoolManager's default container.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if registration was successful, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Register_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Register*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Register__1_GameObject_System_String_Transform_System_Boolean_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Register``1(GameObject,System.String,Transform,System.Boolean)">
+  Register&lt;T&gt;(GameObject, string, Transform, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a GameObject prefab with the pooling system under a specific name, associating it with a specific component type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Register&lt;T&gt;(GameObject _prefab, string _name, Transform _container = null, bool _componentInChildren = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_prefab</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject prefab to register.</p>
+</dd>
+    <dt><code>_name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name to register the prefab under.</p>
+</dd>
+    <dt><code>_container</code> <span class="xref">Transform</span></dt>
+    <dd><p>The Transform to parent pooled instances under. If null, instances will be parented under the PoolManager's default container.</p>
+</dd>
+    <dt><code>_componentInChildren</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, the component will be searched for in children as well.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if registration was successful, false otherwise.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The component type associated with the prefab.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Register_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Register*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Register__1_GameObject_Transform_System_Boolean_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Register``1(GameObject,Transform,System.Boolean)">
+  Register&lt;T&gt;(GameObject, Transform, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a GameObject prefab with the pooling system, associating it with a specific component type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Register&lt;T&gt;(GameObject _prefab, Transform _container = null, bool _componentInChildren = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_prefab</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject prefab to register.</p>
+</dd>
+    <dt><code>_container</code> <span class="xref">Transform</span></dt>
+    <dd><p>The Transform to parent pooled instances under. If null, instances will be parented under the PoolManager's default container.</p>
+</dd>
+    <dt><code>_componentInChildren</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, the component will be searched for in children as well.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if registration was successful, false otherwise.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The component type associated with the prefab.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Release_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Release*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Release_GameObject_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Release(GameObject)">
+  Release(GameObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases a GameObject back into the pool, making it available for reuse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Release(GameObject _gameObject)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_gameObject</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject to release.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Release_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Release*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Release_GameObject_System_Single_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Release(GameObject,System.Single)">
+  Release(GameObject, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases a GameObject back into the pool after a specified delay.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Release(GameObject _gameObject, float _delay)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_gameObject</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject to release.</p>
+</dd>
+    <dt><code>_delay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The delay in seconds before releasing the GameObject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Release_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Release*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Release_Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_PoolCell_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Release(Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.PoolCell)">
+  Release(PoolCell)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases a PoolCell back into the pool, making its GameObject available for reuse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Release(PoolCell _cell)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_cell</code> <a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.PoolCell.html">PoolCell</a></dt>
+    <dd><p>The PoolCell to release.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Release_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Release*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Release_Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_PoolCell_System_Single_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Release(Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.PoolCell,System.Single)">
+  Release(PoolCell, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases a PoolCell back into the pool after a specified delay.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Release(PoolCell _cell, float _delay)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_cell</code> <a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.PoolCell.html">PoolCell</a></dt>
+    <dd><p>The PoolCell to release.</p>
+</dd>
+    <dt><code>_delay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The delay in seconds before releasing the PoolCell.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Release_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Release*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Release_System_Object_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Release(System.Object)">
+  Release(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases a Component's associated GameObject back into the pool, making it available for reuse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Release(object _component)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_component</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The Component whose GameObject is to be released.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Release_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Release*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Release_System_Object_System_Single_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Release(System.Object,System.Single)">
+  Release(object, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases a Component's associated GameObject back into the pool after a specified delay.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Release(object _component, float _delay)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_component</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The Component whose GameObject is to be released.</p>
+</dd>
+    <dt><code>_delay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The delay in seconds before releasing the GameObject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Release_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Release*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Release_Transform_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Release(Transform)">
+  Release(Transform)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases a Transform's associated GameObject back into the pool, making it available for reuse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Release(Transform _transform)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_transform</code> <span class="xref">Transform</span></dt>
+    <dd><p>The Transform whose GameObject is to be released.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Release_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Release*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Release_Transform_System_Single_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Release(Transform,System.Single)">
+  Release(Transform, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases a Transform's associated GameObject back into the pool after a specified delay.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Release(Transform _transform, float _delay)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_transform</code> <span class="xref">Transform</span></dt>
+    <dd><p>The Transform whose GameObject is to be released.</p>
+</dd>
+    <dt><code>_delay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The delay in seconds before releasing the GameObject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_ReleaseAll_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.ReleaseAll*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_ReleaseAll_GameObject_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.ReleaseAll(GameObject)">
+  ReleaseAll(GameObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases all active instances of a specific GameObject prefab back into the pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ReleaseAll(GameObject _prefab)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_prefab</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject prefab whose instances are to be released.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_ReleaseAll_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.ReleaseAll*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_ReleaseAll_GameObject_System_Single_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.ReleaseAll(GameObject,System.Single)">
+  ReleaseAll(GameObject, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases all active instances of a specific GameObject prefab back into the pool after a specified delay.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ReleaseAll(GameObject _prefab, float _delay)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_prefab</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject prefab whose instances are to be released.</p>
+</dd>
+    <dt><code>_delay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The delay in seconds before releasing all instances.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_ReleaseAll_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.ReleaseAll*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_ReleaseAll_System_String_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.ReleaseAll(System.String)">
+  ReleaseAll(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases all active instances of GameObjects registered under a specific name back into the pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ReleaseAll(string _name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The registered name of the GameObject prefab.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_ReleaseAll_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.ReleaseAll*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_ReleaseAll_System_String_System_Single_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.ReleaseAll(System.String,System.Single)">
+  ReleaseAll(string, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases all active instances of GameObjects registered under a specific name back into the pool after a specified delay.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ReleaseAll(string _name, float _delay)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The registered name of the GameObject prefab.</p>
+</dd>
+    <dt><code>_delay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The delay in seconds before releasing all instances.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Remove_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Remove*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Remove_GameObject_System_Boolean_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Remove(GameObject,System.Boolean)">
+  Remove(GameObject, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a specific GameObject from the pooling scheme. Optionally destroys the GameObject.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Remove(GameObject _gameObject, bool _destroy = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_gameObject</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject to remove.</p>
+</dd>
+    <dt><code>_destroy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, the GameObject will be destroyed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Remove_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Remove*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Remove_Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_PoolCell_System_Boolean_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Remove(Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.PoolCell,System.Boolean)">
+  Remove(PoolCell, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a specific PoolCell from the pooling scheme. Optionally destroys the associated GameObject.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Remove(PoolCell _cell, bool _destroy = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_cell</code> <a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.PoolCell.html">PoolCell</a></dt>
+    <dd><p>The PoolCell to remove.</p>
+</dd>
+    <dt><code>_destroy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, the GameObject associated with the PoolCell will be destroyed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Remove_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Remove*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Remove_System_Object_System_Boolean_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Remove(System.Object,System.Boolean)">
+  Remove(object, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L300"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a Component's associated GameObject from the pooling scheme. Optionally destroys the GameObject.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Remove(object _component, bool _destroy = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_component</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The Component whose GameObject is to be removed.</p>
+</dd>
+    <dt><code>_destroy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, the GameObject will be destroyed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Remove_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Remove*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Remove_Transform_System_Boolean_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Remove(Transform,System.Boolean)">
+  Remove(Transform, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a Transform's associated GameObject from the pooling scheme. Optionally destroys the GameObject.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Remove(Transform _transform, bool _destroy = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_transform</code> <span class="xref">Transform</span></dt>
+    <dd><p>The Transform whose GameObject is to be removed.</p>
+</dd>
+    <dt><code>_destroy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, the GameObject will be destroyed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Unregister_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Unregister*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Unregister_GameObject_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Unregister(GameObject)">
+  Unregister(GameObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L226"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unregisters a GameObject prefab from the pooling scheme and destroys all its instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Unregister(GameObject _prefab)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_prefab</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The GameObject prefab to unregister.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Unregister_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Unregister*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_UniPool_UniPool_Unregister_System_String_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.UniPool.UniPool.Unregister(System.String)">
+  Unregister(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/UniPool/UniPool.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unregisters a GameObject prefab (by its registered name) from the pooling scheme and destroys all its instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Unregister(string _name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The registered name of the GameObject prefab to unregister.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

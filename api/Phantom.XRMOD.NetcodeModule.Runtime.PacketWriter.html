@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PacketWriter |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PacketWriter |  |  ">
+      
+      <meta name="description" content="Binary writer for serializing data packets for network transmission.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter.md&amp;value=---%0Auid%3A%20Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter">
+
+
+
+  <h1 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter" class="text-break">
+Class PacketWriter  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L606"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Phantom.html">Phantom</a>.<a class="xref" href="Phantom.XRMOD.html">XRMOD</a>.<a class="xref" href="Phantom.XRMOD.NetcodeModule.html">NetcodeModule</a>.<a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.html">Runtime</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Binary writer for serializing data packets for network transmission.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PacketWriter</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PacketWriter</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Provides methods for writing primitives, Unity types (Vector3, Color, etc.), and collections to a binary stream.
+Use <a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.html#Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_ToArray">ToArray()</a> to get the final byte array for network transmission.
+This is a lightweight alternative to MessagePack or other serializers, optimized for Unity types.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter__ctor_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.#ctor*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter__ctor" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.#ctor">
+  PacketWriter()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.html">PacketWriter</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PacketWriter()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_ToArray_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.ToArray*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_ToArray" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.ToArray">
+  ToArray()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts the current buffered data into a byte array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] ToArray()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>The serialized byte array.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteBool_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteBool*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteBool_System_Boolean_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteBool(System.Boolean)">
+  WriteBool(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteBool(bool v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteBoolArray_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteBoolArray*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteBoolArray_System_Boolean___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteBoolArray(System.Boolean[])">
+  WriteBoolArray(bool[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteBoolArray(bool[] arr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteBoolList_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteBoolList*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteBoolList_System_Collections_Generic_List_System_Boolean__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteBoolList(System.Collections.Generic.List{System.Boolean})">
+  WriteBoolList(List&lt;bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteBoolList(List&lt;bool&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteBounds_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteBounds*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteBounds_Bounds_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteBounds(Bounds)">
+  WriteBounds(Bounds)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteBounds(Bounds b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>b</code> <span class="xref">Bounds</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteBoundsArray_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteBoundsArray*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteBoundsArray_Bounds___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteBoundsArray(Bounds[])">
+  WriteBoundsArray(Bounds[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L609"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteBoundsArray(Bounds[] arr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arr</code> <span class="xref">Bounds</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteBoundsList_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteBoundsList*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteBoundsList_System_Collections_Generic_List_Bounds__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteBoundsList(System.Collections.Generic.List{Bounds})">
+  WriteBoundsList(List&lt;Bounds&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L616"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteBoundsList(List&lt;Bounds&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Bounds</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteBytes_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteBytes*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteBytes_System_Byte___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteBytes(System.Byte[])">
+  WriteBytes(byte[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteBytes(byte[] d)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>d</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteColor_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteColor*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteColor_Color_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteColor(Color)">
+  WriteColor(Color)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteColor(Color c)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>c</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteColor32_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteColor32*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteColor32_Color32_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteColor32(Color32)">
+  WriteColor32(Color32)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteColor32(Color32 c)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>c</code> <span class="xref">Color32</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteColor32Array_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteColor32Array*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteColor32Array_Color32___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteColor32Array(Color32[])">
+  WriteColor32Array(Color32[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L345"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteColor32Array(Color32[] arr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arr</code> <span class="xref">Color32</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteColor32List_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteColor32List*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteColor32List_System_Collections_Generic_List_Color32__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteColor32List(System.Collections.Generic.List{Color32})">
+  WriteColor32List(List&lt;Color32&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L352"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteColor32List(List&lt;Color32&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Color32</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteColorArray_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteColorArray*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteColorArray_Color___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteColorArray(Color[])">
+  WriteColorArray(Color[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L330"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteColorArray(Color[] arr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arr</code> <span class="xref">Color</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteColorList_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteColorList*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteColorList_System_Collections_Generic_List_Color__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteColorList(System.Collections.Generic.List{Color})">
+  WriteColorList(List&lt;Color&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L337"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteColorList(List&lt;Color&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Color</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteDouble_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteDouble*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteDouble_System_Double_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteDouble(System.Double)">
+  WriteDouble(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteDouble(double v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteFloat_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteFloat*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteFloat_System_Single_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteFloat(System.Single)">
+  WriteFloat(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteFloat(float v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteFloatArray_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteFloatArray*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteFloatArray_System_Single___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteFloatArray(System.Single[])">
+  WriteFloatArray(float[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteFloatArray(float[] arr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteFloatList_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteFloatList*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteFloatList_System_Collections_Generic_List_System_Single__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteFloatList(System.Collections.Generic.List{System.Single})">
+  WriteFloatList(List&lt;float&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteFloatList(List&lt;float&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteInt_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteInt*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteInt_System_Int32_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteInt(System.Int32)">
+  WriteInt(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteInt(int v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteIntArray_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteIntArray*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteIntArray_System_Int32___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteIntArray(System.Int32[])">
+  WriteIntArray(int[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteIntArray(int[] arr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteIntList_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteIntList*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteIntList_System_Collections_Generic_List_System_Int32__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteIntList(System.Collections.Generic.List{System.Int32})">
+  WriteIntList(List&lt;int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteIntList(List&lt;int&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteLong_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteLong*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteLong_System_Int64_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteLong(System.Int64)">
+  WriteLong(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteLong(long v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteMatrix4x4_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteMatrix4x4*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteMatrix4x4_Matrix4x4_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteMatrix4x4(Matrix4x4)">
+  WriteMatrix4x4(Matrix4x4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteMatrix4x4(Matrix4x4 m)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>m</code> <span class="xref">Matrix4x4</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteMatrix4x4Array_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteMatrix4x4Array*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteMatrix4x4Array_Matrix4x4___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteMatrix4x4Array(Matrix4x4[])">
+  WriteMatrix4x4Array(Matrix4x4[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L639"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteMatrix4x4Array(Matrix4x4[] arr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arr</code> <span class="xref">Matrix4x4</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteMatrix4x4List_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteMatrix4x4List*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteMatrix4x4List_System_Collections_Generic_List_Matrix4x4__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteMatrix4x4List(System.Collections.Generic.List{Matrix4x4})">
+  WriteMatrix4x4List(List&lt;Matrix4x4&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L646"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteMatrix4x4List(List&lt;Matrix4x4&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Matrix4x4</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteQuaternion_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteQuaternion*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteQuaternion_Quaternion_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteQuaternion(Quaternion)">
+  WriteQuaternion(Quaternion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteQuaternion(Quaternion q)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>q</code> <span class="xref">Quaternion</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteQuaternionArray_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteQuaternionArray*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteQuaternionArray_Quaternion___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteQuaternionArray(Quaternion[])">
+  WriteQuaternionArray(Quaternion[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L315"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteQuaternionArray(Quaternion[] arr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arr</code> <span class="xref">Quaternion</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteQuaternionList_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteQuaternionList*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteQuaternionList_System_Collections_Generic_List_Quaternion__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteQuaternionList(System.Collections.Generic.List{Quaternion})">
+  WriteQuaternionList(List&lt;Quaternion&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L322"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteQuaternionList(List&lt;Quaternion&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Quaternion</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteRay_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteRay*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteRay_Ray_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteRay(Ray)">
+  WriteRay(Ray)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteRay(Ray r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <span class="xref">Ray</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteRayArray_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteRayArray*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteRayArray_Ray___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteRayArray(Ray[])">
+  WriteRayArray(Ray[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L654"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteRayArray(Ray[] arr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arr</code> <span class="xref">Ray</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteRayList_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteRayList*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteRayList_System_Collections_Generic_List_Ray__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteRayList(System.Collections.Generic.List{Ray})">
+  WriteRayList(List&lt;Ray&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L661"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteRayList(List&lt;Ray&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Ray</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteRect_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteRect*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteRect_Rect_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteRect(Rect)">
+  WriteRect(Rect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteRect(Rect r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <span class="xref">Rect</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteRectArray_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteRectArray*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteRectArray_Rect___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteRectArray(Rect[])">
+  WriteRectArray(Rect[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L624"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteRectArray(Rect[] arr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arr</code> <span class="xref">Rect</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteRectList_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteRectList*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteRectList_System_Collections_Generic_List_Rect__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteRectList(System.Collections.Generic.List{Rect})">
+  WriteRectList(List&lt;Rect&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L631"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteRectList(List&lt;Rect&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Rect</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteString_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteString*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteString_System_String_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteString(System.String)">
+  WriteString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteString(string s)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>s</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteStringArray_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteStringArray*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteStringArray_System_String___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteStringArray(System.String[])">
+  WriteStringArray(string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteStringArray(string[] arr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteStringList_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteStringList*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteStringList_System_Collections_Generic_List_System_String__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteStringList(System.Collections.Generic.List{System.String})">
+  WriteStringList(List&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteStringList(List&lt;string&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteULong_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteULong*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteULong_System_UInt64_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteULong(System.UInt64)">
+  WriteULong(ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteULong(ulong v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector2_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector2*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector2_Vector2_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector2(Vector2)">
+  WriteVector2(Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteVector2(Vector2 v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector2Array_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector2Array*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector2Array_Vector2___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector2Array(Vector2[])">
+  WriteVector2Array(Vector2[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteVector2Array(Vector2[] arr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arr</code> <span class="xref">Vector2</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector2Int_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector2Int*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector2Int_Vector2Int_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector2Int(Vector2Int)">
+  WriteVector2Int(Vector2Int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteVector2Int(Vector2Int v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <span class="xref">Vector2Int</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector2IntArray_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector2IntArray*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector2IntArray_Vector2Int___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector2IntArray(Vector2Int[])">
+  WriteVector2IntArray(Vector2Int[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L360"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteVector2IntArray(Vector2Int[] arr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arr</code> <span class="xref">Vector2Int</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector2IntList_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector2IntList*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector2IntList_System_Collections_Generic_List_Vector2Int__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector2IntList(System.Collections.Generic.List{Vector2Int})">
+  WriteVector2IntList(List&lt;Vector2Int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L367"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteVector2IntList(List&lt;Vector2Int&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector2Int</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector2List_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector2List*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector2List_System_Collections_Generic_List_Vector2__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector2List(System.Collections.Generic.List{Vector2})">
+  WriteVector2List(List&lt;Vector2&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteVector2List(List&lt;Vector2&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector3_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector3*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector3_Vector3_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector3(Vector3)">
+  WriteVector3(Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteVector3(Vector3 v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector3Array_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector3Array*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector3Array_Vector3___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector3Array(Vector3[])">
+  WriteVector3Array(Vector3[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteVector3Array(Vector3[] arr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arr</code> <span class="xref">Vector3</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector3Int_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector3Int*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector3Int_Vector3Int_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector3Int(Vector3Int)">
+  WriteVector3Int(Vector3Int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteVector3Int(Vector3Int v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <span class="xref">Vector3Int</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector3IntArray_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector3IntArray*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector3IntArray_Vector3Int___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector3IntArray(Vector3Int[])">
+  WriteVector3IntArray(Vector3Int[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L375"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteVector3IntArray(Vector3Int[] arr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arr</code> <span class="xref">Vector3Int</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector3IntList_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector3IntList*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector3IntList_System_Collections_Generic_List_Vector3Int__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector3IntList(System.Collections.Generic.List{Vector3Int})">
+  WriteVector3IntList(List&lt;Vector3Int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L382"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteVector3IntList(List&lt;Vector3Int&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector3Int</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector3List_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector3List*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector3List_System_Collections_Generic_List_Vector3__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector3List(System.Collections.Generic.List{Vector3})">
+  WriteVector3List(List&lt;Vector3&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L292"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteVector3List(List&lt;Vector3&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector3</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector4_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector4*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector4_Vector4_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector4(Vector4)">
+  WriteVector4(Vector4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteVector4(Vector4 v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <span class="xref">Vector4</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector4Array_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector4Array*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector4Array_Vector4___" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector4Array(Vector4[])">
+  WriteVector4Array(Vector4[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L300"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteVector4Array(Vector4[] arr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arr</code> <span class="xref">Vector4</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector4List_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector4List*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_PacketWriter_WriteVector4List_System_Collections_Generic_List_Vector4__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.PacketWriter.WriteVector4List(System.Collections.Generic.List{Vector4})">
+  WriteVector4List(List&lt;Vector4&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Utilities/MessageWriterAndReader.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteVector4List(List&lt;Vector4&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector4</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

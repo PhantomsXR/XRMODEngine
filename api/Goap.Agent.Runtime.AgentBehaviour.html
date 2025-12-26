@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AgentBehaviour |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AgentBehaviour |  |  ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Goap_Agent_Runtime_AgentBehaviour.md&amp;value=---%0Auid%3A%20Goap.Agent.Runtime.AgentBehaviour%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Goap.Agent.Runtime.AgentBehaviour">
+
+
+
+  <h1 id="Goap_Agent_Runtime_AgentBehaviour" data-uid="Goap.Agent.Runtime.AgentBehaviour" class="text-break">
+Class AgentBehaviour  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Goap.html">Goap</a>.<a class="xref" href="Goap.Agent.html">Agent</a>.<a class="xref" href="Goap.Agent.Runtime.html">Runtime</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AgentBehaviour : MonoBehaviour, IMonoAgent, IAgent, IActionReceiver, IMonoBehaviour</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AgentBehaviour</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Goap.Agent.Core.IMonoAgent.html">IMonoAgent</a></div>
+      <div><a class="xref" href="Goap.Agent.Core.IAgent.html">IAgent</a></div>
+      <div><a class="xref" href="Goap.Agent.Core.IActionReceiver.html">IActionReceiver</a></div>
+      <div><a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html">IMonoBehaviour</a></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_ActionProvider_" data-uid="Goap.Agent.Runtime.AgentBehaviour.ActionProvider*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_ActionProvider" data-uid="Goap.Agent.Runtime.AgentBehaviour.ActionProvider">
+  ActionProvider
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IActionProvider ActionProvider { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Core.IActionProvider.html">IActionProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_ActionProviderBase_" data-uid="Goap.Agent.Runtime.AgentBehaviour.ActionProviderBase*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_ActionProviderBase" data-uid="Goap.Agent.Runtime.AgentBehaviour.ActionProviderBase">
+  ActionProviderBase
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionProviderBase ActionProviderBase { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Runtime.ActionProviderBase.html">ActionProviderBase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_ActionState_" data-uid="Goap.Agent.Runtime.AgentBehaviour.ActionState*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_ActionState" data-uid="Goap.Agent.Runtime.AgentBehaviour.ActionState">
+  ActionState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IActionState ActionState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Core.IActionState.html">IActionState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_CurrentAction_" data-uid="Goap.Agent.Runtime.AgentBehaviour.CurrentAction*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_CurrentAction" data-uid="Goap.Agent.Runtime.AgentBehaviour.CurrentAction">
+  CurrentAction
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use ActionState.Action instead.&quot;)]
+public IAction CurrentAction { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Core.IAction.html">IAction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_CurrentActionData_" data-uid="Goap.Agent.Runtime.AgentBehaviour.CurrentActionData*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_CurrentActionData" data-uid="Goap.Agent.Runtime.AgentBehaviour.CurrentActionData">
+  CurrentActionData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use ActionState.Data instead.&quot;)]
+public IActionData CurrentActionData { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Core.IActionData.html">IActionData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_CurrentGoal_" data-uid="Goap.Agent.Runtime.AgentBehaviour.CurrentGoal*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_CurrentGoal" data-uid="Goap.Agent.Runtime.AgentBehaviour.CurrentGoal">
+  CurrentGoal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use GoapActionProvider.CurrentPlan.Goal instead&quot;)]
+public object CurrentGoal { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_CurrentTarget_" data-uid="Goap.Agent.Runtime.AgentBehaviour.CurrentTarget*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_CurrentTarget" data-uid="Goap.Agent.Runtime.AgentBehaviour.CurrentTarget">
+  CurrentTarget
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITarget CurrentTarget { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Core.ITarget.html">ITarget</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_DistanceObserver_" data-uid="Goap.Agent.Runtime.AgentBehaviour.DistanceObserver*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_DistanceObserver" data-uid="Goap.Agent.Runtime.AgentBehaviour.DistanceObserver">
+  DistanceObserver
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAgentDistanceObserver DistanceObserver { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Core.IAgentDistanceObserver.html">IAgentDistanceObserver</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_Events_" data-uid="Goap.Agent.Runtime.AgentBehaviour.Events*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_Events" data-uid="Goap.Agent.Runtime.AgentBehaviour.Events">
+  Events
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAgentEvents Events { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Core.IAgentEvents.html">IAgentEvents</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_GoapSet_" data-uid="Goap.Agent.Runtime.AgentBehaviour.GoapSet*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_GoapSet" data-uid="Goap.Agent.Runtime.AgentBehaviour.GoapSet">
+  GoapSet
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use GoapActionProvider.AgentType instead&quot;)]
+public object GoapSet { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_Injector_" data-uid="Goap.Agent.Runtime.AgentBehaviour.Injector*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_Injector" data-uid="Goap.Agent.Runtime.AgentBehaviour.Injector">
+  Injector
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDataReferenceInjector Injector { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Core.IDataReferenceInjector.html">IDataReferenceInjector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_IsPaused_" data-uid="Goap.Agent.Runtime.AgentBehaviour.IsPaused*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_IsPaused" data-uid="Goap.Agent.Runtime.AgentBehaviour.IsPaused">
+  IsPaused
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPaused { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_Logger_" data-uid="Goap.Agent.Runtime.AgentBehaviour.Logger*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_Logger" data-uid="Goap.Agent.Runtime.AgentBehaviour.Logger">
+  Logger
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILogger&lt;IMonoAgent&gt; Logger { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Core.ILogger-1.html">ILogger</a>&lt;<a class="xref" href="Goap.Agent.Core.IMonoAgent.html">IMonoAgent</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_LoggerConfig_" data-uid="Goap.Agent.Runtime.AgentBehaviour.LoggerConfig*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_LoggerConfig" data-uid="Goap.Agent.Runtime.AgentBehaviour.LoggerConfig">
+  LoggerConfig
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoggerConfig LoggerConfig { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Runtime.LoggerConfig.html">LoggerConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_MoveState_" data-uid="Goap.Agent.Runtime.AgentBehaviour.MoveState*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_MoveState" data-uid="Goap.Agent.Runtime.AgentBehaviour.MoveState">
+  MoveState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AgentMoveState MoveState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Core.AgentMoveState.html">AgentMoveState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_RunState_" data-uid="Goap.Agent.Runtime.AgentBehaviour.RunState*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_RunState" data-uid="Goap.Agent.Runtime.AgentBehaviour.RunState">
+  RunState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use ActionState.RunState instead.&quot;)]
+public IActionRunState RunState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Core.IActionRunState.html">IActionRunState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_State_" data-uid="Goap.Agent.Runtime.AgentBehaviour.State*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_State" data-uid="Goap.Agent.Runtime.AgentBehaviour.State">
+  State
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AgentState State { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Core.AgentState.html">AgentState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_Timers_" data-uid="Goap.Agent.Runtime.AgentBehaviour.Timers*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_Timers" data-uid="Goap.Agent.Runtime.AgentBehaviour.Timers">
+  Timers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAgentTimers Timers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Agent.Core.IAgentTimers.html">IAgentTimers</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_Transform_" data-uid="Goap.Agent.Runtime.AgentBehaviour.Transform*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_Transform" data-uid="Goap.Agent.Runtime.AgentBehaviour.Transform">
+  Transform
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform Transform { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_CompleteAction_" data-uid="Goap.Agent.Runtime.AgentBehaviour.CompleteAction*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_CompleteAction_System_Boolean_" data-uid="Goap.Agent.Runtime.AgentBehaviour.CompleteAction(System.Boolean)">
+  CompleteAction(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Completes the current action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CompleteAction(bool resolveAction = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>resolveAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to resolve for a new action after completing.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_DisableAction_" data-uid="Goap.Agent.Runtime.AgentBehaviour.DisableAction*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_DisableAction__1" data-uid="Goap.Agent.Runtime.AgentBehaviour.DisableAction``1">
+  DisableAction&lt;TAction&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L292"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Disable actions from within the action itself, or disable using actionProvider.GetActions&lt;TAction&gt;.ForEach((action) =&gt; action.Disable(IActionDisabler))&quot;)]
+public void DisableAction&lt;TAction&gt;() where TAction : IAction</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TAction</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_EnableAction_" data-uid="Goap.Agent.Runtime.AgentBehaviour.EnableAction*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_EnableAction__1" data-uid="Goap.Agent.Runtime.AgentBehaviour.EnableAction``1">
+  EnableAction&lt;TAction&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Enable actions from within the action itself, or disable using actionProvider.GetActions&lt;TAction&gt;.ForEach((action) =&gt; action.Enable(IActionDisabler))&quot;)]
+public void EnableAction&lt;TAction&gt;() where TAction : IAction</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TAction</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_Initialize_" data-uid="Goap.Agent.Runtime.AgentBehaviour.Initialize*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_Initialize" data-uid="Goap.Agent.Runtime.AgentBehaviour.Initialize">
+  Initialize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_ResolveAction_" data-uid="Goap.Agent.Runtime.AgentBehaviour.ResolveAction*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_ResolveAction" data-uid="Goap.Agent.Runtime.AgentBehaviour.ResolveAction">
+  ResolveAction()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Will trigger try and resolve a new action from the action provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResolveAction()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_Run_" data-uid="Goap.Agent.Runtime.AgentBehaviour.Run*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_Run" data-uid="Goap.Agent.Runtime.AgentBehaviour.Run">
+  Run()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runs the current action. This is called in the Update method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Run()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_SetAction_" data-uid="Goap.Agent.Runtime.AgentBehaviour.SetAction*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_SetAction_Goap_Agent_Core_IActionProvider_Goap_Agent_Core_IAction_Goap_Agent_Core_ITarget_" data-uid="Goap.Agent.Runtime.AgentBehaviour.SetAction(Goap.Agent.Core.IActionProvider,Goap.Agent.Core.IAction,Goap.Agent.Core.ITarget)">
+  SetAction(IActionProvider, IAction, ITarget)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the action for the agent. This is mostly used by the action provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAction(IActionProvider actionProvider, IAction action, ITarget target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionProvider</code> <a class="xref" href="Goap.Agent.Core.IActionProvider.html">IActionProvider</a></dt>
+    <dd><p>The action provider.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="Goap.Agent.Core.IAction.html">IAction</a></dt>
+    <dd><p>The action to set.</p>
+</dd>
+    <dt><code>target</code> <a class="xref" href="Goap.Agent.Core.ITarget.html">ITarget</a></dt>
+    <dd><p>The target of the action.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Runtime_AgentBehaviour_StopAction_" data-uid="Goap.Agent.Runtime.AgentBehaviour.StopAction*"></a>
+
+  <h3 id="Goap_Agent_Runtime_AgentBehaviour_StopAction_System_Boolean_" data-uid="Goap.Agent.Runtime.AgentBehaviour.StopAction(System.Boolean)">
+  StopAction(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentRuntime/AgentBehaviour.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops the current action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopAction(bool resolveAction = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>resolveAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to resolve for a new action after stopping.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class LagCompensationManager |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class LagCompensationManager |  |  ">
+      
+      <meta name="description" content="The main class for controlling lag compensation in networked gameplay.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Phantom_XRMOD_NetcodeModule_Runtime_LagCompensation_LagCompensationManager.md&amp;value=---%0Auid%3A%20Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.LagCompensationManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.LagCompensationManager">
+
+
+
+  <h1 id="Phantom_XRMOD_NetcodeModule_Runtime_LagCompensation_LagCompensationManager" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.LagCompensationManager" class="text-break">
+Class LagCompensationManager  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/LagCompensation/LagCompensationManager.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Phantom.html">Phantom</a>.<a class="xref" href="Phantom.XRMOD.html">XRMOD</a>.<a class="xref" href="Phantom.XRMOD.NetcodeModule.html">NetcodeModule</a>.<a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.html">Runtime</a>.<a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.html">LagCompensation</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>The main class for controlling lag compensation in networked gameplay.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LagCompensationManager : MonoBehaviour</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">LagCompensationManager</span></div>
+    </dd>
+  </dl>
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Phantom_XRMOD_NetcodeModule_Runtime_LagCompensation_LagCompensationManager_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Lag compensation allows the server to &quot;rewind&quot; object positions to compensate for client latency,
+enabling more accurate hit detection and gameplay logic. This is essential for fast-paced multiplayer games.</p>
+</div>
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_LagCompensation_LagCompensationManager_SimulationObjects" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.LagCompensationManager.SimulationObjects">
+  SimulationObjects
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/LagCompensation/LagCompensationManager.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the list of simulation objects being tracked for lag compensation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly List&lt;TrackedObject&gt; SimulationObjects</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.TrackedObject.html">TrackedObject</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_LagCompensation_LagCompensationManager_Singleton_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.LagCompensationManager.Singleton*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_LagCompensation_LagCompensationManager_Singleton" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.LagCompensationManager.Singleton">
+  Singleton
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/LagCompensation/LagCompensationManager.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the singleton instance of the LagCompensationManager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static LagCompensationManager Singleton { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.LagCompensationManager.html">LagCompensationManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_LagCompensation_LagCompensationManager_Simulate_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.LagCompensationManager.Simulate*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_LagCompensation_LagCompensationManager_Simulate_System_Single_System_Action_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.LagCompensationManager.Simulate(System.Single,System.Action)">
+  Simulate(float, Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/LagCompensation/LagCompensationManager.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Turns time back a given amount of seconds, invokes an action, and then restores the current state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Simulate(float secondsAgo, Action action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>secondsAgo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The amount of seconds to rewind.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>The action to invoke when time is turned back (e.g., perform raycasts or collision checks).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_LagCompensation_LagCompensationManager_Simulate_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.LagCompensationManager.Simulate*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_LagCompensation_LagCompensationManager_Simulate_System_Single_System_Collections_Generic_IList_Phantom_XRMOD_NetcodeModule_Runtime_LagCompensation_TrackedObject__System_Action_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.LagCompensationManager.Simulate(System.Single,System.Collections.Generic.IList{Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.TrackedObject},System.Action)">
+  Simulate(float, IList&lt;TrackedObject&gt;, Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/LagCompensation/LagCompensationManager.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Turns time back a given amount of seconds on the given objects, invokes an action, and then restores the current state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Simulate(float secondsAgo, IList&lt;TrackedObject&gt; simulatedObjects, Action action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>secondsAgo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The amount of seconds to rewind.</p>
+</dd>
+    <dt><code>simulatedObjects</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.TrackedObject.html">TrackedObject</a>&gt;</dt>
+    <dd><p>The objects to simulate back in time.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>The action to invoke when time is turned back.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_LagCompensation_LagCompensationManager_Simulate_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.LagCompensationManager.Simulate*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_LagCompensation_LagCompensationManager_Simulate_System_UInt64_System_Action_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.LagCompensation.LagCompensationManager.Simulate(System.UInt64,System.Action)">
+  Simulate(ulong, Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/LagCompensation/LagCompensationManager.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Turns time back based on the estimated RTT of a client, invokes an action, and then restores the current state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Simulate(ulong clientId, Action action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>clientId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The client ID whose RTT to use for compensation.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>The action to invoke when time is turned back.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

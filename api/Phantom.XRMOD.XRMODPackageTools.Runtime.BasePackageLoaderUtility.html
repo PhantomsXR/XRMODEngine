@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class BasePackageLoaderUtility |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class BasePackageLoaderUtility |  |  ">
+      
+      <meta name="description" content="Utility class for loading assets and scenes from XRMOD asset bundles. Provides low-level methods for bundle management, asset instantiation, and handling both local/remote loading.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility.md&amp;value=---%0Auid%3A%20Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility">
+
+
+
+  <h1 id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility" class="text-break">
+Class BasePackageLoaderUtility  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Utilities/BasePackageLoaderUtility.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Phantom.html">Phantom</a>.<a class="xref" href="Phantom.XRMOD.html">XRMOD</a>.<a class="xref" href="Phantom.XRMOD.XRMODPackageTools.html">XRMODPackageTools</a>.<a class="xref" href="Phantom.XRMOD.XRMODPackageTools.Runtime.html">Runtime</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Utility class for loading assets and scenes from XRMOD asset bundles.
+Provides low-level methods for bundle management, asset instantiation, and handling both local/remote loading.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class BasePackageLoaderUtility</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">BasePackageLoaderUtility</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadFromRemote" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadFromRemote">
+  LoadFromRemote
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Utilities/BasePackageLoaderUtility.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether assets should be loaded from remote sources (true) or local editor paths (false).
+This flag is primarily used for development and testing in the Unity Editor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool LoadFromRemote</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadAssetFromFileAsync_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadAssetFromFileAsync*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadAssetFromFileAsync__1_System_String_System_String_System_Action___0__System_Action_System_String__" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadAssetFromFileAsync``1(System.String,System.String,System.Action{``0},System.Action{System.String})">
+  LoadAssetFromFileAsync&lt;T&gt;(string, string, Action&lt;T&gt;, Action&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Utilities/BasePackageLoaderUtility.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously loads a specific asset from a local asset bundle file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LoadAssetFromFileAsync&lt;T&gt;(string _pathWithFile, string _wannaLoadAssetsName, Action&lt;T&gt; _loadFinished, Action&lt;string&gt; _loadFailed) where T : UnityEngine.Object</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_pathWithFile</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The full path to the asset bundle file.</p>
+</dd>
+    <dt><code>_wannaLoadAssetsName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the asset to load from the bundle.</p>
+</dd>
+    <dt><code>_loadFinished</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd><p>Callback invoked upon successful asset loading, providing the loaded asset.</p>
+</dd>
+    <dt><code>_loadFailed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Callback invoked if asset loading fails, providing an error message.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the asset to load (must inherit from UnityEngine.Object).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadAssetFromPackage_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadAssetFromPackage*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadAssetFromPackage__1_System_String_System_String_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadAssetFromPackage``1(System.String,System.String)">
+  LoadAssetFromPackage&lt;T&gt;(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Utilities/BasePackageLoaderUtility.cs/#L366"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously loads a specific asset from a package by project name.
+In editor, it attempts to load directly from project assets first, then falls back to asset bundles.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; LoadAssetFromPackage&lt;T&gt;(string _projectName, string _wannaLoadedAssetName) where T : UnityEngine.Object</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the project (which corresponds to the asset bundle name).</p>
+</dd>
+    <dt><code>_wannaLoadedAssetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the asset to load.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</dt>
+    <dd><p>A Task representing the asynchronous operation, yielding the loaded asset.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the asset to load (must inherit from UnityEngine.Object).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a></dt>
+    <dd><p>Thrown if the asset bundle cannot be found.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>Thrown if the asset fails to load.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadAssetFromPackage_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadAssetFromPackage*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadAssetFromPackage__1_System_String_System_String_System_Action___0__" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadAssetFromPackage``1(System.String,System.String,System.Action{``0})">
+  LoadAssetFromPackage&lt;T&gt;(string, string, Action&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Utilities/BasePackageLoaderUtility.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads a specific asset from a package by project name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method will be removed in future updates. Use LoadAssetFromPackage(Async) instead.&quot;)]
+public static void LoadAssetFromPackage&lt;T&gt;(string _projectName, string _wannaLoadedAssetName, Action&lt;T&gt; _loadedCallback) where T : UnityEngine.Object</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the project (which corresponds to the asset bundle name).</p>
+</dd>
+    <dt><code>_wannaLoadedAssetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the asset to load.</p>
+</dd>
+    <dt><code>_loadedCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd><p>Callback invoked upon successful asset loading, providing the loaded asset.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the asset to load (must inherit from UnityEngine.Object).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadAssetsFromPackageAsDictionary_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadAssetsFromPackageAsDictionary*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadAssetsFromPackageAsDictionary__1_System_String_System_String___" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadAssetsFromPackageAsDictionary``1(System.String,System.String[])">
+  LoadAssetsFromPackageAsDictionary&lt;T&gt;(string, string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Utilities/BasePackageLoaderUtility.cs/#L788"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously loads a batch of assets by names from a package and returns a name-to-asset map.
+Delegates to <a class="xref" href="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.html#Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadAssetsFromPackage__1_System_String_System_String___">LoadAssetsFromPackage&lt;T&gt;(string, string[])</a> to ensure assets are
+loaded and ordered to match the input names, then builds a dictionary in that order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Dictionary&lt;string, T&gt;&gt; LoadAssetsFromPackageAsDictionary&lt;T&gt;(string _projectName, string[] _assetNames) where T : UnityEngine.Object</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The project (package) name.</p>
+</dd>
+    <dt><code>_assetNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>The list of asset names to load, in the desired order.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, T&gt;&gt;</dt>
+    <dd><p>A dictionary mapping asset name to asset instance. The insertion order of the dictionary
+follows the order of <code class="paramref">_assetNames</code>. Enumeration over the dictionary will
+reflect that order.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the assets to load (must inherit from UnityEngine.Object).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">_assetNames</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
+    <dd><p>Propagated if any requested asset is missing.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadAssetsFromPackage_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadAssetsFromPackage*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadAssetsFromPackage__1_System_String_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadAssetsFromPackage``1(System.String)">
+  LoadAssetsFromPackage&lt;T&gt;(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Utilities/BasePackageLoaderUtility.cs/#L474"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously loads all assets of a specific type from a package by project name.
+In editor, it attempts to load directly from project assets first, then falls back to asset bundles.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;T[]&gt; LoadAssetsFromPackage&lt;T&gt;(string _projectName) where T : UnityEngine.Object</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the project (which corresponds to the asset bundle name).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T[]&gt;</dt>
+    <dd><p>A Task representing the asynchronous operation, yielding an array of loaded assets.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the assets to load (must inherit from UnityEngine.Object).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a></dt>
+    <dd><p>Thrown if the asset bundle cannot be found.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>Thrown if no assets of the specified type are found.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadAssetsFromPackage_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadAssetsFromPackage*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadAssetsFromPackage__1_System_String_System_String___" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadAssetsFromPackage``1(System.String,System.String[])">
+  LoadAssetsFromPackage&lt;T&gt;(string, string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Utilities/BasePackageLoaderUtility.cs/#L588"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously loads a specific set of named assets of a given type from a package by project name.
+In editor, it attempts to load directly from project assets first, then falls back to asset bundles.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;T[]&gt; LoadAssetsFromPackage&lt;T&gt;(string _projectName, string[] _assetNames) where T : UnityEngine.Object</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the project (which corresponds to the asset bundle name).</p>
+</dd>
+    <dt><code>_assetNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>An array of asset names to load.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T[]&gt;</dt>
+    <dd><p>A Task representing the asynchronous operation, yielding an array of loaded assets.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the assets to load (must inherit from UnityEngine.Object).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a></dt>
+    <dd><p>Thrown if the asset bundle cannot be found.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
+    <dd><p>Thrown if any specified asset is not found in the package.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadBundleFromLocal_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadBundleFromLocal*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadBundleFromLocal__1_System_String_System_String_System_Action_System_Single__System_Action_System_String__" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadBundleFromLocal``1(System.String,System.String,System.Action{System.Single},System.Action{System.String})">
+  LoadBundleFromLocal&lt;T&gt;(string, string, Action&lt;float&gt;, Action&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Utilities/BasePackageLoaderUtility.cs/#L973"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously loads a specific asset from a local asset bundle file.
+Supports progress reporting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; LoadBundleFromLocal&lt;T&gt;(string _path, string _wannaLoadAssetsName, Action&lt;float&gt; _progressAction, Action&lt;string&gt; _failedAction) where T : UnityEngine.Object</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The full path to the asset bundle file.</p>
+</dd>
+    <dt><code>_wannaLoadAssetsName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the asset to load from the bundle.</p>
+</dd>
+    <dt><code>_progressAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd><p>Callback invoked to report loading progress (0.0 to 1.0).</p>
+</dd>
+    <dt><code>_failedAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Callback invoked if asset loading fails, providing an error message.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</dt>
+    <dd><p>A Task representing the asynchronous operation, yielding the loaded asset.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the asset to load (must inherit from UnityEngine.Object).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadBundleFromUrl_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadBundleFromUrl*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadBundleFromUrl__1_System_String_System_Int32_System_String_Hash128_System_UInt32_System_Action_System_Single__System_Action_System_String__" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadBundleFromUrl``1(System.String,System.Int32,System.String,Hash128,System.UInt32,System.Action{System.Single},System.Action{System.String})">
+  LoadBundleFromUrl&lt;T&gt;(string, int, string, Hash128, uint, Action&lt;float&gt;, Action&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Utilities/BasePackageLoaderUtility.cs/#L899"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously loads a specific asset from an asset bundle downloaded from a URL string.
+Supports caching and progress reporting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; LoadBundleFromUrl&lt;T&gt;(string _uri, int _timeout, string _wannaLoadAssetsName, Hash128 _hash128, uint _crc, Action&lt;float&gt; _progressAction, Action&lt;string&gt; _failedAction) where T : UnityEngine.Object</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_uri</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The URI string of the asset bundle to download.</p>
+</dd>
+    <dt><code>_timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The timeout duration for the web request in seconds.</p>
+</dd>
+    <dt><code>_wannaLoadAssetsName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the asset to load from the bundle.</p>
+</dd>
+    <dt><code>_hash128</code> <span class="xref">Hash128</span></dt>
+    <dd><p>A version hash for caching. If it doesn't match, the bundle will be re-downloaded.</p>
+</dd>
+    <dt><code>_crc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>A checksum for data integrity. If zero, CRC checking is skipped.</p>
+</dd>
+    <dt><code>_progressAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd><p>Callback invoked to report download progress (0.0 to 1.0).</p>
+</dd>
+    <dt><code>_failedAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Callback invoked if asset loading fails, providing an error message.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</dt>
+    <dd><p>A Task representing the asynchronous operation, yielding the loaded asset.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the asset to load (must inherit from UnityEngine.Object).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadBundleFromUrl_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadBundleFromUrl*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadBundleFromUrl__1_System_Uri_System_Int32_System_String_Hash128_System_UInt32_System_Action_System_Single__System_Action_System_String__" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadBundleFromUrl``1(System.Uri,System.Int32,System.String,Hash128,System.UInt32,System.Action{System.Single},System.Action{System.String})">
+  LoadBundleFromUrl&lt;T&gt;(Uri, int, string, Hash128, uint, Action&lt;float&gt;, Action&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Utilities/BasePackageLoaderUtility.cs/#L821"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously loads a specific asset from an asset bundle downloaded from a URL.
+Supports caching and progress reporting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; LoadBundleFromUrl&lt;T&gt;(Uri _uri, int _timeout, string _wannaLoadAssetsName, Hash128 _hash128, uint _crc, Action&lt;float&gt; _progressAction, Action&lt;string&gt; _failedAction) where T : UnityEngine.Object</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_uri</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></dt>
+    <dd><p>The URI of the asset bundle to download.</p>
+</dd>
+    <dt><code>_timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The timeout duration for the web request in seconds.</p>
+</dd>
+    <dt><code>_wannaLoadAssetsName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the asset to load from the bundle.</p>
+</dd>
+    <dt><code>_hash128</code> <span class="xref">Hash128</span></dt>
+    <dd><p>A version hash for caching. If it doesn't match, the bundle will be re-downloaded.</p>
+</dd>
+    <dt><code>_crc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>A checksum for data integrity. If zero, CRC checking is skipped.</p>
+</dd>
+    <dt><code>_progressAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd><p>Callback invoked to report download progress (0.0 to 1.0).</p>
+</dd>
+    <dt><code>_failedAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Callback invoked if asset loading fails, providing an error message.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</dt>
+    <dd><p>A Task representing the asynchronous operation, yielding the loaded asset.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the asset to load (must inherit from UnityEngine.Object).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadGameObjectFromUrl_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadGameObjectFromUrl*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadGameObjectFromUrl__1_System_Uri_System_String_Hash128_System_UInt32_System_Action___0__System_Action_System_String__System_Action_System_Single__" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadGameObjectFromUrl``1(System.Uri,System.String,Hash128,System.UInt32,System.Action{``0},System.Action{System.String},System.Action{System.Single})">
+  LoadGameObjectFromUrl&lt;T&gt;(Uri, string, Hash128, uint, Action&lt;T&gt;, Action&lt;string&gt;, Action&lt;float&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Utilities/BasePackageLoaderUtility.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously loads a specific asset from an asset bundle downloaded from a URL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method will be removed in future updates. Use LoadBundleFromUrl(Async) instead.&quot;)]
+public static IEnumerator LoadGameObjectFromUrl&lt;T&gt;(Uri _uri, string _wannaLoadAssetsName, Hash128 _hash, uint _crc, Action&lt;T&gt; _loadFinished, Action&lt;string&gt; _loadFailed, Action&lt;float&gt; _downloadProgressCallback) where T : UnityEngine.Object</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_uri</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></dt>
+    <dd><p>The URI of the asset bundle to download.</p>
+</dd>
+    <dt><code>_wannaLoadAssetsName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the asset to load from the bundle.</p>
+</dd>
+    <dt><code>_hash</code> <span class="xref">Hash128</span></dt>
+    <dd><p>A version hash for caching. If it doesn't match, the bundle will be re-downloaded.</p>
+</dd>
+    <dt><code>_crc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>A checksum for data integrity. If zero, CRC checking is skipped.</p>
+</dd>
+    <dt><code>_loadFinished</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd><p>Callback invoked upon successful asset loading, providing the loaded asset.</p>
+</dd>
+    <dt><code>_loadFailed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Callback invoked if asset loading fails, providing an error message.</p>
+</dd>
+    <dt><code>_downloadProgressCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd><p>Callback invoked to report download progress (0.0 to 1.0).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the asset to load (must inherit from UnityEngine.Object).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadSceneFromBundle_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadSceneFromBundle*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_LoadSceneFromBundle_System_String_System_String_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.LoadSceneFromBundle(System.String,System.String)">
+  LoadSceneFromBundle(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Utilities/BasePackageLoaderUtility.cs/#L1010"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously loads a scene from a local asset bundle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task LoadSceneFromBundle(string _path, string _wannaLoadAssetsName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The full path to the asset bundle file containing the scene.</p>
+</dd>
+    <dt><code>_wannaLoadAssetsName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the scene to load from the bundle.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A Task representing the asynchronous scene loading operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_ReleaseAllAssetBundle_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.ReleaseAllAssetBundle*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_ReleaseAllAssetBundle" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.ReleaseAllAssetBundle">
+  ReleaseAllAssetBundle()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Utilities/BasePackageLoaderUtility.cs/#L1037"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases all currently loaded asset bundles that end with &quot;arexperience&quot; and unloads unused assets from memory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ReleaseAllAssetBundle()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_ReleaseAssetBundle_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.ReleaseAssetBundle*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_ReleaseAssetBundle_System_String_System_String_System_Boolean_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.ReleaseAssetBundle(System.String,System.String,System.Boolean)">
+  ReleaseAssetBundle(string, string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Utilities/BasePackageLoaderUtility.cs/#L1058"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases a specific loaded asset bundle and destroys associated GameObjects with a matching process ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ReleaseAssetBundle(string _bundleName, string _processId, bool _unloadAll = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_bundleName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the asset bundle to release.</p>
+</dd>
+    <dt><code>_processId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The process ID used to identify and destroy related GameObjects.</p>
+</dd>
+    <dt><code>_unloadAll</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, all assets in the bundle are unloaded; otherwise, only the bundle itself is unloaded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_ReleaseAssetBundleScene_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.ReleaseAssetBundleScene*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_BasePackageLoaderUtility_ReleaseAssetBundleScene_System_String_System_String_System_Boolean_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.ReleaseAssetBundleScene(System.String,System.String,System.Boolean)">
+  ReleaseAssetBundleScene(string, string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Utilities/BasePackageLoaderUtility.cs/#L1090"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases a specific loaded scene asset bundle and destroys associated GameObjects with a matching process ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ReleaseAssetBundleScene(string _bundleName, string _processId, bool _unloadAll = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_bundleName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The base name of the scene asset bundle to release (e.g., &quot;myproject&quot;).</p>
+</dd>
+    <dt><code>_processId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The process ID used to identify and destroy related GameObjects.</p>
+</dd>
+    <dt><code>_unloadAll</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, all assets in the bundle are unloaded; otherwise, only the bundle itself is unloaded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

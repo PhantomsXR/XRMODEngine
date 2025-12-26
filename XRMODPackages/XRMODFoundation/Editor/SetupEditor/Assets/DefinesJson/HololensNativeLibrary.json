@@ -1,9 +1,0 @@
-{
-  "Json": [
-    "HOLOLENS_INSTALL",
-    "ENABLE_NATIVE",
-    "MRTK3_INSTALL", 
-    "XRMOD_INSTALL"
-    
-  ]
-}

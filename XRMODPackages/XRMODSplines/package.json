@@ -1,1 +1,0 @@
-{"name":"com.phantomsxr.xrmodsplinesmodule","displayName":"","version":"1.0.0","unity":"2022.3","description":"Work with Unity Splines in XRMOD Engine.","keywords":["splines"],"category":"","author":{	"name":"Phantom",	"email":"nswell@phantomsxr.com",	"url":"phantomsxr.com"},"dependencies":{"com.unity.splines":"2.6.0","com.phantomsxr.unityfusion":"2.0.0-preview.43"}}

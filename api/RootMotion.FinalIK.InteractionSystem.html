@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class InteractionSystem |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class InteractionSystem |  |  ">
+      
+      <meta name="description" content="Handles FBBIK interactions for a character.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=RootMotion_FinalIK_InteractionSystem.md&amp;value=---%0Auid%3A%20RootMotion.FinalIK.InteractionSystem%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RootMotion.FinalIK.InteractionSystem">
+
+
+
+  <h1 id="RootMotion_FinalIK_InteractionSystem" data-uid="RootMotion.FinalIK.InteractionSystem" class="text-break">
+Class InteractionSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RootMotion.html">RootMotion</a>.<a class="xref" href="RootMotion.FinalIK.html">FinalIK</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Handles FBBIK interactions for a character.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class InteractionSystem : MonoBehaviour</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">InteractionSystem</span></div>
+    </dd>
+  </dl>
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_FPSCamera" data-uid="RootMotion.FinalIK.InteractionSystem.FPSCamera">
+  FPSCamera
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Will be used by Interaction Triggers that need the camera's position. Assign the first person view character camera.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform FPSCamera</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_OnInteractionEvent" data-uid="RootMotion.FinalIK.InteractionSystem.OnInteractionEvent">
+  OnInteractionEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L646"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when an interaction event occurs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionSystem.InteractionEventDelegate OnInteractionEvent</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.InteractionSystem.html">InteractionSystem</a>.<a class="xref" href="RootMotion.FinalIK.InteractionSystem.InteractionEventDelegate.html">InteractionEventDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_OnInteractionPause" data-uid="RootMotion.FinalIK.InteractionSystem.OnInteractionPause">
+  OnInteractionPause
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L630"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when an Interaction has been paused</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionSystem.InteractionDelegate OnInteractionPause</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.InteractionSystem.html">InteractionSystem</a>.<a class="xref" href="RootMotion.FinalIK.InteractionSystem.InteractionDelegate.html">InteractionDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_OnInteractionPickUp" data-uid="RootMotion.FinalIK.InteractionSystem.OnInteractionPickUp">
+  OnInteractionPickUp
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L634"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when an InteractionObject has been picked up.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionSystem.InteractionDelegate OnInteractionPickUp</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.InteractionSystem.html">InteractionSystem</a>.<a class="xref" href="RootMotion.FinalIK.InteractionSystem.InteractionDelegate.html">InteractionDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_OnInteractionResume" data-uid="RootMotion.FinalIK.InteractionSystem.OnInteractionResume">
+  OnInteractionResume
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L638"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when a paused Interaction has been resumed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionSystem.InteractionDelegate OnInteractionResume</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.InteractionSystem.html">InteractionSystem</a>.<a class="xref" href="RootMotion.FinalIK.InteractionSystem.InteractionDelegate.html">InteractionDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_OnInteractionStart" data-uid="RootMotion.FinalIK.InteractionSystem.OnInteractionStart">
+  OnInteractionStart
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L626"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when an InteractionEvent has been started</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionSystem.InteractionDelegate OnInteractionStart</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.InteractionSystem.html">InteractionSystem</a>.<a class="xref" href="RootMotion.FinalIK.InteractionSystem.InteractionDelegate.html">InteractionDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_OnInteractionStop" data-uid="RootMotion.FinalIK.InteractionSystem.OnInteractionStop">
+  OnInteractionStop
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L642"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when an Interaction has been stopped</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionSystem.InteractionDelegate OnInteractionStop</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.InteractionSystem.html">InteractionSystem</a>.<a class="xref" href="RootMotion.FinalIK.InteractionSystem.InteractionDelegate.html">InteractionDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_camRaycastDistance" data-uid="RootMotion.FinalIK.InteractionSystem.camRaycastDistance">
+  camRaycastDistance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Max distance of raycasting from the camera.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float camRaycastDistance</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_camRaycastLayers" data-uid="RootMotion.FinalIK.InteractionSystem.camRaycastLayers">
+  camRaycastLayers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The layers that will be raycasted from the camera (along camera.forward). All InteractionTrigger look at target colliders should be included.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LayerMask camRaycastLayers</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">LayerMask</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_characterCollider" data-uid="RootMotion.FinalIK.InteractionSystem.characterCollider">
+  characterCollider
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Collider characterCollider</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Collider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_fadeInTime" data-uid="RootMotion.FinalIK.InteractionSystem.fadeInTime">
+  fadeInTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The fade in time of the interaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float fadeInTime</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_lookAt" data-uid="RootMotion.FinalIK.InteractionSystem.lookAt">
+  lookAt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L664"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles looking at the interactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionLookAt lookAt</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.InteractionLookAt.html">InteractionLookAt</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_raycastHit" data-uid="RootMotion.FinalIK.InteractionSystem.raycastHit">
+  raycastHit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L651"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the RaycastHit from trigger seeking.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RaycastHit raycastHit</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">RaycastHit</span></dt>
+    <dd><p>The hit.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_resetToDefaultsSpeed" data-uid="RootMotion.FinalIK.InteractionSystem.resetToDefaultsSpeed">
+  resetToDefaultsSpeed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If &gt; 0, lerps all the FBBIK channels used by the Interaction System back to their default or initial values when not in interaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float resetToDefaultsSpeed</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_speed" data-uid="RootMotion.FinalIK.InteractionSystem.speed">
+  speed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The master speed for all interactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float speed</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_targetTag" data-uid="RootMotion.FinalIK.InteractionSystem.targetTag">
+  targetTag
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If not empty, only the targets with the specified tag will be used by this Interaction System.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string targetTag</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_ik_" data-uid="RootMotion.FinalIK.InteractionSystem.ik*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_ik" data-uid="RootMotion.FinalIK.InteractionSystem.ik">
+  ik
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L597"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the FullBodyBipedIK component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FullBodyBipedIK ik { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.FullBodyBipedIK.html">FullBodyBipedIK</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_inInteraction_" data-uid="RootMotion.FinalIK.InteractionSystem.inInteraction*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_inInteraction" data-uid="RootMotion.FinalIK.InteractionSystem.inInteraction">
+  inInteraction
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if any of the effectors is in interaction and not paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool inInteraction { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_initiated_" data-uid="RootMotion.FinalIK.InteractionSystem.initiated*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_initiated" data-uid="RootMotion.FinalIK.InteractionSystem.initiated">
+  initiated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L679"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool initiated { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_triggersInRange_" data-uid="RootMotion.FinalIK.InteractionSystem.triggersInRange*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_triggersInRange" data-uid="RootMotion.FinalIK.InteractionSystem.triggersInRange">
+  triggersInRange
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L610"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the in contact.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;InteractionTrigger&gt; triggersInRange { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RootMotion.FinalIK.InteractionTrigger.html">InteractionTrigger</a>&gt;</dt>
+    <dd><p>The in contact.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_GetClosestInteractionObjectInRange_" data-uid="RootMotion.FinalIK.InteractionSystem.GetClosestInteractionObjectInRange*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_GetClosestInteractionObjectInRange" data-uid="RootMotion.FinalIK.InteractionSystem.GetClosestInteractionObjectInRange">
+  GetClosestInteractionObjectInRange()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L463"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the closest InteractionObject in range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionObject GetClosestInteractionObjectInRange()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.InteractionObject.html">InteractionObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_GetClosestInteractionObjectsInRange_" data-uid="RootMotion.FinalIK.InteractionSystem.GetClosestInteractionObjectsInRange*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_GetClosestInteractionObjectsInRange" data-uid="RootMotion.FinalIK.InteractionSystem.GetClosestInteractionObjectsInRange">
+  GetClosestInteractionObjectsInRange()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L481"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the closest InteractionObjects in range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionObject[] GetClosestInteractionObjectsInRange()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.InteractionObject.html">InteractionObject</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_GetClosestInteractionRange_" data-uid="RootMotion.FinalIK.InteractionSystem.GetClosestInteractionRange*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_GetClosestInteractionRange" data-uid="RootMotion.FinalIK.InteractionSystem.GetClosestInteractionRange">
+  GetClosestInteractionRange()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L451"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the closest InteractionTrigger Range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionTrigger.Range GetClosestInteractionRange()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.InteractionTrigger.html">InteractionTrigger</a>.<a class="xref" href="RootMotion.FinalIK.InteractionTrigger.Range.html">Range</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_GetClosestInteractionTargetInRange_" data-uid="RootMotion.FinalIK.InteractionSystem.GetClosestInteractionTargetInRange*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_GetClosestInteractionTargetInRange" data-uid="RootMotion.FinalIK.InteractionSystem.GetClosestInteractionTargetInRange">
+  GetClosestInteractionTargetInRange()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L472"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the closest InteractionTarget in range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionTarget GetClosestInteractionTargetInRange()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.InteractionTarget.html">InteractionTarget</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_GetClosestInteractionTargetsInRange_" data-uid="RootMotion.FinalIK.InteractionSystem.GetClosestInteractionTargetsInRange*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_GetClosestInteractionTargetsInRange" data-uid="RootMotion.FinalIK.InteractionSystem.GetClosestInteractionTargetsInRange">
+  GetClosestInteractionTargetsInRange()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L497"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the closest InteractionTargets in range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionTarget[] GetClosestInteractionTargetsInRange()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.InteractionTarget.html">InteractionTarget</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_GetClosestTriggerIndex_" data-uid="RootMotion.FinalIK.InteractionSystem.GetClosestTriggerIndex*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_GetClosestTriggerIndex" data-uid="RootMotion.FinalIK.InteractionSystem.GetClosestTriggerIndex">
+  GetClosestTriggerIndex()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L560"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the InteractionTrigger that is in range and closest to the character.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetClosestTriggerIndex()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_GetInteractionObject_" data-uid="RootMotion.FinalIK.InteractionSystem.GetInteractionObject*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_GetInteractionObject_RootMotion_FinalIK_FullBodyBipedEffector_" data-uid="RootMotion.FinalIK.InteractionSystem.GetInteractionObject(RootMotion.FinalIK.FullBodyBipedEffector)">
+  GetInteractionObject(FullBodyBipedEffector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current interaction object of an effector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionObject GetInteractionObject(FullBodyBipedEffector effectorType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>effectorType</code> <a class="xref" href="RootMotion.FinalIK.FullBodyBipedEffector.html">FullBodyBipedEffector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.InteractionObject.html">InteractionObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_GetMinActiveProgress_" data-uid="RootMotion.FinalIK.InteractionSystem.GetMinActiveProgress*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_GetMinActiveProgress" data-uid="RootMotion.FinalIK.InteractionSystem.GetMinActiveProgress">
+  GetMinActiveProgress()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L362"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the minimum progress of any active interaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetMinActiveProgress()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_GetProgress_" data-uid="RootMotion.FinalIK.InteractionSystem.GetProgress*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_GetProgress_RootMotion_FinalIK_FullBodyBipedEffector_" data-uid="RootMotion.FinalIK.InteractionSystem.GetProgress(RootMotion.FinalIK.FullBodyBipedEffector)">
+  GetProgress(FullBodyBipedEffector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L348"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the progress of any interaction with the specified effector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetProgress(FullBodyBipedEffector effectorType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>effectorType</code> <a class="xref" href="RootMotion.FinalIK.FullBodyBipedEffector.html">FullBodyBipedEffector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_GetTriggerRange_" data-uid="RootMotion.FinalIK.InteractionSystem.GetTriggerRange*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_GetTriggerRange_System_Int32_" data-uid="RootMotion.FinalIK.InteractionSystem.GetTriggerRange(System.Int32)">
+  GetTriggerRange(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L546"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Return the current most appropriate range of an InteractionTrigger listed in triggersInRange.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionTrigger.Range GetTriggerRange(int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.InteractionTrigger.html">InteractionTrigger</a>.<a class="xref" href="RootMotion.FinalIK.InteractionTrigger.Range.html">Range</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_IsInInteraction_" data-uid="RootMotion.FinalIK.InteractionSystem.IsInInteraction*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_IsInInteraction_RootMotion_FinalIK_FullBodyBipedEffector_" data-uid="RootMotion.FinalIK.InteractionSystem.IsInInteraction(RootMotion.FinalIK.FullBodyBipedEffector)">
+  IsInInteraction(FullBodyBipedEffector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether this effector is interaction and not paused</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInInteraction(FullBodyBipedEffector effectorType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>effectorType</code> <a class="xref" href="RootMotion.FinalIK.FullBodyBipedEffector.html">FullBodyBipedEffector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_IsInSync_" data-uid="RootMotion.FinalIK.InteractionSystem.IsInSync*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_IsInSync" data-uid="RootMotion.FinalIK.InteractionSystem.IsInSync">
+  IsInSync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if either all effectors in interaction are paused or none is.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInSync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_IsPaused_" data-uid="RootMotion.FinalIK.InteractionSystem.IsPaused*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_IsPaused" data-uid="RootMotion.FinalIK.InteractionSystem.IsPaused">
+  IsPaused()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if any of the effectors is paused</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPaused()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_IsPaused_" data-uid="RootMotion.FinalIK.InteractionSystem.IsPaused*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_IsPaused_RootMotion_FinalIK_FullBodyBipedEffector_" data-uid="RootMotion.FinalIK.InteractionSystem.IsPaused(RootMotion.FinalIK.FullBodyBipedEffector)">
+  IsPaused(FullBodyBipedEffector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether this effector is  paused</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPaused(FullBodyBipedEffector effectorType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>effectorType</code> <a class="xref" href="RootMotion.FinalIK.FullBodyBipedEffector.html">FullBodyBipedEffector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_OnTriggerEnter_" data-uid="RootMotion.FinalIK.InteractionSystem.OnTriggerEnter*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_OnTriggerEnter_Collider_" data-uid="RootMotion.FinalIK.InteractionSystem.OnTriggerEnter(Collider)">
+  OnTriggerEnter(Collider)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L729"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnTriggerEnter(Collider c)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>c</code> <span class="xref">Collider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_OnTriggerExit_" data-uid="RootMotion.FinalIK.InteractionSystem.OnTriggerExit*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_OnTriggerExit_Collider_" data-uid="RootMotion.FinalIK.InteractionSystem.OnTriggerExit(Collider)">
+  OnTriggerExit(Collider)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L740"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnTriggerExit(Collider c)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>c</code> <span class="xref">Collider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_PauseAll_" data-uid="RootMotion.FinalIK.InteractionSystem.PauseAll*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_PauseAll" data-uid="RootMotion.FinalIK.InteractionSystem.PauseAll">
+  PauseAll()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pauses all the interaction effectors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PauseAll()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_PauseInteraction_" data-uid="RootMotion.FinalIK.InteractionSystem.PauseInteraction*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_PauseInteraction_RootMotion_FinalIK_FullBodyBipedEffector_" data-uid="RootMotion.FinalIK.InteractionSystem.PauseInteraction(RootMotion.FinalIK.FullBodyBipedEffector)">
+  PauseInteraction(FullBodyBipedEffector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pauses the interaction of an effector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PauseInteraction(FullBodyBipedEffector effectorType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>effectorType</code> <a class="xref" href="RootMotion.FinalIK.FullBodyBipedEffector.html">FullBodyBipedEffector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_ResumeAll_" data-uid="RootMotion.FinalIK.InteractionSystem.ResumeAll*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_ResumeAll" data-uid="RootMotion.FinalIK.InteractionSystem.ResumeAll">
+  ResumeAll()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L318"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resumes all the paused interaction effectors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResumeAll()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_ResumeInteraction_" data-uid="RootMotion.FinalIK.InteractionSystem.ResumeInteraction*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_ResumeInteraction_RootMotion_FinalIK_FullBodyBipedEffector_" data-uid="RootMotion.FinalIK.InteractionSystem.ResumeInteraction(RootMotion.FinalIK.FullBodyBipedEffector)">
+  ResumeInteraction(FullBodyBipedEffector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resumes the paused interaction of an effector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ResumeInteraction(FullBodyBipedEffector effectorType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>effectorType</code> <a class="xref" href="RootMotion.FinalIK.FullBodyBipedEffector.html">FullBodyBipedEffector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_Start_" data-uid="RootMotion.FinalIK.InteractionSystem.Start*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_Start" data-uid="RootMotion.FinalIK.InteractionSystem.Start">
+  Start()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L684"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_StartInteraction_" data-uid="RootMotion.FinalIK.InteractionSystem.StartInteraction*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_StartInteraction_RootMotion_FinalIK_FullBodyBipedEffector_RootMotion_FinalIK_InteractionObject_RootMotion_FinalIK_InteractionTarget_System_Boolean_" data-uid="RootMotion.FinalIK.InteractionSystem.StartInteraction(RootMotion.FinalIK.FullBodyBipedEffector,RootMotion.FinalIK.InteractionObject,RootMotion.FinalIK.InteractionTarget,System.Boolean)">
+  StartInteraction(FullBodyBipedEffector, InteractionObject, InteractionTarget, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts the interaction between an effector and a specific interaction target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StartInteraction(FullBodyBipedEffector effectorType, InteractionObject interactionObject, InteractionTarget target, bool interrupt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>effectorType</code> <a class="xref" href="RootMotion.FinalIK.FullBodyBipedEffector.html">FullBodyBipedEffector</a></dt>
+    <dd></dd>
+    <dt><code>interactionObject</code> <a class="xref" href="RootMotion.FinalIK.InteractionObject.html">InteractionObject</a></dt>
+    <dd></dd>
+    <dt><code>target</code> <a class="xref" href="RootMotion.FinalIK.InteractionTarget.html">InteractionTarget</a></dt>
+    <dd></dd>
+    <dt><code>interrupt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_StartInteraction_" data-uid="RootMotion.FinalIK.InteractionSystem.StartInteraction*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_StartInteraction_RootMotion_FinalIK_FullBodyBipedEffector_RootMotion_FinalIK_InteractionObject_System_Boolean_" data-uid="RootMotion.FinalIK.InteractionSystem.StartInteraction(RootMotion.FinalIK.FullBodyBipedEffector,RootMotion.FinalIK.InteractionObject,System.Boolean)">
+  StartInteraction(FullBodyBipedEffector, InteractionObject, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts the interaction between an effector and an interaction object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StartInteraction(FullBodyBipedEffector effectorType, InteractionObject interactionObject, bool interrupt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>effectorType</code> <a class="xref" href="RootMotion.FinalIK.FullBodyBipedEffector.html">FullBodyBipedEffector</a></dt>
+    <dd></dd>
+    <dt><code>interactionObject</code> <a class="xref" href="RootMotion.FinalIK.InteractionObject.html">InteractionObject</a></dt>
+    <dd></dd>
+    <dt><code>interrupt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_StartInteractionWithClosestTarget_" data-uid="RootMotion.FinalIK.InteractionSystem.StartInteractionWithClosestTarget*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_StartInteractionWithClosestTarget_RootMotion_FinalIK_FullBodyBipedEffector_RootMotion_FinalIK_InteractionObject_System_Boolean_" data-uid="RootMotion.FinalIK.InteractionSystem.StartInteractionWithClosestTarget(RootMotion.FinalIK.FullBodyBipedEffector,RootMotion.FinalIK.InteractionObject,System.Boolean)">
+  StartInteractionWithClosestTarget(FullBodyBipedEffector, InteractionObject, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts the interaction between an effector and an interaction object, choosing InteractionTarget that is closest to current rotation of the effector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StartInteractionWithClosestTarget(FullBodyBipedEffector effectorType, InteractionObject interactionObject, bool interrupt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>effectorType</code> <a class="xref" href="RootMotion.FinalIK.FullBodyBipedEffector.html">FullBodyBipedEffector</a></dt>
+    <dd></dd>
+    <dt><code>interactionObject</code> <a class="xref" href="RootMotion.FinalIK.InteractionObject.html">InteractionObject</a></dt>
+    <dd></dd>
+    <dt><code>interrupt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_StopAll_" data-uid="RootMotion.FinalIK.InteractionSystem.StopAll*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_StopAll" data-uid="RootMotion.FinalIK.InteractionSystem.StopAll">
+  StopAll()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L327"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops all interactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopAll()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_StopInteraction_" data-uid="RootMotion.FinalIK.InteractionSystem.StopInteraction*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_StopInteraction_RootMotion_FinalIK_FullBodyBipedEffector_" data-uid="RootMotion.FinalIK.InteractionSystem.StopInteraction(RootMotion.FinalIK.FullBodyBipedEffector)">
+  StopInteraction(FullBodyBipedEffector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops the interaction of an effector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StopInteraction(FullBodyBipedEffector effectorType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>effectorType</code> <a class="xref" href="RootMotion.FinalIK.FullBodyBipedEffector.html">FullBodyBipedEffector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_StoreDefaults_" data-uid="RootMotion.FinalIK.InteractionSystem.StoreDefaults*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_StoreDefaults" data-uid="RootMotion.FinalIK.InteractionSystem.StoreDefaults">
+  StoreDefaults()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L586"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Store the default values to which the interaction effectors will be reset to after interactions have ended.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StoreDefaults()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_TriggerEffectorsReady_" data-uid="RootMotion.FinalIK.InteractionSystem.TriggerEffectorsReady*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_TriggerEffectorsReady_System_Int32_" data-uid="RootMotion.FinalIK.InteractionSystem.TriggerEffectorsReady(System.Int32)">
+  TriggerEffectorsReady(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L515"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if all effectors of a trigger are either not in interaction or paused</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TriggerEffectorsReady(int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_TriggerInteraction_" data-uid="RootMotion.FinalIK.InteractionSystem.TriggerInteraction*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_TriggerInteraction_System_Int32_System_Boolean_" data-uid="RootMotion.FinalIK.InteractionSystem.TriggerInteraction(System.Int32,System.Boolean)">
+  TriggerInteraction(int, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L379"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Triggers all interactions of an InteractionTrigger. Returns false if unsuccessful (maybe out of range).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TriggerInteraction(int index, bool interrupt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>interrupt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_TriggerInteraction_" data-uid="RootMotion.FinalIK.InteractionSystem.TriggerInteraction*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_TriggerInteraction_System_Int32_System_Boolean_RootMotion_FinalIK_InteractionObject__" data-uid="RootMotion.FinalIK.InteractionSystem.TriggerInteraction(System.Int32,System.Boolean,RootMotion.FinalIK.InteractionObject@)">
+  TriggerInteraction(int, bool, out InteractionObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L401"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Triggers all interactions of an InteractionTrigger. Returns false if unsuccessful (maybe out of range).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TriggerInteraction(int index, bool interrupt, out InteractionObject interactionObject)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>interrupt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>interactionObject</code> <a class="xref" href="RootMotion.FinalIK.InteractionObject.html">InteractionObject</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_TriggerInteraction_" data-uid="RootMotion.FinalIK.InteractionSystem.TriggerInteraction*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_TriggerInteraction_System_Int32_System_Boolean_RootMotion_FinalIK_InteractionTarget__" data-uid="RootMotion.FinalIK.InteractionSystem.TriggerInteraction(System.Int32,System.Boolean,RootMotion.FinalIK.InteractionTarget@)">
+  TriggerInteraction(int, bool, out InteractionTarget)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L425"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Triggers all interactions of an InteractionTrigger. Returns false if unsuccessful (maybe out of range).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TriggerInteraction(int index, bool interrupt, out InteractionTarget interactionTarget)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>interrupt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>interactionTarget</code> <a class="xref" href="RootMotion.FinalIK.InteractionTarget.html">InteractionTarget</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_InteractionSystem_Update_" data-uid="RootMotion.FinalIK.InteractionSystem.Update*"></a>
+
+  <h3 id="RootMotion_FinalIK_InteractionSystem_Update" data-uid="RootMotion.FinalIK.InteractionSystem.Update">
+  Update()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/InteractionSystem/InteractionSystem.cs/#L779"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class JsonMapper |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class JsonMapper |  |  ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=LitJson_JsonMapper.md&amp;value=---%0Auid%3A%20LitJson.JsonMapper%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="LitJson.JsonMapper">
+
+
+
+  <h1 id="LitJson_JsonMapper" data-uid="LitJson.JsonMapper" class="text-break">
+Class JsonMapper  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="LitJson.html">LitJson</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class JsonMapper</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">JsonMapper</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="LitJson_JsonMapper_JsonToObject_" data-uid="LitJson.JsonMapper.JsonToObject*"></a>
+
+  <h3 id="LitJson_JsonMapper_JsonToObject_UnityFusion_Runtime_Intepreter_ILIntepreter_UnityFusion_Runtime_Stack_StackObject__UnityFusion_Other_UncheckedList_System_Object__UnityFusion_CLR_Method_CLRMethod_System_Boolean_" data-uid="LitJson.JsonMapper.JsonToObject(UnityFusion.Runtime.Intepreter.ILIntepreter,UnityFusion.Runtime.Stack.StackObject*,UnityFusion.Other.UncheckedList{System.Object},UnityFusion.CLR.Method.CLRMethod,System.Boolean)">
+  JsonToObject(ILIntepreter, StackObject*, UncheckedList&lt;object&gt;, CLRMethod, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StackObject* JsonToObject(ILIntepreter intp, StackObject* esp, UncheckedList&lt;object&gt; mStack, CLRMethod method, bool isNewObj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>intp</code> <a class="xref" href="UnityFusion.Runtime.Intepreter.ILIntepreter.html">ILIntepreter</a></dt>
+    <dd></dd>
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>mStack</code> <a class="xref" href="UnityFusion.Other.UncheckedList-1.html">UncheckedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>method</code> <a class="xref" href="UnityFusion.CLR.Method.CLRMethod.html">CLRMethod</a></dt>
+    <dd></dd>
+    <dt><code>isNewObj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_JsonToObject2_" data-uid="LitJson.JsonMapper.JsonToObject2*"></a>
+
+  <h3 id="LitJson_JsonMapper_JsonToObject2_UnityFusion_Runtime_Intepreter_ILIntepreter_UnityFusion_Runtime_Stack_StackObject__UnityFusion_Other_UncheckedList_System_Object__UnityFusion_CLR_Method_CLRMethod_System_Boolean_" data-uid="LitJson.JsonMapper.JsonToObject2(UnityFusion.Runtime.Intepreter.ILIntepreter,UnityFusion.Runtime.Stack.StackObject*,UnityFusion.Other.UncheckedList{System.Object},UnityFusion.CLR.Method.CLRMethod,System.Boolean)">
+  JsonToObject2(ILIntepreter, StackObject*, UncheckedList&lt;object&gt;, CLRMethod, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StackObject* JsonToObject2(ILIntepreter intp, StackObject* esp, UncheckedList&lt;object&gt; mStack, CLRMethod method, bool isNewObj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>intp</code> <a class="xref" href="UnityFusion.Runtime.Intepreter.ILIntepreter.html">ILIntepreter</a></dt>
+    <dd></dd>
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>mStack</code> <a class="xref" href="UnityFusion.Other.UncheckedList-1.html">UncheckedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>method</code> <a class="xref" href="UnityFusion.CLR.Method.CLRMethod.html">CLRMethod</a></dt>
+    <dd></dd>
+    <dt><code>isNewObj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_JsonToObject3_" data-uid="LitJson.JsonMapper.JsonToObject3*"></a>
+
+  <h3 id="LitJson_JsonMapper_JsonToObject3_UnityFusion_Runtime_Intepreter_ILIntepreter_UnityFusion_Runtime_Stack_StackObject__UnityFusion_Other_UncheckedList_System_Object__UnityFusion_CLR_Method_CLRMethod_System_Boolean_" data-uid="LitJson.JsonMapper.JsonToObject3(UnityFusion.Runtime.Intepreter.ILIntepreter,UnityFusion.Runtime.Stack.StackObject*,UnityFusion.Other.UncheckedList{System.Object},UnityFusion.CLR.Method.CLRMethod,System.Boolean)">
+  JsonToObject3(ILIntepreter, StackObject*, UncheckedList&lt;object&gt;, CLRMethod, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StackObject* JsonToObject3(ILIntepreter intp, StackObject* esp, UncheckedList&lt;object&gt; mStack, CLRMethod method, bool isNewObj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>intp</code> <a class="xref" href="UnityFusion.Runtime.Intepreter.ILIntepreter.html">ILIntepreter</a></dt>
+    <dd></dd>
+    <dt><code>esp</code> <a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+    <dt><code>mStack</code> <a class="xref" href="UnityFusion.Other.UncheckedList-1.html">UncheckedList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>method</code> <a class="xref" href="UnityFusion.CLR.Method.CLRMethod.html">CLRMethod</a></dt>
+    <dd></dd>
+    <dt><code>isNewObj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Stack.StackObject.html">StackObject</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_RegisterExporter_" data-uid="LitJson.JsonMapper.RegisterExporter*"></a>
+
+  <h3 id="LitJson_JsonMapper_RegisterExporter__1_LitJson_ExporterFunc___0__" data-uid="LitJson.JsonMapper.RegisterExporter``1(LitJson.ExporterFunc{``0})">
+  RegisterExporter&lt;T&gt;(ExporterFunc&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterExporter&lt;T&gt;(ExporterFunc&lt;T&gt; exporter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>exporter</code> <a class="xref" href="LitJson.ExporterFunc-1.html">ExporterFunc</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_RegisterImporter_" data-uid="LitJson.JsonMapper.RegisterImporter*"></a>
+
+  <h3 id="LitJson_JsonMapper_RegisterImporter__2_LitJson_ImporterFunc___0___1__" data-uid="LitJson.JsonMapper.RegisterImporter``2(LitJson.ImporterFunc{``0,``1})">
+  RegisterImporter&lt;TJson, TValue&gt;(ImporterFunc&lt;TJson, TValue&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterImporter&lt;TJson, TValue&gt;(ImporterFunc&lt;TJson, TValue&gt; importer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>importer</code> <a class="xref" href="LitJson.ImporterFunc-2.html">ImporterFunc</a>&lt;TJson, TValue&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TJson</code></dt>
+    <dd></dd>
+    <dt><code>TValue</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_RegisterUnityFusionCLRRedirection_" data-uid="LitJson.JsonMapper.RegisterUnityFusionCLRRedirection*"></a>
+
+  <h3 id="LitJson_JsonMapper_RegisterUnityFusionCLRRedirection_UnityFusion_Runtime_Enviorment_AppDomain_" data-uid="LitJson.JsonMapper.RegisterUnityFusionCLRRedirection(UnityFusion.Runtime.Enviorment.AppDomain)">
+  RegisterUnityFusionCLRRedirection(AppDomain)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterUnityFusionCLRRedirection(AppDomain appdomain)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>appdomain</code> <a class="xref" href="UnityFusion.Runtime.Enviorment.AppDomain.html">AppDomain</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_ToJson_" data-uid="LitJson.JsonMapper.ToJson*"></a>
+
+  <h3 id="LitJson_JsonMapper_ToJson_System_Object_" data-uid="LitJson.JsonMapper.ToJson(System.Object)">
+  ToJson(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1054"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ToJson(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_ToJson_" data-uid="LitJson.JsonMapper.ToJson*"></a>
+
+  <h3 id="LitJson_JsonMapper_ToJson_System_Object_LitJson_JsonWriter_" data-uid="LitJson.JsonMapper.ToJson(System.Object,LitJson.JsonWriter)">
+  ToJson(object, JsonWriter)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1066"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ToJson(object obj, JsonWriter writer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>writer</code> <a class="xref" href="LitJson.JsonWriter.html">JsonWriter</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_ToObject_" data-uid="LitJson.JsonMapper.ToObject*"></a>
+
+  <h3 id="LitJson_JsonMapper_ToObject_LitJson_JsonReader_" data-uid="LitJson.JsonMapper.ToObject(LitJson.JsonReader)">
+  ToObject(JsonReader)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1071"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonData ToObject(JsonReader reader)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reader</code> <a class="xref" href="LitJson.JsonReader.html">JsonReader</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="LitJson.JsonData.html">JsonData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_ToObject_" data-uid="LitJson.JsonMapper.ToObject*"></a>
+
+  <h3 id="LitJson_JsonMapper_ToObject_System_IO_TextReader_" data-uid="LitJson.JsonMapper.ToObject(System.IO.TextReader)">
+  ToObject(TextReader)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1077"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonData ToObject(TextReader reader)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reader</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textreader">TextReader</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="LitJson.JsonData.html">JsonData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_ToObject_" data-uid="LitJson.JsonMapper.ToObject*"></a>
+
+  <h3 id="LitJson_JsonMapper_ToObject_System_String_" data-uid="LitJson.JsonMapper.ToObject(System.String)">
+  ToObject(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1085"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonData ToObject(string json)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>json</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="LitJson.JsonData.html">JsonData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_ToObject_" data-uid="LitJson.JsonMapper.ToObject*"></a>
+
+  <h3 id="LitJson_JsonMapper_ToObject__1_LitJson_JsonReader_" data-uid="LitJson.JsonMapper.ToObject``1(LitJson.JsonReader)">
+  ToObject&lt;T&gt;(JsonReader)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1091"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ToObject&lt;T&gt;(JsonReader reader)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reader</code> <a class="xref" href="LitJson.JsonReader.html">JsonReader</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_ToObject_" data-uid="LitJson.JsonMapper.ToObject*"></a>
+
+  <h3 id="LitJson_JsonMapper_ToObject__1_System_IO_TextReader_" data-uid="LitJson.JsonMapper.ToObject``1(System.IO.TextReader)">
+  ToObject&lt;T&gt;(TextReader)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1096"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ToObject&lt;T&gt;(TextReader reader)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reader</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textreader">TextReader</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_ToObject_" data-uid="LitJson.JsonMapper.ToObject*"></a>
+
+  <h3 id="LitJson_JsonMapper_ToObject__1_System_String_" data-uid="LitJson.JsonMapper.ToObject``1(System.String)">
+  ToObject&lt;T&gt;(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ToObject&lt;T&gt;(string json)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>json</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_ToWrapper_" data-uid="LitJson.JsonMapper.ToWrapper*"></a>
+
+  <h3 id="LitJson_JsonMapper_ToWrapper_LitJson_WrapperFactory_LitJson_JsonReader_" data-uid="LitJson.JsonMapper.ToWrapper(LitJson.WrapperFactory,LitJson.JsonReader)">
+  ToWrapper(WrapperFactory, JsonReader)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IJsonWrapper ToWrapper(WrapperFactory factory, JsonReader reader)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>factory</code> <a class="xref" href="LitJson.WrapperFactory.html">WrapperFactory</a></dt>
+    <dd></dd>
+    <dt><code>reader</code> <a class="xref" href="LitJson.JsonReader.html">JsonReader</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="LitJson.IJsonWrapper.html">IJsonWrapper</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_ToWrapper_" data-uid="LitJson.JsonMapper.ToWrapper*"></a>
+
+  <h3 id="LitJson_JsonMapper_ToWrapper_LitJson_WrapperFactory_System_String_" data-uid="LitJson.JsonMapper.ToWrapper(LitJson.WrapperFactory,System.String)">
+  ToWrapper(WrapperFactory, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IJsonWrapper ToWrapper(WrapperFactory factory, string json)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>factory</code> <a class="xref" href="LitJson.WrapperFactory.html">WrapperFactory</a></dt>
+    <dd></dd>
+    <dt><code>json</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="LitJson.IJsonWrapper.html">IJsonWrapper</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_UnregisterExporters_" data-uid="LitJson.JsonMapper.UnregisterExporters*"></a>
+
+  <h3 id="LitJson_JsonMapper_UnregisterExporters" data-uid="LitJson.JsonMapper.UnregisterExporters">
+  UnregisterExporters()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UnregisterExporters()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LitJson_JsonMapper_UnregisterImporters_" data-uid="LitJson.JsonMapper.UnregisterImporters*"></a>
+
+  <h3 id="LitJson_JsonMapper_UnregisterImporters" data-uid="LitJson.JsonMapper.UnregisterImporters">
+  UnregisterImporters()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Plugins/LitJson/JsonMapper.cs/#L1147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UnregisterImporters()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

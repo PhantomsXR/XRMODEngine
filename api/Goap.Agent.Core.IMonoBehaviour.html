@@ -1,0 +1,2496 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IMonoBehaviour |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IMonoBehaviour |  |  ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Goap_Agent_Core_IMonoBehaviour.md&amp;value=---%0Auid%3A%20Goap.Agent.Core.IMonoBehaviour%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Goap.Agent.Core.IMonoBehaviour">
+
+
+
+  <h1 id="Goap_Agent_Core_IMonoBehaviour" data-uid="Goap.Agent.Core.IMonoBehaviour" class="text-break">
+Interface IMonoBehaviour  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Goap.html">Goap</a>.<a class="xref" href="Goap.Agent.html">Agent</a>.<a class="xref" href="Goap.Agent.Core.html">Core</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IMonoBehaviour</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_enabled_" data-uid="Goap.Agent.Core.IMonoBehaviour.enabled*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_enabled" data-uid="Goap.Agent.Core.IMonoBehaviour.enabled">
+  enabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool enabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_gameObject_" data-uid="Goap.Agent.Core.IMonoBehaviour.gameObject*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_gameObject" data-uid="Goap.Agent.Core.IMonoBehaviour.gameObject">
+  gameObject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">GameObject gameObject { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_hideFlags_" data-uid="Goap.Agent.Core.IMonoBehaviour.hideFlags*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_hideFlags" data-uid="Goap.Agent.Core.IMonoBehaviour.hideFlags">
+  hideFlags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">HideFlags hideFlags { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">HideFlags</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_isActiveAndEnabled_" data-uid="Goap.Agent.Core.IMonoBehaviour.isActiveAndEnabled*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_isActiveAndEnabled" data-uid="Goap.Agent.Core.IMonoBehaviour.isActiveAndEnabled">
+  isActiveAndEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool isActiveAndEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_name_" data-uid="Goap.Agent.Core.IMonoBehaviour.name*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_name" data-uid="Goap.Agent.Core.IMonoBehaviour.name">
+  name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string name { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_tag_" data-uid="Goap.Agent.Core.IMonoBehaviour.tag*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_tag" data-uid="Goap.Agent.Core.IMonoBehaviour.tag">
+  tag
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string tag { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_transform_" data-uid="Goap.Agent.Core.IMonoBehaviour.transform*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_transform" data-uid="Goap.Agent.Core.IMonoBehaviour.transform">
+  transform
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Transform transform { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_useGUILayout_" data-uid="Goap.Agent.Core.IMonoBehaviour.useGUILayout*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_useGUILayout" data-uid="Goap.Agent.Core.IMonoBehaviour.useGUILayout">
+  useGUILayout
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool useGUILayout { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_BroadcastMessage_" data-uid="Goap.Agent.Core.IMonoBehaviour.BroadcastMessage*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_BroadcastMessage_System_String_" data-uid="Goap.Agent.Core.IMonoBehaviour.BroadcastMessage(System.String)">
+  BroadcastMessage(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void BroadcastMessage(string methodName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_BroadcastMessage_" data-uid="Goap.Agent.Core.IMonoBehaviour.BroadcastMessage*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_BroadcastMessage_System_String_SendMessageOptions_" data-uid="Goap.Agent.Core.IMonoBehaviour.BroadcastMessage(System.String,SendMessageOptions)">
+  BroadcastMessage(string, SendMessageOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void BroadcastMessage(string methodName, SendMessageOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <span class="xref">SendMessageOptions</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_BroadcastMessage_" data-uid="Goap.Agent.Core.IMonoBehaviour.BroadcastMessage*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_BroadcastMessage_System_String_System_Object_" data-uid="Goap.Agent.Core.IMonoBehaviour.BroadcastMessage(System.String,System.Object)">
+  BroadcastMessage(string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void BroadcastMessage(string methodName, object parameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>parameter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_BroadcastMessage_" data-uid="Goap.Agent.Core.IMonoBehaviour.BroadcastMessage*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_BroadcastMessage_System_String_System_Object_SendMessageOptions_" data-uid="Goap.Agent.Core.IMonoBehaviour.BroadcastMessage(System.String,System.Object,SendMessageOptions)">
+  BroadcastMessage(string, object, SendMessageOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void BroadcastMessage(string methodName, object parameter, SendMessageOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>parameter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <span class="xref">SendMessageOptions</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_CancelInvoke_" data-uid="Goap.Agent.Core.IMonoBehaviour.CancelInvoke*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_CancelInvoke" data-uid="Goap.Agent.Core.IMonoBehaviour.CancelInvoke">
+  CancelInvoke()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CancelInvoke()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_CancelInvoke_" data-uid="Goap.Agent.Core.IMonoBehaviour.CancelInvoke*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_CancelInvoke_System_String_" data-uid="Goap.Agent.Core.IMonoBehaviour.CancelInvoke(System.String)">
+  CancelInvoke(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CancelInvoke(string methodName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_CompareTag_" data-uid="Goap.Agent.Core.IMonoBehaviour.CompareTag*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_CompareTag_System_String_" data-uid="Goap.Agent.Core.IMonoBehaviour.CompareTag(System.String)">
+  CompareTag(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CompareTag(string tag)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tag</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_Equals_" data-uid="Goap.Agent.Core.IMonoBehaviour.Equals*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_Equals_System_Object_" data-uid="Goap.Agent.Core.IMonoBehaviour.Equals(System.Object)">
+  Equals(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Equals(object other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponent_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponent*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponent_System_String_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponent(System.String)">
+  GetComponent(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Component GetComponent(string type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Component</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponent_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponent*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponent_System_Type_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponent(System.Type)">
+  GetComponent(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Component GetComponent(Type type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Component</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentInChildren_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentInChildren*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentInChildren_System_Type_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentInChildren(System.Type)">
+  GetComponentInChildren(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Component GetComponentInChildren(Type t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Component</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentInChildren_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentInChildren*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentInChildren_System_Type_System_Boolean_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentInChildren(System.Type,System.Boolean)">
+  GetComponentInChildren(Type, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Component GetComponentInChildren(Type t, bool includeInactive)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>includeInactive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Component</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentInChildren_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentInChildren*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentInChildren__1" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentInChildren``1">
+  GetComponentInChildren&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T GetComponentInChildren&lt;T&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentInChildren_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentInChildren*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentInChildren__1_System_Boolean_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentInChildren``1(System.Boolean)">
+  GetComponentInChildren&lt;T&gt;(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T GetComponentInChildren&lt;T&gt;(bool includeInactive)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>includeInactive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentInParent_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentInParent*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentInParent_System_Type_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentInParent(System.Type)">
+  GetComponentInParent(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Component GetComponentInParent(Type t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Component</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentInParent_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentInParent*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentInParent_System_Type_System_Boolean_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentInParent(System.Type,System.Boolean)">
+  GetComponentInParent(Type, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Component GetComponentInParent(Type t, bool includeInactive)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>includeInactive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Component</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentInParent_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentInParent*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentInParent__1" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentInParent``1">
+  GetComponentInParent&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T GetComponentInParent&lt;T&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentInParent_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentInParent*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentInParent__1_System_Boolean_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentInParent``1(System.Boolean)">
+  GetComponentInParent&lt;T&gt;(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T GetComponentInParent&lt;T&gt;(bool includeInactive)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>includeInactive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponent_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponent*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponent__1" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponent``1">
+  GetComponent&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T GetComponent&lt;T&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponents_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponents*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponents_System_Type_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponents(System.Type)">
+  GetComponents(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Component[] GetComponents(Type type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Component</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponents_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponents*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponents_System_Type_System_Collections_Generic_List_Component__" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponents(System.Type,System.Collections.Generic.List{Component})">
+  GetComponents(Type, List&lt;Component&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void GetComponents(Type type, List&lt;Component&gt; results)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>results</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Component</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInChildren*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren_System_Type_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInChildren(System.Type)">
+  GetComponentsInChildren(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Component[] GetComponentsInChildren(Type t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Component</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInChildren*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren_System_Type_System_Boolean_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInChildren(System.Type,System.Boolean)">
+  GetComponentsInChildren(Type, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Component[] GetComponentsInChildren(Type t, bool includeInactive)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>includeInactive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Component</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInChildren*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren__1" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInChildren``1">
+  GetComponentsInChildren&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T[] GetComponentsInChildren&lt;T&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>T[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInChildren*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren__1_System_Boolean_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInChildren``1(System.Boolean)">
+  GetComponentsInChildren&lt;T&gt;(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T[] GetComponentsInChildren&lt;T&gt;(bool includeInactive)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>includeInactive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>T[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInChildren*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren__1_System_Boolean_System_Collections_Generic_List___0__" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInChildren``1(System.Boolean,System.Collections.Generic.List{``0})">
+  GetComponentsInChildren&lt;T&gt;(bool, List&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void GetComponentsInChildren&lt;T&gt;(bool includeInactive, List&lt;T&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>includeInactive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInChildren*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren__1_System_Collections_Generic_List___0__" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInChildren``1(System.Collections.Generic.List{``0})">
+  GetComponentsInChildren&lt;T&gt;(List&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void GetComponentsInChildren&lt;T&gt;(List&lt;T&gt; results)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>results</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInParent_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInParent*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInParent_System_Type_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInParent(System.Type)">
+  GetComponentsInParent(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Component[] GetComponentsInParent(Type t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Component</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInParent_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInParent*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInParent_System_Type_System_Boolean_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInParent(System.Type,System.Boolean)">
+  GetComponentsInParent(Type, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Component[] GetComponentsInParent(Type t, bool includeInactive)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>includeInactive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Component</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInParent_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInParent*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInParent__1" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInParent``1">
+  GetComponentsInParent&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T[] GetComponentsInParent&lt;T&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>T[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInParent_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInParent*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInParent__1_System_Boolean_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInParent``1(System.Boolean)">
+  GetComponentsInParent&lt;T&gt;(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T[] GetComponentsInParent&lt;T&gt;(bool includeInactive)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>includeInactive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>T[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInParent_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInParent*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponentsInParent__1_System_Boolean_System_Collections_Generic_List___0__" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponentsInParent``1(System.Boolean,System.Collections.Generic.List{``0})">
+  GetComponentsInParent&lt;T&gt;(bool, List&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void GetComponentsInParent&lt;T&gt;(bool includeInactive, List&lt;T&gt; results)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>includeInactive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>results</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponents_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponents*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponents__1" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponents``1">
+  GetComponents&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T[] GetComponents&lt;T&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>T[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetComponents_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponents*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetComponents__1_System_Collections_Generic_List___0__" data-uid="Goap.Agent.Core.IMonoBehaviour.GetComponents``1(System.Collections.Generic.List{``0})">
+  GetComponents&lt;T&gt;(List&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void GetComponents&lt;T&gt;(List&lt;T&gt; results)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>results</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetHashCode_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetHashCode*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetHashCode" data-uid="Goap.Agent.Core.IMonoBehaviour.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_GetInstanceID_" data-uid="Goap.Agent.Core.IMonoBehaviour.GetInstanceID*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_GetInstanceID" data-uid="Goap.Agent.Core.IMonoBehaviour.GetInstanceID">
+  GetInstanceID()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetInstanceID()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_Invoke_" data-uid="Goap.Agent.Core.IMonoBehaviour.Invoke*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_Invoke_System_String_System_Single_" data-uid="Goap.Agent.Core.IMonoBehaviour.Invoke(System.String,System.Single)">
+  Invoke(string, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Invoke(string methodName, float time)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>time</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_InvokeRepeating_" data-uid="Goap.Agent.Core.IMonoBehaviour.InvokeRepeating*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_InvokeRepeating_System_String_System_Single_System_Single_" data-uid="Goap.Agent.Core.IMonoBehaviour.InvokeRepeating(System.String,System.Single,System.Single)">
+  InvokeRepeating(string, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void InvokeRepeating(string methodName, float time, float repeatRate)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>time</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>repeatRate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_IsInvoking_" data-uid="Goap.Agent.Core.IMonoBehaviour.IsInvoking*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_IsInvoking" data-uid="Goap.Agent.Core.IMonoBehaviour.IsInvoking">
+  IsInvoking()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsInvoking()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_IsInvoking_" data-uid="Goap.Agent.Core.IMonoBehaviour.IsInvoking*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_IsInvoking_System_String_" data-uid="Goap.Agent.Core.IMonoBehaviour.IsInvoking(System.String)">
+  IsInvoking(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsInvoking(string methodName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_SendMessage_" data-uid="Goap.Agent.Core.IMonoBehaviour.SendMessage*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_SendMessage_System_String_" data-uid="Goap.Agent.Core.IMonoBehaviour.SendMessage(System.String)">
+  SendMessage(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SendMessage(string methodName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_SendMessage_" data-uid="Goap.Agent.Core.IMonoBehaviour.SendMessage*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_SendMessage_System_String_SendMessageOptions_" data-uid="Goap.Agent.Core.IMonoBehaviour.SendMessage(System.String,SendMessageOptions)">
+  SendMessage(string, SendMessageOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SendMessage(string methodName, SendMessageOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <span class="xref">SendMessageOptions</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_SendMessage_" data-uid="Goap.Agent.Core.IMonoBehaviour.SendMessage*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_SendMessage_System_String_System_Object_" data-uid="Goap.Agent.Core.IMonoBehaviour.SendMessage(System.String,System.Object)">
+  SendMessage(string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SendMessage(string methodName, object value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_SendMessage_" data-uid="Goap.Agent.Core.IMonoBehaviour.SendMessage*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_SendMessage_System_String_System_Object_SendMessageOptions_" data-uid="Goap.Agent.Core.IMonoBehaviour.SendMessage(System.String,System.Object,SendMessageOptions)">
+  SendMessage(string, object, SendMessageOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SendMessage(string methodName, object value, SendMessageOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <span class="xref">SendMessageOptions</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_SendMessageUpwards_" data-uid="Goap.Agent.Core.IMonoBehaviour.SendMessageUpwards*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_SendMessageUpwards_System_String_" data-uid="Goap.Agent.Core.IMonoBehaviour.SendMessageUpwards(System.String)">
+  SendMessageUpwards(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SendMessageUpwards(string methodName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_SendMessageUpwards_" data-uid="Goap.Agent.Core.IMonoBehaviour.SendMessageUpwards*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_SendMessageUpwards_System_String_SendMessageOptions_" data-uid="Goap.Agent.Core.IMonoBehaviour.SendMessageUpwards(System.String,SendMessageOptions)">
+  SendMessageUpwards(string, SendMessageOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SendMessageUpwards(string methodName, SendMessageOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <span class="xref">SendMessageOptions</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_SendMessageUpwards_" data-uid="Goap.Agent.Core.IMonoBehaviour.SendMessageUpwards*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_SendMessageUpwards_System_String_System_Object_" data-uid="Goap.Agent.Core.IMonoBehaviour.SendMessageUpwards(System.String,System.Object)">
+  SendMessageUpwards(string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SendMessageUpwards(string methodName, object value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_SendMessageUpwards_" data-uid="Goap.Agent.Core.IMonoBehaviour.SendMessageUpwards*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_SendMessageUpwards_System_String_System_Object_SendMessageOptions_" data-uid="Goap.Agent.Core.IMonoBehaviour.SendMessageUpwards(System.String,System.Object,SendMessageOptions)">
+  SendMessageUpwards(string, object, SendMessageOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SendMessageUpwards(string methodName, object value, SendMessageOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <span class="xref">SendMessageOptions</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_StartCoroutine_" data-uid="Goap.Agent.Core.IMonoBehaviour.StartCoroutine*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_StartCoroutine_System_Collections_IEnumerator_" data-uid="Goap.Agent.Core.IMonoBehaviour.StartCoroutine(System.Collections.IEnumerator)">
+  StartCoroutine(IEnumerator)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Coroutine StartCoroutine(IEnumerator routine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>routine</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Coroutine</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_StartCoroutine_" data-uid="Goap.Agent.Core.IMonoBehaviour.StartCoroutine*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_StartCoroutine_System_String_" data-uid="Goap.Agent.Core.IMonoBehaviour.StartCoroutine(System.String)">
+  StartCoroutine(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Coroutine StartCoroutine(string methodName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Coroutine</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_StartCoroutine_" data-uid="Goap.Agent.Core.IMonoBehaviour.StartCoroutine*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_StartCoroutine_System_String_System_Object_" data-uid="Goap.Agent.Core.IMonoBehaviour.StartCoroutine(System.String,System.Object)">
+  StartCoroutine(string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Coroutine StartCoroutine(string methodName, object value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Coroutine</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_StartCoroutine_Auto_" data-uid="Goap.Agent.Core.IMonoBehaviour.StartCoroutine_Auto*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_StartCoroutine_Auto_System_Collections_IEnumerator_" data-uid="Goap.Agent.Core.IMonoBehaviour.StartCoroutine_Auto(System.Collections.IEnumerator)">
+  StartCoroutine_Auto(IEnumerator)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Coroutine StartCoroutine_Auto(IEnumerator routine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>routine</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Coroutine</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_StopAllCoroutines_" data-uid="Goap.Agent.Core.IMonoBehaviour.StopAllCoroutines*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_StopAllCoroutines" data-uid="Goap.Agent.Core.IMonoBehaviour.StopAllCoroutines">
+  StopAllCoroutines()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StopAllCoroutines()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_StopCoroutine_" data-uid="Goap.Agent.Core.IMonoBehaviour.StopCoroutine*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_StopCoroutine_Coroutine_" data-uid="Goap.Agent.Core.IMonoBehaviour.StopCoroutine(Coroutine)">
+  StopCoroutine(Coroutine)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StopCoroutine(Coroutine routine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>routine</code> <span class="xref">Coroutine</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_StopCoroutine_" data-uid="Goap.Agent.Core.IMonoBehaviour.StopCoroutine*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_StopCoroutine_System_Collections_IEnumerator_" data-uid="Goap.Agent.Core.IMonoBehaviour.StopCoroutine(System.Collections.IEnumerator)">
+  StopCoroutine(IEnumerator)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StopCoroutine(IEnumerator routine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>routine</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_StopCoroutine_" data-uid="Goap.Agent.Core.IMonoBehaviour.StopCoroutine*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_StopCoroutine_System_String_" data-uid="Goap.Agent.Core.IMonoBehaviour.StopCoroutine(System.String)">
+  StopCoroutine(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StopCoroutine(string methodName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_ToString_" data-uid="Goap.Agent.Core.IMonoBehaviour.ToString*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_ToString" data-uid="Goap.Agent.Core.IMonoBehaviour.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_TryGetComponent_" data-uid="Goap.Agent.Core.IMonoBehaviour.TryGetComponent*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_TryGetComponent_System_Type_Component__" data-uid="Goap.Agent.Core.IMonoBehaviour.TryGetComponent(System.Type,Component@)">
+  TryGetComponent(Type, out Component)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool TryGetComponent(Type type, out Component component)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>component</code> <span class="xref">Component</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Agent_Core_IMonoBehaviour_TryGetComponent_" data-uid="Goap.Agent.Core.IMonoBehaviour.TryGetComponent*"></a>
+
+  <h3 id="Goap_Agent_Core_IMonoBehaviour_TryGetComponent__1___0__" data-uid="Goap.Agent.Core.IMonoBehaviour.TryGetComponent``1(``0@)">
+  TryGetComponent&lt;T&gt;(out T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/AgentCore/Interfaces/IMonoBehaviour.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool TryGetComponent&lt;T&gt;(out T component)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>component</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

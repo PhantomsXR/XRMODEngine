@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ActionBuilder |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ActionBuilder |  |  ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Goap_Runtime_ActionBuilder.md&amp;value=---%0Auid%3A%20Goap.Runtime.ActionBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Goap.Runtime.ActionBuilder">
+
+
+
+  <h1 id="Goap_Runtime_ActionBuilder" data-uid="Goap.Runtime.ActionBuilder" class="text-break">
+Class ActionBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Goap.html">Goap</a>.<a class="xref" href="Goap.Runtime.html">Runtime</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ActionBuilder</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ActionBuilder</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Goap.Runtime.ActionBuilder-1.html">ActionBuilder</a>&lt;T&gt;</div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Goap_Runtime_ActionBuilder__ctor_" data-uid="Goap.Runtime.ActionBuilder.#ctor*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder__ctor_System_Type_Goap_Runtime_WorldKeyBuilder_Goap_Runtime_TargetKeyBuilder_" data-uid="Goap.Runtime.ActionBuilder.#ctor(System.Type,Goap.Runtime.WorldKeyBuilder,Goap.Runtime.TargetKeyBuilder)">
+  ActionBuilder(Type, WorldKeyBuilder, TargetKeyBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionBuilder(Type actionType, WorldKeyBuilder worldKeyBuilder, TargetKeyBuilder targetKeyBuilder)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>worldKeyBuilder</code> <a class="xref" href="Goap.Runtime.WorldKeyBuilder.html">WorldKeyBuilder</a></dt>
+    <dd></dd>
+    <dt><code>targetKeyBuilder</code> <a class="xref" href="Goap.Runtime.TargetKeyBuilder.html">TargetKeyBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Goap_Runtime_ActionBuilder_actionType" data-uid="Goap.Runtime.ActionBuilder.actionType">
+  actionType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly Type actionType</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Goap_Runtime_ActionBuilder_conditions" data-uid="Goap.Runtime.ActionBuilder.conditions">
+  conditions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly List&lt;ICondition&gt; conditions</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Goap.Core.ICondition.html">ICondition</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Goap_Runtime_ActionBuilder_config" data-uid="Goap.Runtime.ActionBuilder.config">
+  config
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ActionConfig config</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.ActionConfig.html">ActionConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Goap_Runtime_ActionBuilder_effects" data-uid="Goap.Runtime.ActionBuilder.effects">
+  effects
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly List&lt;IEffect&gt; effects</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Goap.Core.IEffect.html">IEffect</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Goap_Runtime_ActionBuilder_targetKeyBuilder" data-uid="Goap.Runtime.ActionBuilder.targetKeyBuilder">
+  targetKeyBuilder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly TargetKeyBuilder targetKeyBuilder</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.TargetKeyBuilder.html">TargetKeyBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Goap_Runtime_ActionBuilder_worldKeyBuilder" data-uid="Goap.Runtime.ActionBuilder.worldKeyBuilder">
+  worldKeyBuilder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly WorldKeyBuilder worldKeyBuilder</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.WorldKeyBuilder.html">WorldKeyBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Goap_Runtime_ActionBuilder_AddCondition_" data-uid="Goap.Runtime.ActionBuilder.AddCondition*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder_AddCondition_System_Type_Goap_Core_Comparison_System_Int32_" data-uid="Goap.Runtime.ActionBuilder.AddCondition(System.Type,Goap.Core.Comparison,System.Int32)">
+  AddCondition(Type, Comparison, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionBuilder AddCondition(Type _worldKeyType, Comparison comparison, int amount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_worldKeyType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>comparison</code> <a class="xref" href="Goap.Core.Comparison.html">Comparison</a></dt>
+    <dd></dd>
+    <dt><code>amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.ActionBuilder.html">ActionBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_ActionBuilder_AddEffect_" data-uid="Goap.Runtime.ActionBuilder.AddEffect*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder_AddEffect_System_Type_Goap_Core_EffectType_" data-uid="Goap.Runtime.ActionBuilder.AddEffect(System.Type,Goap.Core.EffectType)">
+  AddEffect(Type, EffectType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionBuilder AddEffect(Type _worldKeyType, EffectType _type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_worldKeyType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>_type</code> <a class="xref" href="Goap.Core.EffectType.html">EffectType</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.ActionBuilder.html">ActionBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_ActionBuilder_Build_" data-uid="Goap.Runtime.ActionBuilder.Build*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder_Build" data-uid="Goap.Runtime.ActionBuilder.Build">
+  Build()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IActionConfig Build()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Core.IActionConfig.html">IActionConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_ActionBuilder_Create_" data-uid="Goap.Runtime.ActionBuilder.Create*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder_Create_System_Type_Goap_Runtime_WorldKeyBuilder_Goap_Runtime_TargetKeyBuilder_" data-uid="Goap.Runtime.ActionBuilder.Create(System.Type,Goap.Runtime.WorldKeyBuilder,Goap.Runtime.TargetKeyBuilder)">
+  Create(Type, WorldKeyBuilder, TargetKeyBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ActionBuilder Create(Type _type, WorldKeyBuilder worldKeyBuilder, TargetKeyBuilder targetKeyBuilder)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>worldKeyBuilder</code> <a class="xref" href="Goap.Runtime.WorldKeyBuilder.html">WorldKeyBuilder</a></dt>
+    <dd></dd>
+    <dt><code>targetKeyBuilder</code> <a class="xref" href="Goap.Runtime.TargetKeyBuilder.html">TargetKeyBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.ActionBuilder.html">ActionBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_ActionBuilder_Create_" data-uid="Goap.Runtime.ActionBuilder.Create*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder_Create__1_Goap_Runtime_WorldKeyBuilder_Goap_Runtime_TargetKeyBuilder_" data-uid="Goap.Runtime.ActionBuilder.Create``1(Goap.Runtime.WorldKeyBuilder,Goap.Runtime.TargetKeyBuilder)">
+  Create&lt;TAction&gt;(WorldKeyBuilder, TargetKeyBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ActionBuilder&lt;TAction&gt; Create&lt;TAction&gt;(WorldKeyBuilder worldKeyBuilder, TargetKeyBuilder targetKeyBuilder) where TAction : IAction</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>worldKeyBuilder</code> <a class="xref" href="Goap.Runtime.WorldKeyBuilder.html">WorldKeyBuilder</a></dt>
+    <dd></dd>
+    <dt><code>targetKeyBuilder</code> <a class="xref" href="Goap.Runtime.TargetKeyBuilder.html">TargetKeyBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.ActionBuilder-1.html">ActionBuilder</a>&lt;TAction&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TAction</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_ActionBuilder_GetPropertiesType_" data-uid="Goap.Runtime.ActionBuilder.GetPropertiesType*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder_GetPropertiesType" data-uid="Goap.Runtime.ActionBuilder.GetPropertiesType">
+  GetPropertiesType()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Type GetPropertiesType()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_ActionBuilder_SetBaseCost_" data-uid="Goap.Runtime.ActionBuilder.SetBaseCost*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder_SetBaseCost_System_Single_" data-uid="Goap.Runtime.ActionBuilder.SetBaseCost(System.Single)">
+  SetBaseCost(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionBuilder SetBaseCost(float baseCost)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>baseCost</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.ActionBuilder.html">ActionBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_ActionBuilder_SetCallback_" data-uid="Goap.Runtime.ActionBuilder.SetCallback*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder_SetCallback_System_Action_System_Object__" data-uid="Goap.Runtime.ActionBuilder.SetCallback(System.Action{System.Object})">
+  SetCallback(Action&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L337"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionBuilder SetCallback(Action&lt;object&gt; callback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.ActionBuilder.html">ActionBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_ActionBuilder_SetMoveMode_" data-uid="Goap.Runtime.ActionBuilder.SetMoveMode*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder_SetMoveMode_Goap_Agent_Core_ActionMoveMode_" data-uid="Goap.Runtime.ActionBuilder.SetMoveMode(Goap.Agent.Core.ActionMoveMode)">
+  SetMoveMode(ActionMoveMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionBuilder SetMoveMode(ActionMoveMode moveMode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>moveMode</code> <a class="xref" href="Goap.Agent.Core.ActionMoveMode.html">ActionMoveMode</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.ActionBuilder.html">ActionBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_ActionBuilder_SetProperties_" data-uid="Goap.Runtime.ActionBuilder.SetProperties*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder_SetProperties_Goap_Agent_Core_IActionProperties_" data-uid="Goap.Runtime.ActionBuilder.SetProperties(Goap.Agent.Core.IActionProperties)">
+  SetProperties(IActionProperties)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionBuilder SetProperties(IActionProperties properties)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>properties</code> <a class="xref" href="Goap.Agent.Core.IActionProperties.html">IActionProperties</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.ActionBuilder.html">ActionBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_ActionBuilder_SetRequiresTarget_" data-uid="Goap.Runtime.ActionBuilder.SetRequiresTarget*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder_SetRequiresTarget_System_Boolean_" data-uid="Goap.Runtime.ActionBuilder.SetRequiresTarget(System.Boolean)">
+  SetRequiresTarget(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L304"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionBuilder SetRequiresTarget(bool requiresTarget)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>requiresTarget</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.ActionBuilder.html">ActionBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_ActionBuilder_SetStoppingDistance_" data-uid="Goap.Runtime.ActionBuilder.SetStoppingDistance*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder_SetStoppingDistance_System_Single_" data-uid="Goap.Runtime.ActionBuilder.SetStoppingDistance(System.Single)">
+  SetStoppingDistance(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionBuilder SetStoppingDistance(float inRange)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inRange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.ActionBuilder.html">ActionBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_ActionBuilder_SetTarget_" data-uid="Goap.Runtime.ActionBuilder.SetTarget*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder_SetTarget_System_Type_" data-uid="Goap.Runtime.ActionBuilder.SetTarget(System.Type)">
+  SetTarget(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionBuilder SetTarget(Type _targetKeyType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_targetKeyType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.ActionBuilder.html">ActionBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_ActionBuilder_SetValidateConditions_" data-uid="Goap.Runtime.ActionBuilder.SetValidateConditions*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder_SetValidateConditions_System_Boolean_" data-uid="Goap.Runtime.ActionBuilder.SetValidateConditions(System.Boolean)">
+  SetValidateConditions(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionBuilder SetValidateConditions(bool validate)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>validate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.ActionBuilder.html">ActionBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_ActionBuilder_SetValidateTarget_" data-uid="Goap.Runtime.ActionBuilder.SetValidateTarget*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder_SetValidateTarget_System_Boolean_" data-uid="Goap.Runtime.ActionBuilder.SetValidateTarget(System.Boolean)">
+  SetValidateTarget(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L298"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionBuilder SetValidateTarget(bool validate)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>validate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Goap.Runtime.ActionBuilder.html">ActionBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Goap_Runtime_ActionBuilder_ValidateProperties_" data-uid="Goap.Runtime.ActionBuilder.ValidateProperties*"></a>
+
+  <h3 id="Goap_Runtime_ActionBuilder_ValidateProperties_Goap_Agent_Core_IActionProperties_" data-uid="Goap.Runtime.ActionBuilder.ValidateProperties(Goap.Agent.Core.IActionProperties)">
+  ValidateProperties(IActionProperties)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapRuntime/Classes/Builders/ActionBuilder.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ValidateProperties(IActionProperties properties)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>properties</code> <a class="xref" href="Goap.Agent.Core.IActionProperties.html">IActionProperties</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

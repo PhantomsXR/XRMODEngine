@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NetworkDiscovery&lt;TBroadCast, TResponse&gt; |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NetworkDiscovery&lt;TBroadCast, TResponse&gt; |  |  ">
+      
+      <meta name="description" content="Base class for network discovery functionality using UDP broadcasts.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2.md&amp;value=---%0Auid%3A%20Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2">
+
+
+
+  <h1 id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2" class="text-break">
+Class NetworkDiscovery&lt;TBroadCast, TResponse&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/NetworkDiscovery/NetworkDiscovery.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Phantom.html">Phantom</a>.<a class="xref" href="Phantom.XRMOD.html">XRMOD</a>.<a class="xref" href="Phantom.XRMOD.NetcodeModule.html">NetcodeModule</a>.<a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.html">Runtime</a>.<a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.html">NetworkDiscovery</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Base class for network discovery functionality using UDP broadcasts.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class NetworkDiscovery&lt;TBroadCast, TResponse&gt; : MonoBehaviour where TBroadCast : INetworkSerializable, new() where TResponse : INetworkSerializable, new()</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TBroadCast</code></dt>
+    <dd><p>The type of data sent in broadcast messages.</p>
+</dd>
+    <dt><code>TResponse</code></dt>
+    <dd><p>The type of data sent in response messages.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NetworkDiscovery&lt;TBroadCast, TResponse&gt;</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.LANNetworkDiscovery.html">LANNetworkDiscovery</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This class enables automatic server discovery on local networks. Clients broadcast a request,
+and servers respond with their connection information. Extend this class to define custom
+broadcast and response data structures.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_IsClient_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.IsClient*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_IsClient" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.IsClient">
+  IsClient
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/NetworkDiscovery/NetworkDiscovery.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the discovery is in client mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsClient { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_IsRunning_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.IsRunning*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_IsRunning" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.IsRunning">
+  IsRunning
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/NetworkDiscovery/NetworkDiscovery.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the discovery is running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRunning { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_IsServer_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.IsServer*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_IsServer" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.IsServer">
+  IsServer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/NetworkDiscovery/NetworkDiscovery.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the discovery is in server mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsServer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_ClientBroadcast_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.ClientBroadcast*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_ClientBroadcast__0_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.ClientBroadcast(`0)">
+  ClientBroadcast(TBroadCast)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/NetworkDiscovery/NetworkDiscovery.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a broadcast message from the client to discover available servers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClientBroadcast(TBroadCast broadCast)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>broadCast</code> <span class="xref">TBroadCast</span></dt>
+    <dd><p>The broadcast data to send.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if not running in client mode.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_GetUniqueApplicationId_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.GetUniqueApplicationId*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_GetUniqueApplicationId" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.GetUniqueApplicationId">
+  GetUniqueApplicationId()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/NetworkDiscovery/NetworkDiscovery.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a unique application ID for filtering discovery packets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long GetUniqueApplicationId()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>A unique 64-bit identifier.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_OnApplicationQuit_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.OnApplicationQuit*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_OnApplicationQuit" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.OnApplicationQuit">
+  OnApplicationQuit()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/NetworkDiscovery/NetworkDiscovery.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the application quits. Stops the discovery.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnApplicationQuit()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_ProcessBroadcast_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.ProcessBroadcast*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_ProcessBroadcast_System_Net_IPEndPoint__0__1__" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.ProcessBroadcast(System.Net.IPEndPoint,`0,`1@)">
+  ProcessBroadcast(IPEndPoint, TBroadCast, out TResponse)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/NetworkDiscovery/NetworkDiscovery.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets called whenever a broadcast is received. Creates a response based on the incoming broadcast data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool ProcessBroadcast(IPEndPoint sender, TBroadCast broadCast, out TResponse response)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.ipendpoint">IPEndPoint</a></dt>
+    <dd><p>The sender of the broadcast.</p>
+</dd>
+    <dt><code>broadCast</code> <span class="xref">TBroadCast</span></dt>
+    <dd><p>The broadcast data which was sent.</p>
+</dd>
+    <dt><code>response</code> <span class="xref">TResponse</span></dt>
+    <dd><p>The response to send back.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if a response should be sent back, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_ResponseReceived_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.ResponseReceived*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_ResponseReceived_System_Net_IPEndPoint__1_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.ResponseReceived(System.Net.IPEndPoint,`1)">
+  ResponseReceived(IPEndPoint, TResponse)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/NetworkDiscovery/NetworkDiscovery.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets called when a response to a broadcast is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void ResponseReceived(IPEndPoint sender, TResponse response)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.ipendpoint">IPEndPoint</a></dt>
+    <dd><p>The sender of the response.</p>
+</dd>
+    <dt><code>response</code> <span class="xref">TResponse</span></dt>
+    <dd><p>The value of the response.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_SetupUniqueApplicationId_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.SetupUniqueApplicationId*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_SetupUniqueApplicationId_System_Int64_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.SetupUniqueApplicationId(System.Int64)">
+  SetupUniqueApplicationId(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/NetworkDiscovery/NetworkDiscovery.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the unique application ID used for filtering discovery packets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUniqueApplicationId(long _uniqueApplicationId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_uniqueApplicationId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The unique application ID.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_StartClient_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.StartClient*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_StartClient" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.StartClient">
+  StartClient()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/NetworkDiscovery/NetworkDiscovery.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts the discovery in client mode. <a class="xref" href="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery-2.html#Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_ClientBroadcast__0_">ClientBroadcast(TBroadCast)</a> can be called to send out broadcasts to servers and the client will actively listen for responses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartClient()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_StartServer_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.StartServer*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_StartServer" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.StartServer">
+  StartServer()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/NetworkDiscovery/NetworkDiscovery.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts the discovery in server mode which will respond to client broadcasts searching for servers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartServer()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_StopDiscovery_" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.StopDiscovery*"></a>
+
+  <h3 id="Phantom_XRMOD_NetcodeModule_Runtime_NetworkDiscovery_NetworkDiscovery_2_StopDiscovery" data-uid="Phantom.XRMOD.NetcodeModule.Runtime.NetworkDiscovery.NetworkDiscovery`2.StopDiscovery">
+  StopDiscovery()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODNetcode/Runtime/Components/NetworkDiscovery/NetworkDiscovery.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops the discovery process and closes the UDP socket.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopDiscovery()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

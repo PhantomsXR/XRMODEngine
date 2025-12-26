@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class BipedIK |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class BipedIK |  |  ">
+      
+      <meta name="description" content="%IK system for standard biped characters that is designed to replicate and enhance the behaviour of the Unity&#39;s built-in character %IK setup.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=RootMotion_FinalIK_BipedIK.md&amp;value=---%0Auid%3A%20RootMotion.FinalIK.BipedIK%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RootMotion.FinalIK.BipedIK">
+
+
+
+  <h1 id="RootMotion_FinalIK_BipedIK" data-uid="RootMotion.FinalIK.BipedIK" class="text-break">
+Class BipedIK  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RootMotion.html">RootMotion</a>.<a class="xref" href="RootMotion.FinalIK.html">FinalIK</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>%IK system for standard biped characters that is designed to replicate and enhance the behaviour of the Unity's built-in character %IK setup.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BipedIK : SolverManager</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="RootMotion.SolverManager.html">SolverManager</a></div>
+      <div><span class="xref">BipedIK</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="RootMotion.SolverManager.html#RootMotion_SolverManager_fixTransforms">SolverManager.fixTransforms</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.SolverManager.html#RootMotion_SolverManager_Disable">SolverManager.Disable()</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.SolverManager.html#RootMotion_SolverManager_UpdateSolverExternal">SolverManager.UpdateSolverExternal()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="RootMotion_FinalIK_BipedIK_references" data-uid="RootMotion.FinalIK.BipedIK.references">
+  references
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>References to character bones.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BipedReferences references</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.BipedReferences.html">BipedReferences</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_BipedIK_solvers" data-uid="RootMotion.FinalIK.BipedIK.solvers">
+  solvers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The %IK solvers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BipedIKSolvers solvers</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.BipedIKSolvers.html">BipedIKSolvers</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="RootMotion_FinalIK_BipedIK_FixTransforms_" data-uid="RootMotion.FinalIK.BipedIK.FixTransforms*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_FixTransforms" data-uid="RootMotion.FinalIK.BipedIK.FixTransforms">
+  FixTransforms()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void FixTransforms()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_GetGoalIK_" data-uid="RootMotion.FinalIK.BipedIK.GetGoalIK*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_GetGoalIK_AvatarIKGoal_" data-uid="RootMotion.FinalIK.BipedIK.GetGoalIK(AvatarIKGoal)">
+  GetGoalIK(AvatarIKGoal)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the limb solver for the %IK Goal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKSolverLimb GetGoalIK(AvatarIKGoal goal)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>goal</code> <span class="xref">AvatarIKGoal</span></dt>
+    <dd><p>%IK Goal.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.IKSolverLimb.html">IKSolverLimb</a></dt>
+    <dd><p>The solver.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_GetIKPosition_" data-uid="RootMotion.FinalIK.BipedIK.GetIKPosition*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_GetIKPosition_AvatarIKGoal_" data-uid="RootMotion.FinalIK.BipedIK.GetIKPosition(AvatarIKGoal)">
+  GetIKPosition(AvatarIKGoal)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the %IK position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 GetIKPosition(AvatarIKGoal goal)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>goal</code> <span class="xref">AvatarIKGoal</span></dt>
+    <dd><p>%IK Goal.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_GetIKPositionWeight_" data-uid="RootMotion.FinalIK.BipedIK.GetIKPositionWeight*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_GetIKPositionWeight_AvatarIKGoal_" data-uid="RootMotion.FinalIK.BipedIK.GetIKPositionWeight(AvatarIKGoal)">
+  GetIKPositionWeight(AvatarIKGoal)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the %IK position weight.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetIKPositionWeight(AvatarIKGoal goal)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>goal</code> <span class="xref">AvatarIKGoal</span></dt>
+    <dd><p>%IK Goal.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_GetIKRotation_" data-uid="RootMotion.FinalIK.BipedIK.GetIKRotation*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_GetIKRotation_AvatarIKGoal_" data-uid="RootMotion.FinalIK.BipedIK.GetIKRotation(AvatarIKGoal)">
+  GetIKRotation(AvatarIKGoal)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the %IK rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion GetIKRotation(AvatarIKGoal goal)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>goal</code> <span class="xref">AvatarIKGoal</span></dt>
+    <dd><p>%IK Goal.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Quaternion</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_GetIKRotationWeight_" data-uid="RootMotion.FinalIK.BipedIK.GetIKRotationWeight*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_GetIKRotationWeight_AvatarIKGoal_" data-uid="RootMotion.FinalIK.BipedIK.GetIKRotationWeight(AvatarIKGoal)">
+  GetIKRotationWeight(AvatarIKGoal)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the %IK rotation weight.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetIKRotationWeight(AvatarIKGoal goal)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>goal</code> <span class="xref">AvatarIKGoal</span></dt>
+    <dd><p>IK Goal.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_InitiateBipedIK_" data-uid="RootMotion.FinalIK.BipedIK.InitiateBipedIK*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_InitiateBipedIK" data-uid="RootMotion.FinalIK.BipedIK.InitiateBipedIK">
+  InitiateBipedIK()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>(Re)Initiates the biped IK solvers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitiateBipedIK()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_InitiateSolver_" data-uid="RootMotion.FinalIK.BipedIK.InitiateSolver*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_InitiateSolver" data-uid="RootMotion.FinalIK.BipedIK.InitiateSolver">
+  InitiateSolver()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void InitiateSolver()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_LogWarning_" data-uid="RootMotion.FinalIK.BipedIK.LogWarning*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_LogWarning_System_String_" data-uid="RootMotion.FinalIK.BipedIK.LogWarning(System.String)">
+  LogWarning(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L313"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs the warning if no other warning has beed logged in this session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogWarning(string message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_SetIKPosition_" data-uid="RootMotion.FinalIK.BipedIK.SetIKPosition*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_SetIKPosition_AvatarIKGoal_Vector3_" data-uid="RootMotion.FinalIK.BipedIK.SetIKPosition(AvatarIKGoal,Vector3)">
+  SetIKPosition(AvatarIKGoal, Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the %IK position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetIKPosition(AvatarIKGoal goal, Vector3 IKPosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>goal</code> <span class="xref">AvatarIKGoal</span></dt>
+    <dd><p>%IK Goal.</p>
+</dd>
+    <dt><code>IKPosition</code> <span class="xref">Vector3</span></dt>
+    <dd><p>Position.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_SetIKPositionWeight_" data-uid="RootMotion.FinalIK.BipedIK.SetIKPositionWeight*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_SetIKPositionWeight_AvatarIKGoal_System_Single_" data-uid="RootMotion.FinalIK.BipedIK.SetIKPositionWeight(AvatarIKGoal,System.Single)">
+  SetIKPositionWeight(AvatarIKGoal, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the %IK position weight.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetIKPositionWeight(AvatarIKGoal goal, float weight)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>goal</code> <span class="xref">AvatarIKGoal</span></dt>
+    <dd><p>%IK Goal.</p>
+</dd>
+    <dt><code>weight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Weight.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_SetIKRotation_" data-uid="RootMotion.FinalIK.BipedIK.SetIKRotation*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_SetIKRotation_AvatarIKGoal_Quaternion_" data-uid="RootMotion.FinalIK.BipedIK.SetIKRotation(AvatarIKGoal,Quaternion)">
+  SetIKRotation(AvatarIKGoal, Quaternion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the %IK rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetIKRotation(AvatarIKGoal goal, Quaternion IKRotation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>goal</code> <span class="xref">AvatarIKGoal</span></dt>
+    <dd><p>%IK Goal.</p>
+</dd>
+    <dt><code>IKRotation</code> <span class="xref">Quaternion</span></dt>
+    <dd><p>Rotation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_SetIKRotationWeight_" data-uid="RootMotion.FinalIK.BipedIK.SetIKRotationWeight*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_SetIKRotationWeight_AvatarIKGoal_System_Single_" data-uid="RootMotion.FinalIK.BipedIK.SetIKRotationWeight(AvatarIKGoal,System.Single)">
+  SetIKRotationWeight(AvatarIKGoal, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the %IK rotation weight.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetIKRotationWeight(AvatarIKGoal goal, float weight)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>goal</code> <span class="xref">AvatarIKGoal</span></dt>
+    <dd><p>%IK Goal.</p>
+</dd>
+    <dt><code>weight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Weight.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_SetLookAtPosition_" data-uid="RootMotion.FinalIK.BipedIK.SetLookAtPosition*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_SetLookAtPosition_Vector3_" data-uid="RootMotion.FinalIK.BipedIK.SetLookAtPosition(Vector3)">
+  SetLookAtPosition(Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the look at target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetLookAtPosition(Vector3 lookAtPosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lookAtPosition</code> <span class="xref">Vector3</span></dt>
+    <dd><p>Look at position.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_SetLookAtWeight_" data-uid="RootMotion.FinalIK.BipedIK.SetLookAtWeight*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_SetLookAtWeight_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_" data-uid="RootMotion.FinalIK.BipedIK.SetLookAtWeight(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+  SetLookAtWeight(float, float, float, float, float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the look at weight.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetLookAtWeight(float weight, float bodyWeight, float headWeight, float eyesWeight, float clampWeight, float clampWeightHead, float clampWeightEyes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>weight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Master Weight.</p>
+</dd>
+    <dt><code>bodyWeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Body weight.</p>
+</dd>
+    <dt><code>headWeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Head weight.</p>
+</dd>
+    <dt><code>eyesWeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Eyes weight.</p>
+</dd>
+    <dt><code>clampWeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Clamp weight for body and head.</p>
+</dd>
+    <dt><code>clampWeightHead</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>clampWeightEyes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Clamp weight for eyes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_SetSpinePosition_" data-uid="RootMotion.FinalIK.BipedIK.SetSpinePosition*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_SetSpinePosition_Vector3_" data-uid="RootMotion.FinalIK.BipedIK.SetSpinePosition(Vector3)">
+  SetSpinePosition(Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the spine %IK position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSpinePosition(Vector3 spinePosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>spinePosition</code> <span class="xref">Vector3</span></dt>
+    <dd><p>Spine %IK position.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_SetSpineWeight_" data-uid="RootMotion.FinalIK.BipedIK.SetSpineWeight*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_SetSpineWeight_System_Single_" data-uid="RootMotion.FinalIK.BipedIK.SetSpineWeight(System.Single)">
+  SetSpineWeight(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the spine weight.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSpineWeight(float weight)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>weight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Weight.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_SetToDefaults_" data-uid="RootMotion.FinalIK.BipedIK.SetToDefaults*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_SetToDefaults" data-uid="RootMotion.FinalIK.BipedIK.SetToDefaults">
+  SetToDefaults()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetToDefaults()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_UpdateBipedIK_" data-uid="RootMotion.FinalIK.BipedIK.UpdateBipedIK*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_UpdateBipedIK" data-uid="RootMotion.FinalIK.BipedIK.UpdateBipedIK">
+  UpdateBipedIK()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updating BipedIK</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateBipedIK()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_BipedIK_UpdateSolver_" data-uid="RootMotion.FinalIK.BipedIK.UpdateSolver*"></a>
+
+  <h3 id="RootMotion_FinalIK_BipedIK_UpdateSolver" data-uid="RootMotion.FinalIK.BipedIK.UpdateSolver">
+  UpdateSolver()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/BipedIK/BipedIK.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void UpdateSolver()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

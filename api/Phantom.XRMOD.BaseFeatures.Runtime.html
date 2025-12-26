@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Phantom.XRMOD.BaseFeatures.Runtime |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Phantom.XRMOD.BaseFeatures.Runtime |  |  ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.BaseFeatures.Runtime">
+
+  <h1 id="Phantom_XRMOD_BaseFeatures_Runtime" data-uid="Phantom.XRMOD.BaseFeatures.Runtime" class="text-break">Namespace Phantom.XRMOD.BaseFeatures.Runtime</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.AbstractCommand.html">AbstractCommand</a></dt>
+      <dd><p>Base class for commands that requires access to core XRMOD configurations and context data.
+Provides helper methods for resolving common dependencies from the Ioc Container.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.ActionBasedControllerManager.html">ActionBasedControllerManager</a></dt>
+      <dd><p>Use this class to mediate the controllers and their associated interactors and input actions under different interaction states.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BaseFeatureModule.html">BaseFeatureModule</a></dt>
+      <dd><p>The core module responsible for registering and managing fundamental XRMOD features.
+It handles the initialization and disposal of essential services like GLTF loading,
+event systems, and post-processing.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BuildEventSystemCommand.html">BuildEventSystemCommand</a></dt>
+      <dd><p>Command responsible for ensuring an active Unity EventSystem exists in the scene.
+It will automatically find an existing one or create a new one with an InputSystemUIInputModule.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BuildGltfLoaderCommand.html">BuildGltfLoaderCommand</a></dt>
+      <dd><p>Command that initializes the GLTF asset loading system.
+It subscribes to network mesh acquisition requests and handles shader resource management.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BuildGraphQualityCommand.html">BuildGraphQualityCommand</a></dt>
+      <dd><p>Command that applies the project-level graphical quality settings to the Unity engine.
+Inherits from <a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.AbstractCommand.html">AbstractCommand</a> to access project configuration.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BuildNetworkMeshDownloadCommand.html">BuildNetworkMeshDownloadCommand</a></dt>
+      <dd><p>Command responsible for downloading 3D mesh files from a URL and caching them locally.
+Subscribes to the <code>DownloadMesh</code> action notification.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BuildOpenBuiltInBrowserCommand.html">BuildOpenBuiltInBrowserCommand</a></dt>
+      <dd><p>Command that enables opening URLs in the platform's built-in web browser or a customized in-app browser.
+Subscribes to the <code>OpenBuiltInBrowser</code> action notification.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BuildPostProcessingCommand.html">BuildPostProcessingCommand</a></dt>
+      <dd><p>Command that configures post-processing settings on the main camera.
+Enables FXAA, Stop NaN, and Post-Processing as part of the experience initialization.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BuildProcessesManagerCommand.html">BuildProcessesManagerCommand</a></dt>
+      <dd><p>Core command that manages the lifecycle of multiple XR projects/processes.
+It handles process registration, space type switching (Shared vs Exclusive),
+and clean release of project assets and memory.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BuildRecorderCommand.html">BuildRecorderCommand</a></dt>
+      <dd><p>OBSELETE. Previously used for in-game video and image recording.
+Users are encouraged to use platform-native recording solutions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BuildRuntimeDebugConsoleCommand.html">BuildRuntimeDebugConsoleCommand</a></dt>
+      <dd><p>Command that instantiates an in-game debug console if the experience is in debug mode.
+Uses the &quot;IngameDebugConsole&quot; resource.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BuildScriptRuntimeEnvironmentCommand.html">BuildScriptRuntimeEnvironmentCommand</a></dt>
+      <dd><p>Command responsible for initializing the script execution environment.
+Supports both C# (via IL2CPP/JIT hooks) and Visual Scripting entry points.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BuildSendMessageToSDKCommand.html">BuildSendMessageToSDKCommand</a></dt>
+      <dd><p>Command that enables an XR experience to send messages back to the host SDK/App.
+Wraps the platform-specific callback mechanism.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BuildTryAcquireInformationCommand.html">BuildTryAcquireInformationCommand</a></dt>
+      <dd><p>Command that facilitates acquiring native platform information, such as user IDs or device details.
+Subscribes to the <code>TryAcquireAppInfo</code> action notification.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BuildTryAcquireLoadObjectCommand.html">BuildTryAcquireLoadObjectCommand</a></dt>
+      <dd><p>Command responsible for loading Unity Objects (GameObjects, TextAssets) from downloaded asset bundles.
+Subscribes to the <code>TryAcquireLoadObject</code> action notification.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BuildTryAcquireProjectInfoCommand.html">BuildTryAcquireProjectInfoCommand</a></dt>
+      <dd><p>Command that provides information about the current XR experience project.
+Returns a JSON-serialized representation of the ExperienceInfo.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BuildTryAcquireTemporaryCachePathCommand.html">BuildTryAcquireTemporaryCachePathCommand</a></dt>
+      <dd><p>Command that returns the path to the temporary cache directory used by XRMOD for storing downloaded assets.
+Subscribes to the <code>TryAcquireTemporaryCachePath</code> action notification.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.DynamicMoveProvider.html">DynamicMoveProvider</a></dt>
+      <dd><p>A version of action-based continuous movement that automatically controls the frame of reference that
+determines the forward direction of movement based on user preference for each hand.
+For example, can configure to use head relative movement for the left hand and controller relative movement for the right hand.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.DynamicMoveProvider.MovementDirection.html">DynamicMoveProvider.MovementDirection</a></dt>
+      <dd><p>Defines which transform the XR Origin's movement direction is relative to.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

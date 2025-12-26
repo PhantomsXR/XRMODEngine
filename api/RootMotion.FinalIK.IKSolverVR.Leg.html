@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class IKSolverVR.Leg |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class IKSolverVR.Leg |  |  ">
+      
+      <meta name="description" content="4-segmented analytic leg chain.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=RootMotion_FinalIK_IKSolverVR_Leg.md&amp;value=---%0Auid%3A%20RootMotion.FinalIK.IKSolverVR.Leg%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RootMotion.FinalIK.IKSolverVR.Leg">
+
+
+
+  <h1 id="RootMotion_FinalIK_IKSolverVR_Leg" data-uid="RootMotion.FinalIK.IKSolverVR.Leg" class="text-break">
+Class IKSolverVR.Leg  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RootMotion.html">RootMotion</a>.<a class="xref" href="RootMotion.FinalIK.html">FinalIK</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>4-segmented analytic leg chain.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class IKSolverVR.Leg : IKSolverVR.BodyPart</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="RootMotion.FinalIK.IKSolverVR.html">IKSolverVR</a>.<a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html">BodyPart</a></div>
+      <div><span class="xref">IKSolverVR.Leg</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_sqrMag">IKSolverVR.BodyPart.sqrMag</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_mag">IKSolverVR.BodyPart.mag</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_bones">IKSolverVR.BodyPart.bones</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_initiated">IKSolverVR.BodyPart.initiated</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_rootPosition">IKSolverVR.BodyPart.rootPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_rootRotation">IKSolverVR.BodyPart.rootRotation</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_index">IKSolverVR.BodyPart.index</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_LOD">IKSolverVR.BodyPart.LOD</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_SetLOD_System_Int32_">IKSolverVR.BodyPart.SetLOD(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_Read_Vector3___Quaternion___System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Int32_System_Int32_">IKSolverVR.BodyPart.Read(Vector3[], Quaternion[], bool, bool, bool, bool, bool, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_MovePosition_Vector3_">IKSolverVR.BodyPart.MovePosition(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_MoveRotation_Quaternion_">IKSolverVR.BodyPart.MoveRotation(Quaternion)</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_Translate_Vector3_Quaternion_">IKSolverVR.BodyPart.Translate(Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_TranslateRoot_Vector3_Quaternion_">IKSolverVR.BodyPart.TranslateRoot(Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_RotateTo_RootMotion_FinalIK_IKSolverVR_VirtualBone_Quaternion_System_Single_">IKSolverVR.BodyPart.RotateTo(IKSolverVR.VirtualBone, Quaternion, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_Visualize_Color_">IKSolverVR.BodyPart.Visualize(Color)</a>
+    </div>
+    <div>
+      <a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html#RootMotion_FinalIK_IKSolverVR_BodyPart_Visualize">IKSolverVR.BodyPart.Visualize()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_IKPosition" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.IKPosition">
+  IKPosition
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Target position of the toe/foot. Will be overwritten if target is assigned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public Vector3 IKPosition</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_IKRotation" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.IKRotation">
+  IKRotation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Target rotation of the toe/foot. Will be overwritten if target is assigned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public Quaternion IKRotation</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Quaternion</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_bendGoal" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.bendGoal">
+  bendGoal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[LargeHeader]
+public Transform bendGoal</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_bendGoalWeight" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.bendGoalWeight">
+  bendGoalWeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float bendGoalWeight</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_bendToTargetWeight" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.bendToTargetWeight">
+  bendToTargetWeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float bendToTargetWeight</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_currentMag" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.currentMag">
+  currentMag
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The length of the leg (calculated in last read).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public float currentMag</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_footPositionOffset" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.footPositionOffset">
+  footPositionOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Position offset of the toe/foot. Will be applied on top of target position and reset to Vector3.zero after each update.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public Vector3 footPositionOffset</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_footRotationOffset" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.footRotationOffset">
+  footRotationOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotation offset of the toe/foot. Will be reset to Quaternion.identity after each update.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public Quaternion footRotationOffset</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Quaternion</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_heelPositionOffset" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.heelPositionOffset">
+  heelPositionOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Position offset of the heel. Will be reset to Vector3.zero after each update.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public Vector3 heelPositionOffset</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_legLengthMlp" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.legLengthMlp">
+  legLengthMlp
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[LargeHeader]
+public float legLengthMlp</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_positionWeight" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.positionWeight">
+  positionWeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float positionWeight</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_rotationWeight" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.rotationWeight">
+  rotationWeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float rotationWeight</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_stretchCurve" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.stretchCurve">
+  stretchCurve
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimationCurve stretchCurve</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">AnimationCurve</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_swivelOffset" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.swivelOffset">
+  swivelOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float swivelOffset</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_target" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.target">
+  target
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[LargeHeader]
+public Transform target</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_useAnimatedBendNormal" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.useAnimatedBendNormal">
+  useAnimatedBendNormal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true, will sample the leg bend angle each frame from the animation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool useAnimatedBendNormal</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="RootMotion_FinalIK_IKSolverVR_Leg_bendNormalRelToPelvis_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.bendNormalRelToPelvis*"></a>
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_bendNormalRelToPelvis" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.bendNormalRelToPelvis">
+  bendNormalRelToPelvis
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 bendNormalRelToPelvis { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_IKSolverVR_Leg_bendNormalRelToTarget_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.bendNormalRelToTarget*"></a>
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_bendNormalRelToTarget" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.bendNormalRelToTarget">
+  bendNormalRelToTarget
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 bendNormalRelToTarget { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_IKSolverVR_Leg_hasToes_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.hasToes*"></a>
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_hasToes" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.hasToes">
+  hasToes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool hasToes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_IKSolverVR_Leg_lastBone_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.lastBone*"></a>
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_lastBone" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.lastBone">
+  lastBone
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKSolverVR.VirtualBone lastBone { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.IKSolverVR.html">IKSolverVR</a>.<a class="xref" href="RootMotion.FinalIK.IKSolverVR.VirtualBone.html">VirtualBone</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_IKSolverVR_Leg_position_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.position*"></a>
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_position" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.position">
+  position
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 position { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_IKSolverVR_Leg_rotation_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.rotation*"></a>
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_rotation" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.rotation">
+  rotation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion rotation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Quaternion</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_IKSolverVR_Leg_thigh_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.thigh*"></a>
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_thigh" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.thigh">
+  thigh
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKSolverVR.VirtualBone thigh { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RootMotion.FinalIK.IKSolverVR.html">IKSolverVR</a>.<a class="xref" href="RootMotion.FinalIK.IKSolverVR.VirtualBone.html">VirtualBone</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_IKSolverVR_Leg_thighRelativeToPelvis_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.thighRelativeToPelvis*"></a>
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_thighRelativeToPelvis" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.thighRelativeToPelvis">
+  thighRelativeToPelvis
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 thighRelativeToPelvis { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="RootMotion_FinalIK_IKSolverVR_Leg_ApplyOffsets_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.ApplyOffsets*"></a>
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_ApplyOffsets_System_Single_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.ApplyOffsets(System.Single)">
+  ApplyOffsets(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ApplyOffsets(float scale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_IKSolverVR_Leg_OnRead_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.OnRead*"></a>
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_OnRead_Vector3___Quaternion___System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Int32_System_Int32_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.OnRead(Vector3[],Quaternion[],System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32)">
+  OnRead(Vector3[], Quaternion[], bool, bool, bool, bool, bool, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnRead(Vector3[] positions, Quaternion[] rotations, bool hasChest, bool hasNeck, bool hasShoulders, bool hasToes, bool hasLegs, int rootIndex, int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>positions</code> <span class="xref">Vector3</span>[]</dt>
+    <dd></dd>
+    <dt><code>rotations</code> <span class="xref">Quaternion</span>[]</dt>
+    <dd></dd>
+    <dt><code>hasChest</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>hasNeck</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>hasShoulders</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>hasToes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>hasLegs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>rootIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_IKSolverVR_Leg_PreSolve_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.PreSolve*"></a>
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_PreSolve_System_Single_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.PreSolve(System.Single)">
+  PreSolve(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void PreSolve(float scale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_IKSolverVR_Leg_ResetOffsets_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.ResetOffsets*"></a>
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_ResetOffsets" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.ResetOffsets">
+  ResetOffsets()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L380"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ResetOffsets()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_IKSolverVR_Leg_Solve_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.Solve*"></a>
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_Solve_System_Boolean_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.Solve(System.Boolean)">
+  Solve(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Solve(bool stretch)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stretch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RootMotion_FinalIK_IKSolverVR_Leg_Write_" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.Write*"></a>
+
+  <h3 id="RootMotion_FinalIK_IKSolverVR_Leg_Write_Vector3____Quaternion____" data-uid="RootMotion.FinalIK.IKSolverVR.Leg.Write(Vector3[]@,Quaternion[]@)">
+  Write(ref Vector3[], ref Quaternion[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFullBodyAvatar/Runtime/Thirdparties/FinalIK/IK Solvers/IKSolverVRLeg.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Write(ref Vector3[] solvedPositions, ref Quaternion[] solvedRotations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>solvedPositions</code> <span class="xref">Vector3</span>[]</dt>
+    <dd></dd>
+    <dt><code>solvedRotations</code> <span class="xref">Quaternion</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Utility |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Utility |  |  ">
+      
+      <meta name="description" content="Provides common utility functions for the XRMOD SDK, including platform mapping, version comparison, and permission requests.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Phantom_XRMOD_SDKEntry_Runtime_Utility.md&amp;value=---%0Auid%3A%20Phantom.XRMOD.SDKEntry.Runtime.Utility%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility">
+
+
+
+  <h1 id="Phantom_XRMOD_SDKEntry_Runtime_Utility" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility" class="text-break">
+Class Utility  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/Utility.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Phantom.html">Phantom</a>.<a class="xref" href="Phantom.XRMOD.html">XRMOD</a>.<a class="xref" href="Phantom.XRMOD.SDKEntry.html">SDKEntry</a>.<a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.html">Runtime</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Provides common utility functions for the XRMOD SDK, including platform mapping,
+version comparison, and permission requests.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Utility</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Utility</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_Utility_ARExperienceInCache_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.ARExperienceInCache*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_Utility_ARExperienceInCache_System_String_Hash128_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.ARExperienceInCache(System.String,Hash128)">
+  ARExperienceInCache(string, Hash128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/Utility.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check current AR experience is cached</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ARExperienceInCache(string _bundleName, Hash128 _hash128)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_bundleName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>bundle name</p>
+</dd>
+    <dt><code>_hash128</code> <span class="xref">Hash128</span></dt>
+    <dd><p>bundle hash128</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True:in cache,False:otherwise</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_Utility_CompareVersion_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.CompareVersion*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_Utility_CompareVersion_System_String_System_String_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.CompareVersion(System.String,System.String)">
+  CompareVersion(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/Utility.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compare the version</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CompareVersion(string _version1, string _version2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_version1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>current version</p>
+</dd>
+    <dt><code>_version2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>package version</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>0:Equal,1:Greater，-1:less</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_Utility_GetCurrentPlatformARExperiencePackageSize_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.GetCurrentPlatformARExperiencePackageSize*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_Utility_GetCurrentPlatformARExperiencePackageSize_Phantom_XRMOD_SDKEntry_Runtime_Mapper_ProjectAssetMapper_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.GetCurrentPlatformARExperiencePackageSize(Phantom.XRMOD.SDKEntry.Runtime.Mapper.ProjectAssetMapper)">
+  GetCurrentPlatformARExperiencePackageSize(ProjectAssetMapper)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/Utility.cs/#L332"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the resource size of the corresponding platform</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float GetCurrentPlatformARExperiencePackageSize(ProjectAssetMapper _projectAssetMapper)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectAssetMapper</code> <a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.Mapper.ProjectAssetMapper.html">ProjectAssetMapper</a></dt>
+    <dd><p>project asset response</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>resource size(M)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_Utility_GetCurrentPlatformAssetUrl_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.GetCurrentPlatformAssetUrl*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_Utility_GetCurrentPlatformAssetUrl_Phantom_XRMOD_SDKEntry_Runtime_Mapper_ProjectAssetMapper_System_String__System_String__" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.GetCurrentPlatformAssetUrl(Phantom.XRMOD.SDKEntry.Runtime.Mapper.ProjectAssetMapper,System.String@,System.String@)">
+  GetCurrentPlatformAssetUrl(ProjectAssetMapper, out string, out string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/Utility.cs/#L284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the resource address of the corresponding platform</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GetCurrentPlatformAssetUrl(ProjectAssetMapper _projectAssetMapper, out string _bundletUrl, out string _jsonUrl)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectAssetMapper</code> <a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.Mapper.ProjectAssetMapper.html">ProjectAssetMapper</a></dt>
+    <dd><p>project asset response</p>
+</dd>
+    <dt><code>_bundletUrl</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>bundle url</p>
+</dd>
+    <dt><code>_jsonUrl</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>json url</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_Utility_GetFileSize_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.GetFileSize*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_Utility_GetFileSize_System_String_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.GetFileSize(System.String)">
+  GetFileSize(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/Utility.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get file size from url</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;long&gt; GetFileSize(string _url)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_url</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>file's url</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd><p>file size length</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_Utility_GetGatewayVersion_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.GetGatewayVersion*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_Utility_GetGatewayVersion_System_String_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.GetGatewayVersion(System.String)">
+  GetGatewayVersion(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/Utility.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Extracts the version number from a gateway URL string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetGatewayVersion(string _gateway)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_gateway</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The gateway URL.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The version string found at the expected index.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_Utility_GetRuntimePlatform_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.GetRuntimePlatform*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_Utility_GetRuntimePlatform" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.GetRuntimePlatform">
+  GetRuntimePlatform()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/Utility.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current runtime platform name in lowercase.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetRuntimePlatform()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The platform name (e.g., &quot;android&quot;, &quot;ios&quot;).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_Utility_MD5Encryption_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.MD5Encryption*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_Utility_MD5Encryption_System_String_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.MD5Encryption(System.String)">
+  MD5Encryption(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/Utility.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>MD5 encryption</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string MD5Encryption(string _originString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_originString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>need to encryption string</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>MD5 String</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_Utility_MakeSurePlatformAsset_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.MakeSurePlatformAsset*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_Utility_MakeSurePlatformAsset_System_String_System_String_System_String_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.MakeSurePlatformAsset(System.String,System.String,System.String)">
+  MakeSurePlatformAsset(string, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/Utility.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maps a platform name and base URLs to an <a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.Mapper.ExperienceResourceMapper.html">ExperienceResourceMapper</a> object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ExperienceResourceMapper MakeSurePlatformAsset(string _platform, string _bundleURL, string _jsonURL)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_platform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The target platform name.</p>
+</dd>
+    <dt><code>_bundleURL</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The base bundle URL.</p>
+</dd>
+    <dt><code>_jsonURL</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The base JSON configuration URL.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.Mapper.ExperienceResourceMapper.html">ExperienceResourceMapper</a></dt>
+    <dd><p>A populated mapper object, or null if the platform is unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_Utility_TryAcquireCameraPermission_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.TryAcquireCameraPermission*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_Utility_TryAcquireCameraPermission_System_Action_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.TryAcquireCameraPermission(System.Action)">
+  TryAcquireCameraPermission(Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/Utility.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>acquire the device's camera permission</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerator TryAcquireCameraPermission(Action _callback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>run after got the permission of device camera</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd><p>IEnumerator</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_Utility_XRExperienceInCache_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.XRExperienceInCache*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_Utility_XRExperienceInCache_System_String_System_String_System_String_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.Utility.XRExperienceInCache(System.String,System.String,System.String)">
+  XRExperienceInCache(string, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/Utility.cs/#L343"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool XRExperienceInCache(string _bundleName, string _crc, string _hash128)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_bundleName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>_crc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>_hash128</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

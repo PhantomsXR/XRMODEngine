@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Phantom.XRMOD.QuestModule.Runtime |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Phantom.XRMOD.QuestModule.Runtime |  |  ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.QuestModule.Runtime">
+
+  <h1 id="Phantom_XRMOD_QuestModule_Runtime" data-uid="Phantom.XRMOD.QuestModule.Runtime" class="text-break">Namespace Phantom.XRMOD.QuestModule.Runtime</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.ArchitectureComponentsModel.html">ArchitectureComponentsModel</a></dt>
+      <dd><p>Holds references to the essential architectural components of the Quest XR rig.</p>
+<p>
+This model is responsible for locating and caching references to cameras, managers (AR, Input, Occlusion),
+providers (Locomotion, Turn, Climb), and controller transforms. It acts as a central registry for accessing these components.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.AutoRegisterModule.html">AutoRegisterModule</a></dt>
+      <dd><p>Automatically registers the Meta Quest module when running on a Quest device.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.BaseMetaQuestFeatureDecorator.html">BaseMetaQuestFeatureDecorator</a></dt>
+      <dd><p>Base abstract decorator for Meta Quest features.</p>
+<p>
+Provides common functionality for registering feature decorators at runtime.
+Implementations should override <a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.BaseMetaQuestFeatureDecorator.html#Phantom_XRMOD_QuestModule_Runtime_BaseMetaQuestFeatureDecorator_StartAlgorithm">StartAlgorithm()</a>, <a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.BaseMetaQuestFeatureDecorator.html#Phantom_XRMOD_QuestModule_Runtime_BaseMetaQuestFeatureDecorator_PauseAlgorithm">PauseAlgorithm()</a>, and <a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.BaseMetaQuestFeatureDecorator.html#Phantom_XRMOD_QuestModule_Runtime_BaseMetaQuestFeatureDecorator_StopAlgorithm">StopAlgorithm()</a>.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.BuildMetaQuestInteracterSwitcherFeatureCommand.html">BuildMetaQuestInteracterSwitcherFeatureCommand</a></dt>
+      <dd><p>Command to build and initialize the Meta Quest Interactor Switcher feature.</p>
+<p>
+This command creates an instance of <a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.MetaQuestInteracterSwitherDecorator.html">MetaQuestInteracterSwitherDecorator</a> to handle interaction switching.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.BuildMetaQuestLocomotionFeatureCommand.html">BuildMetaQuestLocomotionFeatureCommand</a></dt>
+      <dd><p>Command to build and initialize the Meta Quest Locomotion feature.</p>
+<p>
+This command creates an instance of <a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.MetaQuestLocomotionFeatureDecorator.html">MetaQuestLocomotionFeatureDecorator</a> to handle locomotion logic.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.BuildMetaQuestMRFeatureCommand.html">BuildMetaQuestMRFeatureCommand</a></dt>
+      <dd><p>Command to build and initialize the Meta Quest Mixed Reality feature.</p>
+<p>
+This command creates an instance of <a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.MetaQuestMRFeatureDecorator.html">MetaQuestMRFeatureDecorator</a> to enable mixed reality capabilities like passthrough.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.BuildMetaQuestMeshFeatureCommand.html">BuildMetaQuestMeshFeatureCommand</a></dt>
+      <dd><p>Command to build and initialize the Meta Quest Meshing feature.</p>
+<p>
+This command handles loading the mesh visualizer (either default or custom) and initializing the <a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.MetaQuestMeshingDecorator.html">MetaQuestMeshingDecorator</a>.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.BuildMetaQuestOcclusionFeatureCommand.html">BuildMetaQuestOcclusionFeatureCommand</a></dt>
+      <dd><p>Command to build and initialize the Meta Quest Occlusion feature.</p>
+<p>
+This command creates an instance of <a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.MetaQuestOcclusionDecorator.html">MetaQuestOcclusionDecorator</a> to handle environmental occlusion.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.BuildMetaQuestSceneCaptureCommand.html">BuildMetaQuestSceneCaptureCommand</a></dt>
+      <dd><p>Command to build and initialize the Meta Quest Scene Capture feature.</p>
+<p>
+This command creates an instance of <a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.MetaQuestSceneCaptureDecorator.html">MetaQuestSceneCaptureDecorator</a> to handle scene capture functionality.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.BuildXRAlgorithmLifeControllerCommand.html">BuildXRAlgorithmLifeControllerCommand</a></dt>
+      <dd><p>Manages the lifecycle of XR algorithms on the Quest platform.</p>
+<p>
+Listens for <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.ActionParameterDataType.html#Phantom_XRMOD_ActionNotification_Runtime_ActionParameterDataType_ARAlgorithmLifeCTRL">ARAlgorithmLifeCTRL</a> notifications and controls the state (Start, Pause, Stop)
+of various algorithms such as Meshing and Passthrough.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.MetaQuestBoundingBoxesDecorator.html">MetaQuestBoundingBoxesDecorator</a></dt>
+      <dd><p>Feature decorator for handling AR Bounding Boxes on Meta Quest.</p>
+<p>
+Initializes the ARBoundingBoxManager and listens for trackable changes, notifying the system via <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.ActionNotificationCenter.html">ActionNotificationCenter</a>.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.MetaQuestInteracterSwitherDecorator.html">MetaQuestInteracterSwitherDecorator</a></dt>
+      <dd><p>Feature decorator for switching between different interaction inputs on Meta Quest.</p>
+<p>
+Listens for input switch notifications and activates/deactivates corresponding controllers (Hands, XR Controllers, etc.).
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.MetaQuestLocomotionFeatureDecorator.html">MetaQuestLocomotionFeatureDecorator</a></dt>
+      <dd><p>Feature decorator for enabling/disabling locomotion features on Meta Quest.</p>
+<p>
+Controls the activation of teleport interactors, character controllers, and locomotion providers.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.MetaQuestMRFeatureDecorator.html">MetaQuestMRFeatureDecorator</a></dt>
+      <dd><p>Feature decorator for Meta Quest Mixed Reality (Passthrough).</p>
+<p>
+Controls the camera background to enable or disable passthrough mode.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.MetaQuestMeshingDecorator.html">MetaQuestMeshingDecorator</a></dt>
+      <dd><p>Feature decorator for Meta Quest Meshing.</p>
+<p>
+Manages the ARMeshManager and dispatches notifications when meshes are added, updated, or removed.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.MetaQuestModule.html">MetaQuestModule</a></dt>
+      <dd><p>The main module class for Meta Quest support in XR-MOD.</p>
+<p>
+This class implements the <a class="xref" href="Phantom.XRMOD.Core.Runtime.IModule.html">IModule</a> interface and is responsible for managing the lifecycle of Quest-specific features
+such as Mixed Reality, Occlusion, and Meshing. It listens for configuration changes and initializes the appropriate systems.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.MetaQuestOcclusionDecorator.html">MetaQuestOcclusionDecorator</a></dt>
+      <dd><p>Feature decorator for Meta Quest Occlusion.</p>
+<p>
+Configures AROcclusionManager settings such as environment depth and human segmentation 
+based on the runtime configuration.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.MetaQuestSceneCaptureDecorator.html">MetaQuestSceneCaptureDecorator</a></dt>
+      <dd><p>Feature decorator for triggering Meta Quest Scene Capture (Spatial Setup).</p>
+<p>
+Listens for a capture environment notification to request scene capture from the system.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.PassthroughCameraDebugger.html">PassthroughCameraDebugger</a></dt>
+      <dd><p>Utility class for handling debug logging with varied levels of verbosity.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.PassthroughCameraPermissions.html">PassthroughCameraPermissions</a></dt>
+      <dd><p>Manages permission requests for Passthrough Camera access on Meta Quest.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.PassthroughCameraUtils.html">PassthroughCameraUtils</a></dt>
+      <dd><p>Utility class for interacting with the Meta Quest Passthrough Camera API.</p>
+<p>
+Provides methods to access camera intrinsics, poses, and frames via Android Java calls.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.WebCamTextureManager.html">WebCamTextureManager</a></dt>
+      <dd><p>Manages the creation and lifecycle of a <a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.WebCamTextureManager.html#Phantom_XRMOD_QuestModule_Runtime_WebCamTextureManager_WebCamTexture">WebCamTexture</a> for a specific passthrough camera eye.</p>
+<p>
+Handles permission checks and initializes the webcam texture with the requested resolution.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.XRConfiguresModel.html">XRConfiguresModel</a></dt>
+      <dd><p>Configuration model for Meta Quest specific features.</p>
+<p>
+Contains settings for mesh visualization, occlusion preferences, depth modes, and hand removal.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.XRControllerVisualizerGroup.html">XRControllerVisualizerGroup</a></dt>
+      <dd><p>Represents a group of visualizers for XR controllers on a specific platform.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.XRControllerVisualizerManager.html">XRControllerVisualizerManager</a></dt>
+      <dd><p>Manages the activation of controller visualizers based on the current platform.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.html">XRRuntimeContextDataModel</a></dt>
+      <dd><p>Runtime data model for the Quest module.</p>
+<p>
+Stores the state of the AR session, availability, visualizers, feature decorators, and other runtime context information.
+</p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.PassthroughCameraIntrinsics.html">PassthroughCameraIntrinsics</a></dt>
+      <dd><p>Contains camera intrinsics, which describe physical characteristics of a passthrough camera</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.PassthroughCameraDebugger.DebuglevelEnum.html">PassthroughCameraDebugger.DebuglevelEnum</a></dt>
+      <dd><p>Defines available debug levels.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.PassthroughCameraEye.html">PassthroughCameraEye</a></dt>
+      <dd><p>Defines the position of a passthrough camera relative to the headset</p>
+</dd>
+    </dl>
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

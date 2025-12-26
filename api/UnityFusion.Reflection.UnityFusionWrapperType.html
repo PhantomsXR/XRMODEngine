@@ -1,0 +1,2790 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UnityFusionWrapperType |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UnityFusionWrapperType |  |  ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=UnityFusion_Reflection_UnityFusionWrapperType.md&amp;value=---%0Auid%3A%20UnityFusion.Reflection.UnityFusionWrapperType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="UnityFusion.Reflection.UnityFusionWrapperType">
+
+
+
+  <h1 id="UnityFusion_Reflection_UnityFusionWrapperType" data-uid="UnityFusion.Reflection.UnityFusionWrapperType" class="text-break">
+Class UnityFusionWrapperType  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="UnityFusion.html">UnityFusion</a>.<a class="xref" href="UnityFusion.Reflection.html">Reflection</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class UnityFusionWrapperType : Type, ICustomAttributeProvider, IReflect</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo">MemberInfo</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></div>
+      <div><span class="xref">UnityFusionWrapperType</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.icustomattributeprovider">ICustomAttributeProvider</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.ireflect">IReflect</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.delimiter">Type.Delimiter</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.emptytypes">Type.EmptyTypes</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.filterattribute">Type.FilterAttribute</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.filtername">Type.FilterName</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.filternameignorecase">Type.FilterNameIgnoreCase</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.missing">Type.Missing</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.equals#system-type-equals(system-object)">Type.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.equals#system-type-equals(system-type)">Type.Equals(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.findinterfaces">Type.FindInterfaces(TypeFilter, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.findmembers">Type.FindMembers(MemberTypes, BindingFlags, MemberFilter, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getarrayrank">Type.GetArrayRank()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getconstructor#system-type-getconstructor(system-reflection-bindingflags-system-reflection-binder-system-reflection-callingconventions-system-type()-system-reflection-parametermodifier())">Type.GetConstructor(BindingFlags, Binder, CallingConventions, Type[], ParameterModifier[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getconstructor#system-type-getconstructor(system-reflection-bindingflags-system-reflection-binder-system-type()-system-reflection-parametermodifier())">Type.GetConstructor(BindingFlags, Binder, Type[], ParameterModifier[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getconstructor#system-type-getconstructor(system-reflection-bindingflags-system-type())">Type.GetConstructor(BindingFlags, Type[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getconstructor#system-type-getconstructor(system-type())">Type.GetConstructor(Type[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getconstructors#system-type-getconstructors">Type.GetConstructors()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getdefaultmembers">Type.GetDefaultMembers()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getenumname">Type.GetEnumName(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getenumnames">Type.GetEnumNames()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getenumunderlyingtype">Type.GetEnumUnderlyingType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getenumvalues">Type.GetEnumValues()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getenumvaluesasunderlyingtype">Type.GetEnumValuesAsUnderlyingType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getevent#system-type-getevent(system-string)">Type.GetEvent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getevents#system-type-getevents">Type.GetEvents()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getfield#system-type-getfield(system-string)">Type.GetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getfields#system-type-getfields">Type.GetFields()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getfunctionpointercallingconventions">Type.GetFunctionPointerCallingConventions()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getfunctionpointerparametertypes">Type.GetFunctionPointerParameterTypes()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getfunctionpointerreturntype">Type.GetFunctionPointerReturnType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getgenericparameterconstraints">Type.GetGenericParameterConstraints()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getinterface#system-type-getinterface(system-string)">Type.GetInterface(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getinterfacemap">Type.GetInterfaceMap(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmember#system-type-getmember(system-string)">Type.GetMember(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmember#system-type-getmember(system-string-system-reflection-bindingflags)">Type.GetMember(string, BindingFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmember#system-type-getmember(system-string-system-reflection-membertypes-system-reflection-bindingflags)">Type.GetMember(string, MemberTypes, BindingFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmembers#system-type-getmembers">Type.GetMembers()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmemberwithsamemetadatadefinitionas">Type.GetMemberWithSameMetadataDefinitionAs(MemberInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmethod#system-type-getmethod(system-string)">Type.GetMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmethod#system-type-getmethod(system-string-system-int32-system-reflection-bindingflags-system-reflection-binder-system-reflection-callingconventions-system-type()-system-reflection-parametermodifier())">Type.GetMethod(string, int, BindingFlags, Binder, CallingConventions, Type[], ParameterModifier[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmethod#system-type-getmethod(system-string-system-int32-system-reflection-bindingflags-system-reflection-binder-system-type()-system-reflection-parametermodifier())">Type.GetMethod(string, int, BindingFlags, Binder, Type[], ParameterModifier[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmethod#system-type-getmethod(system-string-system-int32-system-reflection-bindingflags-system-type())">Type.GetMethod(string, int, BindingFlags, Type[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmethod#system-type-getmethod(system-string-system-int32-system-type())">Type.GetMethod(string, int, Type[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmethod#system-type-getmethod(system-string-system-int32-system-type()-system-reflection-parametermodifier())">Type.GetMethod(string, int, Type[], ParameterModifier[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmethod#system-type-getmethod(system-string-system-reflection-bindingflags)">Type.GetMethod(string, BindingFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmethod#system-type-getmethod(system-string-system-reflection-bindingflags-system-reflection-binder-system-reflection-callingconventions-system-type()-system-reflection-parametermodifier())">Type.GetMethod(string, BindingFlags, Binder, CallingConventions, Type[], ParameterModifier[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmethod#system-type-getmethod(system-string-system-reflection-bindingflags-system-reflection-binder-system-type()-system-reflection-parametermodifier())">Type.GetMethod(string, BindingFlags, Binder, Type[], ParameterModifier[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmethod#system-type-getmethod(system-string-system-reflection-bindingflags-system-type())">Type.GetMethod(string, BindingFlags, Type[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmethod#system-type-getmethod(system-string-system-type())">Type.GetMethod(string, Type[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmethod#system-type-getmethod(system-string-system-type()-system-reflection-parametermodifier())">Type.GetMethod(string, Type[], ParameterModifier[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmethodimpl#system-type-getmethodimpl(system-string-system-int32-system-reflection-bindingflags-system-reflection-binder-system-reflection-callingconventions-system-type()-system-reflection-parametermodifier())">Type.GetMethodImpl(string, int, BindingFlags, Binder, CallingConventions, Type[], ParameterModifier[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getmethods#system-type-getmethods">Type.GetMethods()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getnestedtype#system-type-getnestedtype(system-string)">Type.GetNestedType(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getnestedtypes#system-type-getnestedtypes">Type.GetNestedTypes()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getoptionalcustommodifiers">Type.GetOptionalCustomModifiers()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getproperties#system-type-getproperties">Type.GetProperties()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getproperty#system-type-getproperty(system-string)">Type.GetProperty(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getproperty#system-type-getproperty(system-string-system-reflection-bindingflags)">Type.GetProperty(string, BindingFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getproperty#system-type-getproperty(system-string-system-reflection-bindingflags-system-reflection-binder-system-type-system-type()-system-reflection-parametermodifier())">Type.GetProperty(string, BindingFlags, Binder, Type, Type[], ParameterModifier[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getproperty#system-type-getproperty(system-string-system-type)">Type.GetProperty(string, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getproperty#system-type-getproperty(system-string-system-type-system-type())">Type.GetProperty(string, Type, Type[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getproperty#system-type-getproperty(system-string-system-type-system-type()-system-reflection-parametermodifier())">Type.GetProperty(string, Type, Type[], ParameterModifier[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getproperty#system-type-getproperty(system-string-system-type())">Type.GetProperty(string, Type[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.getrequiredcustommodifiers">Type.GetRequiredCustomModifiers()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettype#system-type-gettype">Type.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettype#system-type-gettype(system-string)">Type.GetType(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettype#system-type-gettype(system-string-system-boolean)">Type.GetType(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettype#system-type-gettype(system-string-system-boolean-system-boolean)">Type.GetType(string, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettype#system-type-gettype(system-string-system-func((system-reflection-assemblyname-system-reflection-assembly))-system-func((system-reflection-assembly-system-string-system-boolean-system-type)))">Type.GetType(string, Func&lt;AssemblyName, Assembly&gt;, Func&lt;Assembly, string, bool, Type&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettype#system-type-gettype(system-string-system-func((system-reflection-assemblyname-system-reflection-assembly))-system-func((system-reflection-assembly-system-string-system-boolean-system-type))-system-boolean)">Type.GetType(string, Func&lt;AssemblyName, Assembly&gt;, Func&lt;Assembly, string, bool, Type&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettype#system-type-gettype(system-string-system-func((system-reflection-assemblyname-system-reflection-assembly))-system-func((system-reflection-assembly-system-string-system-boolean-system-type))-system-boolean-system-boolean)">Type.GetType(string, Func&lt;AssemblyName, Assembly&gt;, Func&lt;Assembly, string, bool, Type&gt;, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettypearray">Type.GetTypeArray(object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettypecode">Type.GetTypeCode(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettypecodeimpl">Type.GetTypeCodeImpl()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettypefromclsid#system-type-gettypefromclsid(system-guid)">Type.GetTypeFromCLSID(Guid)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettypefromclsid#system-type-gettypefromclsid(system-guid-system-boolean)">Type.GetTypeFromCLSID(Guid, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettypefromclsid#system-type-gettypefromclsid(system-guid-system-string)">Type.GetTypeFromCLSID(Guid, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettypefromclsid#system-type-gettypefromclsid(system-guid-system-string-system-boolean)">Type.GetTypeFromCLSID(Guid, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettypefromhandle">Type.GetTypeFromHandle(RuntimeTypeHandle)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettypefromprogid#system-type-gettypefromprogid(system-string)">Type.GetTypeFromProgID(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettypefromprogid#system-type-gettypefromprogid(system-string-system-boolean)">Type.GetTypeFromProgID(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettypefromprogid#system-type-gettypefromprogid(system-string-system-string)">Type.GetTypeFromProgID(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettypefromprogid#system-type-gettypefromprogid(system-string-system-string-system-boolean)">Type.GetTypeFromProgID(string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.gettypehandle">Type.GetTypeHandle(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.invokemember#system-type-invokemember(system-string-system-reflection-bindingflags-system-reflection-binder-system-object-system-object())">Type.InvokeMember(string, BindingFlags, Binder, object, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.invokemember#system-type-invokemember(system-string-system-reflection-bindingflags-system-reflection-binder-system-object-system-object()-system-globalization-cultureinfo)">Type.InvokeMember(string, BindingFlags, Binder, object, object[], CultureInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isassignableto">Type.IsAssignableTo(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.iscontextfulimpl">Type.IsContextfulImpl()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isenumdefined">Type.IsEnumDefined(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isequivalentto">Type.IsEquivalentTo(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.ismarshalbyrefimpl">Type.IsMarshalByRefImpl()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.issubclassof">Type.IsSubclassOf(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isvaluetypeimpl">Type.IsValueTypeImpl()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.makearraytype#system-type-makearraytype">Type.MakeArrayType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.makearraytype#system-type-makearraytype(system-int32)">Type.MakeArrayType(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.makebyreftype">Type.MakeByRefType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.makegenericmethodparameter">Type.MakeGenericMethodParameter(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.makegenericsignaturetype">Type.MakeGenericSignatureType(Type, params Type[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.makegenerictype">Type.MakeGenericType(params Type[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.makepointertype">Type.MakePointerType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.reflectiononlygettype">Type.ReflectionOnlyGetType(string, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.attributes">Type.Attributes</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.containsgenericparameters">Type.ContainsGenericParameters</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.declaringmethod">Type.DeclaringMethod</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.declaringtype">Type.DeclaringType</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.defaultbinder">Type.DefaultBinder</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.genericparameterattributes">Type.GenericParameterAttributes</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.genericparameterposition">Type.GenericParameterPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.generictypearguments">Type.GenericTypeArguments</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.haselementtype">Type.HasElementType</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isabstract">Type.IsAbstract</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isansiclass">Type.IsAnsiClass</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isarray">Type.IsArray</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isautoclass">Type.IsAutoClass</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isautolayout">Type.IsAutoLayout</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isbyref">Type.IsByRef</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isbyreflike">Type.IsByRefLike</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isclass">Type.IsClass</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.iscomobject">Type.IsCOMObject</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isconstructedgenerictype">Type.IsConstructedGenericType</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.iscontextful">Type.IsContextful</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isenum">Type.IsEnum</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isexplicitlayout">Type.IsExplicitLayout</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isfunctionpointer">Type.IsFunctionPointer</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isgenericmethodparameter">Type.IsGenericMethodParameter</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isgenerictypeparameter">Type.IsGenericTypeParameter</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isimport">Type.IsImport</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isinterface">Type.IsInterface</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.islayoutsequential">Type.IsLayoutSequential</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.ismarshalbyref">Type.IsMarshalByRef</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isnested">Type.IsNested</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isnestedassembly">Type.IsNestedAssembly</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isnestedfamandassem">Type.IsNestedFamANDAssem</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isnestedfamily">Type.IsNestedFamily</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isnestedfamorassem">Type.IsNestedFamORAssem</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isnestedprivate">Type.IsNestedPrivate</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isnestedpublic">Type.IsNestedPublic</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isnotpublic">Type.IsNotPublic</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.ispointer">Type.IsPointer</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isprimitive">Type.IsPrimitive</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.ispublic">Type.IsPublic</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.issealed">Type.IsSealed</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.issecuritycritical">Type.IsSecurityCritical</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.issecuritysafecritical">Type.IsSecuritySafeCritical</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.issecuritytransparent">Type.IsSecurityTransparent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isserializable">Type.IsSerializable</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.issignaturetype">Type.IsSignatureType</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isspecialname">Type.IsSpecialName</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isszarray">Type.IsSZArray</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.istypedefinition">Type.IsTypeDefinition</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isunicodeclass">Type.IsUnicodeClass</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isunmanagedfunctionpointer">Type.IsUnmanagedFunctionPointer</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isvaluetype">Type.IsValueType</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isvariableboundarray">Type.IsVariableBoundArray</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isvisible">Type.IsVisible</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.membertype">Type.MemberType</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.reflectedtype">Type.ReflectedType</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.structlayoutattribute">Type.StructLayoutAttribute</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.typehandle">Type.TypeHandle</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.typeinitializer">Type.TypeInitializer</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo.getcustomattributesdata">MemberInfo.GetCustomAttributesData()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo.hassamemetadatadefinitionas">MemberInfo.HasSameMetadataDefinitionAs(MemberInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo.customattributes">MemberInfo.CustomAttributes</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo.iscollectible">MemberInfo.IsCollectible</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo.metadatatoken">MemberInfo.MetadataToken</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Agent.Runtime.Extensions.html#Goap_Agent_Runtime_Extensions_GetGenericTypeName_System_Type_">Extensions.GetGenericTypeName(Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.TypeExtensions.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_TypeExtensions_GetTopBaseType_System_Type_">TypeExtensions.GetTopBaseType(Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.CLR.Utils.Extensions.html#UnityFusion_CLR_Utils_Extensions_CheckCLRTypes_System_Type_System_Object_">Extensions.CheckCLRTypes(Type, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.CLR.Utils.Extensions.html#UnityFusion_CLR_Utils_Extensions_CheckCLRTypes_System_Type_System_Object_UnityFusion_CLR_Utils_Extensions_TypeFlags_">Extensions.CheckCLRTypes(Type, object, Extensions.TypeFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.CLR.Utils.Extensions.html#UnityFusion_CLR_Utils_Extensions_FastIsByRef_System_Type_">Extensions.FastIsByRef(Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.CLR.Utils.Extensions.html#UnityFusion_CLR_Utils_Extensions_FastIsEnum_System_Type_">Extensions.FastIsEnum(Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.CLR.Utils.Extensions.html#UnityFusion_CLR_Utils_Extensions_FastIsPrimitive_System_Type_">Extensions.FastIsPrimitive(Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.CLR.Utils.Extensions.html#UnityFusion_CLR_Utils_Extensions_FastIsValueType_System_Type_">Extensions.FastIsValueType(Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.CLR.Utils.Extensions.html#UnityFusion_CLR_Utils_Extensions_GetTypeFlags_System_Type_">Extensions.GetTypeFlags(Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.CLR.Utils.Extensions.html#UnityFusion_CLR_Utils_Extensions_GetTypeFlagsRecursive_System_Type_">Extensions.GetTypeFlagsRecursive(Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.CLR.Utils.Extensions.html#UnityFusion_CLR_Utils_Extensions_UnWrapper_System_Type_">Extensions.UnWrapper(Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetClassName_System_Type_System_String__System_String__System_Boolean__System_Boolean_">Extensions.GetClassName(Type, out string, out string, out bool, bool)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType__ctor_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.#ctor*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType__ctor_UnityFusion_CLR_TypeSystem_CLRType_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.#ctor(UnityFusion.CLR.TypeSystem.CLRType)">
+  UnityFusionWrapperType(CLRType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityFusionWrapperType(CLRType t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="UnityFusion.CLR.TypeSystem.CLRType.html">CLRType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_Assembly_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.Assembly*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_Assembly" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.Assembly">
+  Assembly
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a> in which the type is declared. For generic types, gets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a> in which the generic type is defined.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Assembly Assembly { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a> instance that describes the assembly containing the current type. For generic types, the instance describes the assembly that contains the generic type definition, not the assembly that creates and uses a particular constructed type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_AssemblyQualifiedName_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.AssemblyQualifiedName*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_AssemblyQualifiedName" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.AssemblyQualifiedName">
+  AssemblyQualifiedName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the assembly-qualified name of the type, which includes the name of the assembly from which this <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> object was loaded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string AssemblyQualifiedName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The assembly-qualified name of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, which includes the name of the assembly from which the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> was loaded, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the current instance represents a generic type parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_BaseType_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.BaseType*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_BaseType" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.BaseType">
+  BaseType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the type from which the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> directly inherits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Type BaseType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> from which the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> directly inherits, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the current <code>Type</code> represents the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> class or an interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_CLRType_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.CLRType*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_CLRType" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.CLRType">
+  CLRType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CLRType CLRType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.CLR.TypeSystem.CLRType.html">CLRType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_FullName_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.FullName*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_FullName" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.FullName">
+  FullName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the fully qualified name of the type, including its namespace but not its assembly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string FullName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The fully qualified name of the type, including its namespace but not its assembly; or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the current instance represents a generic type parameter, an array type, pointer type, or <code>byref</code> type based on a type parameter, or a generic type that is not a generic type definition but contains unresolved type parameters.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GUID_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GUID*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GUID" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GUID">
+  GUID
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the GUID associated with the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Guid GUID { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>The GUID associated with the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_IsGenericParameter_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsGenericParameter*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_IsGenericParameter" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsGenericParameter">
+  IsGenericParameter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> represents a type parameter in the definition of a generic type or method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsGenericParameter { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> object represents a type parameter of a generic type definition or generic method definition; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_IsGenericType_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsGenericType*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_IsGenericType" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsGenericType">
+  IsGenericType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the current type is a generic type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsGenericType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current type is a generic type; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_IsGenericTypeDefinition_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsGenericTypeDefinition*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_IsGenericTypeDefinition" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsGenericTypeDefinition">
+  IsGenericTypeDefinition
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> represents a generic type definition, from which other generic types can be constructed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsGenericTypeDefinition { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> object represents a generic type definition; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_Module_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.Module*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_Module" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.Module">
+  Module
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the module (the DLL) in which the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> is defined.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Module Module { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.module">Module</a></dt>
+    <dd><p>The module in which the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> is defined.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_Name_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.Name*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_Name" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the current member.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string Name { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> containing the name of this member.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_Namespace_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.Namespace*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_Namespace" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.Namespace">
+  Namespace
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the namespace of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string Namespace { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The namespace of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the current instance has no namespace or represents a generic parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_RealType_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.RealType*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_RealType" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.RealType">
+  RealType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type RealType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_UnderlyingSystemType_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.UnderlyingSystemType*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_UnderlyingSystemType" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.UnderlyingSystemType">
+  UnderlyingSystemType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates the type provided by the common language runtime that represents this type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Type UnderlyingSystemType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The underlying system type for the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetAttributeFlagsImpl_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetAttributeFlagsImpl*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetAttributeFlagsImpl" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetAttributeFlagsImpl">
+  GetAttributeFlagsImpl()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, implements the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.attributes">Attributes</a> property and gets a bitwise combination of enumeration values that indicate the attributes associated with the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override TypeAttributes GetAttributeFlagsImpl()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.typeattributes">TypeAttributes</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.typeattributes">TypeAttributes</a> object representing the attribute set of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetConstructorImpl_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetConstructorImpl*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetConstructorImpl_System_Reflection_BindingFlags_System_Reflection_Binder_System_Reflection_CallingConventions_System_Type___System_Reflection_ParameterModifier___" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetConstructorImpl(System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])">
+  GetConstructorImpl(BindingFlags, Binder, CallingConventions, Type[], ParameterModifier[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, searches for a constructor whose parameters match the specified argument types and modifiers, using the specified binding constraints and the specified calling convention.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ConstructorInfo GetConstructorImpl(BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, Type[] types, ParameterModifier[] modifiers)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bindingAttr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></dt>
+    <dd><p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
+<p>-or-</p>
+<p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags#system-reflection-bindingflags-default">Default</a> to return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><code>binder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.binder">Binder</a></dt>
+    <dd><p>An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.</p>
+<p>-or-</p>
+<p>A null reference (<code>Nothing</code> in Visual Basic), to use the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.defaultbinder">DefaultBinder</a>.</p>
+</dd>
+    <dt><code>callConvention</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.callingconventions">CallingConventions</a></dt>
+    <dd><p>The object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, what registers are used for arguments, and the stack is cleaned up.</p>
+</dd>
+    <dt><code>types</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> objects representing the number, order, and type of the parameters for the constructor to get.</p>
+<p>-or-</p>
+<p>An empty array of the type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> (that is, Type[] types = new Type[0]) to get a constructor that takes no parameters.</p>
+</dd>
+    <dt><code>modifiers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.parametermodifier">ParameterModifier</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.parametermodifier">ParameterModifier</a> objects representing the attributes associated with the corresponding element in the <code class="paramref">types</code> array. The default binder does not process this parameter.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.constructorinfo">ConstructorInfo</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.constructorinfo">ConstructorInfo</a> object representing the constructor that matches the specified requirements, if found; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><pre><code>   &lt;code class=&quot;paramref&quot;&gt;types&lt;/code&gt; is &lt;a href=&quot;https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null&quot;&gt;null&lt;/a&gt;.
+</code></pre>
+<p>-or-</p>
+<p>One of the elements in <code class="paramref">types</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><pre><code>   &lt;code class=&quot;paramref&quot;&gt;types&lt;/code&gt; is multidimensional.
+</code></pre>
+<p>-or-</p>
+<p><code class="paramref">modifiers</code> is multidimensional.</p>
+<p>-or-</p>
+<p><code class="paramref">types</code> and <code class="paramref">modifiers</code> do not have the same length.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>The current type is a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.emit.typebuilder">TypeBuilder</a> or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.emit.generictypeparameterbuilder">GenericTypeParameterBuilder</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetConstructors_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetConstructors*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetConstructors_System_Reflection_BindingFlags_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetConstructors(System.Reflection.BindingFlags)">
+  GetConstructors(BindingFlags)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, searches for the constructors defined for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, using the specified <code>BindingFlags</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ConstructorInfo[] GetConstructors(BindingFlags bindingAttr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bindingAttr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></dt>
+    <dd><p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
+<p>-or-</p>
+<p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags#system-reflection-bindingflags-default">Default</a> to return an empty array.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.constructorinfo">ConstructorInfo</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.constructorinfo">ConstructorInfo</a> objects representing all constructors defined for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> that match the specified binding constraints, including the type initializer if it's defined. Returns an empty array of type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.constructorinfo">ConstructorInfo</a> if no constructors are defined for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, if none of the defined constructors match the binding constraints, or if the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> represents a type parameter in the definition of a generic type or generic method.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetCustomAttributes_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetCustomAttributes*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetCustomAttributes_System_Boolean_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetCustomAttributes(System.Boolean)">
+  GetCustomAttributes(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, returns an array of all custom attributes applied to this member.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object[] GetCustomAttributes(bool inherit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inherit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to search this member's inheritance chain to find the attributes; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>. This parameter is ignored for properties and events.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>An array that contains all the custom attributes applied to this member, or an array with zero elements if no attributes are defined.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>This member belongs to a type that is loaded into the reflection-only context. See How to: Load Assemblies into the Reflection-Only Context.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.typeloadexception">TypeLoadException</a></dt>
+    <dd><p>A custom attribute type could not be loaded.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetCustomAttributes_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetCustomAttributes*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetCustomAttributes_System_Type_System_Boolean_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetCustomAttributes(System.Type,System.Boolean)">
+  GetCustomAttributes(Type, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, returns an array of custom attributes applied to this member and identified by <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object[] GetCustomAttributes(Type attributeType, bool inherit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attributeType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type of attribute to search for. Only attributes that are assignable to this type are returned.</p>
+</dd>
+    <dt><code>inherit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to search this member's inheritance chain to find the attributes; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>. This parameter is ignored for properties and events.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>An array of custom attributes applied to this member, or an array with zero elements if no attributes assignable to <code class="paramref">attributeType</code> have been applied.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.typeloadexception">TypeLoadException</a></dt>
+    <dd><p>A custom attribute type cannot be loaded.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">attributeType</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>This member belongs to a type that is loaded into the reflection-only context. See How to: Load Assemblies into the Reflection-Only Context.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetElementType_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetElementType*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetElementType" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetElementType">
+  GetElementType()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, returns the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> of the object encompassed or referred to by the current array, pointer or reference type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Type GetElementType()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> of the object encompassed or referred to by the current array, pointer, or reference type, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> is not an array or a pointer, or is not passed by reference, or represents a generic type or a type parameter in the definition of a generic type or generic method.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetEvent_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetEvent*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetEvent_System_String_System_Reflection_BindingFlags_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetEvent(System.String,System.Reflection.BindingFlags)">
+  GetEvent(string, BindingFlags)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, returns the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.eventinfo">EventInfo</a> object representing the specified event, using the specified binding constraints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override EventInfo GetEvent(string name, BindingFlags bindingAttr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string containing the name of an event which is declared or inherited by the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+</dd>
+    <dt><code>bindingAttr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></dt>
+    <dd><p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
+<p>-or-</p>
+<p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags#system-reflection-bindingflags-default">Default</a> to return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.eventinfo">EventInfo</a></dt>
+    <dd><p>The object representing the specified event that is declared or inherited by the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, if found; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">name</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetEvents_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetEvents*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetEvents_System_Reflection_BindingFlags_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetEvents(System.Reflection.BindingFlags)">
+  GetEvents(BindingFlags)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, searches for events that are declared or inherited by the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, using the specified binding constraints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override EventInfo[] GetEvents(BindingFlags bindingAttr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bindingAttr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></dt>
+    <dd><p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
+<p>-or-</p>
+<p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags#system-reflection-bindingflags-default">Default</a> to return an empty array.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.eventinfo">EventInfo</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.eventinfo">EventInfo</a> objects representing all events that are declared or inherited by the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> that match the specified binding constraints.</p>
+<p>-or-</p>
+<p>An empty array of type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.eventinfo">EventInfo</a>, if the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> does not have events, or if none of the events match the binding constraints.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetField_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetField*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetField_System_String_System_Reflection_BindingFlags_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetField(System.String,System.Reflection.BindingFlags)">
+  GetField(string, BindingFlags)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Searches for the specified field, using the specified binding constraints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override FieldInfo GetField(string name, BindingFlags bindingAttr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string containing the name of the data field to get.</p>
+</dd>
+    <dt><code>bindingAttr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></dt>
+    <dd><p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
+<p>-or-</p>
+<p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags#system-reflection-bindingflags-default">Default</a> to return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.fieldinfo">FieldInfo</a></dt>
+    <dd><p>An object representing the field that matches the specified requirements, if found; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">name</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetFields_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetFields*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetFields_System_Reflection_BindingFlags_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetFields(System.Reflection.BindingFlags)">
+  GetFields(BindingFlags)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, searches for the fields defined for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, using the specified binding constraints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override FieldInfo[] GetFields(BindingFlags bindingAttr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bindingAttr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></dt>
+    <dd><p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
+<p>-or-</p>
+<p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags#system-reflection-bindingflags-default">Default</a> to return an empty array.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.fieldinfo">FieldInfo</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.fieldinfo">FieldInfo</a> objects representing all fields defined for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> that match the specified binding constraints.</p>
+<p>-or-</p>
+<p>An empty array of type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.fieldinfo">FieldInfo</a>, if no fields are defined for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, or if none of the defined fields match the binding constraints.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetGenericArguments_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetGenericArguments*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetGenericArguments" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetGenericArguments">
+  GetGenericArguments()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns an array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> objects that represent the type arguments of a closed generic type or the type parameters of a generic type definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Type[] GetGenericArguments()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> objects that represent the type arguments of a generic type. Returns an empty array if the current type is not a generic type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>The invoked method is not supported in the base class. Derived classes must provide an implementation.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetGenericTypeDefinition_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetGenericTypeDefinition*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetGenericTypeDefinition" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetGenericTypeDefinition">
+  GetGenericTypeDefinition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> object that represents a generic type definition from which the current generic type can be constructed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Type GetGenericTypeDefinition()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> object representing a generic type from which the current type can be constructed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The current type is not a generic type.  That is, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isgenerictype">IsGenericType</a> returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>The invoked method is not supported in the base class. Derived classes must provide an implementation.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetHashCode_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetHashCode*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetHashCode" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The hash code for this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetInterface_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetInterface*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetInterface_System_String_System_Boolean_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetInterface(System.String,System.Boolean)">
+  GetInterface(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, searches for the specified interface, specifying whether to do a case-insensitive search for the interface name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Type GetInterface(string name, bool ignoreCase)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string containing the name of the interface to get. For generic interfaces, this is the mangled name.</p>
+</dd>
+    <dt><code>ignoreCase</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><pre><code>   &lt;a href=&quot;https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool&quot;&gt;true&lt;/a&gt; to ignore the case of that part of &lt;code class=&quot;paramref&quot;&gt;name&lt;/code&gt; that specifies the simple interface name (the part that specifies the namespace must be correctly cased).
+</code></pre>
+<p>-or-</p>
+<p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to perform a case-sensitive search for all parts of <code class="paramref">name</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>An object representing the interface with the specified name, implemented or inherited by the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, if found; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">name</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.ambiguousmatchexception">AmbiguousMatchException</a></dt>
+    <dd><p>The current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> represents a type that implements the same generic interface with different type arguments.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetInterfaces_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetInterfaces*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetInterfaces" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetInterfaces">
+  GetInterfaces()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, gets all the interfaces implemented or inherited by the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Type[] GetInterfaces()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> objects representing all the interfaces implemented or inherited by the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+<p>-or-</p>
+<p>An empty array of type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, if no interfaces are implemented or inherited by the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.targetinvocationexception">TargetInvocationException</a></dt>
+    <dd><p>A static initializer is invoked and throws an exception.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetMembers_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetMembers*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetMembers_System_Reflection_BindingFlags_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetMembers(System.Reflection.BindingFlags)">
+  GetMembers(BindingFlags)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, searches for the members defined for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, using the specified binding constraints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MemberInfo[] GetMembers(BindingFlags bindingAttr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bindingAttr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></dt>
+    <dd><p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
+<p>-or-</p>
+<p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags#system-reflection-bindingflags-default">Default</a> to return an empty array.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo">MemberInfo</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo">MemberInfo</a> objects representing all members defined for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> that match the specified binding constraints.</p>
+<p>-or-</p>
+<p>An empty array if no members are defined for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, or if none of the defined members match the binding constraints.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetMethodImpl_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetMethodImpl*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetMethodImpl_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Reflection_CallingConventions_System_Type___System_Reflection_ParameterModifier___" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetMethodImpl(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])">
+  GetMethodImpl(string, BindingFlags, Binder, CallingConventions, Type[], ParameterModifier[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, searches for the specified method whose parameters match the specified argument types and modifiers, using the specified binding constraints and the specified calling convention.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override MethodInfo GetMethodImpl(string name, BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, Type[] types, ParameterModifier[] modifiers)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string containing the name of the method to get.</p>
+</dd>
+    <dt><code>bindingAttr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></dt>
+    <dd><p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
+<p>-or-</p>
+<p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags#system-reflection-bindingflags-default">Default</a> to return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><code>binder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.binder">Binder</a></dt>
+    <dd><p>An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.</p>
+<p>-or-</p>
+<p>A null reference (<code>Nothing</code> in Visual Basic), to use the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.defaultbinder">DefaultBinder</a>.</p>
+</dd>
+    <dt><code>callConvention</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.callingconventions">CallingConventions</a></dt>
+    <dd><p>The object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, what registers are used for arguments, and what process cleans up the stack.</p>
+</dd>
+    <dt><code>types</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> objects representing the number, order, and type of the parameters for the method to get.</p>
+<p>-or-</p>
+<p>An empty array of the type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> (that is, Type[] types = new Type[0]) to get a method that takes no parameters.</p>
+<p>-or-</p>
+<p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>. If <code class="paramref">types</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, arguments are not matched.</p>
+</dd>
+    <dt><code>modifiers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.parametermodifier">ParameterModifier</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.parametermodifier">ParameterModifier</a> objects representing the attributes associated with the corresponding element in the <code class="paramref">types</code> array. The default binder does not process this parameter.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.methodinfo">MethodInfo</a></dt>
+    <dd><p>An object representing the method that matches the specified requirements, if found; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.ambiguousmatchexception">AmbiguousMatchException</a></dt>
+    <dd><p>More than one method is found with the specified name and matching the specified binding constraints.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">name</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><pre><code>   &lt;code class=&quot;paramref&quot;&gt;types&lt;/code&gt; is multidimensional.
+</code></pre>
+<p>-or-</p>
+<p><code class="paramref">modifiers</code> is multidimensional.</p>
+<p>-or-</p>
+<p><code class="paramref">types</code> and <code class="paramref">modifiers</code> do not have the same length.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>The current type is a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.emit.typebuilder">TypeBuilder</a> or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.emit.generictypeparameterbuilder">GenericTypeParameterBuilder</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetMethods_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetMethods*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetMethods_System_Reflection_BindingFlags_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetMethods(System.Reflection.BindingFlags)">
+  GetMethods(BindingFlags)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, searches for the methods defined for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, using the specified binding constraints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MethodInfo[] GetMethods(BindingFlags bindingAttr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bindingAttr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></dt>
+    <dd><p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
+<p>-or-</p>
+<p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags#system-reflection-bindingflags-default">Default</a> to return an empty array.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.methodinfo">MethodInfo</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.methodinfo">MethodInfo</a> objects representing all methods defined for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> that match the specified binding constraints.</p>
+<p>-or-</p>
+<p>An empty array of type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.methodinfo">MethodInfo</a>, if no methods are defined for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, or if none of the defined methods match the binding constraints.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetNestedType_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetNestedType*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetNestedType_System_String_System_Reflection_BindingFlags_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetNestedType(System.String,System.Reflection.BindingFlags)">
+  GetNestedType(string, BindingFlags)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, searches for the specified nested type, using the specified binding constraints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Type GetNestedType(string name, BindingFlags bindingAttr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string containing the name of the nested type to get.</p>
+</dd>
+    <dt><code>bindingAttr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></dt>
+    <dd><p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
+<p>-or-</p>
+<p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags#system-reflection-bindingflags-default">Default</a> to return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>An object representing the nested type that matches the specified requirements, if found; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">name</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetNestedTypes_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetNestedTypes*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetNestedTypes_System_Reflection_BindingFlags_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetNestedTypes(System.Reflection.BindingFlags)">
+  GetNestedTypes(BindingFlags)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, searches for the types nested in the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, using the specified binding constraints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Type[] GetNestedTypes(BindingFlags bindingAttr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bindingAttr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></dt>
+    <dd><p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
+<p>-or-</p>
+<p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags#system-reflection-bindingflags-default">Default</a> to return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> objects representing all the types nested in the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> that match the specified binding constraints (the search is not recursive), or an empty array of type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, if no nested types are found that match the binding constraints.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetProperties_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetProperties*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetProperties_System_Reflection_BindingFlags_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetProperties(System.Reflection.BindingFlags)">
+  GetProperties(BindingFlags)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, searches for the properties of the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, using the specified binding constraints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PropertyInfo[] GetProperties(BindingFlags bindingAttr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bindingAttr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></dt>
+    <dd><p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
+<p>-or-</p>
+<p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags#system-reflection-bindingflags-default">Default</a> to return an empty array.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo">PropertyInfo</a>[]</dt>
+    <dd><p>An array of objects representing all properties of the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> that match the specified binding constraints.</p>
+<p>-or-</p>
+<p>An empty array of type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo">PropertyInfo</a>, if the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> does not have properties, or if none of the properties match the binding constraints.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_GetPropertyImpl_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetPropertyImpl*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_GetPropertyImpl_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Type_System_Type___System_Reflection_ParameterModifier___" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.GetPropertyImpl(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Type,System.Type[],System.Reflection.ParameterModifier[])">
+  GetPropertyImpl(string, BindingFlags, Binder, Type, Type[], ParameterModifier[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, searches for the specified property whose parameters match the specified argument types and modifiers, using the specified binding constraints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override PropertyInfo GetPropertyImpl(string name, BindingFlags bindingAttr, Binder binder, Type returnType, Type[] types, ParameterModifier[] modifiers)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string containing the name of the property to get.</p>
+</dd>
+    <dt><code>bindingAttr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></dt>
+    <dd><p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
+<p>-or-</p>
+<p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags#system-reflection-bindingflags-default">Default</a> to return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><code>binder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.binder">Binder</a></dt>
+    <dd><p>An object that defines a set of properties and enables binding, which can involve selection of an overloaded member, coercion of argument types, and invocation of a member through reflection.</p>
+<p>-or-</p>
+<p>A null reference (<code>Nothing</code> in Visual Basic), to use the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.defaultbinder">DefaultBinder</a>.</p>
+</dd>
+    <dt><code>returnType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The return type of the property.</p>
+</dd>
+    <dt><code>types</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> objects representing the number, order, and type of the parameters for the indexed property to get.</p>
+<p>-or-</p>
+<p>An empty array of the type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> (that is, Type[] types = new Type[0]) to get a property that is not indexed.</p>
+</dd>
+    <dt><code>modifiers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.parametermodifier">ParameterModifier</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.parametermodifier">ParameterModifier</a> objects representing the attributes associated with the corresponding element in the <code class="paramref">types</code> array. The default binder does not process this parameter.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo">PropertyInfo</a></dt>
+    <dd><p>An object representing the property that matches the specified requirements, if found; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.ambiguousmatchexception">AmbiguousMatchException</a></dt>
+    <dd><p>More than one property is found with the specified name and matching the specified binding constraints.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><pre><code>   &lt;code class=&quot;paramref&quot;&gt;name&lt;/code&gt; is &lt;a href=&quot;https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null&quot;&gt;null&lt;/a&gt;.
+</code></pre>
+<p>-or-</p>
+<p><code class="paramref">types</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+<p>-or-</p>
+<p>One of the elements in <code class="paramref">types</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><pre><code>   &lt;code class=&quot;paramref&quot;&gt;types&lt;/code&gt; is multidimensional.
+</code></pre>
+<p>-or-</p>
+<p><code class="paramref">modifiers</code> is multidimensional.</p>
+<p>-or-</p>
+<p><code class="paramref">types</code> and <code class="paramref">modifiers</code> do not have the same length.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>The current type is a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.emit.typebuilder">TypeBuilder</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.emit.enumbuilder">EnumBuilder</a>, or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.emit.generictypeparameterbuilder">GenericTypeParameterBuilder</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_HasElementTypeImpl_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.HasElementTypeImpl*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_HasElementTypeImpl" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.HasElementTypeImpl">
+  HasElementTypeImpl()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, implements the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.haselementtype">HasElementType</a> property and determines whether the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> encompasses or refers to another type; that is, whether the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> is an array, a pointer, or is passed by reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool HasElementTypeImpl()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> is an array, a pointer, or is passed by reference; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_InvokeMember_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.InvokeMember*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_InvokeMember_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Object_System_Object___System_Reflection_ParameterModifier___System_Globalization_CultureInfo_System_String___" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])">
+  InvokeMember(string, BindingFlags, Binder, object, object[], ParameterModifier[], CultureInfo, string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, invokes the specified member, using the specified binding constraints and matching the specified argument list, modifiers and culture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object InvokeMember(string name, BindingFlags invokeAttr, Binder binder, object target, object[] args, ParameterModifier[] modifiers, CultureInfo culture, string[] namedParameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string containing the name of the constructor, method, property, or field member to invoke.</p>
+<p>-or-</p>
+<p>An empty string (&quot;&quot;) to invoke the default member.</p>
+<p>-or-</p>
+<p>For <code>IDispatch</code> members, a string representing the DispID, for example &quot;[DispID=3]&quot;.</p>
+</dd>
+    <dt><code>invokeAttr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></dt>
+    <dd><p>A bitwise combination of the enumeration values that specify how the search is conducted. The access can be one of the <code>BindingFlags</code> such as <code>Public</code>, <code>NonPublic</code>, <code>Private</code>, <code>InvokeMethod</code>, <code>GetField</code>, and so on. The type of lookup need not be specified. If the type of lookup is omitted, <code>BindingFlags.Public</code> | <code>BindingFlags.Instance</code> | <code>BindingFlags.Static</code> are used.</p>
+</dd>
+    <dt><code>binder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.binder">Binder</a></dt>
+    <dd><p>An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.</p>
+<p>-or-</p>
+<p>A null reference (Nothing in Visual Basic), to use the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.defaultbinder">DefaultBinder</a>. Note that explicitly defining a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.binder">Binder</a> object may be required for successfully invoking method overloads with variable arguments.</p>
+</dd>
+    <dt><code>target</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object on which to invoke the specified member.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>An array containing the arguments to pass to the member to invoke.</p>
+</dd>
+    <dt><code>modifiers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.parametermodifier">ParameterModifier</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.parametermodifier">ParameterModifier</a> objects representing the attributes associated with the corresponding element in the <code class="paramref">args</code> array. A parameter's associated attributes are stored in the member's signature.</p>
+<p>The default binder processes this parameter only when calling a COM component.</p>
+</dd>
+    <dt><code>culture</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo">CultureInfo</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo">CultureInfo</a> object representing the globalization locale to use, which may be necessary for locale-specific conversions, such as converting a numeric String to a Double.</p>
+<p>-or-</p>
+<p>A null reference (<code>Nothing</code> in Visual Basic) to use the current thread's <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo">CultureInfo</a>.</p>
+</dd>
+    <dt><code>namedParameters</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>An array containing the names of the parameters to which the values in the <code class="paramref">args</code> array are passed.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An object representing the return value of the invoked member.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">invokeAttr</code> does not contain <code>CreateInstance</code> and <code class="paramref">name</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><pre><code>   &lt;code class=&quot;paramref&quot;&gt;args&lt;/code&gt; and &lt;code class=&quot;paramref&quot;&gt;modifiers&lt;/code&gt; do not have the same length.
+</code></pre>
+<p>-or-</p>
+<p><code class="paramref">invokeAttr</code> is not a valid <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a> attribute.</p>
+<p>-or-</p>
+<p><code class="paramref">invokeAttr</code> does not contain one of the following binding flags: <code>InvokeMethod</code>, <code>CreateInstance</code>, <code>GetField</code>, <code>SetField</code>, <code>GetProperty</code>, or <code>SetProperty</code>.</p>
+<p>-or-</p>
+<p><code class="paramref">invokeAttr</code> contains <code>CreateInstance</code> combined with <code>InvokeMethod</code>, <code>GetField</code>, <code>SetField</code>, <code>GetProperty</code>, or <code>SetProperty</code>.</p>
+<p>-or-</p>
+<p><code class="paramref">invokeAttr</code> contains both <code>GetField</code> and <code>SetField</code>.</p>
+<p>-or-</p>
+<p><code class="paramref">invokeAttr</code> contains both <code>GetProperty</code> and <code>SetProperty</code>.</p>
+<p>-or-</p>
+<p><code class="paramref">invokeAttr</code> contains <code>InvokeMethod</code> combined with <code>SetField</code> or <code>SetProperty</code>.</p>
+<p>-or-</p>
+<p><code class="paramref">invokeAttr</code> contains <code>SetField</code> and <code class="paramref">args</code> has more than one element.</p>
+<p>-or-</p>
+<p>The named parameter array is larger than the argument array.</p>
+<p>-or-</p>
+<p>This method is called on a COM object and one of the following binding flags was not passed in: <code>BindingFlags.InvokeMethod</code>, <code>BindingFlags.GetProperty</code>, <code>BindingFlags.SetProperty</code>, <code>BindingFlags.PutDispProperty</code>, or <code>BindingFlags.PutRefDispProperty</code>.</p>
+<p>-or-</p>
+<p>One of the named parameter arrays contains a string that is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.methodaccessexception">MethodAccessException</a></dt>
+    <dd><p>The specified member is a class initializer.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.missingfieldexception">MissingFieldException</a></dt>
+    <dd><p>The field or property cannot be found.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.missingmethodexception">MissingMethodException</a></dt>
+    <dd><p>No method can be found that matches the arguments in <code class="paramref">args</code>.</p>
+<p>-or-</p>
+<p>No member can be found that has the argument names supplied in <code class="paramref">namedParameters</code>.</p>
+<p>-or-</p>
+<p>The current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> object represents a type that contains open type parameters, that is, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.containsgenericparameters">ContainsGenericParameters</a> returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.targetexception">TargetException</a></dt>
+    <dd><p>The specified member cannot be invoked on <code class="paramref">target</code>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.ambiguousmatchexception">AmbiguousMatchException</a></dt>
+    <dd><p>More than one method matches the binding criteria.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The method represented by <code class="paramref">name</code> has one or more unspecified generic type parameters. That is, the method's <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.methodbase.containsgenericparameters">ContainsGenericParameters</a> property returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_IsArrayImpl_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsArrayImpl*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_IsArrayImpl" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsArrayImpl">
+  IsArrayImpl()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, implements the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isarray">IsArray</a> property and determines whether the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> is an array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool IsArrayImpl()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> is an array; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_IsAssignableFrom_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsAssignableFrom*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_IsAssignableFrom_System_Type_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsAssignableFrom(System.Type)">
+  IsAssignableFrom(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether an instance of a specified type <code class="paramref">c</code> can be assigned to a variable of the current type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsAssignableFrom(Type c)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>c</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type to compare with the current type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><pre><code>    &lt;a href=&quot;https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool&quot;&gt;true&lt;/a&gt; if any of the following conditions is true:
+</code></pre>
+<ul>
+<li><p><code class="paramref">c</code> and the current instance represent the same type.</p>
+</li>
+<li><p><code class="paramref">c</code> is derived either directly or indirectly from the current instance. <code class="paramref">c</code> is derived directly from the current instance if it inherits from the current instance; <code class="paramref">c</code> is derived indirectly from the current instance if it inherits from a succession of one or more classes that inherit from the current instance.</p>
+</li>
+<li><p>The current instance is an interface that <code class="paramref">c</code> implements.</p>
+</li>
+<li><p><code class="paramref">c</code> is a generic type parameter, and the current instance represents one of the constraints of <code class="paramref">c</code>.</p>
+</li>
+<li><p><code class="paramref">c</code> represents a value type, and the current instance represents <code>Nullable&lt;c&gt;</code> (<code>Nullable(Of c)</code> in Visual Basic).</p>
+</li>
+</ul>
+<p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if none of these conditions are true, or if <code class="paramref">c</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_IsByRefImpl_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsByRefImpl*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_IsByRefImpl" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsByRefImpl">
+  IsByRefImpl()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, implements the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isbyref">IsByRef</a> property and determines whether the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> is passed by reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool IsByRefImpl()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> is passed by reference; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_IsCOMObjectImpl_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsCOMObjectImpl*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_IsCOMObjectImpl" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsCOMObjectImpl">
+  IsCOMObjectImpl()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, implements the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.iscomobject">IsCOMObject</a> property and determines whether the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> is a COM object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool IsCOMObjectImpl()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> is a COM object; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_IsDefined_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsDefined*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_IsDefined_System_Type_System_Boolean_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsDefined(System.Type,System.Boolean)">
+  IsDefined(Type, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L289"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, indicates whether one or more attributes of the specified type or of its derived types is applied to this member.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsDefined(Type attributeType, bool inherit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attributeType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type of custom attribute to search for. The search includes derived types.</p>
+</dd>
+    <dt><code>inherit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to search this member's inheritance chain to find the attributes; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>. This parameter is ignored for properties and events.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if one or more instances of <code class="paramref">attributeType</code> or any of its derived types is applied to this member; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_IsInstanceOfType_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsInstanceOfType*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_IsInstanceOfType_System_Object_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsInstanceOfType(System.Object)">
+  IsInstanceOfType(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified object is an instance of the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsInstanceOfType(object o)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>o</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with the current type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current <code>Type</code> is in the inheritance hierarchy of the object represented by <code class="paramref">o</code>, or if the current <code>Type</code> is an interface that <code class="paramref">o</code> implements. <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if neither of these conditions is the case, if <code class="paramref">o</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, or if the current <code>Type</code> is an open generic type (that is, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.containsgenericparameters">ContainsGenericParameters</a> returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_IsPointerImpl_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsPointerImpl*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_IsPointerImpl" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsPointerImpl">
+  IsPointerImpl()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, implements the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.ispointer">IsPointer</a> property and determines whether the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> is a pointer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool IsPointerImpl()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> is a pointer; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_IsPrimitiveImpl_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsPrimitiveImpl*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_IsPrimitiveImpl" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.IsPrimitiveImpl">
+  IsPrimitiveImpl()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When overridden in a derived class, implements the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.isprimitive">IsPrimitive</a> property and determines whether the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> is one of the primitive types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool IsPrimitiveImpl()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> is one of the primitive types; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_Reflection_UnityFusionWrapperType_ToString_" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.ToString*"></a>
+
+  <h3 id="UnityFusion_Reflection_UnityFusionWrapperType_ToString" data-uid="UnityFusion.Reflection.UnityFusionWrapperType.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Cores/Reflection/UnityFusionWrapperType.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a <code>String</code> representing the name of the current <code>Type</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> representing the name of the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RuntimePlatformHelper |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RuntimePlatformHelper |  |  ">
+      
+      <meta name="description" content="Helper class for detecting and identifying the current runtime platform and device model. Provides methods to check for specific XR hardware and software configurations.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper.md&amp;value=---%0Auid%3A%20Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper">
+
+
+
+  <h1 id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper" class="text-break">
+Class RuntimePlatformHelper  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/RuntimePlatform/RuntimePlatformHelper.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Phantom.html">Phantom</a>.<a class="xref" href="Phantom.XRMOD.html">XRMOD</a>.<a class="xref" href="Phantom.XRMOD.XRMODUtilites.html">XRMODUtilites</a>.<a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.html">Runtime</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Helper class for detecting and identifying the current runtime platform and device model.
+Provides methods to check for specific XR hardware and software configurations.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class RuntimePlatformHelper</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">RuntimePlatformHelper</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_GetPlatformName_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.GetPlatformName*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_GetPlatformName" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.GetPlatformName">
+  GetPlatformName()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/RuntimePlatform/RuntimePlatformHelper.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a string representation of the current platform based on defined symbols.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetPlatformName()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the platform.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_GetRuntimePlatform_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.GetRuntimePlatform*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_GetRuntimePlatform" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.GetRuntimePlatform">
+  GetRuntimePlatform()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/RuntimePlatform/RuntimePlatformHelper.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the runtime OS platform as a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetRuntimePlatform()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string representing the OS (e.g., &quot;iOS&quot;, &quot;Android&quot;).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_GetXRMODRuntimePlatformType_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.GetXRMODRuntimePlatformType*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_GetXRMODRuntimePlatformType" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.GetXRMODRuntimePlatformType">
+  GetXRMODRuntimePlatformType()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/RuntimePlatform/RuntimePlatformHelper.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Mapping from build-time defines to <a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.XRMODPlatform.html">XRMODPlatform</a> enum values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XRMODPlatform GetXRMODRuntimePlatformType()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.XRMODPlatform.html">XRMODPlatform</a></dt>
+    <dd><p>The <a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.XRMODPlatform.html">XRMODPlatform</a> for the current build.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsClassic3D_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsClassic3D*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsClassic3D" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsClassic3D">
+  IsClassic3D()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/RuntimePlatform/RuntimePlatformHelper.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is the current platform Classic 3D (Non-XR)?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsClassic3D()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsHandheldAR_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsHandheldAR*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsHandheldAR" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsHandheldAR">
+  IsHandheldAR()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/RuntimePlatform/RuntimePlatformHelper.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is the current platform Handheld AR (ARKit/ARCore on Mobile)?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsHandheldAR()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsHololens_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsHololens*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsHololens" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsHololens">
+  IsHololens()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/RuntimePlatform/RuntimePlatformHelper.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is the current platform Hololens?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsHololens()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsPico_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsPico*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsPico" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsPico">
+  IsPico()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/RuntimePlatform/RuntimePlatformHelper.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is the current platform Pico XR?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsPico()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsPlatform_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsPlatform*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsPlatform_Phantom_XRMOD_XRMODUtilites_Runtime_PlatformType_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsPlatform(Phantom.XRMOD.XRMODUtilites.Runtime.PlatformType)">
+  IsPlatform(PlatformType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/RuntimePlatform/RuntimePlatformHelper.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if the current execution environment matches the specified <a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.PlatformType.html">PlatformType</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsPlatform(PlatformType _platformType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_platformType</code> <a class="xref" href="Phantom.XRMOD.XRMODUtilites.Runtime.PlatformType.html">PlatformType</a></dt>
+    <dd><p>The platform type to check against.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the platform matches; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsQuest_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsQuest*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsQuest" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsQuest">
+  IsQuest()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/RuntimePlatform/RuntimePlatformHelper.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is the current platform Meta Quest?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsQuest()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsRokid_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsRokid*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsRokid" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsRokid">
+  IsRokid()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/RuntimePlatform/RuntimePlatformHelper.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is the current platform Rokid?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsRokid()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsVisionOS_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsVisionOS*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsVisionOS" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsVisionOS">
+  IsVisionOS()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/RuntimePlatform/RuntimePlatformHelper.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is the current platform Apple VisionOS?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsVisionOS()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsWeb3D_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsWeb3D*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsWeb3D" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsWeb3D">
+  IsWeb3D()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/RuntimePlatform/RuntimePlatformHelper.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is the current platform Web 3D (Non-AR/VR)?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsWeb3D()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsWebAR_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsWebAR*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsWebAR" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsWebAR">
+  IsWebAR()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/RuntimePlatform/RuntimePlatformHelper.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is the current platform WebAR?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsWebAR()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsWebVR_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsWebVR*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsWebVR" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsWebVR">
+  IsWebVR()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/RuntimePlatform/RuntimePlatformHelper.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is the current platform WebVR?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsWebVR()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsXReal_" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsXReal*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODUtilites_Runtime_RuntimePlatformHelper_IsXReal" data-uid="Phantom.XRMOD.XRMODUtilites.Runtime.RuntimePlatformHelper.IsXReal">
+  IsXReal()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/Utilities/RuntimePlatform/RuntimePlatformHelper.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is the current platform XReal?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsXReal()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

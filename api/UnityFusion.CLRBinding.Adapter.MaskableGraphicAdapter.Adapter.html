@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MaskableGraphicAdapter.Adapter |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MaskableGraphicAdapter.Adapter |  |  ">
+      
+      <meta name="description" content="The implementation class that bridges MaskableGraphic messages to the hot-reload domain.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter.md&amp;value=---%0Auid%3A%20UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter">
+
+
+
+  <h1 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter" class="text-break">
+Class MaskableGraphicAdapter.Adapter  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="UnityFusion.html">UnityFusion</a>.<a class="xref" href="UnityFusion.CLRBinding.html">CLRBinding</a>.<a class="xref" href="UnityFusion.CLRBinding.Adapter.html">Adapter</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>The implementation class that bridges MaskableGraphic messages to the hot-reload domain.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MaskableGraphicAdapter.Adapter : UnityEngine.UI.MaskableGraphic, CrossBindingAdaptorType</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">MaskableGraphicAdapter.Adapter</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="UnityFusion.Runtime.Enviorment.CrossBindingAdaptorType.html">CrossBindingAdaptorType</a></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter__ctor_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.#ctor*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter__ctor" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.#ctor">
+  Adapter()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Adapter()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter__ctor_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.#ctor*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter__ctor_UnityFusion_Runtime_Enviorment_AppDomain_UnityFusion_Runtime_Intepreter_ILTypeInstance_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.#ctor(UnityFusion.Runtime.Enviorment.AppDomain,UnityFusion.Runtime.Intepreter.ILTypeInstance)">
+  Adapter(AppDomain, ILTypeInstance)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Adapter(AppDomain appdomain, ILTypeInstance instance)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>appdomain</code> <a class="xref" href="UnityFusion.Runtime.Enviorment.AppDomain.html">AppDomain</a></dt>
+    <dd></dd>
+    <dt><code>instance</code> <a class="xref" href="UnityFusion.Runtime.Intepreter.ILTypeInstance.html">ILTypeInstance</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_ILInstance_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.ILInstance*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_ILInstance" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.ILInstance">
+  ILInstance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILTypeInstance ILInstance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityFusion.Runtime.Intepreter.ILTypeInstance.html">ILTypeInstance</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_color_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.color*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_color" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.color">
+  color
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L470"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override UnityEngine.Color color { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_defaultMaterial_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.defaultMaterial*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_defaultMaterial" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.defaultMaterial">
+  defaultMaterial
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L506"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override UnityEngine.Material defaultMaterial { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Material</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_gameObject_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.gameObject*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_gameObject" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.gameObject">
+  gameObject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L557"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEngine.GameObject gameObject { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_mainTexture_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.mainTexture*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_mainTexture" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.mainTexture">
+  mainTexture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L546"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override UnityEngine.Texture mainTexture { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Texture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_material_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.material*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_material" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.material">
+  material
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L517"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override UnityEngine.Material material { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Material</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_materialForRendering_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.materialForRendering*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_materialForRendering" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.materialForRendering">
+  materialForRendering
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L535"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override UnityEngine.Material materialForRendering { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Material</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_raycastTarget_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.raycastTarget*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_raycastTarget" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.raycastTarget">
+  raycastTarget
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L488"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool raycastTarget { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_transform_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.transform*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_transform" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.transform">
+  transform
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L562"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEngine.Transform transform { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_Awake_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.Awake*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_Awake" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.Awake">
+  Awake()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L438"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Awake()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_CrossFadeAlpha_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.CrossFadeAlpha*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_CrossFadeAlpha_System_Single_System_Single_System_Boolean_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.CrossFadeAlpha(System.Single,System.Single,System.Boolean)">
+  CrossFadeAlpha(float, float, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L429"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void CrossFadeAlpha(float alpha, float duration, bool ignoreTimeScale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>alpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>ignoreTimeScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_CrossFadeColor_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.CrossFadeColor*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_CrossFadeColor_UnityEngine_Color_System_Single_System_Boolean_System_Boolean_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.CrossFadeColor(UnityEngine.Color,System.Single,System.Boolean,System.Boolean)">
+  CrossFadeColor(Color, float, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L411"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void CrossFadeColor(UnityEngine.Color targetColor, float duration, bool ignoreTimeScale, bool useAlpha)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>targetColor</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>ignoreTimeScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>useAlpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_CrossFadeColor_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.CrossFadeColor*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_CrossFadeColor_UnityEngine_Color_System_Single_System_Boolean_System_Boolean_System_Boolean_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.CrossFadeColor(UnityEngine.Color,System.Single,System.Boolean,System.Boolean,System.Boolean)">
+  CrossFadeColor(Color, float, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L420"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void CrossFadeColor(UnityEngine.Color targetColor, float duration, bool ignoreTimeScale, bool useAlpha, bool useRGB)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>targetColor</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>ignoreTimeScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>useAlpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>useRGB</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_Cull_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.Cull*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_Cull_UnityEngine_Rect_System_Boolean_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.Cull(UnityEngine.Rect,System.Boolean)">
+  Cull(Rect, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Cull(UnityEngine.Rect clipRect, bool validRect)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>clipRect</code> <span class="xref">Rect</span></dt>
+    <dd></dd>
+    <dt><code>validRect</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_GetModifiedMaterial_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.GetModifiedMaterial*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_GetModifiedMaterial_UnityEngine_Material_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.GetModifiedMaterial(UnityEngine.Material)">
+  GetModifiedMaterial(Material)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override UnityEngine.Material GetModifiedMaterial(UnityEngine.Material baseMaterial)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>baseMaterial</code> <span class="xref">Material</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Material</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_GraphicUpdateComplete_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.GraphicUpdateComplete*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_GraphicUpdateComplete" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.GraphicUpdateComplete">
+  GraphicUpdateComplete()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L355"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void GraphicUpdateComplete()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_IsActive_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.IsActive*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_IsActive" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.IsActive">
+  IsActive()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L454"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsActive()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_LayoutComplete_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.LayoutComplete*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_LayoutComplete" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.LayoutComplete">
+  LayoutComplete()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L347"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void LayoutComplete()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnBeforeTransformParentChanged_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnBeforeTransformParentChanged*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnBeforeTransformParentChanged" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnBeforeTransformParentChanged">
+  OnBeforeTransformParentChanged()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L315"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnBeforeTransformParentChanged()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnCanvasGroupChanged_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnCanvasGroupChanged*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnCanvasGroupChanged" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnCanvasGroupChanged">
+  OnCanvasGroupChanged()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L462"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnCanvasGroupChanged()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnCanvasHierarchyChanged_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnCanvasHierarchyChanged*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnCanvasHierarchyChanged" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnCanvasHierarchyChanged">
+  OnCanvasHierarchyChanged()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnCanvasHierarchyChanged()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnCullingChanged_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnCullingChanged*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnCullingChanged" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnCullingChanged">
+  OnCullingChanged()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L331"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnCullingChanged()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnDestroy_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnDestroy*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnDestroy" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnDestroy">
+  OnDestroy()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDestroy()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnDidApplyAnimationProperties_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnDidApplyAnimationProperties*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnDidApplyAnimationProperties" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnDidApplyAnimationProperties">
+  OnDidApplyAnimationProperties()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L387"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDidApplyAnimationProperties()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnDisable_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnDisable*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnDisable" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnDisable">
+  OnDisable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDisable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnEnable_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnEnable*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnEnable" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnEnable">
+  OnEnable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEnable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnPopulateMesh_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnPopulateMesh*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnPopulateMesh_UnityEngine_UI_VertexHelper_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnPopulateMesh(UnityEngine.UI.VertexHelper)">
+  OnPopulateMesh(VertexHelper)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L379"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnPopulateMesh(UnityEngine.UI.VertexHelper vh)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vh</code> <span class="xref">VertexHelper</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnRectTransformDimensionsChange_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnRectTransformDimensionsChange*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnRectTransformDimensionsChange" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnRectTransformDimensionsChange">
+  OnRectTransformDimensionsChange()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnRectTransformDimensionsChange()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnTransformParentChanged_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnTransformParentChanged*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_OnTransformParentChanged" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.OnTransformParentChanged">
+  OnTransformParentChanged()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnTransformParentChanged()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_Raycast_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.Raycast*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_Raycast_UnityEngine_Vector2_UnityEngine_Camera_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.Raycast(UnityEngine.Vector2,UnityEngine.Camera)">
+  Raycast(Vector2, Camera)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L403"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Raycast(UnityEngine.Vector2 sp, UnityEngine.Camera eventCamera)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sp</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>eventCamera</code> <span class="xref">Camera</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_Rebuild_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.Rebuild*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_Rebuild_UnityEngine_UI_CanvasUpdate_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.Rebuild(UnityEngine.UI.CanvasUpdate)">
+  Rebuild(CanvasUpdate)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Rebuild(UnityEngine.UI.CanvasUpdate update)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>update</code> <span class="xref">CanvasUpdate</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_RecalculateClipping_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.RecalculateClipping*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_RecalculateClipping" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.RecalculateClipping">
+  RecalculateClipping()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RecalculateClipping()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_RecalculateMasking_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.RecalculateMasking*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_RecalculateMasking" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.RecalculateMasking">
+  RecalculateMasking()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RecalculateMasking()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_SetAllDirty_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.SetAllDirty*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_SetAllDirty" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.SetAllDirty">
+  SetAllDirty()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetAllDirty()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_SetClipRect_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.SetClipRect*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_SetClipRect_UnityEngine_Rect_System_Boolean_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.SetClipRect(UnityEngine.Rect,System.Boolean)">
+  SetClipRect(Rect, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetClipRect(UnityEngine.Rect clipRect, bool validRect)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>clipRect</code> <span class="xref">Rect</span></dt>
+    <dd></dd>
+    <dt><code>validRect</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_SetClipSoftness_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.SetClipSoftness*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_SetClipSoftness_UnityEngine_Vector2_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.SetClipSoftness(UnityEngine.Vector2)">
+  SetClipSoftness(Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetClipSoftness(UnityEngine.Vector2 clipSoftness)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>clipSoftness</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_SetLayoutDirty_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.SetLayoutDirty*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_SetLayoutDirty" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.SetLayoutDirty">
+  SetLayoutDirty()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetLayoutDirty()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_SetMaterialDirty_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.SetMaterialDirty*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_SetMaterialDirty" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.SetMaterialDirty">
+  SetMaterialDirty()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetMaterialDirty()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_SetNativeSize_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.SetNativeSize*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_SetNativeSize" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.SetNativeSize">
+  SetNativeSize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L395"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetNativeSize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_SetVerticesDirty_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.SetVerticesDirty*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_SetVerticesDirty" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.SetVerticesDirty">
+  SetVerticesDirty()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetVerticesDirty()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_Start_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.Start*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_Start" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.Start">
+  Start()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L446"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Start()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_ToString_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.ToString*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_ToString" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L567"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_UpdateGeometry_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.UpdateGeometry*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_UpdateGeometry" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.UpdateGeometry">
+  UpdateGeometry()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L371"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void UpdateGeometry()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_UpdateMaterial_" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.UpdateMaterial*"></a>
+
+  <h3 id="UnityFusion_CLRBinding_Adapter_MaskableGraphicAdapter_Adapter_UpdateMaterial" data-uid="UnityFusion.CLRBinding.Adapter.MaskableGraphicAdapter.Adapter.UpdateMaterial">
+  UpdateMaterial()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODUnityFusion/Runtime/Adapters/MaskableGraphic_Adapter.cs/#L363"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void UpdateMaterial()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

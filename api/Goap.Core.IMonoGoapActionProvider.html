@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IMonoGoapActionProvider |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IMonoGoapActionProvider |  |  ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Goap_Core_IMonoGoapActionProvider.md&amp;value=---%0Auid%3A%20Goap.Core.IMonoGoapActionProvider%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Goap.Core.IMonoGoapActionProvider">
+
+
+
+  <h1 id="Goap_Core_IMonoGoapActionProvider" data-uid="Goap.Core.IMonoGoapActionProvider" class="text-break">
+Interface IMonoGoapActionProvider  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODGoap/Runtime/GoapCore/Interfaces/IMonoGoapActionProvider.cs/#L5"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Goap.html">Goap</a>.<a class="xref" href="Goap.Core.html">Core</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IMonoGoapActionProvider : IGoapActionProvider, IActionProvider, IMonoBehaviour</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_DistanceMultiplier">IGoapActionProvider.DistanceMultiplier</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_AgentType">IGoapActionProvider.AgentType</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_CurrentPlan">IGoapActionProvider.CurrentPlan</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_WorldData">IGoapActionProvider.WorldData</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_Events">IGoapActionProvider.Events</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_Logger">IGoapActionProvider.Logger</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_GoalRequest">IGoapActionProvider.GoalRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_Position">IGoapActionProvider.Position</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_SetGoal__1_System_Boolean_">IGoapActionProvider.SetGoal&lt;TGoal&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_SetGoal_Goap_Core_IGoal_System_Boolean_">IGoapActionProvider.SetGoal(IGoal, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_RequestGoal_System_Type___System_Boolean_">IGoapActionProvider.RequestGoal(Type[], bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_RequestGoal_System_Type_System_Boolean_">IGoapActionProvider.RequestGoal(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_RequestGoal__1_System_Boolean_">IGoapActionProvider.RequestGoal&lt;TGoal&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_RequestGoal__2_System_Boolean_">IGoapActionProvider.RequestGoal&lt;TGoal1, TGoal2&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_RequestGoal__3_System_Boolean_">IGoapActionProvider.RequestGoal&lt;TGoal1, TGoal2, TGoal3&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_RequestGoal__4_System_Boolean_">IGoapActionProvider.RequestGoal&lt;TGoal1, TGoal2, TGoal3, TGoal4&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_RequestGoal__5_System_Boolean_">IGoapActionProvider.RequestGoal&lt;TGoal1, TGoal2, TGoal3, TGoal4, TGoal5&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_RequestGoal_Goap_Core_IGoal_System_Boolean_">IGoapActionProvider.RequestGoal(IGoal, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_RequestGoal_Goap_Core_IGoalRequest_System_Boolean_">IGoapActionProvider.RequestGoal(IGoalRequest, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_SetAction_Goap_Core_IGoalResult_">IGoapActionProvider.SetAction(IGoalResult)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_ClearGoal">IGoapActionProvider.ClearGoal()</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_StopAction_System_Boolean_">IGoapActionProvider.StopAction(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_SetDistanceMultiplier_System_Single_">IGoapActionProvider.SetDistanceMultiplier(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_SetDistanceMultiplierSpeed_System_Single_">IGoapActionProvider.SetDistanceMultiplierSpeed(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_GetActions__1">IGoapActionProvider.GetActions&lt;TAction&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_CurrentGoal">IGoapActionProvider.CurrentGoal</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Core.IGoapActionProvider.html#Goap_Core_IGoapActionProvider_GoapSet">IGoapActionProvider.GoapSet</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IActionProvider.html#Goap_Agent_Core_IActionProvider_Receiver">IActionProvider.Receiver</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IActionProvider.html#Goap_Agent_Core_IActionProvider_ResolveAction">IActionProvider.ResolveAction()</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IActionProvider.html#Goap_Agent_Core_IActionProvider_IsDisabled_Goap_Agent_Core_IAction_">IActionProvider.IsDisabled(IAction)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IActionProvider.html#Goap_Agent_Core_IActionProvider_Enable_Goap_Agent_Core_IAction_">IActionProvider.Enable(IAction)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IActionProvider.html#Goap_Agent_Core_IActionProvider_Disable_Goap_Agent_Core_IAction_Goap_Agent_Core_IActionDisabler_">IActionProvider.Disable(IAction, IActionDisabler)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_Equals_System_Object_">IMonoBehaviour.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetHashCode">IMonoBehaviour.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_ToString">IMonoBehaviour.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetInstanceID">IMonoBehaviour.GetInstanceID()</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_name">IMonoBehaviour.name</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_hideFlags">IMonoBehaviour.hideFlags</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_transform">IMonoBehaviour.transform</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_gameObject">IMonoBehaviour.gameObject</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_tag">IMonoBehaviour.tag</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_enabled">IMonoBehaviour.enabled</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_isActiveAndEnabled">IMonoBehaviour.isActiveAndEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_useGUILayout">IMonoBehaviour.useGUILayout</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponent_System_Type_">IMonoBehaviour.GetComponent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponent__1">IMonoBehaviour.GetComponent&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponent_System_String_">IMonoBehaviour.GetComponent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_TryGetComponent_System_Type_Component__">IMonoBehaviour.TryGetComponent(Type, out Component)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_TryGetComponent__1___0__">IMonoBehaviour.TryGetComponent&lt;T&gt;(out T)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentInChildren_System_Type_System_Boolean_">IMonoBehaviour.GetComponentInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentInChildren_System_Type_">IMonoBehaviour.GetComponentInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentInChildren__1_System_Boolean_">IMonoBehaviour.GetComponentInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentInChildren__1">IMonoBehaviour.GetComponentInChildren&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren_System_Type_System_Boolean_">IMonoBehaviour.GetComponentsInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren_System_Type_">IMonoBehaviour.GetComponentsInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren__1_System_Boolean_">IMonoBehaviour.GetComponentsInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren__1_System_Boolean_System_Collections_Generic_List___0__">IMonoBehaviour.GetComponentsInChildren&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren__1">IMonoBehaviour.GetComponentsInChildren&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentsInChildren__1_System_Collections_Generic_List___0__">IMonoBehaviour.GetComponentsInChildren&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentInParent_System_Type_System_Boolean_">IMonoBehaviour.GetComponentInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentInParent_System_Type_">IMonoBehaviour.GetComponentInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentInParent__1_System_Boolean_">IMonoBehaviour.GetComponentInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentInParent__1">IMonoBehaviour.GetComponentInParent&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentsInParent_System_Type_System_Boolean_">IMonoBehaviour.GetComponentsInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentsInParent_System_Type_">IMonoBehaviour.GetComponentsInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentsInParent__1_System_Boolean_">IMonoBehaviour.GetComponentsInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentsInParent__1_System_Boolean_System_Collections_Generic_List___0__">IMonoBehaviour.GetComponentsInParent&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponentsInParent__1">IMonoBehaviour.GetComponentsInParent&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponents_System_Type_">IMonoBehaviour.GetComponents(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponents_System_Type_System_Collections_Generic_List_Component__">IMonoBehaviour.GetComponents(Type, List&lt;Component&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponents__1_System_Collections_Generic_List___0__">IMonoBehaviour.GetComponents&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_GetComponents__1">IMonoBehaviour.GetComponents&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_CompareTag_System_String_">IMonoBehaviour.CompareTag(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_SendMessageUpwards_System_String_System_Object_SendMessageOptions_">IMonoBehaviour.SendMessageUpwards(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_SendMessageUpwards_System_String_System_Object_">IMonoBehaviour.SendMessageUpwards(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_SendMessageUpwards_System_String_">IMonoBehaviour.SendMessageUpwards(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_SendMessageUpwards_System_String_SendMessageOptions_">IMonoBehaviour.SendMessageUpwards(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_SendMessage_System_String_System_Object_">IMonoBehaviour.SendMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_SendMessage_System_String_">IMonoBehaviour.SendMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_SendMessage_System_String_System_Object_SendMessageOptions_">IMonoBehaviour.SendMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_SendMessage_System_String_SendMessageOptions_">IMonoBehaviour.SendMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_BroadcastMessage_System_String_System_Object_SendMessageOptions_">IMonoBehaviour.BroadcastMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_BroadcastMessage_System_String_System_Object_">IMonoBehaviour.BroadcastMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_BroadcastMessage_System_String_">IMonoBehaviour.BroadcastMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_BroadcastMessage_System_String_SendMessageOptions_">IMonoBehaviour.BroadcastMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_IsInvoking">IMonoBehaviour.IsInvoking()</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_IsInvoking_System_String_">IMonoBehaviour.IsInvoking(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_CancelInvoke">IMonoBehaviour.CancelInvoke()</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_CancelInvoke_System_String_">IMonoBehaviour.CancelInvoke(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_Invoke_System_String_System_Single_">IMonoBehaviour.Invoke(string, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_InvokeRepeating_System_String_System_Single_System_Single_">IMonoBehaviour.InvokeRepeating(string, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_StartCoroutine_System_String_">IMonoBehaviour.StartCoroutine(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_StartCoroutine_System_String_System_Object_">IMonoBehaviour.StartCoroutine(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_StartCoroutine_System_Collections_IEnumerator_">IMonoBehaviour.StartCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_StartCoroutine_Auto_System_Collections_IEnumerator_">IMonoBehaviour.StartCoroutine_Auto(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_StopCoroutine_System_Collections_IEnumerator_">IMonoBehaviour.StopCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_StopCoroutine_Coroutine_">IMonoBehaviour.StopCoroutine(Coroutine)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_StopCoroutine_System_String_">IMonoBehaviour.StopCoroutine(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Goap.Agent.Core.IMonoBehaviour.html#Goap_Agent_Core_IMonoBehaviour_StopAllCoroutines">IMonoBehaviour.StopAllCoroutines()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

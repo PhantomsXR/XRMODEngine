@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PackageLoaderApiUtility |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PackageLoaderApiUtility |  |  ">
+      
+      <meta name="description" content="Legacy API utility for loading various asset types from XRMOD packages. Provides simple callback-based wrappers around .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility.md&amp;value=---%0Auid%3A%20Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility">
+
+
+
+  <h1 id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility" class="text-break">
+Class PackageLoaderApiUtility  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Obsoletes/PackageLoaderAPIUtility.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Phantom.html">Phantom</a>.<a class="xref" href="Phantom.XRMOD.html">XRMOD</a>.<a class="xref" href="Phantom.XRMOD.XRMODPackageTools.html">XRMODPackageTools</a>.<a class="xref" href="Phantom.XRMOD.XRMODPackageTools.Runtime.html">Runtime</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Legacy API utility for loading various asset types from XRMOD packages.
+Provides simple callback-based wrappers around <a class="xref" href="Phantom.XRMOD.XRMODPackageTools.Runtime.BasePackageLoaderUtility.html">BasePackageLoaderUtility</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated, use other api instead.&quot;, true)]
+public class PackageLoaderApiUtility</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PackageLoaderApiUtility</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility_LoadAnimationClip_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility.LoadAnimationClip*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility_LoadAnimationClip_System_String_System_String_System_Action_AnimationClip__" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility.LoadAnimationClip(System.String,System.String,System.Action{AnimationClip})">
+  LoadAnimationClip(string, string, Action&lt;AnimationClip&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Obsoletes/PackageLoaderAPIUtility.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>load a animation clip from package by project name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadAnimationClip(string _projectName, string _wannaLoadedAssetName, Action&lt;AnimationClip&gt; _loadedCallback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>your project name</p>
+</dd>
+    <dt><code>_wannaLoadedAssetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>you wanna load asset name</p>
+</dd>
+    <dt><code>_loadedCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">AnimationClip</span>&gt;</dt>
+    <dd><p>call back when loaded</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility_LoadAudioClip_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility.LoadAudioClip*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility_LoadAudioClip_System_String_System_String_System_Action_AudioClip__" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility.LoadAudioClip(System.String,System.String,System.Action{AudioClip})">
+  LoadAudioClip(string, string, Action&lt;AudioClip&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Obsoletes/PackageLoaderAPIUtility.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>load a Audio clip from package by project name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadAudioClip(string _projectName, string _wannaLoadedAssetName, Action&lt;AudioClip&gt; _loadedCallback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>your project name</p>
+</dd>
+    <dt><code>_wannaLoadedAssetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>you wanna load asset name</p>
+</dd>
+    <dt><code>_loadedCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">AudioClip</span>&gt;</dt>
+    <dd><p>call back when loaded</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility_LoadFont_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility.LoadFont*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility_LoadFont_System_String_System_String_System_Action_Font__" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility.LoadFont(System.String,System.String,System.Action{Font})">
+  LoadFont(string, string, Action&lt;Font&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Obsoletes/PackageLoaderAPIUtility.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>load a font from package by project name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadFont(string _projectName, string _wannaLoadedAssetName, Action&lt;Font&gt; _loadedCallback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>your project name</p>
+</dd>
+    <dt><code>_wannaLoadedAssetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>you wanna load asset name</p>
+</dd>
+    <dt><code>_loadedCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">Font</span>&gt;</dt>
+    <dd><p>call back when loaded</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility_LoadGameObject_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility.LoadGameObject*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility_LoadGameObject_System_String_System_String_System_Action_GameObject__" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility.LoadGameObject(System.String,System.String,System.Action{GameObject})">
+  LoadGameObject(string, string, Action&lt;GameObject&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Obsoletes/PackageLoaderAPIUtility.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>load a game object from package by project name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadGameObject(string _projectName, string _wannaLoadedAssetName, Action&lt;GameObject&gt; _loadedCallback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>your project name</p>
+</dd>
+    <dt><code>_wannaLoadedAssetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>you wanna load asset name</p>
+</dd>
+    <dt><code>_loadedCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">GameObject</span>&gt;</dt>
+    <dd><p>call back when loaded</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility_LoadSpriteAtlas_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility.LoadSpriteAtlas*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility_LoadSpriteAtlas_System_String_System_String_System_Action_SpriteAtlas__" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility.LoadSpriteAtlas(System.String,System.String,System.Action{SpriteAtlas})">
+  LoadSpriteAtlas(string, string, Action&lt;SpriteAtlas&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Obsoletes/PackageLoaderAPIUtility.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>load a Sprite atlas from package by project name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadSpriteAtlas(string _projectName, string _wannaLoadedAssetName, Action&lt;SpriteAtlas&gt; _loadedCallback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>your project name</p>
+</dd>
+    <dt><code>_wannaLoadedAssetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>you wanna load asset name</p>
+</dd>
+    <dt><code>_loadedCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">SpriteAtlas</span>&gt;</dt>
+    <dd><p>call back when loaded</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility_LoadTextAsset_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility.LoadTextAsset*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility_LoadTextAsset_System_String_System_String_System_Action_TextAsset__" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility.LoadTextAsset(System.String,System.String,System.Action{TextAsset})">
+  LoadTextAsset(string, string, Action&lt;TextAsset&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Obsoletes/PackageLoaderAPIUtility.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>load a Text assets from package by project name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadTextAsset(string _projectName, string _wannaLoadedAssetName, Action&lt;TextAsset&gt; _loadedCallback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>your project name</p>
+</dd>
+    <dt><code>_wannaLoadedAssetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>you wanna load asset name</p>
+</dd>
+    <dt><code>_loadedCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">TextAsset</span>&gt;</dt>
+    <dd><p>call back when loaded</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility_LoadTexture2D_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility.LoadTexture2D*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility_LoadTexture2D_System_String_System_String_System_Action_Texture2D__" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility.LoadTexture2D(System.String,System.String,System.Action{Texture2D})">
+  LoadTexture2D(string, string, Action&lt;Texture2D&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Obsoletes/PackageLoaderAPIUtility.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>load a Texture2D from package by project name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadTexture2D(string _projectName, string _wannaLoadedAssetName, Action&lt;Texture2D&gt; _loadedCallback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>your project name</p>
+</dd>
+    <dt><code>_wannaLoadedAssetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>you wanna load asset name</p>
+</dd>
+    <dt><code>_loadedCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">Texture2D</span>&gt;</dt>
+    <dd><p>call back when loaded</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility_LoadVideoClip_" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility.LoadVideoClip*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODPackageTools_Runtime_PackageLoaderApiUtility_LoadVideoClip_System_String_System_String_System_Action_VideoClip__" data-uid="Phantom.XRMOD.XRMODPackageTools.Runtime.PackageLoaderApiUtility.LoadVideoClip(System.String,System.String,System.Action{VideoClip})">
+  LoadVideoClip(string, string, Action&lt;VideoClip&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/PackageTools/Obsoletes/PackageLoaderAPIUtility.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>load a video from package by project name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadVideoClip(string _projectName, string _wannaLoadedAssetName, Action&lt;VideoClip&gt; _loadedCallback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_projectName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>your project name</p>
+</dd>
+    <dt><code>_wannaLoadedAssetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>you wanna load asset name</p>
+</dd>
+    <dt><code>_loadedCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">VideoClip</span>&gt;</dt>
+    <dd><p>call back when loaded</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

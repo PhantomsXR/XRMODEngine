@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Phantom.XRMOD.SDKEntry.Runtime |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Phantom.XRMOD.SDKEntry.Runtime |  |  ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.SDKEntry.Runtime">
+
+  <h1 id="Phantom_XRMOD_SDKEntry_Runtime" data-uid="Phantom.XRMOD.SDKEntry.Runtime" class="text-break">Namespace Phantom.XRMOD.SDKEntry.Runtime</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.AbstractHandler.html">AbstractHandler</a></dt>
+      <dd><p>Base implementation for the project loading and disposal chain-of-responsibility.
+Manages the linking of handlers in a sequence.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.BuildExceptionCollectorCommand.html">BuildExceptionCollectorCommand</a></dt>
+      <dd><p>Command that observes Unity's threaded log messages and reports exceptions/errors
+back to the PhantomsXR backend for debugging and telemetry.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.BuildExitCommand.html">BuildExitCommand</a></dt>
+      <dd><p>Command that listens for the 'Exit' notification and triggers the SDK disposal sequence.
+This effectively stops the current project and returns to the host application state.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.BuildLoadingUIHandler.html">BuildLoadingUIHandler</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.BuildTryAcquireLaunchConfigCommand.html">BuildTryAcquireLaunchConfigCommand</a></dt>
+      <dd><p>Command that facilitates acquiring the custom configuration JSON associated with the current project's launch.
+Subscribes to the <code>TryAcquireCustomConfig</code> action notification.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.BuildTryAcquireSDKVersionCommand.html">BuildTryAcquireSDKVersionCommand</a></dt>
+      <dd><p>Command that provides the current version of the XRMOD SDK.
+Subscribes to the <code>TryAcquireSDKVersion</code> action notification.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.BuildTryAcquireSdkTypeCommand.html">BuildTryAcquireSdkTypeCommand</a></dt>
+      <dd><p>Command that provides the current SDK device type (e.g., Handheld vs Headset).
+Subscribes to the <code>TryAcquireSdkType</code> action notification.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.CacheProjectInformationHandler.html">CacheProjectInformationHandler</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.ConstKey.html">ConstKey</a></dt>
+      <dd><p>Contains constant keys and values used throughout the SDK, including configuration names,
+scene tags, network request parameters, and resource paths.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.CreateUIEventSystemHandler.html">CreateUIEventSystemHandler</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.DefaultJsonSerializer.html">DefaultJsonSerializer</a></dt>
+      <dd><p>Default JSON Serializer implementation using Unity's JsonUtility.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.DisposeXRMODEngineHandler.html">DisposeXRMODEngineHandler</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.DownloadManager.html">DownloadManager</a></dt>
+      <dd><p>Manages file downloads using a specified <a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.IDownloadStrategy.html">IDownloadStrategy</a>.
+Provides a high-level API for asynchronous downloads with progress reporting.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.EncryptStringExtension.html">EncryptStringExtension</a></dt>
+      <dd><p>Extension methods for encrypting and decrypting strings using Advanced Encryption Standard (AES) with Rijndael.
+Used for securing sensitive tokens and license data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.ExpericenLoadStateHandler.html">ExpericenLoadStateHandler</a></dt>
+      <dd><p>Handler that notifies the host application that asset loading is in progress.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.FPS.html">FPS</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.FetchXRResourcesHandler.html">FetchXRResourcesHandler</a></dt>
+      <dd><p>Handler that asynchronously fetches XR experience metadata and asset bundle manifests
+from the backend based on the project identity and target platform.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.GetXRPackageConfigHandler.html">GetXRPackageConfigHandler</a></dt>
+      <dd><p>Handler that downloads and parses the core configuration file for an XR experience package.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.HandlerExtension.html">HandlerExtension</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.HttpClientDownloadStrategy.html">HttpClientDownloadStrategy</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.IDownloadStrategy.html">IDownloadStrategy</a> using .NET <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a>.
+Supports multi-part downloads with Range headers for improved performance.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.JsonWebToken.html">JsonWebToken</a></dt>
+      <dd><p>Provides methods for encoding and decoding JSON Web Tokens.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.LaunchXRModuleHandler.html">LaunchXRModuleHandler</a></dt>
+      <dd><p>Handler that launches the active <a class="xref" href="Phantom.XRMOD.BaseFeatures.Runtime.BaseFeatureModule.html">BaseFeatureModule</a> once all assets are loaded,
+triggering the actual XR experience start.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.LitJsonSerializer.html">LitJsonSerializer</a></dt>
+      <dd><p>JSON Serializer implementation using the LitJson library.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.ModuleDependenceRegisterHandler.html">ModuleDependenceRegisterHandler</a></dt>
+      <dd><p>Handler that registers all essential system models and commands into the global <a class="xref" href="Phantom.XRMOD.Core.Runtime.IocContainer.html">IocContainer</a>
+during the SDK's bootstrap phase.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.OfflineLicenseValidator.html">OfflineLicenseValidator</a></dt>
+      <dd><p>Command that validates an offline license token.
+Decodes the JWT token and verifies the application identifier and expiration time.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.OversizeCheckHandler.html">OversizeCheckHandler</a></dt>
+      <dd><p>Handler that validates the total asset package size against the defined maximum limit
+and triggers a warning callback if the limit is exceeded.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.html">SDKEntryPoint</a></dt>
+      <dd><p>The main entry point for the XRMOD SDK.
+This class provides high-level APIs for initializing the SDK, launching XR experiences,
+and managing the SDK lifecycle.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.SDKInitialization.html">SDKInitialization</a></dt>
+      <dd><p>Handles the automatic or manual initialization of the XRMOD SDK entry point.
+This class is responsible for instantiating the SDK prefab and setting initial application settings.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.SceneDeactivated.html">SceneDeactivated</a></dt>
+      <dd><p>Subscriber that handles cleanup when an XR scene is deactivated.
+Releases memory, unregisters models, and handles player unloading.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.SceneInitialization.html">SceneInitialization</a></dt>
+      <dd><p>Subscriber that handles initialization when the main XR scene is loaded.
+Instantiates the device launcher and sets up initial scene state.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.SdkVersionCheckHandler.html">SdkVersionCheckHandler</a></dt>
+      <dd><p>Handler that compares the project's required XRMOD SDK version with the version currently running in the host app.
+Throws an exception if the version is incompatible.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.SignatureTimeExpirationException.html">SignatureTimeExpirationException</a></dt>
+      <dd><p>Exception thrown when a signed token has expired based on its claim time.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.SignatureVerificationException.html">SignatureVerificationException</a></dt>
+      <dd><p>Exception thrown when a JWT signature verification fails.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.Simulater.html">Simulater</a></dt>
+      <dd><p>A utility component for simulating XRMOD behaviors within the Unity Editor.
+Provides GUI buttons to launch/disable XR, clean cache, and test mesh downloads.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.Utility.html">Utility</a></dt>
+      <dd><p>Provides common utility functions for the XRMOD SDK, including platform mapping,
+version comparison, and permission requests.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.IDownloadStrategy.html">IDownloadStrategy</a></dt>
+      <dd><p>Interface for file download strategies.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.IHandler.html">IHandler</a></dt>
+      <dd><p>Interface for all handlers in the SDK's project loading and lifecycle pipeline.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.IJsonSerializer.html">IJsonSerializer</a></dt>
+      <dd><p>Provides JSON Serialize and Deserialize.  Allows custom serializers used.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.ErrorCode.html">ErrorCode</a></dt>
+      <dd><p>Defines error codes returned by various SDK operations, such as initialization,
+downloading, and asset loading.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.JwtHashAlgorithm.html">JwtHashAlgorithm</a></dt>
+      <dd><p>Supported HMAC hashing algorithms for JWT signing.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.SceneTags.html">SceneTags</a></dt>
+      <dd><p>Standard Unity scene names/tags used by the SDK for internal navigation and cleanup.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

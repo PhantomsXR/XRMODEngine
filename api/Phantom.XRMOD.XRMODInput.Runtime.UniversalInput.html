@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UniversalInput |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UniversalInput |  |  ">
+      
+      <meta name="description" content="Legacy input handler for XRMOD.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Phantom_XRMOD_XRMODInput_Runtime_UniversalInput.md&amp;value=---%0Auid%3A%20Phantom.XRMOD.XRMODInput.Runtime.UniversalInput%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput">
+
+
+
+  <h1 id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput" class="text-break">
+Class UniversalInput  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODInput/Runtime/Common/UniversalInput.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Phantom.html">Phantom</a>.<a class="xref" href="Phantom.XRMOD.html">XRMOD</a>.<a class="xref" href="Phantom.XRMOD.XRMODInput.html">XRMODInput</a>.<a class="xref" href="Phantom.XRMOD.XRMODInput.Runtime.html">Runtime</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Legacy input handler for XRMOD.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Please use UniversalXRInput instead.&quot;, true)]
+public class UniversalInput</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">UniversalInput</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Use UniversalXRInput instead for the modern input system.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput__INSTANCE_" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput._INSTANCE*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput__INSTANCE" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput._INSTANCE">
+  _INSTANCE
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODInput/Runtime/Common/UniversalInput.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Singleton instance of UniversalInput.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UniversalInput _INSTANCE { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.html">UniversalInput</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_GetRayInteractor_" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.GetRayInteractor*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_GetRayInteractor_InteractorHandness_NearFarInteractor__" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.GetRayInteractor(InteractorHandness,NearFarInteractor@)">
+  GetRayInteractor(InteractorHandness, out NearFarInteractor)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODInput/Runtime/Common/UniversalInput.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to get the NearFarInteractor component for the specified hand.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetRayInteractor(InteractorHandness _handness, out NearFarInteractor _nearFarInteractor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_handness</code> <span class="xref">InteractorHandness</span></dt>
+    <dd><p>The handedness of the interactor.</p>
+</dd>
+    <dt><code>_nearFarInteractor</code> <span class="xref">NearFarInteractor</span></dt>
+    <dd><p>The resulting interactor component.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the interactor was found, <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_GetRayInteractorPose_" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.GetRayInteractorPose*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_GetRayInteractorPose_InteractorHandness_Vector3__Quaternion__" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.GetRayInteractorPose(InteractorHandness,Vector3@,Quaternion@)">
+  GetRayInteractorPose(InteractorHandness, out Vector3, out Quaternion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODInput/Runtime/Common/UniversalInput.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the pose (position and rotation) of the ray interactor for the specified hand.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetRayInteractorPose(InteractorHandness _handedness, out Vector3 _position, out Quaternion _rotation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_handedness</code> <span class="xref">InteractorHandness</span></dt>
+    <dd><p>The handedness of the interactor.</p>
+</dd>
+    <dt><code>_position</code> <span class="xref">Vector3</span></dt>
+    <dd><p>The current position of the ray.</p>
+</dd>
+    <dt><code>_rotation</code> <span class="xref">Quaternion</span></dt>
+    <dd><p>The current rotation of the ray.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_IsInputDeviceCharacteristics_" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.IsInputDeviceCharacteristics*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_IsInputDeviceCharacteristics_InputDeviceCharacteristics_" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.IsInputDeviceCharacteristics(InputDeviceCharacteristics)">
+  IsInputDeviceCharacteristics(InputDeviceCharacteristics)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODInput/Runtime/Common/UniversalInput.cs/#L297"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if an input device with the specified characteristics is connected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInputDeviceCharacteristics(InputDeviceCharacteristics _characteristics)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_characteristics</code> <span class="xref">InputDeviceCharacteristics</span></dt>
+    <dd><p>The characteristics of the input device to look for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if a matching device is found, <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_SetupInteractorState_" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.SetupInteractorState*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_SetupInteractorState_Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_InteractorMode_System_Boolean_" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.SetupInteractorState(Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.InteractorMode,System.Boolean)">
+  SetupInteractorState(InteractorMode, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODInput/Runtime/Common/UniversalInput.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures the state (enabled/disabled) of different interactor modes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupInteractorState(UniversalInput.InteractorMode _interactorMode, bool _enable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_interactorMode</code> <a class="xref" href="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.html">UniversalInput</a>.<a class="xref" href="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.InteractorMode.html">InteractorMode</a></dt>
+    <dd><p>The mode to configure (Far, Near, or Both).</p>
+</dd>
+    <dt><code>_enable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> to enable the interactor, <code>false</code> to disable it.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown when an invalid interactor mode is provided.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_SwitchInput_" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.SwitchInput*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_SwitchInput_Phantom_XRMOD_XRMODInput_Runtime_InputType_" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.SwitchInput(Phantom.XRMOD.XRMODInput.Runtime.InputType)">
+  SwitchInput(InputType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODInput/Runtime/Common/UniversalInput.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Switches the user input to the specified <a class="xref" href="Phantom.XRMOD.XRMODInput.Runtime.InputType.html">InputType</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SwitchInput(InputType _inputType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_inputType</code> <a class="xref" href="Phantom.XRMOD.XRMODInput.Runtime.InputType.html">InputType</a></dt>
+    <dd><p>The target input type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_TryGetJointPose_" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.TryGetJointPose*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_TryGetJointPose_XRHandJointID_XRNode_Pose__System_Boolean_" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.TryGetJointPose(XRHandJointID,XRNode,Pose@,System.Boolean)">
+  TryGetJointPose(XRHandJointID, XRNode, out Pose, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODInput/Runtime/Common/UniversalInput.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to get the pose of a specific hand joint.
+Supported only in SpaceType.FullSpace or metal mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetJointPose(XRHandJointID _joint, XRNode _hand, out Pose _jointPose, bool _convertToWorldPose = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_joint</code> <span class="xref">XRHandJointID</span></dt>
+    <dd><p>The identifier of the joint to query.</p>
+</dd>
+    <dt><code>_hand</code> <span class="xref">XRNode</span></dt>
+    <dd><p>The hand node being queried.</p>
+</dd>
+    <dt><code>_jointPose</code> <span class="xref">Pose</span></dt>
+    <dd><p>The resulting pose of the joint.</p>
+</dd>
+    <dt><code>_convertToWorldPose</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If <code>true</code>, the pose is transformed into world space.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the joint pose was successfully retrieved, <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_TryGetJointTransform_" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.TryGetJointTransform*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_TryGetJointTransform_XRNode_XRHandJointID_Transform__" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.TryGetJointTransform(XRNode,XRHandJointID,Transform@)">
+  TryGetJointTransform(XRNode, XRHandJointID, out Transform)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODInput/Runtime/Common/UniversalInput.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to get the transform of a specific hand joint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetJointTransform(XRNode _xrNode, XRHandJointID _jointId, out Transform _jointTransform)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_xrNode</code> <span class="xref">XRNode</span></dt>
+    <dd><p>The XR node (hand) to query.</p>
+</dd>
+    <dt><code>_jointId</code> <span class="xref">XRHandJointID</span></dt>
+    <dd><p>The identifier of the joint.</p>
+</dd>
+    <dt><code>_jointTransform</code> <span class="xref">Transform</span></dt>
+    <dd><p>The resulting transform of the joint.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the transform was found, <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_TryGetPalmFacingAway_" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.TryGetPalmFacingAway*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_TryGetPalmFacingAway_XRNode_System_Boolean__" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.TryGetPalmFacingAway(XRNode,System.Boolean@)">
+  TryGetPalmFacingAway(XRNode, out bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODInput/Runtime/Common/UniversalInput.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether the palm of the specified hand is facing away from the user.
+Supported only in SpaceType.FullSpace.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TryGetPalmFacingAway(XRNode _hand, out bool _palmFacingAway)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_hand</code> <span class="xref">XRNode</span></dt>
+    <dd><p>The hand node being queried.</p>
+</dd>
+    <dt><code>_palmFacingAway</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the palm is facing away from the user, <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_TryGetPinch_" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.TryGetPinch*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_TryGetPinch" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.TryGetPinch">
+  TryGetPinch()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODInput/Runtime/Common/UniversalInput.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to get the pinch status.
+Supported only in <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.SpaceType.html#Phantom_XRMOD_ActionNotification_Runtime_SpaceType_SharedSpace">SharedSpace</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetPinch()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if a pinch gesture is detected, <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_TryGetPinchProgress_" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.TryGetPinchProgress*"></a>
+
+  <h3 id="Phantom_XRMOD_XRMODInput_Runtime_UniversalInput_TryGetPinchProgress_XRNode_System_Boolean__System_Boolean__System_Single__" data-uid="Phantom.XRMOD.XRMODInput.Runtime.UniversalInput.TryGetPinchProgress(XRNode,System.Boolean@,System.Boolean@,System.Single@)">
+  TryGetPinchProgress(XRNode, out bool, out bool, out float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODInput/Runtime/Common/UniversalInput.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to get the progress of a pinch gesture.
+Supported only in SpaceType.FullSpace or metal mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetPinchProgress(XRNode _handNode, out bool _isReadyToPinch, out bool _isPinching, out float _pinchAmount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_handNode</code> <span class="xref">XRNode</span></dt>
+    <dd><p>The hand node (XRNode.LeftHand or XRNode.RightHand) to query.</p>
+</dd>
+    <dt><code>_isReadyToPinch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the hand is in a pose ready to begin a pinch.</p>
+</dd>
+    <dt><code>_isPinching</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the hand is currently pinching.</p>
+</dd>
+    <dt><code>_pinchAmount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A value from 0 to 1 representing the pinch progress.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the pinch data was successfully retrieved, <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

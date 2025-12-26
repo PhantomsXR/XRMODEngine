@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SDKEntryPoint |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SDKEntryPoint |  |  ">
+      
+      <meta name="description" content="The main entry point for the XRMOD SDK. This class provides high-level APIs for initializing the SDK, launching XR experiences, and managing the SDK lifecycle.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint.md&amp;value=---%0Auid%3A%20Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint">
+
+
+
+  <h1 id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint" class="text-break">
+Class SDKEntryPoint  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/SDKEntryPoint.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Phantom.html">Phantom</a>.<a class="xref" href="Phantom.XRMOD.html">XRMOD</a>.<a class="xref" href="Phantom.XRMOD.SDKEntry.html">SDKEntry</a>.<a class="xref" href="Phantom.XRMOD.SDKEntry.Runtime.html">Runtime</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>The main entry point for the XRMOD SDK.
+This class provides high-level APIs for initializing the SDK, launching XR experiences,
+and managing the SDK lifecycle.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SDKEntryPoint : MonoBehaviour</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SDKEntryPoint</span></div>
+    </dd>
+  </dl>
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_ChangeSpaceType_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.ChangeSpaceType*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_ChangeSpaceType_Phantom_XRMOD_ActionNotification_Runtime_SpaceType_System_String_Phantom_XRMOD_ActionNotification_Runtime_BoundResizeMode_Vector3_Vector3_LayerMask_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.ChangeSpaceType(Phantom.XRMOD.ActionNotification.Runtime.SpaceType,System.String,Phantom.XRMOD.ActionNotification.Runtime.BoundResizeMode,Vector3,Vector3,LayerMask)">
+  ChangeSpaceType(SpaceType, string, BoundResizeMode, Vector3, Vector3, LayerMask)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/SDKAPI.cs/#L373"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Change current experience space type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ChangeSpaceType(SpaceType _spaceType, string _processId, BoundResizeMode _boundResizeMode, Vector3 _dimensions, Vector3 _boundPosition, LayerMask _cullingMask)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_spaceType</code> <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.SpaceType.html">SpaceType</a></dt>
+    <dd><p>Space type to switch. See <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.SpaceType.html">SpaceType</a></p>
+</dd>
+    <dt><code>_processId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The process to switch</p>
+</dd>
+    <dt><code>_boundResizeMode</code> <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.BoundResizeMode.html">BoundResizeMode</a></dt>
+    <dd><p>Resize mode of the bounded. See <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.BoundResizeMode.html">BoundResizeMode</a></p>
+</dd>
+    <dt><code>_dimensions</code> <span class="xref">Vector3</span></dt>
+    <dd><p>The bounded dimensions</p>
+</dd>
+    <dt><code>_boundPosition</code> <span class="xref">Vector3</span></dt>
+    <dd><p>The position of bounded</p>
+</dd>
+    <dt><code>_cullingMask</code> <span class="xref">LayerMask</span></dt>
+    <dd><p>Render mask. See LayerMask</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_CleanCache_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.CleanCache*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_CleanCache" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.CleanCache">
+  CleanCache()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/SDKAPI.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>clean all cache</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CleanCache()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_ContinueToDownloadAssets_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.ContinueToDownloadAssets*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_ContinueToDownloadAssets" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.ContinueToDownloadAssets">
+  ContinueToDownloadAssets()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/SDKAPI.cs/#L296"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Call this method will continue to download the assets</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ContinueToDownloadAssets()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_Dispose_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.Dispose*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_Dispose" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/SDKAPI.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shuts down and cleans up the XRMOD SDK.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Dispose()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the SDK was disposed of successfully; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_Dispose_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Call this when the XR experience is finished or when the app is closing.
+This will stop all running coroutines, clear invokes, and unload the AR session.</p>
+</div>
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_GetAllProcesses_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.GetAllProcesses*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_GetAllProcesses" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.GetAllProcesses">
+  GetAllProcesses()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/SDKAPI.cs/#L340"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get all running experience processes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, List&lt;string&gt;&gt; GetAllProcesses()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd><p>All processes</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_GetAppSpaceType_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.GetAppSpaceType*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_GetAppSpaceType" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.GetAppSpaceType">
+  GetAppSpaceType()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/SDKAPI.cs/#L392"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get current App space type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpaceType GetAppSpaceType()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.SpaceType.html">SpaceType</a></dt>
+    <dd><p>Current App space type. See <a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.SpaceType.html">SpaceType</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_InitSDK_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.InitSDK*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_InitSDK_Phantom_XRMOD_Models_Runtime_SDKConfiguration_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.InitSDK(Phantom.XRMOD.Models.Runtime.SDKConfiguration)">
+  InitSDK(SDKConfiguration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/SDKAPI.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the SDK using a <a class="xref" href="Phantom.XRMOD.Models.Runtime.SDKConfiguration.html">SDKConfiguration</a> object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitSDK(SDKConfiguration _config)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_config</code> <a class="xref" href="Phantom.XRMOD.Models.Runtime.SDKConfiguration.html">SDKConfiguration</a></dt>
+    <dd><p>The configuration parameters for SDK initialization.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_InitSDK_Phantom_XRMOD_Models_Runtime_SDKConfiguration__examples">Examples</h4>
+  <pre><code class="lang-csharp">var config = new SDKConfiguration { AppModel = AppModel.Online };
+sdkEntryPoint.InitSDK(config);</code></pre>
+
+
+  <h4 class="section" id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_InitSDK_Phantom_XRMOD_Models_Runtime_SDKConfiguration__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is the preferred way to initialize the SDK programmatically.</p>
+</div>
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_InitSDK_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.InitSDK*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_InitSDK_System_String_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.InitSDK(System.String)">
+  InitSDK(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/SDKAPI.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the SDK using a JSON configuration string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitSDK(string _config)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_config</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A JSON string representing the <a class="xref" href="Phantom.XRMOD.Models.Runtime.SDKConfiguration.html">SDKConfiguration</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_InitSDK_System_String__examples">Examples</h4>
+  <pre><code class="lang-csharp">sdkEntryPoint.InitSDK("{\"AppModel\": 0, ...}");</code></pre>
+
+
+  <h4 class="section" id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_InitSDK_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><b>Note:</b> This method must be called before any other SDK operations.
+Ensure the JSON format matches the <a class="xref" href="Phantom.XRMOD.Models.Runtime.SDKConfiguration.html">SDKConfiguration</a> structure.</p>
+</div>
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_LaunchARScanner_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.LaunchARScanner*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_LaunchARScanner" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.LaunchARScanner">
+  LaunchARScanner()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/SDKAPI.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts the AR scanner for visual recognition-based experience queries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LaunchARScanner()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_LaunchARScanner_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This API is primarily used by native application integrations to start a recognition loop.</p>
+</div>
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_LaunchXRQuery_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.LaunchXRQuery*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_LaunchXRQuery_System_String_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.LaunchXRQuery(System.String)">
+  LaunchXRQuery(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/SDKAPI.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Launches an XR experience query using a unique experience ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LaunchXRQuery(string _experiencesId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_experiencesId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The unique identifier of the XR experience to launch.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_LaunchXRQuery_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method triggers the XRMOD engine to fetch and start the specified experience.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if the SDK is not initialized.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_OnMessageReceived_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.OnMessageReceived*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_OnMessageReceived_System_String_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.OnMessageReceived(System.String)">
+  OnMessageReceived(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/SDKAPI.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Receive the message data from Native App</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnMessageReceived(string _data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Will receive message data</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_ReleaseProcess_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.ReleaseProcess*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_ReleaseProcess_System_String_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.ReleaseProcess(System.String)">
+  ReleaseProcess(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/SDKAPI.cs/#L358"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Release the specified process</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReleaseProcess(string _processId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_processId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The unique ID of the process to be released</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_SendMessageToXRExperience_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.SendMessageToXRExperience*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_SendMessageToXRExperience_System_String_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.SendMessageToXRExperience(System.String)">
+  SendMessageToXRExperience(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/SDKAPI.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a message data string to all running XR experiences.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendMessageToXRExperience(string _data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The message payload to send.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_SendMessageToXRExperience_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Experiences can listen for these messages to trigger custom logic.</p>
+</div>
+
+
+
+
+  <a id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_SetUIInterfaceOrientation_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.SetUIInterfaceOrientation*"></a>
+
+  <h3 id="Phantom_XRMOD_SDKEntry_Runtime_SDKEntryPoint_SetUIInterfaceOrientation_System_String_" data-uid="Phantom.XRMOD.SDKEntry.Runtime.SDKEntryPoint.SetUIInterfaceOrientation(System.String)">
+  SetUIInterfaceOrientation(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODFoundation/Runtime/SDKEntry/SDKAPI.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the display direction of the AR view</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetUIInterfaceOrientation(string _orientation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>_orientation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Display direction enumeration. See ScreenOrientation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace RootMotion.FinalIK |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace RootMotion.FinalIK |  |  ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RootMotion.FinalIK">
+
+  <h1 id="RootMotion_FinalIK" data-uid="RootMotion.FinalIK" class="text-break">Namespace RootMotion.FinalIK</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.AimController.html">AimController</a></dt>
+      <dd><p>Handles smooth aim target switching, weight blending, target interpolation and root rotation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.AimIK.html">AimIK</a></dt>
+      <dd><p>Aim %IK solver component.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.AimPoser.html">AimPoser</a></dt>
+      <dd><p>Aim Poser returns a reference by direction.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.AimPoser.Pose.html">AimPoser.Pose</a></dt>
+      <dd><p>the pose definition</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Amplifier.html">Amplifier</a></dt>
+      <dd><p>Demo script that amplifies the motion of a body part relative to the root of the character or another body part.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Amplifier.Body.html">Amplifier.Body</a></dt>
+      <dd><p>Body is amplifying the motion of &quot;transform&quot; relative to the &quot;relativeTo&quot;.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Amplifier.Body.EffectorLink.html">Amplifier.Body.EffectorLink</a></dt>
+      <dd><p>Linking this to an effector</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.ArmIK.html">ArmIK</a></dt>
+      <dd><p>Arm %IK solver component.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.BipedIK.html">BipedIK</a></dt>
+      <dd><p>%IK system for standard biped characters that is designed to replicate and enhance the behaviour of the Unity's built-in character %IK setup.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.BipedIKSolvers.html">BipedIKSolvers</a></dt>
+      <dd><p>BipedIK solver collection.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.BodyTilt.html">BodyTilt</a></dt>
+      <dd><p>Procedural body tilting with FBBIK.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.CCDBendGoal.html">CCDBendGoal</a></dt>
+      <dd><p>Bend goal object for CCDIK. Add this to a GameObject you wish CCD to bend towards.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.CCDIK.html">CCDIK</a></dt>
+      <dd><p>CCD (Cyclic Coordinate Descent) %IK solver component.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.CCDStretch.html">CCDStretch</a></dt>
+      <dd><p>Automatic stretch and squash for CCDIK.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Constraint.html">Constraint</a></dt>
+      <dd><p>The base abstract class for all Transform constraints.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.ConstraintPosition.html">ConstraintPosition</a></dt>
+      <dd><p>%Constraints to position in world space.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.ConstraintPositionOffset.html">ConstraintPositionOffset</a></dt>
+      <dd><p>Offsets the transform from its (animated) position.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.ConstraintRotation.html">ConstraintRotation</a></dt>
+      <dd><p>%Constraints to rotation in world space</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.ConstraintRotationOffset.html">ConstraintRotationOffset</a></dt>
+      <dd><p>Offsets the transform from its (animated) rotation</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Constraints.html">Constraints</a></dt>
+      <dd><p>Contains and manages a set of constraints.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.EditorIK.html">EditorIK</a></dt>
+      <dd><p>Updates any Final IK component in Editor mode</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.EditorIKPose.html">EditorIKPose</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.FABRIK.html">FABRIK</a></dt>
+      <dd><p>Forward and Backward Reaching %IK solver component.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.FABRIKBendGoal.html">FABRIKBendGoal</a></dt>
+      <dd><p>Bend goal object for FABRIK. Add this to a GameObject you wish FABRIK to bend towards.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.FABRIKChain.html">FABRIKChain</a></dt>
+      <dd><p>Branch of FABRIK components in the FABRIKRoot hierarchy.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.FABRIKRoot.html">FABRIKRoot</a></dt>
+      <dd><p>%IK system for multiple branched %FABRIK chains.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.FBBIKArmBending.html">FBBIKArmBending</a></dt>
+      <dd><p>Calculates bending direction and hand rotations for a FBBIK rig for VR hand controllers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.FBBIKHeadEffector.html">FBBIKHeadEffector</a></dt>
+      <dd><p>Head effector for FBBIK.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.FBBIKHeadEffector.BendBone.html">FBBIKHeadEffector.BendBone</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.FBIKChain.html">FBIKChain</a></dt>
+      <dd><p>A chain of bones in IKSolverFullBody.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.FBIKChain.ChildConstraint.html">FBIKChain.ChildConstraint</a></dt>
+      <dd><p>Linear constraint between child chains of a FBIKChain.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Finger.html">Finger</a></dt>
+      <dd><p>Contains a LimbIK solver and some additional logic to handle the finger.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.FingerRig.html">FingerRig</a></dt>
+      <dd><p>Handles IK for a number of Fingers with 3-4 joints.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.FullBodyBipedIK.html">FullBodyBipedIK</a></dt>
+      <dd><p>Full Body %IK System designed specifically for bipeds</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.GenericPoser.html">GenericPoser</a></dt>
+      <dd><p>Posing the children of a Transform to match the children of another Transform</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.GenericPoser.Map.html">GenericPoser.Map</a></dt>
+      <dd><p>Mapping a bone to its target</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Grounder.html">Grounder</a></dt>
+      <dd><p>Dedicated abstrac base component for the Grounding solver.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.GrounderBipedIK.html">GrounderBipedIK</a></dt>
+      <dd><p>Grounding for BipedIK characters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.GrounderFBBIK.html">GrounderFBBIK</a></dt>
+      <dd><p>Grounding for FBBIK characters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.GrounderFBBIK.SpineEffector.html">GrounderFBBIK.SpineEffector</a></dt>
+      <dd><p>Contains the bending weights for an effector.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.GrounderIK.html">GrounderIK</a></dt>
+      <dd><p>Grounding for LimbIK, CCD and/or FABRIK solvers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.GrounderQuadruped.html">GrounderQuadruped</a></dt>
+      <dd><p>Grounding for LimbIK, CCD and/or FABRIK solvers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Grounding.html">Grounding</a></dt>
+      <dd><p>Foot placement system.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Grounding.Leg.html">Grounding.Leg</a></dt>
+      <dd><p>The %Grounding %Leg.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Grounding.Pelvis.html">Grounding.Pelvis</a></dt>
+      <dd><p>The %Grounding %Pelvis.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.HandPoser.html">HandPoser</a></dt>
+      <dd><p>Posing the children of a Transform to match the children of another Transform</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.HitReaction.html">HitReaction</a></dt>
+      <dd><p>Class for creating procedural FBBIK hit reactions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.HitReaction.HitPoint.html">HitReaction.HitPoint</a></dt>
+      <dd><p>Hit point definition</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.HitReaction.HitPointBone.html">HitReaction.HitPointBone</a></dt>
+      <dd><p>Hit Point for simple bone Transforms that don't have a FBBIK effector</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.HitReaction.HitPointBone.BoneLink.html">HitReaction.HitPointBone.BoneLink</a></dt>
+      <dd><p>Linking a bone Transform to this bone hit point</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.HitReaction.HitPointEffector.html">HitReaction.HitPointEffector</a></dt>
+      <dd><p>Hit Point for FBBIK effectors</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.HitReaction.HitPointEffector.EffectorLink.html">HitReaction.HitPointEffector.EffectorLink</a></dt>
+      <dd><p>Linking a FBBIK effector to this effector hit point</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.HitReactionVRIK.html">HitReactionVRIK</a></dt>
+      <dd><p>Class for creating procedural FBBIK hit reactions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.HitReactionVRIK.Offset.html">HitReactionVRIK.Offset</a></dt>
+      <dd><p>Hit point definition</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.HitReactionVRIK.PositionOffset.html">HitReactionVRIK.PositionOffset</a></dt>
+      <dd><p>Hit Point for FBBIK effectors</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.HitReactionVRIK.PositionOffset.PositionOffsetLink.html">HitReactionVRIK.PositionOffset.PositionOffsetLink</a></dt>
+      <dd><p>Linking a FBBIK effector to this effector hit point</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.HitReactionVRIK.RotationOffset.html">HitReactionVRIK.RotationOffset</a></dt>
+      <dd><p>Hit Point for simple bone Transforms that don't have a FBBIK effector</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.HitReactionVRIK.RotationOffset.RotationOffsetLink.html">HitReactionVRIK.RotationOffset.RotationOffsetLink</a></dt>
+      <dd><p>Linking a bone Transform to this bone hit point</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IK.html">IK</a></dt>
+      <dd><p>Base abstract class for %IK solver components.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKConstraintBend.html">IKConstraintBend</a></dt>
+      <dd><p>%Constraint used for fixing bend direction of 3-segment node chains in a node based %IK solver.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKEffector.html">IKEffector</a></dt>
+      <dd><p>Effector for manipulating node based %IK solvers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKExecutionOrder.html">IKExecutionOrder</a></dt>
+      <dd><p>Manages the execution order of IK components.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKMapping.html">IKMapping</a></dt>
+      <dd><p>Maps a bone or a collection of bones to a node based %IK solver</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKMapping.BoneMap.html">IKMapping.BoneMap</a></dt>
+      <dd><p>Contains mapping information of a single bone</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKMappingBone.html">IKMappingBone</a></dt>
+      <dd><p>Maps a single bone to a node in %IK Solver</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKMappingLimb.html">IKMappingLimb</a></dt>
+      <dd><p>Maps a 3-segmented bone hierarchy to a node chain of an %IK Solver</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKMappingSpine.html">IKMappingSpine</a></dt>
+      <dd><p>Mapping a bone hierarchy to 2 triangles defined by the hip and chest planes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolver.html">IKSolver</a></dt>
+      <dd><p>The base abstract class for all %IK solvers</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolver.Bone.html">IKSolver.Bone</a></dt>
+      <dd><p>%Bone type of element in the %IK chain. Used in the case of skeletal Transform hierarchies.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolver.Node.html">IKSolver.Node</a></dt>
+      <dd><p>%Node type of element in the %IK chain. Used in the case of mixed/non-hierarchical %IK systems</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolver.Point.html">IKSolver.Point</a></dt>
+      <dd><p>The most basic element type in the %IK chain that all other types extend from.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverAim.html">IKSolverAim</a></dt>
+      <dd><p>Rotates a hierarchy of bones to make a Transform aim at a target.
+If there are problems with continuity and the solver get's jumpy, make sure to keep IKPosition at a safe distance from the transform and try decreasing solver and bone weights.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverArm.html">IKSolverArm</a></dt>
+      <dd><p>A wrapper for making IKSolverVRArm work with other IK components.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverCCD.html">IKSolverCCD</a></dt>
+      <dd><p>CCD (Cyclic Coordinate Descent) constrainable heuristic inverse kinematics algorithm.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverFABRIK.html">IKSolverFABRIK</a></dt>
+      <dd><p>Forward and Backward Reaching Inverse Kinematics solver.</p>
+<p>This class is based on the &quot;FABRIK: A fast, iterative solver for the inverse kinematics problem.&quot; paper by Aristidou, A., Lasenby, J.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverFABRIKRoot.html">IKSolverFABRIKRoot</a></dt>
+      <dd><p>%IK system for multiple branched %FABRIK chains.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverFullBody.html">IKSolverFullBody</a></dt>
+      <dd><p>Generic FBIK solver. In each solver update, %IKSolverFullBody first reads the character's pose, then solves the %IK and writes the solved pose back to the character via IKMapping.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverFullBodyBiped.html">IKSolverFullBodyBiped</a></dt>
+      <dd><p>FBIK solver specialized to biped characters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverHeuristic.html">IKSolverHeuristic</a></dt>
+      <dd><p>Contains methods common for all heuristic solvers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverLeg.html">IKSolverLeg</a></dt>
+      <dd><p>A wrapper for making IKSolverVRLeg work with other IK components and the Grounder.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverLimb.html">IKSolverLimb</a></dt>
+      <dd><p>Extends IKSolverTrigonometric to add automatic bend and rotation modes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverLookAt.html">IKSolverLookAt</a></dt>
+      <dd><p>Rotates a hierarchy of bones to face a target.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverLookAt.LookAtBone.html">IKSolverLookAt.LookAtBone</a></dt>
+      <dd><p>Look At bone class.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverTrigonometric.html">IKSolverTrigonometric</a></dt>
+      <dd><p>Analytic %IK solver based on the Law of Cosines.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverTrigonometric.TrigonometricBone.html">IKSolverTrigonometric.TrigonometricBone</a></dt>
+      <dd><p>Bone type used by IKSolverTrigonometric.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverVR.html">IKSolverVR</a></dt>
+      <dd><p>Hybrid %IK solver designed for mapping a character to a VR headset and 2 hand controllers</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverVR.Arm.html">IKSolverVR.Arm</a></dt>
+      <dd><p>4-segmented analytic arm chain.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverVR.BodyPart.html">IKSolverVR.BodyPart</a></dt>
+      <dd><p>A base class for all IKSolverVR body parts.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverVR.Footstep.html">IKSolverVR.Footstep</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverVR.Leg.html">IKSolverVR.Leg</a></dt>
+      <dd><p>4-segmented analytic leg chain.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverVR.Locomotion.html">IKSolverVR.Locomotion</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverVR.Spine.html">IKSolverVR.Spine</a></dt>
+      <dd><p>Spine solver for IKSolverVR.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverVR.VirtualBone.html">IKSolverVR.VirtualBone</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Inertia.html">Inertia</a></dt>
+      <dd><p>Demo script that adds the illusion of mass to your character using FullBodyBipedIK.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Inertia.Body.html">Inertia.Body</a></dt>
+      <dd><p>Body is just following its transform in a lazy and bouncy way.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Inertia.Body.EffectorLink.html">Inertia.Body.EffectorLink</a></dt>
+      <dd><p>Linking this to an effector</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionEffector.html">InteractionEffector</a></dt>
+      <dd><p>Managing Interactions for a single FBBIK effector.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionLookAt.html">InteractionLookAt</a></dt>
+      <dd><p>Controls LookAtIK for the InteractionSystem</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionObject.html">InteractionObject</a></dt>
+      <dd><p>Object than the InteractionSystem can interact with.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionObject.AnimatorEvent.html">InteractionObject.AnimatorEvent</a></dt>
+      <dd><p>Calls an animation on an interaction event.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionObject.InteractionEvent.html">InteractionObject.InteractionEvent</a></dt>
+      <dd><p>Predefined interaction events for pausing, picking up, triggering animations and sending messages.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionObject.Message.html">InteractionObject.Message</a></dt>
+      <dd><p>Definition of a message sent by an InteractionEvent.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionObject.Multiplier.html">InteractionObject.Multiplier</a></dt>
+      <dd><p>Multiplies a weight curve and uses the result for another FBBIK channel. (to reduce the amount of work with AnimationCurves)</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionObject.WeightCurve.html">InteractionObject.WeightCurve</a></dt>
+      <dd><p>A Weight curve for various FBBIK channels.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionSystem.html">InteractionSystem</a></dt>
+      <dd><p>Handles FBBIK interactions for a character.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionTarget.html">InteractionTarget</a></dt>
+      <dd><p>The target of an effector in the InteractionSystem.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionTarget.Multiplier.html">InteractionTarget.Multiplier</a></dt>
+      <dd><p>Multiplies the value of a weight curve for this effector target.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionTrigger.html">InteractionTrigger</a></dt>
+      <dd><p>When a character with an InteractionSystem component enters the trigger collider of this game object, this component will register itself to the InteractionSystem.
+The InteractionSystem can then use it to find the most appropriate InteractionObject and effectors to interact with.
+Use InteractionSystem.GetClosestTriggerIndex() and InteractionSystem.TriggerInteration() to trigger the interactions that the character is in contact with.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionTrigger.CameraPosition.html">InteractionTrigger.CameraPosition</a></dt>
+      <dd><p>Defines the valid range of the camera's position relative to this trigger.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionTrigger.CharacterPosition.html">InteractionTrigger.CharacterPosition</a></dt>
+      <dd><p>Defines the valid range of the character's position and rotation relative to this trigger.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionTrigger.Range.html">InteractionTrigger.Range</a></dt>
+      <dd><p>Defines the valid range of the character's and/or its camera's position for one or multiple interactions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionTrigger.Range.Interaction.html">InteractionTrigger.Range.Interaction</a></dt>
+      <dd><p>Defines the interaction object and effectors that will be triggered when calling InteractionSystem.TriggerInteraction().</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.LegIK.html">LegIK</a></dt>
+      <dd><p>Leg %IK solver component.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.LimbIK.html">LimbIK</a></dt>
+      <dd><p>%IK component for IKSolverLimb.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.LookAtController.html">LookAtController</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.LookAtIK.html">LookAtIK</a></dt>
+      <dd><p>Rotates a hierarchy of bones to face a target</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.OffsetModifier.html">OffsetModifier</a></dt>
+      <dd><p>Base class for all FBBIK effector positionOffset modifiers. Works with animatePhysics, safe delegates, offset limits.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.OffsetModifier.OffsetLimits.html">OffsetModifier.OffsetLimits</a></dt>
+      <dd><p>Limiting effector position offsets</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.OffsetModifierVRIK.html">OffsetModifierVRIK</a></dt>
+      <dd><p>Base class for all FBBIK effector positionOffset modifiers. Works with animatePhysics, safe delegates, offset limits.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.OffsetPose.html">OffsetPose</a></dt>
+      <dd><p>Definition of FBBIK Offset pose.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.OffsetPose.EffectorLink.html">OffsetPose.EffectorLink</a></dt>
+      <dd><p>State of an effector in this pose</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.PenetrationAvoidance.html">PenetrationAvoidance</a></dt>
+      <dd><p>Prevents body parts from penetrating scene geometry by offsetting effectors away from the colliders.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.PenetrationAvoidance.Avoider.html">PenetrationAvoidance.Avoider</a></dt>
+      <dd><p>Definition of avoidance and raycasting info.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.PenetrationAvoidance.Avoider.EffectorLink.html">PenetrationAvoidance.Avoider.EffectorLink</a></dt>
+      <dd><p>Linking this to an effector</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Poser.html">Poser</a></dt>
+      <dd><p>The base abstract class for all class that are translating a hierarchy of bones to match the translation of bones in another hierarchy.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.RagdollUtility.html">RagdollUtility</a></dt>
+      <dd><p>Ragdoll Utility controls switching characters in and out of ragdoll mode. It also enables you to use IK effects on top of ragdoll simulation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.RagdollUtility.Child.html">RagdollUtility.Child</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.RagdollUtility.Rigidbone.html">RagdollUtility.Rigidbone</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Recoil.html">Recoil</a></dt>
+      <dd><p>Procedural recoil using FBBIK.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Recoil.RecoilOffset.html">Recoil.RecoilOffset</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Recoil.RecoilOffset.EffectorLink.html">Recoil.RecoilOffset.EffectorLink</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.RotationLimit.html">RotationLimit</a></dt>
+      <dd><p>The base abstract class for all Rotation limits. Contains common functionality and static helper methods</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.RotationLimitAngle.html">RotationLimitAngle</a></dt>
+      <dd><p>Simple angular rotation limit.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.RotationLimitHinge.html">RotationLimitHinge</a></dt>
+      <dd><p>The hinge rotation limit limits the rotation to 1 degree of freedom around Axis. This rotation limit is additive which means the limits can exceed 360 degrees.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.RotationLimitPolygonal.html">RotationLimitPolygonal</a></dt>
+      <dd><p>Using a spherical polygon to limit the range of rotation on universal and ball-and-socket joints. A reach cone is specified as a spherical polygon
+on the surface of a a reach sphere that defines all positions the longitudinal segment axis beyond the joint can take.</p>
+<p>This class is based on the &quot;Fast and Easy Reach-Cone Joint Limits&quot; paper by Jane Wilhelms and Allen Van Gelder.
+Computer Science Dept., University of California, Santa Cruz, CA 95064. August 2, 2001
+<a href="http://users.soe.ucsc.edu/%7Eavg/Papers/jtl.pdf">http://users.soe.ucsc.edu/~avg/Papers/jtl.pdf</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.RotationLimitPolygonal.LimitPoint.html">RotationLimitPolygonal.LimitPoint</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.RotationLimitPolygonal.ReachCone.html">RotationLimitPolygonal.ReachCone</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.RotationLimitSpline.html">RotationLimitSpline</a></dt>
+      <dd><p>Using a spline to limit the range of rotation on universal and ball-and-socket joints.
+Reachable area is defined by an AnimationCurve orthogonally mapped onto a sphere.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.ShoulderRotator.html">ShoulderRotator</a></dt>
+      <dd><p>Shoulder rotator is a workaround for FBBIK not rotating the shoulder bones when pulled by hands.
+It get's the job done if you need it, but will take 2 solving iterations.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.TrigonometricIK.html">TrigonometricIK</a></dt>
+      <dd><p>Analytic %IK algorithm based on the law of cosines</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.TwistRelaxer.html">TwistRelaxer</a></dt>
+      <dd><p>Relaxes the twist rotation if the TwistSolver transforms relative to their parent and a child Transforms, using their initial rotations as the most relaxed pose.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.TwistSolver.html">TwistSolver</a></dt>
+      <dd><p>Relaxes the twist rotation if the Transform relative to its parent and a child Transforms, using the Transform's initial rotation as the most relaxed pose.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.UniversalPoser.html">UniversalPoser</a></dt>
+      <dd><p>Posing the children of a Transform to match the children of another Transform that has different bone orientations.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.UniversalPoser.Map.html">UniversalPoser.Map</a></dt>
+      <dd><p>Mapping a bone to its target</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.VRIK.html">VRIK</a></dt>
+      <dd><p>A full-body IK solver designed specifically for a VR HMD and hand controllers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.VRIK.References.html">VRIK.References</a></dt>
+      <dd><p>VRIK-specific definition of a humanoid biped.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.VRIKCalibrator.html">VRIKCalibrator</a></dt>
+      <dd><p>Calibrates VRIK for the HMD and up to 5 additional trackers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.VRIKCalibrator.CalibrationData.html">VRIKCalibrator.CalibrationData</a></dt>
+      <dd><p>When VRIK is calibrated by calibration settings, will store CalibrationData that can be used to set up another character with the exact same calibration.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.VRIKCalibrator.CalibrationData.Target.html">VRIKCalibrator.CalibrationData.Target</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.VRIKCalibrator.Settings.html">VRIKCalibrator.Settings</a></dt>
+      <dd><p>The settings for VRIK tracker calibration.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.VRIKLODController.html">VRIKLODController</a></dt>
+      <dd><p>Simple VRIK LOD level controller based on renderer.isVisible and camera distance.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.VRIKRootController.html">VRIKRootController</a></dt>
+      <dd></dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.GrounderQuadruped.Foot.html">GrounderQuadruped.Foot</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverLimb.AxisDirection.html">IKSolverLimb.AxisDirection</a></dt>
+      <dd></dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.FBIKChain.Smoothing.html">FBIKChain.Smoothing</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Finger.DOF.html">Finger.DOF</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.FullBodyBipedChain.html">FullBodyBipedChain</a></dt>
+      <dd><p>Full body biped IK chain types.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.FullBodyBipedEffector.html">FullBodyBipedEffector</a></dt>
+      <dd><p>Full body biped IK effector types.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Grounding.Quality.html">Grounding.Quality</a></dt>
+      <dd><p>The raycasting quality. Fastest is a single raycast per foot, Simple is three raycasts, Best is one raycast and a capsule cast per foot.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKMappingLimb.BoneMapType.html">IKMappingLimb.BoneMapType</a></dt>
+      <dd><p>Limb Bone Map type</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverLimb.BendModifier.html">IKSolverLimb.BendModifier</a></dt>
+      <dd><p>Automatic bend modes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverVR.Arm.ShoulderRotationMode.html">IKSolverVR.Arm.ShoulderRotationMode</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverVR.Locomotion.Mode.html">IKSolverVR.Locomotion.Mode</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverVR.PositionOffset.html">IKSolverVR.PositionOffset</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolverVR.RotationOffset.html">IKSolverVR.RotationOffset</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionObject.WeightCurve.Type.html">InteractionObject.WeightCurve.Type</a></dt>
+      <dd><p>The type of the weight curve</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionTarget.RotationMode.html">InteractionTarget.RotationMode</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Recoil.Handedness.html">Recoil.Handedness</a></dt>
+      <dd></dd>
+    </dl>
+    <h3 id="delegates">
+Delegates
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Grounder.GrounderDelegate.html">Grounder.GrounderDelegate</a></dt>
+      <dd><p>Delegate for Grounder events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Grounding.OnCapsuleCastDelegate.html">Grounding.OnCapsuleCastDelegate</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Grounding.OnRaycastDelegate.html">Grounding.OnRaycastDelegate</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.Grounding.OnSphereCastDelegate.html">Grounding.OnSphereCastDelegate</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolver.IterationDelegate.html">IKSolver.IterationDelegate</a></dt>
+      <dd><p>Delegates solver iteration events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.IKSolver.UpdateDelegate.html">IKSolver.UpdateDelegate</a></dt>
+      <dd><p>Delegates solver update events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionSystem.InteractionDelegate.html">InteractionSystem.InteractionDelegate</a></dt>
+      <dd><p>Interaction delegate</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RootMotion.FinalIK.InteractionSystem.InteractionEventDelegate.html">InteractionSystem.InteractionEventDelegate</a></dt>
+      <dd><p>Interaction event delegate</p>
+</dd>
+    </dl>
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

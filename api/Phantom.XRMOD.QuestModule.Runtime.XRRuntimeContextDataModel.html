@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class XRRuntimeContextDataModel |  |  </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class XRRuntimeContextDataModel |  |  ">
+      
+      <meta name="description" content="Runtime data model for the Quest module.  Stores the state of the AR session, availability, visualizers, feature decorators, and other runtime context information.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      <meta name="docfx:disablenewtab" content="true">
+      
+      <meta name="docfx:docurl" content="https://github.com/PhantomsXR/XRMODEngine/new/main/apiSpec/new?filename=Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel.md&amp;value=---%0Auid%3A%20Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel">
+
+
+
+  <h1 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel" class="text-break">
+Class XRRuntimeContextDataModel  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Phantom.html">Phantom</a>.<a class="xref" href="Phantom.XRMOD.html">XRMOD</a>.<a class="xref" href="Phantom.XRMOD.QuestModule.html">QuestModule</a>.<a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.html">Runtime</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Runtime data model for the Quest module.</p>
+<p>
+Stores the state of the AR session, availability, visualizers, feature decorators, and other runtime context information.
+</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class XRRuntimeContextDataModel</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">XRRuntimeContextDataModel</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToFileAt_System_Object_System_String_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToFileAt(object, string, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="EPPZ.Persistence.Extensions.Object_Extensions.html#EPPZ_Persistence_Extensions_Object_Extensions_SerializeToString_System_Object_EPPZ_Persistence_Serializer_">Object_Extensions.SerializeToString(object, Serializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Goap.Runtime.Extensions.html#Goap_Runtime_Extensions_IsNull_System_Object_">Extensions.IsNull(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.CodeHook.UnityValueTypeSerializer.html#Phantom_XRMOD_UnityFusion_Runtime_CodeHook_UnityValueTypeSerializer_Serializer_System_Object_">UnityValueTypeSerializer.Serializer(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Phantom.XRMOD.UnityFusion.Runtime.Utility.html#Phantom_XRMOD_UnityFusion_Runtime_Utility_GetGameObject_System_Object_">Utility.GetGameObject(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_GetActualType_System_Object_">Extensions.GetActualType(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToDouble_System_Object_">Extensions.ToDouble(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToFloat_System_Object_">Extensions.ToFloat(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt16_System_Object_">Extensions.ToInt16(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt32_System_Object_">Extensions.ToInt32(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityFusion.Runtime.Extensions.html#UnityFusion_Runtime_Extensions_ToInt64_System_Object_">Extensions.ToInt64(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel__ctor_" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.#ctor*"></a>
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel__ctor" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.#ctor">
+  XRRuntimeContextDataModel()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.html">XRRuntimeContextDataModel</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XRRuntimeContextDataModel()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_ARKitCoachingOverlayAvailability" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.ARKitCoachingOverlayAvailability">
+  ARKitCoachingOverlayAvailability
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Availability of ARKit coaching overlay.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ARKitCoachingOverlayAvailability</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_ARKitWordMapSavePath" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.ARKitWordMapSavePath">
+  ARKitWordMapSavePath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Path to save the ARKit world map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ARKitWordMapSavePath</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_FeatureDecoratorsAtRuntime" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.FeatureDecoratorsAtRuntime">
+  FeatureDecoratorsAtRuntime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dictionary of active feature decorators grouped by project name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, List&lt;IFeatureDecorator&gt;&gt; FeatureDecoratorsAtRuntime</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Phantom.XRMOD.Core.Runtime.IFeatureDecorator.html">IFeatureDecorator</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_FrameGetter" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.FrameGetter">
+  FrameGetter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bindable property for the frame getter decorator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BindableProperty&lt;IFeatureDecorator&gt; FrameGetter</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.Core.Runtime.BindableProperty-1.html">BindableProperty</a>&lt;<a class="xref" href="Phantom.XRMOD.Core.Runtime.IFeatureDecorator.html">IFeatureDecorator</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_IsARCollaborationAvailability" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.IsARCollaborationAvailability">
+  IsARCollaborationAvailability
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Availability of AR collaboration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsARCollaborationAvailability</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_OnMarkerRecognized" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.OnMarkerRecognized">
+  OnMarkerRecognized
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bindable property triggered when a marker is recognized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BindableProperty&lt;string&gt; OnMarkerRecognized</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.Core.Runtime.BindableProperty-1.html">BindableProperty</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_ARAvailability_" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.ARAvailability*"></a>
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_ARAvailability" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.ARAvailability">
+  ARAvailability
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bindable property for AR availability status.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BindableProperty&lt;bool&gt; ARAvailability { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.Core.Runtime.BindableProperty-1.html">BindableProperty</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_ARSessionState_" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.ARSessionState*"></a>
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_ARSessionState" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.ARSessionState">
+  ARSessionState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bindable property for the current AR session state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BindableProperty&lt;ARSessionState&gt; ARSessionState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.Core.Runtime.BindableProperty-1.html">BindableProperty</a>&lt;<span class="xref">ARSessionState</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_ConversionType_" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.ConversionType*"></a>
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_ConversionType" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.ConversionType">
+  ConversionType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Texture conversion type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConversionType ConversionType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.ConversionType.html">ConversionType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_EnableHDR_" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.EnableHDR*"></a>
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_EnableHDR" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.EnableHDR">
+  EnableHDR
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bindable property for enabling HDR.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BindableProperty&lt;bool&gt; EnableHDR { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.Core.Runtime.BindableProperty-1.html">BindableProperty</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_FrameTexture_" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.FrameTexture*"></a>
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_FrameTexture" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.FrameTexture">
+  FrameTexture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bindable property for the current camera frame texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BindableProperty&lt;Texture2D&gt; FrameTexture { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.Core.Runtime.BindableProperty-1.html">BindableProperty</a>&lt;<span class="xref">Texture2D</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_MeshVisualizer_" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.MeshVisualizer*"></a>
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_MeshVisualizer" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.MeshVisualizer">
+  MeshVisualizer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reference to the mesh visualizer GameObject.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject MeshVisualizer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_PlaneVisualizer_" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.PlaneVisualizer*"></a>
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_PlaneVisualizer" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.PlaneVisualizer">
+  PlaneVisualizer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reference to the plane visualizer GameObject.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject PlaneVisualizer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_PointCloudVisualizer_" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.PointCloudVisualizer*"></a>
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_PointCloudVisualizer" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.PointCloudVisualizer">
+  PointCloudVisualizer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reference to the point cloud visualizer GameObject.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject PointCloudVisualizer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_SpaceType_" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.SpaceType*"></a>
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_SpaceType" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.SpaceType">
+  SpaceType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current space type (e.g., Local, Global).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpaceType SpaceType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Phantom.XRMOD.ActionNotification.Runtime.SpaceType.html">SpaceType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_StopARModule_" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.StopARModule*"></a>
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_StopARModule" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.StopARModule">
+  StopARModule
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag to indicate if the AR module should stop.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StopARModule { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_TextureFormat_" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.TextureFormat*"></a>
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_TextureFormat" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.TextureFormat">
+  TextureFormat
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Format of the camera texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextureFormat TextureFormat { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TextureFormat</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_Initialize_" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.Initialize*"></a>
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_Initialize" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.Initialize">
+  Initialize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes bindable properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_Release_" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.Release*"></a>
+
+  <h3 id="Phantom_XRMOD_QuestModule_Runtime_XRRuntimeContextDataModel_Release" data-uid="Phantom.XRMOD.QuestModule.Runtime.XRRuntimeContextDataModel.Release">
+  Release()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/PhantomsXR/XRMODEngine/blob/main/XRMODPackages/XRMODQuestModule/Runtime/Models/XRRuntimeContextDataModel.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases resources and unbinds events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Release()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made by <a href="https://github.com/PhantomsXR" target="_blank">PhantomsXR</a> using <a href="https://dotnet.github.io/docfx" target="_blank">DocFX</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
