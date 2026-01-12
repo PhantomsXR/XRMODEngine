@@ -157,8 +157,7 @@ public enum TrackableTypeEnum</code></pre>
     <dt id="Phantom_XRMOD_ActionNotification_Runtime_TrackableTypeEnum_All"><code>[Obsolete(&quot;Use TrackableType.AllTypes instead. (2021-05-02)&quot;)]
 All = Planes | FeaturePoint | Image | Face</code></dt>
   
-  <dd><p>Deprecated in favor of TrackableType.AllTypes. Refers to all trackable types except
-TrackableType.Depth.</p>
+  <dd><p>Deprecated in favor of  TrackableType.AllTypes. Refers to all trackable types except</p>
 </dd>
     <dt id="Phantom_XRMOD_ActionNotification_Runtime_TrackableTypeEnum_AllTypes"><code>AllTypes = -1</code></dt>
   
@@ -175,7 +174,6 @@ TrackableType.Depth.</p>
     <dt id="Phantom_XRMOD_ActionNotification_Runtime_TrackableTypeEnum_FeaturePoint"><code>FeaturePoint = 16</code></dt>
   <dd><p>Refers to a feature point (that is, a point in a point cloud).</p>
 <p>When used as the <code>trackableTypeMask</code> in a
-XRRaycastSubsystem.Raycast(Ray, TrackableType, Unity.Collections.Allocator),
 the ray is considered to have hit if a cone around the ray intersects with a point in a point cloud.</p>
 </dd>
   
@@ -190,7 +188,6 @@ the ray is considered to have hit if a cone around the ray intersects with a poi
     <dt id="Phantom_XRMOD_ActionNotification_Runtime_TrackableTypeEnum_PlaneEstimated"><code>PlaneEstimated = 8</code></dt>
   <dd><p>Refers to an estimated plane.</p>
 <p>When used as the <code>trackableTypeMask</code> in a
-XRRaycastSubsystem.Raycast(Ray, TrackableType, Unity.Collections.Allocator),
 the ray is considered to have hit if the ray intersects with an estimated plane. An estimated
 plane is implementation-defined, but might not have an exact boundary. It is a guess that suggests
 the ray is near a surface.</p>
@@ -199,7 +196,6 @@ the ray is near a surface.</p>
     <dt id="Phantom_XRMOD_ActionNotification_Runtime_TrackableTypeEnum_PlaneWithinBounds"><code>PlaneWithinBounds = 2</code></dt>
   <dd><p>Refers to the 2D rectangular bounding box that tightly encloses the plane's polygon.</p>
 <p>When used as the <code>trackableTypeMask</code> in a
-XRRaycastSubsystem.Raycast(Ray, TrackableType, Unity.Collections.Allocator),
 the ray is considered to have hit if the ray intersects with the 2D box described by the
 size of the plane.</p>
 </dd>
@@ -207,14 +203,12 @@ size of the plane.</p>
     <dt id="Phantom_XRMOD_ActionNotification_Runtime_TrackableTypeEnum_PlaneWithinInfinity"><code>PlaneWithinInfinity = 4</code></dt>
   <dd><p>Refers to the infinite plane described by its <code>Pose</code> (a position and orientation).</p>
 <p>When used as the <code>trackableTypeMask</code> in a
-XRRaycastSubsystem.Raycast(Ray, TrackableType, Unity.Collections.Allocator),
 the ray is considered to have hit if the ray intersects with the infinite plane.</p>
 </dd>
   
     <dt id="Phantom_XRMOD_ActionNotification_Runtime_TrackableTypeEnum_PlaneWithinPolygon"><code>PlaneWithinPolygon = 1</code></dt>
   <dd><p>Refers to the 2D convex shape associated with a plane's boundary points.</p>
 <p>When used as the <code>trackableTypeMask</code> in a
-XRRaycastSubsystem.Raycast(Ray, TrackableType, Unity.Collections.Allocator),
 the ray is considered to have hit if the ray intersects with the polygon described by the exact
 boundary of the plane.</p>
 </dd>
@@ -222,7 +216,6 @@ boundary of the plane.</p>
     <dt id="Phantom_XRMOD_ActionNotification_Runtime_TrackableTypeEnum_Planes"><code>Planes = PlaneWithinPolygon | PlaneWithinBounds | PlaneWithinInfinity | PlaneEstimated</code></dt>
   <dd><p>Refers to any of the plane type trackables.</p>
 <p>Often used with the <code>trackableTypeMask</code> in a
-XRRaycastSubsystem.Raycast(Ray, TrackableType, Unity.Collections.Allocator),
 the ray is considered to have hit if the ray intersects with any of the plane types.</p>
 </dd>
   
