@@ -27,8 +27,7 @@ namespace Phantom.XRMOD.ActionNotification.Runtime
         /// Refers to the 2D convex shape associated with a plane's boundary points.
         /// </summary>
         /// <remarks>
-        /// When used as the <c>trackableTypeMask</c> in a
-        /// <see cref="XRRaycastSubsystem.Raycast(Ray, TrackableType, Unity.Collections.Allocator)"/>,
+        /// When used as the <c>trackableTypeMask</c> in a 
         /// the ray is considered to have hit if the ray intersects with the polygon described by the exact
         /// boundary of the plane.
         /// </remarks>
@@ -38,8 +37,7 @@ namespace Phantom.XRMOD.ActionNotification.Runtime
         /// Refers to the 2D rectangular bounding box that tightly encloses the plane's polygon.
         /// </summary>
         /// <remarks>
-        /// When used as the <c>trackableTypeMask</c> in a
-        /// <see cref="XRRaycastSubsystem.Raycast(Ray, TrackableType, Unity.Collections.Allocator)"/>,
+        /// When used as the <c>trackableTypeMask</c> in a 
         /// the ray is considered to have hit if the ray intersects with the 2D box described by the
         /// size of the plane.
         /// </remarks>
@@ -50,7 +48,6 @@ namespace Phantom.XRMOD.ActionNotification.Runtime
         /// </summary>
         /// <remarks>
         /// When used as the <c>trackableTypeMask</c> in a
-        /// <see cref="XRRaycastSubsystem.Raycast(Ray, TrackableType, Unity.Collections.Allocator)"/>,
         /// the ray is considered to have hit if the ray intersects with the infinite plane.
         /// </remarks>
         PlaneWithinInfinity = 1 << 2,
@@ -60,7 +57,6 @@ namespace Phantom.XRMOD.ActionNotification.Runtime
         /// </summary>
         /// <remarks>
         /// When used as the <c>trackableTypeMask</c> in a
-        /// <see cref="XRRaycastSubsystem.Raycast(Ray, TrackableType, Unity.Collections.Allocator)"/>,
         /// the ray is considered to have hit if the ray intersects with an estimated plane. An estimated
         /// plane is implementation-defined, but might not have an exact boundary. It is a guess that suggests
         /// the ray is near a surface.
@@ -72,7 +68,6 @@ namespace Phantom.XRMOD.ActionNotification.Runtime
         /// </summary>
         /// <remarks>
         /// Often used with the <c>trackableTypeMask</c> in a
-        /// <see cref="XRRaycastSubsystem.Raycast(Ray, TrackableType, Unity.Collections.Allocator)"/>,
         /// the ray is considered to have hit if the ray intersects with any of the plane types.
         /// </remarks>
         Planes =
@@ -86,7 +81,6 @@ namespace Phantom.XRMOD.ActionNotification.Runtime
         /// </summary>
         /// <remarks>
         /// When used as the <c>trackableTypeMask</c> in a
-        /// <see cref="XRRaycastSubsystem.Raycast(Ray, TrackableType, Unity.Collections.Allocator)"/>,
         /// the ray is considered to have hit if a cone around the ray intersects with a point in a point cloud.
         /// </remarks>
         FeaturePoint = 1 << 4,
@@ -107,8 +101,7 @@ namespace Phantom.XRMOD.ActionNotification.Runtime
         Depth = 1 << 7,
 
         /// <summary>
-        /// Deprecated in favor of <see cref="TrackableType.AllTypes"/>. Refers to all trackable types except
-        /// <see cref="TrackableType.Depth"/>.
+        /// Deprecated in favor of  TrackableType.AllTypes. Refers to all trackable types except 
         /// </summary>
         [Obsolete("Use TrackableType.AllTypes instead. (2021-05-02)")]
         All = Planes | FeaturePoint | Image | Face,
@@ -140,7 +133,7 @@ namespace Phantom.XRMOD.ActionNotification.Runtime
         /// Placed position
         /// </summary>
         public Vector3 Position;
-        
+
         /// <summary>
         /// Placed rotation
         /// </summary>
