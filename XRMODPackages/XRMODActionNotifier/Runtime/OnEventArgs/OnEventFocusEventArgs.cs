@@ -34,8 +34,7 @@ namespace Phantom.XRMOD.ActionNotification.Runtime
 
     /// <summary>
     /// Represents the alignment of a plane (for example, whether it is horizontal or vertical).
-    /// </summary>
-    /// <seealso cref="BoundedPlane.classification"/>
+    /// </summary> 
     public enum PlaneClassification
     {
         /// <summary>

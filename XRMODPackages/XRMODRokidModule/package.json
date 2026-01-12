@@ -1,7 +1,7 @@
 {
   "name": "com.phantomsxr.rokidmodule",
   "displayName": "XRMOD Rokid Module",
-  "version": "3.0.0-preview.12",
+  "version": "3.0.0-preview.13",
   "keywords": [
     "foundation",
     "core",
@@ -9,11 +9,11 @@
   ],
   "type": "library",
   "dependencies": {
-    "com.phantomsxr.actionnotification": "2.0.5",
+    "com.phantomsxr.actionnotification": "2.0.6",
     "com.phantomsxr.foundation": "3.0.13",
     "com.phantomsxr.unityfusion": "3.0.6",
     "com.phantomsxr.xrmodinput": "1.4.9",
-    "com.phantomsxr.xrmodopenxrmodule": "1.0.3", 
+    "com.phantomsxr.xrmodopenxrmodule": "1.0.3",
     "com.unity.xr.openxr": "1.14.3"
   },
   "author": {
