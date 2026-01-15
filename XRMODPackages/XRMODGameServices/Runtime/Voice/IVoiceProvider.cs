@@ -10,6 +10,7 @@
 // // ===============================================================================*/
 
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Phantom.XRMOD.GameServices.Runtime
@@ -18,6 +19,17 @@ namespace Phantom.XRMOD.GameServices.Runtime
     {
         void Initialize(string _configuration, Voice3DProperties _voice3DProperties);
         void DeInitialize();
+
+        /// <summary>
+        /// Asynchronously initialize the voice provider with retry configuration support.
+        /// </summary>
+        /// <param name="_configuration">Voice provider configuration</param>
+        /// <param name="_voice3DProperties">3D voice properties</param>
+        /// <param name="_retryConfig">Retry configuration for handling failures</param>
+        /// <param name="_cancellationToken">Cancellation token to cancel the operation</param>
+        /// <returns>Task representing the async initialization operation</returns>
+        Task InitializeAsync(string _configuration, Voice3DProperties _voice3DProperties, 
+                           RetryConfiguration _retryConfig, CancellationToken _cancellationToken);
 
         /// <summary>
         /// Join voice channel by channel name

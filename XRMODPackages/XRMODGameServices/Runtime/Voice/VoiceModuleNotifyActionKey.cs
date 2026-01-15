@@ -36,6 +36,9 @@ namespace Phantom.XRMOD.GameServices.Runtime
         OnLoginFailed,
         OnLogged,
         OnLoggedOut,
+        OnInitializationFailed,
+        OnRetryAttempt,
+        OnInitializationTimeout,
     }
 
     public class VoiceModuleNotifyActionKey
@@ -59,6 +62,9 @@ namespace Phantom.XRMOD.GameServices.Runtime
         internal const string CONST_ON_EFFECTIVE_INPUT_DEVICE_CHANGED = "OnEffectiveInputDeviceChanged";
         internal const string CONST_ON_AVAILABLE_INPUT_DEVICES_CHANGED = "OnAvailableInputDevicesChanged";
         internal const string CONST_ON_PARTICIPANT_ADDED = "OnParticipantAdded";
+        internal const string CONST_ON_INITIALIZATION_FAILED = "OnInitializationFailed";
+        internal const string CONST_ON_RETRY_ATTEMPT = "OnRetryAttempt";
+        internal const string CONST_ON_INITIALIZATION_TIMEOUT = "OnInitializationTimeout";
     }
 
 
@@ -67,5 +73,11 @@ namespace Phantom.XRMOD.GameServices.Runtime
         public VoiceParticipant VoiceParticipant;
         public TextMessage Message;
         public VoiceNotificationKey VoiceEventKey;
+        
+        // Retry mechanism fields
+        public string ErrorMessage;
+        public int RetryAttempt;
+        public int MaxRetryAttempts;
+        public System.Exception Exception;
     }
 }

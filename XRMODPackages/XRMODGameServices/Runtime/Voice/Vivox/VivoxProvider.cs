@@ -23,6 +23,7 @@ namespace Phantom.XRMOD.GameServices.Runtime
         private Voice3DProperties voice3DProperties;
         private MonoBehaviour coroutineBehaviour;
         private IEnumerator updateParticipantList;
+        private RetryConfiguration retryConfig;
 
         // private int currentRetryCount = 3; // Counter for the current number of attempts
         private CancellationTokenSource cancellationTokenSource;
@@ -61,6 +62,258 @@ namespace Phantom.XRMOD.GameServices.Runtime
             isInitialized = true;
 
             Debug.Log("Voice System Initialized");
+        }
+
+        public async Task InitializeAsync(string _configuration, Voice3DProperties _voice3DProperties, 
+                                        RetryConfiguration _retryConfig, CancellationToken _cancellationToken)
+        {
+            if (isInitialized) return;
+            
+            retryConfig = _retryConfig;
+            coroutineBehaviour = Object.FindAnyObjectByType<XRMODGameServicesManager>();
+            updateParticipantList = UpdateParticipantList();
+            voice3DProperties = _voice3DProperties;
+            
+            // Subscribe to events
+            VivoxService.Instance.ParticipantAddedToChannel += OnParticipantAdded;
+            VivoxService.Instance.ParticipantRemovedFromChannel += OnParticipantRemoved;
+            VivoxService.Instance.AvailableInputDevicesChanged += OnAvailableInputDevicesChanged;
+            VivoxService.Instance.EffectiveInputDeviceChanged += OnEffectiveInputDeviceChanged;
+            VivoxService.Instance.AvailableOutputDevicesChanged += OnAvailableOutputDevicesChanged;
+            VivoxService.Instance.EffectiveOutputDeviceChanged += OnEffectiveOutputDeviceChanged;
+            VivoxService.Instance.ConnectionRecovering += OnConnectionRecovering;
+            VivoxService.Instance.ConnectionRecovered += OnConnectionRecovered;
+            VivoxService.Instance.ConnectionFailedToRecover += OnConnectionFailedToRecover;
+            VivoxService.Instance.ChannelJoined += OnChannelJoined;
+            VivoxService.Instance.ChannelLeft += OnChannelLeft;
+            VivoxService.Instance.ChannelMessageReceived += OnChannelMessageReceived;
+            VivoxService.Instance.ChannelMessageEdited += OnChannelMessageEdited;
+            VivoxService.Instance.ChannelMessageDeleted += OnChannelMessageDeleted;
+            VivoxService.Instance.DirectedMessageReceived += OnDirectedMessageReceived;
+            VivoxService.Instance.DirectedMessageDeleted += OnDirectedMessageDeleted;
+            VivoxService.Instance.DirectedMessageEdited += OnDirectedMessageEdited;
+            VivoxService.Instance.LoggedIn += LoggedIn;
+            VivoxService.Instance.LoggedOut += LoggedOut;
+
+            // Create cancellation token source with overall timeout
+            cancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(_cancellationToken);
+            var timeoutCts = new CancellationTokenSource(retryConfig.OverallTimeoutMs);
+            var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(
+                cancellationTokenSource.Token, timeoutCts.Token);
+
+            try
+            {
+                await InitializeWithRetryAsync(linkedCts.Token);
+                await LoginWithRetryAsync(linkedCts.Token);
+
+                coroutineBehaviour.StartCoroutine(updateParticipantList);
+                isInitialized = true;
+
+                Debug.Log("Voice System Initialized with retry mechanism");
+            }
+            catch (OperationCanceledException ex)
+            {
+                // Clean up any partial initialization state
+                await CleanupPartialInitializationAsync();
+                
+                // Check if timeout was the cause of cancellation
+                if (timeoutCts.Token.IsCancellationRequested && !_cancellationToken.IsCancellationRequested)
+                {
+                    // Timeout occurred
+                    NotificationSender(VoiceModuleNotifyActionKey.CONST_VOICE_EVENT_KEY, new VoiceNotificationDataArgs
+                    {
+                        VoiceEventKey = VoiceNotificationKey.OnInitializationTimeout,
+                        ErrorMessage = $"Initialization timed out after {retryConfig.OverallTimeoutMs}ms",
+                        MaxRetryAttempts = retryConfig.MaxRetryCount,
+                        Exception = ex
+                    });
+                }
+                throw;
+            }
+            catch (Exception ex)
+            {
+                // Clean up any partial initialization state
+                await CleanupPartialInitializationAsync();
+                
+                // Send initialization failed notification for non-cancellation exceptions
+                NotificationSender(VoiceModuleNotifyActionKey.CONST_VOICE_EVENT_KEY, new VoiceNotificationDataArgs
+                {
+                    VoiceEventKey = VoiceNotificationKey.OnInitializationFailed,
+                    ErrorMessage = ex.Message,
+                    MaxRetryAttempts = retryConfig.MaxRetryCount,
+                    Exception = ex
+                });
+                throw;
+            }
+            finally
+            {
+                timeoutCts?.Dispose();
+                linkedCts?.Dispose();
+            }
+        }
+
+        /// <summary>
+        /// Calculates the delay for retry attempts using exponential backoff.
+        /// Formula: min(InitialDelayMs * (BackoffMultiplier ^ attemptNumber), MaxDelayMs)
+        /// </summary>
+        /// <param name="attemptNumber">The current attempt number (0-based)</param>
+        /// <param name="config">The retry configuration to use</param>
+        /// <returns>Delay in milliseconds</returns>
+        private int CalculateDelay(int attemptNumber, RetryConfiguration config)
+        {
+            if (config == null)
+                return 1000; // Default fallback
+
+            var delay = config.InitialDelayMs * Math.Pow(config.BackoffMultiplier, attemptNumber);
+            return (int)Math.Min(delay, config.MaxDelayMs);
+        }
+
+        private async Task CleanupPartialInitializationAsync()
+        {
+            try
+            {
+                // Cancel any ongoing operations
+                if (cancellationTokenSource != null && !cancellationTokenSource.Token.IsCancellationRequested)
+                {
+                    cancellationTokenSource.Cancel();
+                }
+
+                // Stop coroutine if it was started
+                if (coroutineBehaviour != null && updateParticipantList != null)
+                {
+                    coroutineBehaviour.StopCoroutine(updateParticipantList);
+                }
+
+                // Logout if we were logged in
+                if (VivoxService.Instance.IsLoggedIn)
+                {
+                    await VivoxService.Instance.LogoutAsync();
+                }
+
+                // Unsubscribe from events to prevent memory leaks
+                VivoxService.Instance.ParticipantAddedToChannel -= OnParticipantAdded;
+                VivoxService.Instance.ParticipantRemovedFromChannel -= OnParticipantRemoved;
+                VivoxService.Instance.AvailableInputDevicesChanged -= OnAvailableInputDevicesChanged;
+                VivoxService.Instance.EffectiveInputDeviceChanged -= OnEffectiveInputDeviceChanged;
+                VivoxService.Instance.AvailableOutputDevicesChanged -= OnAvailableOutputDevicesChanged;
+                VivoxService.Instance.EffectiveOutputDeviceChanged -= OnEffectiveOutputDeviceChanged;
+                VivoxService.Instance.ConnectionRecovering -= OnConnectionRecovering;
+                VivoxService.Instance.ConnectionRecovered -= OnConnectionRecovered;
+                VivoxService.Instance.ConnectionFailedToRecover -= OnConnectionFailedToRecover;
+                VivoxService.Instance.ChannelJoined -= OnChannelJoined;
+                VivoxService.Instance.ChannelLeft -= OnChannelLeft;
+                VivoxService.Instance.ChannelMessageReceived -= OnChannelMessageReceived;
+                VivoxService.Instance.ChannelMessageEdited -= OnChannelMessageEdited;
+                VivoxService.Instance.ChannelMessageDeleted -= OnChannelMessageDeleted;
+                VivoxService.Instance.DirectedMessageReceived -= OnDirectedMessageReceived;
+                VivoxService.Instance.DirectedMessageDeleted -= OnDirectedMessageDeleted;
+                VivoxService.Instance.DirectedMessageEdited -= OnDirectedMessageEdited;
+                VivoxService.Instance.LoggedIn -= LoggedIn;
+                VivoxService.Instance.LoggedOut -= LoggedOut;
+
+                // Reset state
+                isInitialized = false;
+                vivoxParticipants.Clear();
+                voiceParticipants.Clear();
+                joinedChannelName = null;
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"Error during cleanup: {ex.Message}");
+            }
+            finally
+            {
+                // Dispose cancellation token source
+                if (cancellationTokenSource != null)
+                {
+                    cancellationTokenSource.Dispose();
+                    cancellationTokenSource = null;
+                }
+            }
+        }
+
+        private async Task InitializeWithRetryAsync(CancellationToken cancellationToken)
+        {
+            for (int attempt = 0; attempt <= retryConfig.MaxRetryCount; attempt++)
+            {
+                try
+                {
+                    await VivoxService.Instance.InitializeAsync();
+                    return; // Success
+                }
+                catch (Exception ex)
+                {
+                    if (attempt == retryConfig.MaxRetryCount)
+                    {
+                        // Final attempt failed
+                        NotificationSender(VoiceModuleNotifyActionKey.CONST_VOICE_EVENT_KEY, new VoiceNotificationDataArgs
+                        {
+                            VoiceEventKey = VoiceNotificationKey.OnInitializationFailed,
+                            ErrorMessage = ex.Message,
+                            RetryAttempt = attempt,
+                            MaxRetryAttempts = retryConfig.MaxRetryCount,
+                            Exception = ex
+                        });
+                        throw;
+                    }
+
+                    // Send retry attempt notification
+                    NotificationSender(VoiceModuleNotifyActionKey.CONST_VOICE_EVENT_KEY, new VoiceNotificationDataArgs
+                    {
+                        VoiceEventKey = VoiceNotificationKey.OnRetryAttempt,
+                        ErrorMessage = ex.Message,
+                        RetryAttempt = attempt,
+                        MaxRetryAttempts = retryConfig.MaxRetryCount,
+                        Exception = ex
+                    });
+
+                    // Wait before next attempt
+                    var delay = CalculateDelay(attempt, retryConfig);
+                    await Task.Delay(delay, cancellationToken);
+                }
+            }
+        }
+
+        private async Task LoginWithRetryAsync(CancellationToken cancellationToken)
+        {
+            for (int attempt = 0; attempt <= retryConfig.MaxRetryCount; attempt++)
+            {
+                try
+                {
+                    await LoginToVivox();
+                    return; // Success
+                }
+                catch (Exception ex)
+                {
+                    if (attempt == retryConfig.MaxRetryCount)
+                    {
+                        // Final attempt failed
+                        NotificationSender(VoiceModuleNotifyActionKey.CONST_VOICE_EVENT_KEY, new VoiceNotificationDataArgs
+                        {
+                            VoiceEventKey = VoiceNotificationKey.OnLoginFailed,
+                            ErrorMessage = ex.Message,
+                            RetryAttempt = attempt,
+                            MaxRetryAttempts = retryConfig.MaxRetryCount,
+                            Exception = ex
+                        });
+                        throw;
+                    }
+
+                    // Send retry attempt notification
+                    NotificationSender(VoiceModuleNotifyActionKey.CONST_VOICE_EVENT_KEY, new VoiceNotificationDataArgs
+                    {
+                        VoiceEventKey = VoiceNotificationKey.OnRetryAttempt,
+                        ErrorMessage = ex.Message,
+                        RetryAttempt = attempt,
+                        MaxRetryAttempts = retryConfig.MaxRetryCount,
+                        Exception = ex
+                    });
+
+                    // Wait before next attempt
+                    var delay = CalculateDelay(attempt, retryConfig);
+                    await Task.Delay(delay, cancellationToken);
+                }
+            }
         }
 
 
@@ -406,27 +659,17 @@ namespace Phantom.XRMOD.GameServices.Runtime
 
         private async Task LoginToVivox()
         {
-            try
+            LoginOptions tmp_Options = new LoginOptions
             {
-                LoginOptions tmp_Options = new LoginOptions
-                {
-                    DisplayName = AuthenticationSystemManager.GetUserInfo().player_name,
-                    PlayerId = AuthenticationService.Instance.PlayerId,
-                    EnableTTS = true,
-                    ParticipantUpdateFrequency = ParticipantPropertyUpdateFrequency.TenPerSecond,
-                };
+                DisplayName = AuthenticationSystemManager.GetUserInfo().player_name,
+                PlayerId = AuthenticationService.Instance.PlayerId,
+                EnableTTS = true,
+                ParticipantUpdateFrequency = ParticipantPropertyUpdateFrequency.TenPerSecond,
+            };
 
-                if (VivoxService.Instance.IsLoggedIn) return;
+            if (VivoxService.Instance.IsLoggedIn) return;
 
-                await VivoxService.Instance.LoginAsync(tmp_Options);
-            }
-            catch (Exception tmp_Exception)
-            {
-                NotificationSender(VoiceModuleNotifyActionKey.CONST_VOICE_EVENT_KEY, new VoiceNotificationDataArgs
-                {
-                    VoiceEventKey = VoiceNotificationKey.OnLoginFailed
-                });
-            }
+            await VivoxService.Instance.LoginAsync(tmp_Options);
         }
 
         private void LoggedOut()

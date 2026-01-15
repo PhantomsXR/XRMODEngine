@@ -1,3 +1,7 @@
+# 1.0.9
+## Fixed
+- Fixed `XRMODGameServicesManager` hanging when Vivox initialization times out. Added `OnInitializationTimeout` handling to ensure ready callback is invoked.
+
 # 1.0.8
 ## Updated
 - Update commit and docs

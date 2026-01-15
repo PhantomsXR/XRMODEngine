@@ -10,6 +10,7 @@
 // // ===============================================================================*/
 
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine.Assertions;
 
@@ -58,6 +59,12 @@ namespace Phantom.XRMOD.GameServices.Runtime
         /// </summary>
         public bool Initialized { get; private set; }
 
+        /// <summary>
+        /// Configuration for retry mechanism when voice initialization fails.
+        /// Contains parameters for exponential backoff retry strategy.
+        /// </summary>
+        public RetryConfiguration RetryConfig { get; set; } = new RetryConfiguration();
+
         private VoiceSystemManager()
         {
 #if USE_VIVOX
@@ -72,13 +79,31 @@ namespace Phantom.XRMOD.GameServices.Runtime
 
         /// <summary>
         /// Initializes the voice provider with a JSON configuration and 3D audio properties.
+        /// This method provides backward compatibility by calling the async version internally.
         /// </summary>
         /// <param name="_configuration">JSON configuration string for the voice provider.</param>
         /// <param name="_voice3DProperties">Properties for 3D audio positioning.</param>
         public void Initialize(string _configuration, Voice3DProperties _voice3DProperties)
         {
             if (Initialized) return;
-            voiceProvider.Initialize(_configuration, _voice3DProperties);
+            
+            // Call the async version for backward compatibility
+            // Use Task.Run to avoid blocking the calling thread
+            Task.Run(async () => await InitializeAsync(_configuration, _voice3DProperties, CancellationToken.None));
+        }
+
+        /// <summary>
+        /// Asynchronously initializes the voice provider with retry configuration support.
+        /// </summary>
+        /// <param name="_configuration">JSON configuration string for the voice provider.</param>
+        /// <param name="_voice3DProperties">Properties for 3D audio positioning.</param>
+        /// <param name="_cancellationToken">Cancellation token to cancel the operation.</param>
+        /// <returns>Task representing the async initialization operation.</returns>
+        public async Task InitializeAsync(string _configuration, Voice3DProperties _voice3DProperties, 
+                                          CancellationToken _cancellationToken = default)
+        {
+            if (Initialized) return;
+            await InitializeAsync(_configuration, _voice3DProperties, RetryConfig, _cancellationToken);
             Initialized = true;
         }
 
@@ -89,6 +114,14 @@ namespace Phantom.XRMOD.GameServices.Runtime
         {
             voiceProvider.DeInitialize();
             Initialized = false;
+        }
+
+        public async Task InitializeAsync(string _configuration, Voice3DProperties _voice3DProperties, RetryConfiguration _retryConfig,
+            CancellationToken _cancellationToken)
+        {
+            if (Initialized) return;
+            await voiceProvider.InitializeAsync(_configuration, _voice3DProperties, _retryConfig, _cancellationToken);
+            Initialized = true;
         }
 
         /// <summary>

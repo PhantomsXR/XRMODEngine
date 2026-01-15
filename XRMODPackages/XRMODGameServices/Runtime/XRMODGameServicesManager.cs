@@ -11,6 +11,7 @@
 
 using System;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
@@ -43,9 +44,23 @@ namespace Phantom.XRMOD.GameServices.Runtime
         [Header("Voice Properties")] public bool EnableVoice = true;
 
         /// <summary>
+        /// Whether to allow the application to continue if voice initialization fails.
+        /// When true, GameServicesReady will be triggered even if voice fails.
+        /// When false, GameServicesFailed will be triggered if voice fails.
+        /// Default: false (strict failure mode)
+        /// </summary>
+        public bool AllowVoiceFailure = false;
+
+        /// <summary>
         /// Configuration arguments for the Voice system.
         /// </summary>
         [SerializeField] private ConfigurationArgs voiceConfigurationArgs;
+
+        /// <summary>
+        /// Retry configuration for voice initialization.
+        /// Contains parameters for exponential backoff retry strategy.
+        /// </summary>
+        [SerializeField] private RetryConfiguration voiceRetryConfig = new RetryConfiguration();
 
         /// <summary>
         /// 3D audio properties for the Voice system.
@@ -61,6 +76,12 @@ namespace Phantom.XRMOD.GameServices.Runtime
         /// Invoked when Game Services initialization fails.
         /// </summary>
         public UnityEvent GameServicesFailed;
+
+        /// <summary>
+        /// Invoked when Voice Service is unavailable but other services continue.
+        /// This event is triggered when AllowVoiceFailure is true and voice initialization fails.
+        /// </summary>
+        public UnityEvent VoiceServiceUnavailable;
 
         private bool authReady;
         private bool voiceReady;
@@ -169,7 +190,7 @@ namespace Phantom.XRMOD.GameServices.Runtime
             AuthenticationSystemManager.InitServices();
         }
 
-        private void OnAuthSignedIn()
+        private async void OnAuthSignedIn()
         {
             authReady = true;
 
@@ -177,6 +198,7 @@ namespace Phantom.XRMOD.GameServices.Runtime
             if (EnableVoice)
             {
 #if USE_VIVOX || USE_AGORA_RTC || USE_PHOTON_VOICE
+                // Subscribe to voice success event
                 Phantom.XRMOD.ActionNotification.Runtime.ActionNotificationCenter.DefaultCenter.AddObserver(
                     _data =>
                     {
@@ -187,9 +209,35 @@ namespace Phantom.XRMOD.GameServices.Runtime
                         }
                     },
                     VoiceModuleNotifyActionKey.CONST_VOICE_EVENT_KEY);
+
+                // Subscribe to voice failure events
+                Phantom.XRMOD.ActionNotification.Runtime.ActionNotificationCenter.DefaultCenter.AddObserver(
+                    _data =>
+                    {
+                        if (_data is VoiceNotificationDataArgs v && 
+                            (v.VoiceEventKey == VoiceNotificationKey.OnInitializationFailed || 
+                             v.VoiceEventKey == VoiceNotificationKey.OnLoginFailed ||
+                             v.VoiceEventKey == VoiceNotificationKey.OnInitializationTimeout))
+                        {
+                            OnVoiceInitializationFailed();
+                        }
+                    },
+                    VoiceModuleNotifyActionKey.CONST_VOICE_EVENT_KEY);
 #endif
-                VoiceSystemManager.GetInstance.Initialize(JsonUtility.ToJson(voiceConfigurationArgs),
-                    voice3DProperties);
+                // Use async initialization with retry configuration
+                var voiceSystemManager = VoiceSystemManager.GetInstance;
+                voiceSystemManager.RetryConfig = voiceRetryConfig;
+                
+                try
+                {
+                    await voiceSystemManager.InitializeAsync(JsonUtility.ToJson(voiceConfigurationArgs),
+                        voice3DProperties, CancellationToken.None);
+                }
+                catch (System.Exception ex)
+                {
+                    Debug.LogError($"Voice initialization failed with exception: {ex.Message}");
+                    // The failure will be handled by the notification system
+                }
             }
 
             // Subscribe to friend sign-in notification and initialize
@@ -208,6 +256,26 @@ namespace Phantom.XRMOD.GameServices.Runtime
         {
             friendReady = true;
             CheckReady();
+        }
+
+        /// <summary>
+        /// Handles voice initialization failure events.
+        /// Implements graceful degradation based on AllowVoiceFailure setting.
+        /// </summary>
+        private void OnVoiceInitializationFailed()
+        {
+            if (AllowVoiceFailure)
+            {
+                // Mark voice as "ready" to allow other services to continue
+                voiceReady = true;
+                VoiceServiceUnavailable?.Invoke();
+                CheckReady();
+            }
+            else
+            {
+                // Strict failure mode - entire service initialization fails
+                GameServicesFailed?.Invoke();
+            }
         }
 
         private void CheckReady()
